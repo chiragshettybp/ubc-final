@@ -1,11 +1,38 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import ProductCarousel from '../components/ProductCarousel';
+import ProductInfo from '../components/ProductInfo';
+import ProductVariants from '../components/ProductVariants';
+import CTAButton from '../components/CTAButton';
+import OrderTimer from '../components/OrderTimer';
+import BenefitBadges from '../components/BenefitBadges';
+import PaymentMethods from '../components/PaymentMethods';
+import FAQSection from '../components/FAQSection';
+import { toast } from "@/components/ui/use-toast";
 
 const Index = () => {
+  const handlePurchase = () => {
+    toast({
+      title: "Your order is being processed",
+      description: "Thank you for your purchase!",
+    });
+  };
+  
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="max-w-md mx-auto bg-white pb-8">
+      <div className="flex flex-col items-center">
+        <ProductCarousel />
+        <ProductInfo />
+        <ProductVariants />
+        
+        <div className="w-full px-4 my-4">
+          <CTAButton onClick={handlePurchase} />
+        </div>
+        
+        <PaymentMethods />
+        <OrderTimer />
+        <BenefitBadges />
+        <FAQSection />
       </div>
     </div>
   );
