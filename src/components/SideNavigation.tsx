@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, HelpCircle, Package, Truck, ShieldCheck, FileText, UserX, Mail, Phone } from 'lucide-react';
+
 export const SideNavigation: React.FC = () => {
   return <div className="h-full flex flex-col bg-white">
       {/* Header */}
@@ -20,7 +22,7 @@ export const SideNavigation: React.FC = () => {
         <div className="mb-6">
           <h3 className="text-xs uppercase font-bold text-gray-500 mb-2 px-2">Customer Support</h3>
           
-          <Link to="/track-order" className="flex items-center gap-3 p-2 hover:bg-gray-100 rounded-md text-purple-600 font-semibold">
+          <Link to="/track-order" className="flex items-center gap-3 p-2 hover:bg-gray-100 rounded-md">
             <Truck size={18} />
             <span className="text-sm">Track Your Order</span>
           </Link>
@@ -58,8 +60,6 @@ export const SideNavigation: React.FC = () => {
             <FileText size={18} />
             <span className="text-sm">Terms of Service</span>
           </Link>
-          
-          
         </div>
       </div>
       
@@ -70,7 +70,10 @@ export const SideNavigation: React.FC = () => {
           <Mail size={16} />
           <span>hello@bleame.com</span>
         </a>
-        
+        <a href="tel:815-857-8366" className="flex items-center gap-2 p-2 text-sm hover:text-purple-600">
+          <Phone size={16} />
+          <span>815-857-8366</span>
+        </a>
       </div>
     </div>;
 };

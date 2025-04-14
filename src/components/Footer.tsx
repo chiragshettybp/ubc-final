@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Mail, Phone, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Footer = () => {
   return <footer className="w-full bg-dark text-white pb-16">
       <div className="max-w-md mx-auto px-4 pt-16">
@@ -13,26 +15,46 @@ const Footer = () => {
           </p>
           
           {/* Email signup form - simplified version */}
-          
+          <div className="flex">
+            <input 
+              type="email" 
+              placeholder="Your email address" 
+              className="bg-gray-800 text-white px-4 py-2 rounded-l-md w-full text-sm focus:outline-none"
+            />
+            <button className="bg-purple-600 text-white px-4 py-2 rounded-r-md text-sm font-medium">
+              Sign Up
+            </button>
+          </div>
         </div>
         
         {/* Help Links */}
         <div className="mb-10">
           <h3 className="font-bold mb-4">Need Help?</h3>
           <ul className="opacity-75 text-sm space-y-3">
-            
-            
-            <li><Link to="/" className="hover:text-purple-lighter">Track Your Order</Link></li>
-            <li><Link to="/" className="hover:text-purple-lighter">Shipping & Delivery</Link></li>
-            <li><Link to="/" className="hover:text-purple-lighter">Return & Refund Policy</Link></li>
-            <li><Link to="/" className="hover:text-purple-lighter">Privacy Policy</Link></li>
-            <li><Link to="/" className="hover:text-purple-lighter">Terms of Service</Link></li>
-            
+            <li><Link to="/help-center" className="hover:text-purple-lighter">Help Center</Link></li>
+            <li><Link to="/track-order" className="hover:text-purple-lighter">Track Your Order</Link></li>
+            <li><Link to="/shipping-delivery" className="hover:text-purple-lighter">Shipping & Delivery</Link></li>
+            <li><Link to="/return-refund" className="hover:text-purple-lighter">Return & Refund Policy</Link></li>
+            <li><Link to="/privacy-policy" className="hover:text-purple-lighter">Privacy Policy</Link></li>
+            <li><Link to="/terms-of-service" className="hover:text-purple-lighter">Terms of Service</Link></li>
+            <li><Link to="/how-to-use" className="hover:text-purple-lighter">How to Use</Link></li>
           </ul>
         </div>
         
         {/* Company Info */}
-        
+        <div className="mb-10">
+          <h3 className="font-bold mb-4">Contact Us</h3>
+          <ul className="opacity-75 text-sm space-y-3">
+            <li className="flex items-center">
+              <Mail size={16} className="mr-2" />
+              <a href="mailto:hello@bleame.com" className="hover:text-purple-lighter">hello@bleame.com</a>
+            </li>
+            <li className="flex items-center">
+              <Phone size={16} className="mr-2" />
+              <a href="tel:815-857-8366" className="hover:text-purple-lighter">815-857-8366</a>
+            </li>
+          </ul>
+        </div>
         
         {/* Legal Disclaimer */}
         <div className="border-t border-gray-800 pt-6 mb-8">
@@ -69,9 +91,23 @@ const Footer = () => {
           </div>
           
           {/* Social links */}
-          
+          <div className="flex space-x-4 mb-6">
+            <a href="https://facebook.com" className="hover:text-purple-lighter" aria-label="Facebook">
+              <Facebook size={20} />
+            </a>
+            <a href="https://twitter.com" className="hover:text-purple-lighter" aria-label="Twitter">
+              <Twitter size={20} />
+            </a>
+            <a href="https://instagram.com" className="hover:text-purple-lighter" aria-label="Instagram">
+              <Instagram size={20} />
+            </a>
+            <a href="https://youtube.com" className="hover:text-purple-lighter" aria-label="Youtube">
+              <Youtube size={20} />
+            </a>
+          </div>
         </div>
       </div>
     </footer>;
 };
+
 export default Footer;
