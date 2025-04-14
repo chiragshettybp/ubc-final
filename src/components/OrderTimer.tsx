@@ -1,24 +1,46 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const OrderTimer: React.FC = () => {
   const [hours, setHours] = useState(2);
   const [minutes, setMinutes] = useState(12);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      if (minutes > 0) {
-        setMinutes(minutes - 1);
-      } else if (hours > 0) {
-        setHours(hours - 1);
-        setMinutes(59);
-      } else {
-        clearInterval(timer);
-      }
+    // Skip the first render to prevent initial scroll jump
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
+    // Clear any existing timer
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+    }
+
+    // Set new timer
+    timerRef.current = setInterval(() => {
+      setMinutes(prev => {
+        if (prev > 0) {
+          return prev - 1;
+        } else if (hours > 0) {
+          setHours(prev => prev - 1);
+          return 59;
+        } else {
+          if (timerRef.current) clearInterval(timerRef.current);
+          return 0;
+        }
+      });
     }, 60000); // Update every minute
 
-    return () => clearInterval(timer);
-  }, [hours, minutes]);
+    // Cleanup function
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
+  }, [hours]);
 
   // Get tomorrow's date
   const tomorrow = new Date();
