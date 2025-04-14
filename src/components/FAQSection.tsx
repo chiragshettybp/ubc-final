@@ -22,10 +22,6 @@ const faqs: FAQ[] = [
     answer: "No, Bleame is designed to be gentle on skin and doesn't cause darkening. In fact, it helps exfoliate dead skin cells which can improve skin appearance."
   },
   {
-    question: "Does it help against strawberry skin & bumps?",
-    answer: "Yes! Bleame helps prevent ingrown hairs and reduces the appearance of strawberry skin by exfoliating while removing hair, leaving skin smooth."
-  },
-  {
     question: "Shipping & Delivery",
     answer: "We offer free shipping from the US. Standard delivery takes 2-5 business days. All orders are processed within 24 hours."
   },
