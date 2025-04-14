@@ -1,33 +1,15 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-// Image paths would normally be imported properly
-const images = [
-  '/img/bleame-bleame-crystal-hair-eraser-crystal-hair-eraser-3.png',
-  '/img/bleame-bleame-crystal-hair-eraser-crystal-hair-eraser-2.png',
-  '/img/button-bleame-bleame-crystal-hair-eraser-crystal-hair-eraser.png',
-  '/img/button-bleame-bleame-crystal-hair-eraser-crystal-hair-eraser-4.png',
-  '/img/button-bleame-bleame-crystal-hair-eraser-crystal-hair-eraser-2.png',
-  '/img/button-bleame-bleame-crystal-hair-eraser-crystal-hair-eraser-7.png',
-  '/img/button-bleame-bleame-crystal-hair-eraser-crystal-hair-eraser-8.png',
-  '/img/button-bleame-bleame-crystal-hair-eraser-crystal-hair-eraser-5.png',
-  '/img/image.png'
-];
-
-// Real product images for the carousel
+// New product images uploaded by the user
 const productImages = [
-  'https://images.unsplash.com/photo-1630173314503-544080c717dc?q=80&w=987&auto=format&fit=crop', // Crystal hair eraser product
-  'https://images.unsplash.com/photo-1576511916051-8b54ed6afefa?q=80&w=987&auto=format&fit=crop', // Woman using beauty product
-  'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=935&auto=format&fit=crop', // Beauty product closeup
-  'https://images.unsplash.com/photo-1592136957897-b2b6ca21e10d?q=80&w=987&auto=format&fit=crop', // Woman smiling with product
-  'https://images.unsplash.com/photo-1656331048123-b9c8506d1a5d?q=80&w=987&auto=format&fit=crop', // Product packaging
-  'https://images.unsplash.com/photo-1620917669809-1af0497965a1?q=80&w=987&auto=format&fit=crop', // Beauty product flat lay
-  'https://images.unsplash.com/photo-1598662957563-ee4965d4d72c?q=80&w=1015&auto=format&fit=crop', // Legs beauty treatment
-  'https://images.unsplash.com/photo-1571875257727-256c39da42af?q=80&w=987&auto=format&fit=crop', // Woman with smooth skin
-  'https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=987&auto=format&fit=crop'  // Woman touching face
+  '/lovable-uploads/599b3290-f59d-4de8-b03b-98d6e6246a53.png', // Nightstand with vase, photo frame, candle, and book
+  '/lovable-uploads/bb0e9a86-4b10-42c5-9d97-14358e987938.png', // Desk with lamp, plants, and acrylic photo frame
+  '/lovable-uploads/a75e18ce-2ee4-45fb-bce9-69b9f744e159.png', // Wedding photo in acrylic frame with gold candle holders
+  '/lovable-uploads/9a8e4043-aa0a-4083-b45b-453b7cde8580.png', // Acrylic frame with dark screen on silky fabric
+  '/lovable-uploads/4ac97874-bcab-4067-9ad6-5b6b688f0b3e.png'  // Couple photo in acrylic frame
 ];
 
 const ProductCarousel: React.FC = () => {
@@ -50,16 +32,13 @@ const ProductCarousel: React.FC = () => {
 
   const handleTouchEnd = () => {
     if (touchStart - touchEnd > 50) {
-      // Swipe left, go to next slide
       goToNextSlide();
     }
 
     if (touchEnd - touchStart > 50) {
-      // Swipe right, go to previous slide
       goToPrevSlide();
     }
     
-    // Resume auto-scroll after a short delay
     setTimeout(() => setIsPaused(false), 5000);
   };
 
@@ -71,12 +50,11 @@ const ProductCarousel: React.FC = () => {
     setActiveSlide(prev => (prev === 0 ? productImages.length - 1 : prev - 1));
   };
 
-  // Auto-scroll functionality
   useEffect(() => {
     if (!isPaused) {
       autoScrollIntervalRef.current = setInterval(() => {
         goToNextSlide();
-      }, 4000); // Change slide every 4 seconds
+      }, 4000);
     }
 
     return () => {
@@ -86,12 +64,10 @@ const ProductCarousel: React.FC = () => {
     };
   }, [isPaused, activeSlide]);
 
-  // Scroll the thumbnail into view when active slide changes, but only once
   useEffect(() => {
     if (thumbsRef.current && !hasScrolledThumbs.current) {
       const thumbElements = thumbsRef.current.querySelectorAll('.thumb-container');
       if (thumbElements[activeSlide]) {
-        // Use scrollLeft instead of scrollIntoView to prevent page scrolling
         const container = thumbsRef.current;
         const thumb = thumbElements[activeSlide] as HTMLElement;
         const scrollLeft = thumb.offsetLeft - (container.offsetWidth - thumb.offsetWidth) / 2;
@@ -101,19 +77,16 @@ const ProductCarousel: React.FC = () => {
           behavior: 'smooth'
         });
         
-        // Mark that we've scrolled at least once
         hasScrolledThumbs.current = true;
       }
     }
   }, [activeSlide]);
 
-  // Pause auto-scroll on hover
   const handleMouseEnter = () => setIsPaused(true);
   const handleMouseLeave = () => setIsPaused(false);
 
   return (
-    <div className="w-full px-[10px]"> {/* Added left and right padding of 10px */}
-      {/* Main product image carousel */}
+    <div className="w-full px-[10px]">
       <div 
         className="relative w-full h-[329px] mb-4 group bg-gradient-to-b from-purple-50 to-white rounded-lg"
         onMouseEnter={handleMouseEnter}
@@ -137,7 +110,6 @@ const ProductCarousel: React.FC = () => {
           ))}
         </div>
         
-        {/* Navigation buttons - show on hover */}
         <button 
           className="absolute top-1/2 left-4 -translate-y-1/2 w-9 h-9 bg-white rounded-full 
                     flex items-center justify-center border border-[#E0DFE1] opacity-0 
@@ -156,7 +128,6 @@ const ProductCarousel: React.FC = () => {
           <ChevronRight className="w-4 h-4 text-gray-600" />
         </button>
         
-        {/* Progress indicator dots */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
           {productImages.map((_, index) => (
             <button 
@@ -173,7 +144,6 @@ const ProductCarousel: React.FC = () => {
         </div>
       </div>
 
-      {/* Thumbnails carousel */}
       <div className="relative w-full h-24 mb-4">
         <ScrollArea className="w-full h-[94px]">
           <div 
