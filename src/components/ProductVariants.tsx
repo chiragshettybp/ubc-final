@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
 const VariantOption: React.FC<{
   active: boolean;
   variant: 'one' | 'two';
@@ -53,7 +52,6 @@ const VariantOption: React.FC<{
       </div>
     </motion.div>;
 };
-
 const ProductVariants: React.FC = () => {
   const [selectedVariant, setSelectedVariant] = useState<'one' | 'two'>('two');
   return <motion.div className="w-full px-4 space-y-4" initial={{
@@ -69,14 +67,14 @@ const ProductVariants: React.FC = () => {
       <VariantOption active={selectedVariant === 'two'} variant="two" onClick={() => setSelectedVariant('two')} />
 
       <motion.div initial={{
-        opacity: 0
-      }} animate={{
-        opacity: 1
-      }} transition={{
-        delay: 0.3
-      }} className="w-full bg-purple rounded-b-lg p-3 text-white flex items-center py-[6px]">
+      opacity: 0
+    }} animate={{
+      opacity: 1
+    }} transition={{
+      delay: 0.3
+    }} className="w-full bg-purple rounded-b-lg p-3 text-white flex items-center py-[6px]">
         <div className="w-12 h-10 bg-gray-100 rounded-md mr-3 overflow-hidden">
-          <img src="/lovable-uploads/1c71e581-758e-440f-91ca-bc7b31e616b1.png" alt="Free Shipping" className="w-full h-full object-cover" />
+          <img alt="Free Shipping" className="w-full h-full object-cover" src="https://img.icons8.com/?size=100&id=61779&format=png&color=FFFFFF" />
         </div>
         <div>
           <p className="text-sm">
@@ -86,14 +84,14 @@ const ProductVariants: React.FC = () => {
       </motion.div>
 
       <motion.div className="flex items-center mt-4 ml-4 text-orange" initial={{
-        opacity: 0,
-        x: -20
-      }} animate={{
-        opacity: 1,
-        x: 0
-      }} transition={{
-        delay: 0.5
-      }}>
+      opacity: 0,
+      x: -20
+    }} animate={{
+      opacity: 1,
+      x: 0
+    }} transition={{
+      delay: 0.5
+    }}>
         <div className="w-3 h-3 rounded-full bg-orange mr-2"></div>
         <p className="text-xs">
           <span className="font-bold">FREE SHIPPING</span> 
@@ -102,5 +100,4 @@ const ProductVariants: React.FC = () => {
       </motion.div>
     </motion.div>;
 };
-
 export default ProductVariants;
