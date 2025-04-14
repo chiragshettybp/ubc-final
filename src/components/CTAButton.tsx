@@ -36,9 +36,9 @@ const CTAButton: React.FC<{
         y: [0, -8, 0, -4, 0],
         transition: { duration: 1, times: [0, 0.2, 0.4, 0.6, 1] }
       } : {}}
-      className="w-full h-16 font-bold tracking-wider text-slate-50 text-xl transition-all duration-300 ease-in-out transform active:scale-95 shadow-lg hover:shadow-xl rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500/50 bg-[#4e279a]"
+      className="w-full h-16 font-bold tracking-wider text-slate-50 text-xl transition-all duration-300 ease-in-out transform active:scale-95 shadow-lg hover:shadow-xl rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500/50 bg-[#4e279a] whitespace-nowrap overflow-hidden text-ellipsis"
     >
-      CLAIM OFFER
+      SECURE & FAST CHECKOUT
     </motion.button>
   );
 };
