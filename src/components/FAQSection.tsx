@@ -1,6 +1,7 @@
 
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import React from 'react';
+import { Accordion } from '@/components/ui/accordion';
+import FAQItem from './FAQItem';
 
 type FAQ = {
   question: string;
@@ -34,33 +35,14 @@ const faqs: FAQ[] = [
   }
 ];
 
-const FAQItem: React.FC<{ faq: FAQ }> = ({ faq }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className="border-b border-gray-200">
-      <div 
-        className="py-4 flex justify-between items-center cursor-pointer"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <h3 className="font-semibold text-black">{faq.question}</h3>
-        {isOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-      </div>
-      {isOpen && (
-        <div className="pb-4 text-gray-700 text-sm">
-          {faq.answer}
-        </div>
-      )}
-    </div>
-  );
-};
-
 const FAQSection: React.FC = () => {
   return (
     <div className="w-full px-4 mt-6">
-      {faqs.map((faq, index) => (
-        <FAQItem key={index} faq={faq} />
-      ))}
+      <Accordion type="single" collapsible className="w-full">
+        {faqs.map((faq, index) => (
+          <FAQItem key={index} faq={faq} index={index} />
+        ))}
+      </Accordion>
     </div>
   );
 };
