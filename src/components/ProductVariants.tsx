@@ -93,7 +93,7 @@ const ProductVariants: React.FC = () => {
     }}>
           <div className="w-3 h-3 rounded-full bg-orange mr-2"></div>
           <p className="text-xs">
-            <span className="font-bold">FREE SHIPPING</span> 
+            <span className="font-bold text-center">SECURE &amp; FAST CHECKOUT</span> 
             
           </p>
         </motion.div>}
