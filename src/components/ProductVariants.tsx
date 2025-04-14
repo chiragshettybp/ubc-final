@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -24,7 +23,7 @@ const VariantOption: React.FC<{
               {variant === 'one' ? (
                 <img src="/img/pack1-png.png" alt="1 pack" className="w-full h-full object-cover" />
               ) : (
-                <img src="/lovable-uploads/b8cacfc3-0509-427b-bd1b-72d4c8ee5285.png" alt="2 pack" className="w-full h-full object-contain" />
+                <img src="/lovable-uploads/ed47c60b-881f-4ffa-a74d-c3a69249261b.png" alt="2 pack" className="w-full h-full object-contain" />
               )}
             </div>
             <div>
