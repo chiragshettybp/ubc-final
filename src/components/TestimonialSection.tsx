@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Star } from 'lucide-react';
+import { Star, Quote as QuoteIcon } from 'lucide-react';
 
 interface Testimonial {
   id: number;
@@ -76,7 +77,7 @@ const TestimonialCard: React.FC<{
       </div>
       
       <div className="relative flex-1">
-        <Quote className="absolute top-0 left-0 w-6 h-6 text-purple-light opacity-50 -translate-x-2 -translate-y-1" />
+        <QuoteIcon className="absolute top-0 left-0 w-6 h-6 text-purple-light opacity-50 -translate-x-2 -translate-y-1" />
         <p className="text-sm text-gray-700 pl-2 italic">
           {testimonial.text}
         </p>
