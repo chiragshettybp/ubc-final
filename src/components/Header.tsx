@@ -1,11 +1,31 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, ShoppingBag } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const Header: React.FC = () => {
   const isMobile = useIsMobile();
+  const [minutes, setMinutes] = useState(12);
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (seconds > 0) {
+        setSeconds(seconds - 1);
+      } else if (minutes > 0) {
+        setMinutes(minutes - 1);
+        setSeconds(59);
+      } else {
+        clearInterval(timer);
+      }
+    }, 1000); // Update every second
+
+    return () => clearInterval(timer);
+  }, [minutes, seconds]);
+
+  // Format seconds to always show two digits
+  const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
   
   return (
     <div className="w-full sticky top-0 z-50 shadow-sm">
@@ -16,21 +36,16 @@ const Header: React.FC = () => {
             🏆 2024 BEST RATED HAIR REMOVAL
           </p>
           
-          {/* Day counters */}
+          {/* Countdown timer */}
           <div className="flex items-center justify-center md:justify-end space-x-2 flex-1">
-            <div className="w-[26px] h-[26px] bg-white rounded-[2px] flex flex-col items-center justify-center">
-              <p className="text-dark-purple text-[11px] font-black leading-none">1</p>
-              <p className="text-dark-purple text-[6px] font-bold leading-none">DAY</p>
-            </div>
-            
-            <div className="w-[26px] h-[26px] bg-white rounded-[2px] flex flex-col items-center justify-center">
-              <p className="text-dark-purple text-[11px] font-black leading-none">3</p>
-              <p className="text-dark-purple text-[6px] font-bold leading-none">HRS</p>
-            </div>
-            
-            <div className="w-[26px] h-[26px] bg-white rounded-[2px] flex flex-col items-center justify-center">
-              <p className="text-dark-purple text-[11px] font-black leading-none">2</p>
+            <div className="w-[45px] h-[26px] bg-white rounded-[2px] flex flex-col items-center justify-center">
+              <p className="text-dark-purple text-[11px] font-black leading-none">{minutes}</p>
               <p className="text-dark-purple text-[6px] font-bold leading-none">MIN</p>
+            </div>
+            
+            <div className="w-[45px] h-[26px] bg-white rounded-[2px] flex flex-col items-center justify-center">
+              <p className="text-dark-purple text-[11px] font-black leading-none">{formattedSeconds}</p>
+              <p className="text-dark-purple text-[6px] font-bold leading-none">SEC</p>
             </div>
           </div>
         </div>
