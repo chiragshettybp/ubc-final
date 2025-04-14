@@ -57,6 +57,8 @@ const ProductMediaSection = () => {
           opts={{
             align: "start",
             loop: true,
+            dragFree: true,
+            skipSnaps: true
           }}
           setApi={setApi}
         >
@@ -67,7 +69,7 @@ const ProductMediaSection = () => {
                   <img
                     src={slide}
                     alt={`Product view ${index + 1}`}
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
                     loading={index === 0 ? "eager" : "lazy"}
                   />
                 </div>
