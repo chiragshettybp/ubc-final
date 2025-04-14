@@ -55,7 +55,7 @@ const ProductVariants: React.FC = () => {
         <div className="w-2.5 h-2.5 rounded-full bg-orange mr-2"></div>
         <p className="text-xs text-orange">
           <span className="font-bold">FREE SHIPPING</span> <span className="font-semibold">included for the next </span>
-          <span className="font-semibold">orders!</span>
+          
         </p>
       </div>
     </div>;
