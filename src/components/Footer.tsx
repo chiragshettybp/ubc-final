@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Mail, Phone, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Footer = () => {
-  return (
-    <footer className="w-full bg-dark text-white pb-16">
+  return <footer className="w-full bg-dark text-white pb-16">
       <div className="max-w-md mx-auto px-4 pt-16">
         {/* Logo and email signup */}
         <div className="mb-10">
@@ -17,11 +14,7 @@ const Footer = () => {
           
           {/* Email signup form - simplified version */}
           <div className="flex gap-2 mt-6">
-            <input
-              type="email"
-              placeholder="Your email"
-              className="px-4 py-2 rounded-md bg-gray-700 text-white flex-1 text-sm border border-gray-600 focus:outline-none focus:border-purple"
-            />
+            <input type="email" placeholder="Your email" className="px-4 py-2 rounded-md bg-gray-700 text-white flex-1 text-sm border border-gray-600 focus:outline-none focus:border-purple" />
             <button className="bg-purple rounded-md px-4 py-2 text-sm font-semibold whitespace-nowrap">
               Subscribe
             </button>
@@ -47,8 +40,8 @@ const Footer = () => {
         <div className="mb-10">
           <h3 className="font-bold mb-4">Bleame</h3>
           <p className="opacity-75 text-sm leading-6">
-            Our mission is to make hygienic care more<br/>
-            accessible for anyone in need.<br/>
+            Our mission is to make hygienic care more<br />
+            accessible for anyone in need.<br />
             <a href="mailto:hello@bleame.com" className="flex items-center gap-2 mt-2 hover:text-purple-lighter">
               <Mail className="w-4 h-4" /> hello@bleame.com
             </a>
@@ -93,24 +86,9 @@ const Footer = () => {
           </div>
           
           {/* Social links */}
-          <div className="flex gap-4 mt-2">
-            <a href="#" className="text-gray-400 hover:text-white">
-              <Facebook className="w-5 h-5" />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <Instagram className="w-5 h-5" />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              <Youtube className="w-5 h-5" />
-            </a>
-          </div>
+          
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
