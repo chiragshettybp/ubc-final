@@ -110,3 +110,24 @@ footer .payment-icon {
 footer .payment-icon:hover {
   transform: translateY(-2px);
 }
+
+/* Product media section animations */
+.product-media-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.product-media-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-media-thumbnail {
+  transition: all 0.3s ease;
+}
+
+.product-media-thumbnail:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}

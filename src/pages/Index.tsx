@@ -11,6 +11,7 @@ import TestimonialSection from '../components/TestimonialSection';
 import ProductStatsSection from '../components/ProductStatsSection';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ProductMediaSection from '../components/ProductMediaSection';
 import { toast } from "@/components/ui/use-toast";
 
 const Index = () => {
@@ -25,7 +26,7 @@ const Index = () => {
     <div className="max-w-md mx-auto bg-white">
       <Header />
       <div className="flex flex-col items-center pt-4 pb-8">
-        {/* Removed ProductCarousel */}
+        <ProductMediaSection />
         <ProductInfo />
         <ProductVariants />
         
