@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+
 const VariantOption: React.FC<{
   active: boolean;
   variant: 'one' | 'two';
@@ -52,6 +53,7 @@ const VariantOption: React.FC<{
       </div>
     </motion.div>;
 };
+
 const ProductVariants: React.FC = () => {
   const [selectedVariant, setSelectedVariant] = useState<'one' | 'two'>('two');
   return <motion.div className="w-full px-4 space-y-4" initial={{
@@ -78,7 +80,7 @@ const ProductVariants: React.FC = () => {
         </div>
         <div>
           <p className="text-sm">
-            <span className="font-bold">+ FREE</span> Body scrub for silky & shiny skin
+            <span className="font-bold">+ FREE</span> + FREE SHIPPING included on this pack
           </p>
         </div>
       </motion.div>
@@ -100,4 +102,5 @@ const ProductVariants: React.FC = () => {
       </motion.div>
     </motion.div>;
 };
+
 export default ProductVariants;
