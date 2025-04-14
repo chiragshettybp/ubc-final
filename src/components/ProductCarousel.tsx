@@ -104,7 +104,7 @@ const ProductCarousel: React.FC = () => {
   const handleMouseLeave = () => setIsPaused(false);
 
   return (
-    <div className="w-full">
+    <div className="w-full px-[10px]"> {/* Added left and right padding of 10px */}
       {/* Main product image carousel */}
       <div 
         className="relative w-full h-[329px] mb-4 group"
