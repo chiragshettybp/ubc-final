@@ -11,6 +11,7 @@ import FAQSection from '../components/FAQSection';
 import TestimonialSection from '../components/TestimonialSection';
 import ProductStatsSection from '../components/ProductStatsSection';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { toast } from "@/components/ui/use-toast";
 
 const Index = () => {
@@ -22,9 +23,9 @@ const Index = () => {
   };
   
   return (
-    <div className="max-w-md mx-auto bg-white pb-8">
+    <div className="max-w-md mx-auto bg-white">
       <Header />
-      <div className="flex flex-col items-center pt-4">
+      <div className="flex flex-col items-center pt-4 pb-8">
         <ProductCarousel />
         <ProductInfo />
         <ProductVariants />
@@ -36,13 +37,13 @@ const Index = () => {
         <PaymentMethods />
         <OrderTimer />
         <BenefitBadges />
-        <FAQSection /> {/* Moved up in the layout */}
+        <FAQSection />
         <TestimonialSection />
         <ProductStatsSection />
       </div>
+      <Footer />
     </div>
   );
 };
 
 export default Index;
-
