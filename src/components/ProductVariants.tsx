@@ -66,13 +66,13 @@ const ProductVariants: React.FC = () => {
       <VariantOption active={selectedVariant === 'one'} variant="one" onClick={() => setSelectedVariant('one')} />
       <VariantOption active={selectedVariant === 'two'} variant="two" onClick={() => setSelectedVariant('two')} />
 
-      <motion.div className="w-full bg-purple rounded-b-lg p-3 text-white flex items-center" initial={{
+      <motion.div initial={{
       opacity: 0
     }} animate={{
       opacity: 1
     }} transition={{
       delay: 0.3
-    }}>
+    }} className="w-full bg-purple rounded-b-lg p-3 text-white flex items-center py-[6px]">
         <div className="w-12 h-10 bg-gray-100 rounded-md mr-3 overflow-hidden">
           <img src="/img/body-scrub-4-50x-png.png" alt="Body Scrub" className="w-full h-full object-cover" />
         </div>
