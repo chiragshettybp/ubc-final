@@ -2,45 +2,40 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const OrderTimer: React.FC = () => {
-  const [hours, setHours] = useState(2);
-  const [minutes, setMinutes] = useState(12);
+  const [timeDisplay, setTimeDisplay] = useState({ hours: 2, minutes: 12 });
   const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const isFirstRender = useRef(true);
+  const hoursRef = useRef(2);
+  const minutesRef = useRef(12);
 
   useEffect(() => {
-    // Skip the first render to prevent initial scroll jump
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
-    }
-
-    // Clear any existing timer
-    if (timerRef.current) {
-      clearInterval(timerRef.current);
-    }
-
-    // Set new timer
-    timerRef.current = setInterval(() => {
-      setMinutes(prev => {
-        if (prev > 0) {
-          return prev - 1;
-        } else if (hours > 0) {
-          setHours(prev => prev - 1);
-          return 59;
+    // Set up the timer only once on component mount
+    if (!timerRef.current) {
+      timerRef.current = setInterval(() => {
+        if (minutesRef.current > 0) {
+          minutesRef.current -= 1;
+        } else if (hoursRef.current > 0) {
+          hoursRef.current -= 1;
+          minutesRef.current = 59;
         } else {
           if (timerRef.current) clearInterval(timerRef.current);
-          return 0;
         }
-      });
-    }, 60000); // Update every minute
+        
+        // Update the display state only once per minute
+        setTimeDisplay({
+          hours: hoursRef.current,
+          minutes: minutesRef.current
+        });
+      }, 60000); // Update every minute
+    }
 
     // Cleanup function
     return () => {
       if (timerRef.current) {
         clearInterval(timerRef.current);
+        timerRef.current = null;
       }
     };
-  }, [hours]);
+  }, []); // Empty dependency array ensures this only runs once
 
   // Get tomorrow's date
   const tomorrow = new Date();
@@ -53,7 +48,7 @@ const OrderTimer: React.FC = () => {
       <p className="font-semibold text-dark">Want It By {formattedDate}?</p>
       <div className="flex items-center justify-center">
         <span className="font-semibold text-dark mr-2">Order Within</span>
-        <span className="font-bold text-purple">{hours} Hours {minutes} Minutes</span>
+        <span className="font-bold text-purple">{timeDisplay.hours} Hours {timeDisplay.minutes} Minutes</span>
       </div>
     </div>
   );

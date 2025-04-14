@@ -37,6 +37,7 @@ const ProductCarousel: React.FC = () => {
   const [isPaused, setIsPaused] = useState(false);
   const autoScrollIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const thumbsRef = useRef<HTMLDivElement>(null);
+  const hasScrolledThumbs = useRef(false);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStart(e.targetTouches[0].clientX);
@@ -85,16 +86,23 @@ const ProductCarousel: React.FC = () => {
     };
   }, [isPaused, activeSlide]);
 
-  // Scroll the thumbnail into view when active slide changes
+  // Scroll the thumbnail into view when active slide changes, but only once
   useEffect(() => {
-    if (thumbsRef.current) {
+    if (thumbsRef.current && !hasScrolledThumbs.current) {
       const thumbElements = thumbsRef.current.querySelectorAll('.thumb-container');
       if (thumbElements[activeSlide]) {
-        thumbElements[activeSlide].scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-          inline: 'center'
+        // Use scrollLeft instead of scrollIntoView to prevent page scrolling
+        const container = thumbsRef.current;
+        const thumb = thumbElements[activeSlide] as HTMLElement;
+        const scrollLeft = thumb.offsetLeft - (container.offsetWidth - thumb.offsetWidth) / 2;
+        
+        container.scrollTo({
+          left: scrollLeft,
+          behavior: 'smooth'
         });
+        
+        // Mark that we've scrolled at least once
+        hasScrolledThumbs.current = true;
       }
     }
   }, [activeSlide]);

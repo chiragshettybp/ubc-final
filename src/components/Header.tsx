@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Menu, ShoppingBag } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -8,21 +8,27 @@ const Header: React.FC = () => {
   const isMobile = useIsMobile();
   const [minutes, setMinutes] = useState(12);
   const [seconds, setSeconds] = useState(0);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      if (seconds > 0) {
-        setSeconds(seconds - 1);
-      } else if (minutes > 0) {
-        setMinutes(minutes - 1);
-        setSeconds(59);
-      } else {
-        clearInterval(timer);
-      }
+    timerRef.current = setInterval(() => {
+      setSeconds(prevSeconds => {
+        if (prevSeconds > 0) {
+          return prevSeconds - 1;
+        } else if (minutes > 0) {
+          setMinutes(prevMinutes => prevMinutes - 1);
+          return 59;
+        } else {
+          if (timerRef.current) clearInterval(timerRef.current);
+          return 0;
+        }
+      });
     }, 1000); // Update every second
 
-    return () => clearInterval(timer);
-  }, [minutes, seconds]);
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, []); // Empty dependency array to run only once on mount
 
   // Format seconds to always show two digits
   const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
