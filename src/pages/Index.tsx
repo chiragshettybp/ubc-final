@@ -9,6 +9,7 @@ import BenefitBadges from '../components/BenefitBadges';
 import PaymentMethods from '../components/PaymentMethods';
 import FAQSection from '../components/FAQSection';
 import TestimonialSection from '../components/TestimonialSection';
+import ToDoSection from '../components/ToDoSection';
 import Header from '../components/Header';
 import { toast } from "@/components/ui/use-toast";
 
@@ -37,6 +38,7 @@ const Index = () => {
         <BenefitBadges />
         <TestimonialSection />
         <FAQSection />
+        <ToDoSection />
       </div>
     </div>
   );
