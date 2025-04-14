@@ -1,6 +1,5 @@
 
 import React from 'react';
-import ProductCarousel from '../components/ProductCarousel';
 import ProductInfo from '../components/ProductInfo';
 import ProductVariants from '../components/ProductVariants';
 import CTAButton from '../components/CTAButton';
@@ -26,7 +25,7 @@ const Index = () => {
     <div className="max-w-md mx-auto bg-white">
       <Header />
       <div className="flex flex-col items-center pt-4 pb-8">
-        <ProductCarousel />
+        {/* Removed ProductCarousel */}
         <ProductInfo />
         <ProductVariants />
         
