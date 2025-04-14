@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -68,40 +67,22 @@ const ProductVariants: React.FC = () => {
       <VariantOption active={selectedVariant === 'one'} variant="one" onClick={() => setSelectedVariant('one')} />
       <VariantOption active={selectedVariant === 'two'} variant="two" onClick={() => setSelectedVariant('two')} />
 
-      <motion.div initial={{
-          opacity: 0
-        }} animate={{
-          opacity: 1
-        }} transition={{
-          delay: 0.3
-        }} className="w-full rounded-b-lg p-3 text-white flex items-center py-0 bg-[#4e2f97]">
-          <div className="w-12 h-10 rounded-md mr-3 overflow-hidden flex items-center justify-center bg-[#7069bc]/0">
-            <img alt="Free Shipping" className="w-6 h-6 object-contain filter invert brightness-0 saturate-100 sepia-100 hue-rotate-220" src="/lovable-uploads/310eeacf-d479-48c5-8f4b-8036a46c378f.png" />
-          </div>
-          <div>
-            <p className="text-xs">
-              <span className="font-bold">+ FREE</span> SHIPPING included on this pack
-            </p>
-          </div>
-        </motion.div>
-
-      {selectedVariant === 'two' && (
-        <motion.div className="flex items-center mt-4 ml-4 text-orange" initial={{
-          opacity: 0,
-          x: -20
-        }} animate={{
-          opacity: 1,
-          x: 0
-        }} transition={{
-          delay: 0.5
-        }}>
-          <div className="w-3 h-3 rounded-full bg-orange mr-2"></div>
-          <p className="text-xs">
-            <span className="font-bold">FREE SHIPPING</span> 
-            <span className="font-semibold"> included for the next</span>
-          </p>
-        </motion.div>
-      )}
+      {/* Shipping bar always visible */}
+      <motion.div className="flex items-center mt-4 ml-4 text-orange" initial={{
+        opacity: 0,
+        x: -20
+      }} animate={{
+        opacity: 1,
+        x: 0
+      }} transition={{
+        delay: 0.5
+      }}>
+        <div className="w-3 h-3 rounded-full bg-orange mr-2"></div>
+        <p className="text-xs">
+          <span className="font-bold">FREE SHIPPING</span> 
+          <span className="font-semibold"> included for the next</span>
+        </p>
+      </motion.div>
     </motion.div>;
 };
 
