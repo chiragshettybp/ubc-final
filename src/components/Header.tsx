@@ -3,6 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Menu, ShoppingBag } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { SideNavigation } from '../components/SideNavigation';
 
 const Header: React.FC = () => {
   const isMobile = useIsMobile();
@@ -69,10 +71,17 @@ const Header: React.FC = () => {
       {/* Navigation bar */}
       <div className="w-full bg-white py-3 relative border-b border-gray-100">
         <div className="container mx-auto flex items-center justify-between px-4">
-          {/* Menu button */}
-          <button className="hover:bg-gray-100 p-2 rounded-full transition-colors">
-            <Menu className="w-5 h-5" />
-          </button>
+          {/* Menu button with Sheet */}
+          <Sheet>
+            <SheetTrigger asChild>
+              <button className="hover:bg-gray-100 p-2 rounded-full transition-colors">
+                <Menu className="w-5 h-5" />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="left" className="p-0 w-[280px]">
+              <SideNavigation />
+            </SheetContent>
+          </Sheet>
           
           {/* Logo */}
           <Link to="/" className="absolute left-1/2 transform -translate-x-1/2">
