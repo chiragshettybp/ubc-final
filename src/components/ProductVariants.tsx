@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 const VariantOption: React.FC<{
@@ -78,7 +77,7 @@ const ProductVariants: React.FC = () => {
           <img alt="Free Shipping" className="w-8 h-8 object-contain filter invert brightness-0 saturate-100 sepia-100 hue-rotate-220" src="https://img.icons8.com/?size=100&id=61779&format=png" />
         </div>
         <div>
-          <p className="text-sm">
+          <p className="text-xs">
             <span className="font-bold">+ FREE</span> SHIPPING included on this pack
           </p>
         </div>
