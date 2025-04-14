@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ProductInfo from '../components/ProductInfo';
 import ProductVariants from '../components/ProductVariants';
@@ -12,6 +11,7 @@ import ProductStatsSection from '../components/ProductStatsSection';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProductMediaSection from '../components/ProductMediaSection';
+import ImageCarouselSection from '../components/ImageCarouselSection';
 import { toast } from "@/components/ui/use-toast";
 
 const Index = () => {
@@ -29,6 +29,7 @@ const Index = () => {
         <ProductMediaSection />
         <ProductInfo />
         <ProductVariants />
+        <ImageCarouselSection />
         
         <div className="w-full px-4 my-4">
           <CTAButton onClick={handlePurchase} />
