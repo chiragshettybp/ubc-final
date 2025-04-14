@@ -59,10 +59,7 @@ export const SideNavigation: React.FC = () => {
             <span className="text-sm">Terms of Service</span>
           </Link>
           
-          <Link to="/membership-cancelation" className="flex items-center gap-3 p-2 hover:bg-gray-100 rounded-md">
-            <UserX size={18} />
-            <span className="text-sm">Membership Cancelation</span>
-          </Link>
+          
         </div>
       </div>
       
