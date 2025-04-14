@@ -10,6 +10,7 @@ import PaymentMethods from '../components/PaymentMethods';
 import FAQSection from '../components/FAQSection';
 import TestimonialSection from '../components/TestimonialSection';
 import ToDoSection from '../components/ToDoSection';
+import ProductStatsSection from '../components/ProductStatsSection';
 import Header from '../components/Header';
 import { toast } from "@/components/ui/use-toast";
 
@@ -39,6 +40,7 @@ const Index = () => {
         <TestimonialSection />
         <FAQSection />
         <ToDoSection />
+        <ProductStatsSection />
       </div>
     </div>
   );
