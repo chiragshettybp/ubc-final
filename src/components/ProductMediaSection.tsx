@@ -9,20 +9,18 @@ const ProductMediaSection = () => {
   
   // Images for the carousel
   const slides = [
-    '/lovable-uploads/36d6952d-5240-4c75-ae4a-304950336435.png',
-    '/lovable-uploads/542d869c-4402-4621-b9fd-10843906acf1.png',
-    '/lovable-uploads/dd690b99-7177-4463-82a7-8c05197e69e4.png',
-    '/lovable-uploads/0b89deb6-862d-41f2-88c6-ae89e03b3a43.png',
-    '/lovable-uploads/cab82ea6-f1e9-411c-987a-e94e5d4edc5a.png',
+    '/lovable-uploads/8e3bd07b-b2b2-4f33-a3f9-3c00b2ead9ba.png',
+    '/lovable-uploads/310eeacf-d479-48c5-8f4b-8036a46c378f.png',
   ];
   
-  // Thumbnails for the navigation (using the same images)
+  // Thumbnails for the navigation
   const thumbnails = [
-    '/lovable-uploads/36d6952d-5240-4c75-ae4a-304950336435.png',
-    '/lovable-uploads/542d869c-4402-4621-b9fd-10843906acf1.png',
-    '/lovable-uploads/dd690b99-7177-4463-82a7-8c05197e69e4.png',
-    '/lovable-uploads/0b89deb6-862d-41f2-88c6-ae89e03b3a43.png',
-    '/lovable-uploads/cab82ea6-f1e9-411c-987a-e94e5d4edc5a.png',
+    '/lovable-uploads/8e3bd07b-b2b2-4f33-a3f9-3c00b2ead9ba.png',
+    '/lovable-uploads/310eeacf-d479-48c5-8f4b-8036a46c378f.png',
+    '/lovable-uploads/1c71e581-758e-440f-91ca-bc7b31e616b1.png',
+    '/lovable-uploads/92a6c0e9-d4a3-420f-b37d-84dddc26ccfa.png',
+    '/lovable-uploads/b8cacfc3-0509-427b-bd1b-72d4c8ee5285.png',
+    '/lovable-uploads/ed47c60b-881f-4ffa-a74d-c3a69249261b.png',
   ];
 
   useEffect(() => {
@@ -47,15 +45,15 @@ const ProductMediaSection = () => {
   }, []);
 
   const handleThumbnailClick = (index: number) => {
-    setActiveSlide(index);
+    setActiveSlide(index % 2); // Only two main slides available
   };
 
   const nextSlide = () => {
-    setActiveSlide((prev) => (prev + 1) % slides.length);
+    setActiveSlide((prev) => (prev + 1) % 2);
   };
 
   const prevSlide = () => {
-    setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setActiveSlide((prev) => (prev - 1 + 2) % 2);
   };
 
   return (
@@ -70,14 +68,14 @@ const ProductMediaSection = () => {
             {slides.map((slide, index) => (
               <div 
                 key={index}
-                className={`absolute w-full h-full transition-all duration-500 ease-in-out ${
-                  index === activeSlide ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'
+                className={`absolute w-full h-full transition-transform duration-500 ease-in-out ${
+                  index === activeSlide ? 'translate-x-0' : index < activeSlide ? '-translate-x-full' : 'translate-x-full'
                 }`}
               >
                 <img 
                   src={slide} 
-                  alt={`Crystal photo frame ${index + 1}`} 
-                  className="w-full h-full object-contain rounded-lg"
+                  alt={`Product view ${index + 1}`} 
+                  className="w-full h-full object-cover rounded-lg"
                 />
               </div>
             ))}
@@ -106,7 +104,7 @@ const ProductMediaSection = () => {
                 <button 
                   key={index}
                   className={`flex-shrink-0 w-[82px] h-[82px] rounded-md overflow-hidden transition-all duration-300 ${
-                    index === activeSlide ? 'ring-2 ring-purple-600 scale-105' : 'hover:opacity-80'
+                    index % 2 === activeSlide ? 'ring-2 ring-purple-600' : 'hover:opacity-80'
                   }`}
                   onClick={() => handleThumbnailClick(index)}
                 >
