@@ -94,16 +94,14 @@ const TestimonialSection: React.FC = () => {
           duration: 0.5
         }}>Look At How Others Are
 Loving Their Bleame</motion.h2>
-          <motion.p className="text-sm text-gray-600" initial={{
+          <motion.p initial={{
           opacity: 0
         }} animate={{
           opacity: 1
         }} transition={{
           duration: 0.5,
           delay: 0.2
-        }}>
-            Join thousands of satisfied customers who have transformed their hair removal routine
-          </motion.p>
+        }} className="text-gray-600 text-xs">Rated 4.8/5 by 1,319+ Happy Customers</motion.p>
         </div>
         
         <div className="px-4 space-y-4">
