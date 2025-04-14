@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import ProductCarousel from '../components/ProductCarousel';
 import ProductInfo from '../components/ProductInfo';
 import ProductVariants from '../components/ProductVariants';
@@ -19,6 +19,20 @@ const Index = () => {
       description: "Thank you for your purchase!",
     });
   };
+  
+  // Prevent auto scrolling when timer updates
+  useEffect(() => {
+    // Store the original scroll behavior
+    const originalStyle = window.getComputedStyle(document.documentElement).scrollBehavior;
+    
+    // Set scroll-behavior to auto to prevent smooth scrolling
+    document.documentElement.style.scrollBehavior = 'auto';
+    
+    // Cleanup function to restore original scroll behavior
+    return () => {
+      document.documentElement.style.scrollBehavior = originalStyle;
+    };
+  }, []);
   
   return (
     <div className="max-w-md mx-auto bg-white pb-8">
