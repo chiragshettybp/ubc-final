@@ -1,20 +1,19 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { 
+import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
   CarouselPrevious,
+  CarouselNext,
 } from "@/components/ui/carousel";
+import { cn } from "@/lib/utils";
 
 const ProductMediaSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
   const [activeSlide, setActiveSlide] = useState(0);
   
-  // Images for the carousel - using the new uploaded images
+  // Images for the carousel
   const slides = [
     '/lovable-uploads/b1aa5ecf-3cfe-4294-8387-94c22c29221c.png',
     '/lovable-uploads/599e321e-8ba8-42a2-b858-36251b22b2d4.png',
@@ -24,92 +23,62 @@ const ProductMediaSection = () => {
     '/lovable-uploads/734daea1-0d6b-4f48-847b-a56edc2de3e5.png',
   ];
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
-
-  const handleThumbnailClick = (index: number) => {
-    setActiveSlide(index);
-  };
-
   return (
-    <div 
-      ref={sectionRef}
-      className={`w-full max-w-md transition-opacity duration-700 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
-    >
-      <div className="productmedia-productmedia flex flex-col items-center py-6 px-4">
-        {/* Main image carousel */}
-        <div className="relative w-full h-[329px] mb-4 bg-[#f5f5f5] rounded-lg overflow-hidden">
-          {slides.map((slide, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 flex items-center justify-center transition-opacity duration-500 ease-in-out ${
-                index === activeSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
-              }`}
-            >
-              <img
-                src={slide}
-                alt={`Crystal photo frame view ${index + 1}`}
-                className="max-w-full max-h-full object-contain"
-              />
-            </div>
-          ))}
-          
-          {/* Navigation arrows */}
-          <button 
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white rounded-full p-1 shadow-md hover:bg-gray-100 transition-colors"
-            onClick={() => setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length)}
-            aria-label="Previous slide"
-          >
-            <ChevronLeft className="w-6 h-6 text-purple-600" />
-          </button>
-          <button 
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white rounded-full p-1 shadow-md hover:bg-gray-100 transition-colors"
-            onClick={() => setActiveSlide((prev) => (prev + 1) % slides.length)}
-            aria-label="Next slide"
-          >
-            <ChevronRight className="w-6 h-6 text-purple-600" />
-          </button>
-        </div>
-        
-        {/* Thumbnails navigation */}
-        <div className="w-full">
-          <div className="relative w-full overflow-x-auto scrollbar-hide">
-            <div className="flex space-x-3 py-2 px-1 justify-start">
-              {slides.map((slide, index) => (
-                <button 
-                  key={index}
-                  className={`flex-shrink-0 w-[70px] h-[70px] rounded-md overflow-hidden transition-all duration-300 ${
-                    index === activeSlide ? 'ring-2 ring-purple-600' : 'hover:opacity-80'
-                  }`}
-                  onClick={() => handleThumbnailClick(index)}
-                  aria-label={`View crystal photo frame ${index + 1}`}
-                >
-                  <img 
-                    src={slide} 
-                    alt={`Crystal photo frame thumbnail ${index + 1}`}
-                    className="w-full h-full object-cover"
+    <div className="w-full max-w-md mx-auto p-4">
+      <div className="relative">
+        {/* Main Carousel */}
+        <Carousel
+          className="w-full"
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          onSlideSelected={(api) => {
+            setActiveSlide(api?.selectedScrollSnap() || 0);
+          }}
+        >
+          <CarouselContent>
+            {slides.map((slide, index) => (
+              <CarouselItem key={index} className="basis-full">
+                <div className="relative aspect-square overflow-hidden rounded-lg bg-[#f5f5f5]">
+                  <img
+                    src={slide}
+                    alt={`Product view ${index + 1}`}
+                    className="w-full h-full object-contain"
+                    loading={index === 0 ? "eager" : "lazy"}
                   />
-                </button>
-              ))}
-            </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          
+          <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2" />
+          <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2" />
+        </Carousel>
+
+        {/* Thumbnails */}
+        <div className="mt-4">
+          <div className="flex space-x-2 overflow-x-auto pb-2 scrollbar-hide">
+            {slides.map((slide, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveSlide(index)}
+                className={cn(
+                  "flex-shrink-0 w-16 h-16 rounded-md overflow-hidden transition-all duration-200",
+                  activeSlide === index
+                    ? "ring-2 ring-purple-600"
+                    : "ring-1 ring-gray-200 hover:ring-purple-400"
+                )}
+                aria-label={`View product image ${index + 1}`}
+              >
+                <img
+                  src={slide}
+                  alt={`Thumbnail ${index + 1}`}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </button>
+            ))}
           </div>
         </div>
       </div>
