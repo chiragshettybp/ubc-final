@@ -22,7 +22,7 @@ const Index = () => {
   return (
     <div className="max-w-md mx-auto bg-white pb-8">
       <Header />
-      <div className="flex flex-col items-center mt-[67px]">
+      <div className="flex flex-col items-center pt-4">
         <ProductCarousel />
         <ProductInfo />
         <ProductVariants />
