@@ -1,28 +1,11 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Home, 
-  HelpCircle, 
-  Package, 
-  Truck, 
-  ShieldCheck, 
-  FileText, 
-  UserX, 
-  Mail, 
-  Phone 
-} from 'lucide-react';
-
+import { Home, HelpCircle, Package, Truck, ShieldCheck, FileText, UserX, Mail, Phone } from 'lucide-react';
 export const SideNavigation: React.FC = () => {
-  return (
-    <div className="h-full flex flex-col bg-white">
+  return <div className="h-full flex flex-col bg-white">
       {/* Header */}
       <div className="p-4 border-b flex items-center">
-        <img 
-          src="/img/bleame-logo.svg" 
-          alt="Bleame Logo" 
-          className="h-8 object-contain"
-        />
+        <img src="/img/bleame-logo.svg" alt="Bleame Logo" className="h-8 object-contain" />
       </div>
       
       {/* Navigation Links */}
@@ -90,11 +73,7 @@ export const SideNavigation: React.FC = () => {
           <Mail size={16} />
           <span>hello@bleame.com</span>
         </a>
-        <a href="tel:815-857-8366" className="flex items-center gap-2 p-2 text-sm hover:text-purple-600">
-          <Phone size={16} />
-          <span>815-857-8366</span>
-        </a>
+        
       </div>
-    </div>
-  );
+    </div>;
 };
