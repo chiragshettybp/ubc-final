@@ -36,8 +36,8 @@ const Index = () => {
         <PaymentMethods />
         <OrderTimer />
         <BenefitBadges />
+        <FAQSection /> {/* Moved up in the layout */}
         <TestimonialSection />
-        <FAQSection />
         <ProductStatsSection />
       </div>
     </div>
@@ -45,3 +45,4 @@ const Index = () => {
 };
 
 export default Index;
+
