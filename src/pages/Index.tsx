@@ -8,6 +8,7 @@ import OrderTimer from '../components/OrderTimer';
 import BenefitBadges from '../components/BenefitBadges';
 import PaymentMethods from '../components/PaymentMethods';
 import FAQSection from '../components/FAQSection';
+import Header from '../components/Header';
 import { toast } from "@/components/ui/use-toast";
 
 const Index = () => {
@@ -20,7 +21,8 @@ const Index = () => {
   
   return (
     <div className="max-w-md mx-auto bg-white pb-8">
-      <div className="flex flex-col items-center">
+      <Header />
+      <div className="flex flex-col items-center mt-[67px]">
         <ProductCarousel />
         <ProductInfo />
         <ProductVariants />

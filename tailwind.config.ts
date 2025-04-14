@@ -56,12 +56,16 @@ export default {
 				purple: {
 					DEFAULT: '#7069BC',
 					light: '#D6D2FF',
-					lighter: '#F4F3FF'
+					lighter: '#F4F3FF',
+					dark: '#4A209A'
 				},
 				orange: {
 					DEFAULT: '#FD8935'
 				},
-				dark: '#2E2A39'
+				dark: {
+					DEFAULT: '#2E2A39',
+					purple: '#2A2552'
+				}
 			},
 			fontFamily: {
 				inter: ['Inter', 'sans-serif']
