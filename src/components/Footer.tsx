@@ -13,12 +13,7 @@ const Footer = () => {
           </p>
           
           {/* Email signup form - simplified version */}
-          <div className="flex gap-2 mt-6">
-            <input type="email" placeholder="Your email" className="px-4 py-2 rounded-md bg-gray-700 text-white flex-1 text-sm border border-gray-600 focus:outline-none focus:border-purple" />
-            <button className="bg-purple rounded-md px-4 py-2 text-sm font-semibold whitespace-nowrap">
-              Subscribe
-            </button>
-          </div>
+          
         </div>
         
         {/* Help Links */}
