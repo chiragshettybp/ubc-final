@@ -7,20 +7,24 @@ const ProductMediaSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [activeSlide, setActiveSlide] = useState(0);
   
-  // Images for the carousel
+  // Images for the carousel - using the new uploaded images
   const slides = [
-    '/lovable-uploads/8e3bd07b-b2b2-4f33-a3f9-3c00b2ead9ba.png',
-    '/lovable-uploads/310eeacf-d479-48c5-8f4b-8036a46c378f.png',
+    '/lovable-uploads/b1aa5ecf-3cfe-4294-8387-94c22c29221c.png',
+    '/lovable-uploads/599e321e-8ba8-42a2-b858-36251b22b2d4.png',
+    '/lovable-uploads/5736a961-c5e2-4e1d-b443-c4eefebe8cf9.png',
+    '/lovable-uploads/1df08acc-d876-460d-9ab7-391e702e41b7.png',
+    '/lovable-uploads/bb74d79c-a2ec-4491-adb1-3bbeb38ded8a.png',
+    '/lovable-uploads/734daea1-0d6b-4f48-847b-a56edc2de3e5.png',
   ];
   
-  // Thumbnails for the navigation
+  // Using all images as thumbnails
   const thumbnails = [
-    '/lovable-uploads/8e3bd07b-b2b2-4f33-a3f9-3c00b2ead9ba.png',
-    '/lovable-uploads/310eeacf-d479-48c5-8f4b-8036a46c378f.png',
-    '/lovable-uploads/1c71e581-758e-440f-91ca-bc7b31e616b1.png',
-    '/lovable-uploads/92a6c0e9-d4a3-420f-b37d-84dddc26ccfa.png',
-    '/lovable-uploads/b8cacfc3-0509-427b-bd1b-72d4c8ee5285.png',
-    '/lovable-uploads/ed47c60b-881f-4ffa-a74d-c3a69249261b.png',
+    '/lovable-uploads/b1aa5ecf-3cfe-4294-8387-94c22c29221c.png',
+    '/lovable-uploads/599e321e-8ba8-42a2-b858-36251b22b2d4.png',
+    '/lovable-uploads/5736a961-c5e2-4e1d-b443-c4eefebe8cf9.png',
+    '/lovable-uploads/1df08acc-d876-460d-9ab7-391e702e41b7.png',
+    '/lovable-uploads/bb74d79c-a2ec-4491-adb1-3bbeb38ded8a.png',
+    '/lovable-uploads/734daea1-0d6b-4f48-847b-a56edc2de3e5.png',
   ];
 
   useEffect(() => {
@@ -45,15 +49,15 @@ const ProductMediaSection = () => {
   }, []);
 
   const handleThumbnailClick = (index: number) => {
-    setActiveSlide(index % 2); // Only two main slides available
+    setActiveSlide(index);
   };
 
   const nextSlide = () => {
-    setActiveSlide((prev) => (prev + 1) % 2);
+    setActiveSlide((prev) => (prev + 1) % slides.length);
   };
 
   const prevSlide = () => {
-    setActiveSlide((prev) => (prev - 1 + 2) % 2);
+    setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
   return (
@@ -69,13 +73,14 @@ const ProductMediaSection = () => {
               <div 
                 key={index}
                 className={`absolute w-full h-full transition-transform duration-500 ease-in-out ${
-                  index === activeSlide ? 'translate-x-0' : index < activeSlide ? '-translate-x-full' : 'translate-x-full'
+                  index === activeSlide ? 'translate-x-0 opacity-100' : 
+                  index < activeSlide ? '-translate-x-full opacity-0' : 'translate-x-full opacity-0'
                 }`}
               >
                 <img 
                   src={slide} 
-                  alt={`Product view ${index + 1}`} 
-                  className="w-full h-full object-cover rounded-lg"
+                  alt={`Crystal photo frame view ${index + 1}`} 
+                  className="w-full h-full object-contain rounded-lg"
                 />
               </div>
             ))}
@@ -85,12 +90,14 @@ const ProductMediaSection = () => {
           <button 
             className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-1 shadow-md hover:bg-gray-100 transition-colors"
             onClick={prevSlide}
+            aria-label="Previous slide"
           >
             <ChevronLeft className="w-6 h-6 text-purple-600" />
           </button>
           <button 
             className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white rounded-full p-1 shadow-md hover:bg-gray-100 transition-colors"
             onClick={nextSlide}
+            aria-label="Next slide"
           >
             <ChevronRight className="w-6 h-6 text-purple-600" />
           </button>
@@ -104,13 +111,14 @@ const ProductMediaSection = () => {
                 <button 
                   key={index}
                   className={`flex-shrink-0 w-[82px] h-[82px] rounded-md overflow-hidden transition-all duration-300 ${
-                    index % 2 === activeSlide ? 'ring-2 ring-purple-600' : 'hover:opacity-80'
+                    index === activeSlide ? 'ring-2 ring-purple-600' : 'hover:opacity-80'
                   }`}
                   onClick={() => handleThumbnailClick(index)}
+                  aria-label={`View crystal photo frame ${index + 1}`}
                 >
                   <img 
                     src={thumb} 
-                    alt={`Thumbnail ${index + 1}`}
+                    alt={`Crystal photo frame thumbnail ${index + 1}`}
                     className="w-full h-full object-cover"
                   />
                 </button>
