@@ -1,17 +1,18 @@
 
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useState, useCallback } from 'react';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 
 const ProductMediaSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [api, setApi] = useState<CarouselApi>();
   
   // Images for the carousel
   const slides = [
@@ -23,6 +24,30 @@ const ProductMediaSection = () => {
     '/lovable-uploads/734daea1-0d6b-4f48-847b-a56edc2de3e5.png',
   ];
 
+  // Use useCallback to avoid recreating function on each render
+  const handleThumbnailClick = useCallback((index: number) => {
+    if (api) {
+      api.scrollTo(index);
+    }
+  }, [api]);
+
+  // Set up effect to update active slide when the carousel changes
+  React.useEffect(() => {
+    if (!api) return;
+    
+    const onSelect = () => {
+      setActiveSlide(api.selectedScrollSnap());
+    };
+    
+    api.on('select', onSelect);
+    // Call once to set initial state
+    onSelect();
+    
+    return () => {
+      api.off('select', onSelect);
+    };
+  }, [api]);
+
   return (
     <div className="w-full max-w-md mx-auto p-4">
       <div className="relative">
@@ -33,9 +58,7 @@ const ProductMediaSection = () => {
             align: "start",
             loop: true,
           }}
-          onSlideSelected={(api) => {
-            setActiveSlide(api?.selectedScrollSnap() || 0);
-          }}
+          setApi={setApi}
         >
           <CarouselContent>
             {slides.map((slide, index) => (
@@ -62,7 +85,7 @@ const ProductMediaSection = () => {
             {slides.map((slide, index) => (
               <button
                 key={index}
-                onClick={() => setActiveSlide(index)}
+                onClick={() => handleThumbnailClick(index)}
                 className={cn(
                   "flex-shrink-0 w-16 h-16 rounded-md overflow-hidden transition-all duration-200",
                   activeSlide === index
