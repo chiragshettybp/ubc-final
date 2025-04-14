@@ -20,31 +20,19 @@ const Footer = () => {
         <div className="mb-10">
           <h3 className="font-bold mb-4">Need Help?</h3>
           <ul className="opacity-75 text-sm space-y-3">
-            <li><Link to="/" className="hover:text-purple-lighter">How to Use</Link></li>
-            <li><Link to="/" className="hover:text-purple-lighter">Help Center</Link></li>
+            
+            
             <li><Link to="/" className="hover:text-purple-lighter">Track Your Order</Link></li>
             <li><Link to="/" className="hover:text-purple-lighter">Shipping & Delivery</Link></li>
             <li><Link to="/" className="hover:text-purple-lighter">Return & Refund Policy</Link></li>
             <li><Link to="/" className="hover:text-purple-lighter">Privacy Policy</Link></li>
             <li><Link to="/" className="hover:text-purple-lighter">Terms of Service</Link></li>
-            <li><Link to="/" className="hover:text-purple-lighter">Membership Cancelation</Link></li>
+            
           </ul>
         </div>
         
         {/* Company Info */}
-        <div className="mb-10">
-          <h3 className="font-bold mb-4">Bleame</h3>
-          <p className="opacity-75 text-sm leading-6">
-            Our mission is to make hygienic care more<br />
-            accessible for anyone in need.<br />
-            <a href="mailto:hello@bleame.com" className="flex items-center gap-2 mt-2 hover:text-purple-lighter">
-              <Mail className="w-4 h-4" /> hello@bleame.com
-            </a>
-            <a href="tel:815-857-8366" className="flex items-center gap-2 mt-2 hover:text-purple-lighter">
-              <Phone className="w-4 h-4" /> 815-857-8366
-            </a>
-          </p>
-        </div>
+        
         
         {/* Legal Disclaimer */}
         <div className="border-t border-gray-800 pt-6 mb-8">
