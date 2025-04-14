@@ -68,8 +68,7 @@ const ProductVariants: React.FC = () => {
       <VariantOption active={selectedVariant === 'one'} variant="one" onClick={() => setSelectedVariant('one')} />
       <VariantOption active={selectedVariant === 'two'} variant="two" onClick={() => setSelectedVariant('two')} />
 
-      {selectedVariant === 'two' && (
-        <motion.div initial={{
+      <motion.div initial={{
           opacity: 0
         }} animate={{
           opacity: 1
@@ -85,7 +84,6 @@ const ProductVariants: React.FC = () => {
             </p>
           </div>
         </motion.div>
-      )}
 
       {selectedVariant === 'two' && (
         <motion.div className="flex items-center mt-4 ml-4 text-orange" initial={{
