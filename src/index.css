@@ -49,6 +49,8 @@
   height: 100%;
   background-size: cover;
   background-position: center;
+  transform: scale(1);
+  transition: transform 0.5s ease-in-out;
 }
 
 .thumb-slide {
@@ -57,6 +59,7 @@
   border-radius: 4px;
   background-size: cover;
   background-position: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .gradient-right {
@@ -66,4 +69,24 @@
 .product-cta-button {
   background: linear-gradient(178deg, rgba(112, 105, 188, 1) 0%, rgba(112, 105, 188, 1) 10%, rgba(0, 0, 0, 0.07) 10%, rgba(0, 0, 0, 0.07) 100%);
   border-radius: 10px;
+}
+
+/* Animation for product slide */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(1.05); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.product-slide {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Custom scrollbar for thumbnails */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
