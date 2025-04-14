@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+
 const VariantOption: React.FC<{
   active: boolean;
   variant: 'one' | 'two';
@@ -51,6 +52,7 @@ const VariantOption: React.FC<{
       </div>
     </motion.div>;
 };
+
 const ProductVariants: React.FC = () => {
   const [selectedVariant, setSelectedVariant] = useState<'one' | 'two'>('two');
   return <motion.div className="w-full px-4 space-y-4" initial={{
@@ -82,7 +84,7 @@ const ProductVariants: React.FC = () => {
           </div>
         </motion.div>
 
-      {selectedVariant === 'two' && <motion.div className="flex items-center mt-4 ml-4 text-orange" initial={{
+      {selectedVariant === 'two' && <motion.div className="flex items-center justify-center w-full mt-4 text-orange" initial={{
       opacity: 0,
       x: -20
     }} animate={{
@@ -94,9 +96,9 @@ const ProductVariants: React.FC = () => {
           <div className="w-3 h-3 rounded-full bg-orange mr-2"></div>
           <p className="text-xs">
             <span className="font-bold text-center">SECURE &amp; FAST CHECKOUT</span> 
-            
           </p>
         </motion.div>}
     </motion.div>;
 };
+
 export default ProductVariants;
