@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -21,7 +20,7 @@ const VariantOption: React.FC<{
       whileTap={{ scale: 0.98 }}
     >
       <div className="flex items-center">
-        <div className={`w-4 h-4 rounded-full mr-4 border-2 transition-all duration-300 
+        <div className={`w-4 h-4 rounded-full mr-4 transition-all duration-300 
           ${active 
             ? 'bg-purple border-purple' 
             : 'bg-white border-gray-300 group-hover:border-purple/50'}`} 
@@ -49,25 +48,27 @@ const VariantOption: React.FC<{
             </div>
           </div>
         </div>
-        <div className="text-right">
-          <p className="font-bold text-purple text-base">
-            {variant === 'one' ? '$29' : '$49'}
-          </p>
+        <div className="text-right flex flex-col items-end">
+          <div className="flex items-center space-x-2">
+            <p className="font-bold text-purple text-base">
+              {variant === 'one' ? '$29' : '$49'}
+            </p>
+            <motion.div 
+              className={`py-1 px-2 rounded-full text-xs font-bold transition-all duration-300
+                ${active 
+                  ? 'bg-purple text-white scale-100' 
+                  : 'bg-purple-light text-dark scale-90 opacity-70'}`}
+              initial={{ scale: 0.9, opacity: 0.7 }}
+              animate={{ scale: active ? 1 : 0.9, opacity: active ? 1 : 0.7 }}
+            >
+              SAVE {variant === 'one' ? '$18' : '$45'}
+            </motion.div>
+          </div>
           <p className="text-xs text-gray-500 line-through">
             {variant === 'one' ? '$47' : '$94'}
           </p>
         </div>
       </div>
-      <motion.div 
-        className={`absolute top-4 right-4 py-1 px-2 rounded-full text-xs font-bold transition-all duration-300
-          ${active 
-            ? 'bg-purple text-white scale-100' 
-            : 'bg-purple-light text-dark scale-90 opacity-70'}`}
-        initial={{ scale: 0.9, opacity: 0.7 }}
-        animate={{ scale: active ? 1 : 0.9, opacity: active ? 1 : 0.7 }}
-      >
-        SAVE {variant === 'one' ? '$18' : '$45'}
-      </motion.div>
     </motion.div>
   );
 };
@@ -130,4 +131,3 @@ const ProductVariants: React.FC = () => {
 };
 
 export default ProductVariants;
-
