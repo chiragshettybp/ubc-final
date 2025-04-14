@@ -17,17 +17,17 @@ const images = [
   '/img/image.png'
 ];
 
-// Sample placeholder images for this demo
-const placeholderImages = [
-  'https://placehold.co/329x329/f5f5f5/7069BC?text=Bleame+1',
-  'https://placehold.co/329x329/f5f5f5/7069BC?text=Bleame+2',
-  'https://placehold.co/329x329/f5f5f5/7069BC?text=Bleame+3',
-  'https://placehold.co/329x329/f5f5f5/7069BC?text=Bleame+4',
-  'https://placehold.co/329x329/f5f5f5/7069BC?text=Bleame+5',
-  'https://placehold.co/329x329/f5f5f5/7069BC?text=Bleame+6',
-  'https://placehold.co/329x329/f5f5f5/7069BC?text=Bleame+7',
-  'https://placehold.co/329x329/f5f5f5/7069BC?text=Bleame+8',
-  'https://placehold.co/329x329/f5f5f5/7069BC?text=Bleame+9'
+// Real product images for the carousel
+const productImages = [
+  'https://images.unsplash.com/photo-1630173314503-544080c717dc?q=80&w=987&auto=format&fit=crop', // Crystal hair eraser product
+  'https://images.unsplash.com/photo-1576511916051-8b54ed6afefa?q=80&w=987&auto=format&fit=crop', // Woman using beauty product
+  'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?q=80&w=935&auto=format&fit=crop', // Beauty product closeup
+  'https://images.unsplash.com/photo-1592136957897-b2b6ca21e10d?q=80&w=987&auto=format&fit=crop', // Woman smiling with product
+  'https://images.unsplash.com/photo-1656331048123-b9c8506d1a5d?q=80&w=987&auto=format&fit=crop', // Product packaging
+  'https://images.unsplash.com/photo-1620917669809-1af0497965a1?q=80&w=987&auto=format&fit=crop', // Beauty product flat lay
+  'https://images.unsplash.com/photo-1598662957563-ee4965d4d72c?q=80&w=1015&auto=format&fit=crop', // Legs beauty treatment
+  'https://images.unsplash.com/photo-1571875257727-256c39da42af?q=80&w=987&auto=format&fit=crop', // Woman with smooth skin
+  'https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=987&auto=format&fit=crop'  // Woman touching face
 ];
 
 const ProductCarousel: React.FC = () => {
@@ -64,11 +64,11 @@ const ProductCarousel: React.FC = () => {
   };
 
   const goToNextSlide = () => {
-    setActiveSlide(prev => (prev === placeholderImages.length - 1 ? 0 : prev + 1));
+    setActiveSlide(prev => (prev === productImages.length - 1 ? 0 : prev + 1));
   };
 
   const goToPrevSlide = () => {
-    setActiveSlide(prev => (prev === 0 ? placeholderImages.length - 1 : prev - 1));
+    setActiveSlide(prev => (prev === 0 ? productImages.length - 1 : prev - 1));
   };
 
   // Auto-scroll functionality
@@ -115,7 +115,7 @@ const ProductCarousel: React.FC = () => {
     <div className="w-full px-[10px]"> {/* Added left and right padding of 10px */}
       {/* Main product image carousel */}
       <div 
-        className="relative w-full h-[329px] mb-4 group"
+        className="relative w-full h-[329px] mb-4 group bg-gradient-to-b from-purple-50 to-white rounded-lg"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -125,7 +125,7 @@ const ProductCarousel: React.FC = () => {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          {placeholderImages.map((image, index) => (
+          {productImages.map((image, index) => (
             <div 
               key={index}
               className={cn(
@@ -158,7 +158,7 @@ const ProductCarousel: React.FC = () => {
         
         {/* Progress indicator dots */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-          {placeholderImages.map((_, index) => (
+          {productImages.map((_, index) => (
             <button 
               key={index}
               className={cn(
@@ -180,7 +180,7 @@ const ProductCarousel: React.FC = () => {
             ref={thumbsRef}
             className="w-full pb-2 flex gap-3 px-4"
           >
-            {placeholderImages.map((image, index) => (
+            {productImages.map((image, index) => (
               <div 
                 key={index}
                 className={cn(
