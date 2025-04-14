@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote as QuoteIcon } from 'lucide-react';
@@ -73,7 +72,12 @@ const TestimonialCard: React.FC<{
       </div>
       
       <div className="flex mb-3">
-        {[...Array(5)].map((_, i) => <Star key={i} className={`w-3.5 h-3.5 ${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} />)}
+        {[...Array(5)].map((_, i) => (
+          <Star 
+            key={i} 
+            className={`w-4 h-4 ${i < 5 ? 'text-purple fill-purple' : 'text-gray-300'}`} 
+          />
+        ))}
       </div>
       
       <div className="relative flex-1">
