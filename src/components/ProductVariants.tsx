@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -22,7 +21,7 @@ const VariantOption: React.FC<{
           <div className="flex items-center">
             <div className="w-10 h-10 bg-gray-100 rounded-md mr-3 overflow-hidden">
               {variant === 'one' ? (
-                <img src="/lovable-uploads/8e3bd07b-b2b2-4f33-a3f9-3c00b2ead9ba.png" alt="1 pack" className="w-full h-full object-contain" />
+                <img src="/lovable-uploads/92a6c0e9-d4a3-420f-b37d-84dddc26ccfa.png" alt="1 pack" className="w-full h-full object-contain" />
               ) : (
                 <img src="/lovable-uploads/ed47c60b-881f-4ffa-a74d-c3a69249261b.png" alt="2 pack" className="w-full h-full object-contain" />
               )}
