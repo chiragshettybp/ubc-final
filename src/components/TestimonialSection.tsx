@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Star, Quote } from 'lucide-react';
+import { Star } from 'lucide-react';
+
 interface Testimonial {
   id: number;
   name: string;
@@ -10,6 +11,7 @@ interface Testimonial {
   image: string;
   verified: boolean;
 }
+
 const testimonials: Testimonial[] = [{
   id: 1,
   name: "Sarah K.",
@@ -35,6 +37,7 @@ const testimonials: Testimonial[] = [{
   image: "/img/placeholder.svg",
   verified: true
 }];
+
 const TestimonialCard: React.FC<{
   testimonial: Testimonial;
   index: number;
@@ -80,6 +83,7 @@ const TestimonialCard: React.FC<{
       </div>
     </motion.div>;
 };
+
 const TestimonialSection: React.FC = () => {
   return <section className="w-full bg-purple-lighter/50 py-8">
       <div className="max-w-md mx-auto">
@@ -94,14 +98,22 @@ const TestimonialSection: React.FC = () => {
           duration: 0.5
         }}>Look At How Others Are
 Loving Their Bleame</motion.h2>
-          <motion.p initial={{
-          opacity: 0
-        }} animate={{
-          opacity: 1
-        }} transition={{
-          duration: 0.5,
-          delay: 0.2
-        }} className="text-gray-600 text-xs">Rated 4.8/5 by 1,319+ Happy Customers</motion.p>
+          <motion.p 
+            initial={{
+              opacity: 0
+            }} 
+            animate={{
+              opacity: 1
+            }} 
+            transition={{
+              duration: 0.5,
+              delay: 0.2
+            }} 
+            className="text-gray-600 text-xs flex items-center justify-center gap-1"
+          >
+            <Star size={14} className="text-yellow-400" />
+            Rated 4.8/5 by 1,319+ Happy Customers
+          </motion.p>
         </div>
         
         <div className="px-4 space-y-4">
@@ -126,4 +138,5 @@ Loving Their Bleame</motion.h2>
       </div>
     </section>;
 };
+
 export default TestimonialSection;
