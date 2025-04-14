@@ -74,7 +74,7 @@ const ProductVariants: React.FC = () => {
       delay: 0.3
     }} className="w-full bg-purple rounded-b-lg p-3 text-white flex items-center py-0">
         <div className="w-12 h-10 bg-purple rounded-md mr-3 overflow-hidden flex items-center justify-center">
-          <img alt="Free Shipping" className="w-8 h-8 object-contain filter invert brightness-0 saturate-100 sepia-100 hue-rotate-220" src="https://img.icons8.com/?size=100&id=61779&format=png" />
+          <img alt="Free Shipping" className="w-8 h-8 object-contain filter invert brightness-0 saturate-100 sepia-100 hue-rotate-220" src="/lovable-uploads/310eeacf-d479-48c5-8f4b-8036a46c378f.png" />
         </div>
         <div>
           <p className="text-xs">
