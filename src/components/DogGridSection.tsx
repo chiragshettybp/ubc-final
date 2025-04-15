@@ -36,7 +36,7 @@ const DogGridSection: React.FC = () => {
       }} transition={{
         duration: 0.5
       }}>
-          <h2 className="text-xl font-bold text-dark mb-2">Real Results, Real Confidence</h2>
+          <h2 className="text-xl font-bold text-dark mb-2">Showcase Cherished Memories</h2>
           <p className="text-sm text-gray-600">See how our digital picture frame helps dog lovers cherish and display their most precious memories with stunning clarity and ease.</p>
         </motion.div>
         
