@@ -12,7 +12,7 @@ import ProductStatsSection from '../components/ProductStatsSection';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProductMediaSection from '../components/ProductMediaSection';
-// Removed import for AnimatedPromoSection
+import ImageCarousel from '../components/ImageCarousel';
 import { toast } from "@/components/ui/use-toast";
 
 const Index = () => {
@@ -35,7 +35,11 @@ const Index = () => {
           <CTAButton onClick={handlePurchase} />
         </div>
         
-        {/* Removed AnimatedPromoSection */}
+        <div className="w-full px-4 my-6">
+          <h2 className="text-lg font-semibold text-center mb-4">Product Gallery</h2>
+          <ImageCarousel className="shadow-xl rounded-2xl" />
+        </div>
+        
         <PaymentMethods />
         <OrderTimer />
         <BenefitBadges />
