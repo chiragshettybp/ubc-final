@@ -1,12 +1,9 @@
-
 import React from 'react';
 import { Star } from 'lucide-react';
-
 const RatingStars = () => <div className="flex items-center">
     {[1, 2, 3, 4, 5].map(star => <Star key={star} className={`w-4 h-4 ${star <= 4 ? 'text-yellow-400 fill-yellow-400' : 'text-yellow-400'}`} />)}
     <span className="ml-2 text-sm text-dark">Excellent 4.8 | 1319 reviews</span>
   </div>;
-
 const ProductInfo: React.FC = () => {
   return <div className="w-full px-4">
       <div className="mb-3">
@@ -30,14 +27,13 @@ const ProductInfo: React.FC = () => {
       </p>
       
       <div className="space-y-3 mb-6">
-        <p className="text-dark">👙 Ultimate Bikini Area Solution</p>
-        <p className="text-dark">🍑 Luxuriously Smooth Skin, Instantly</p>
-        <p className="text-dark">🌸 Permanently Prevent Ingrown Hairs</p>
-        <p className="text-dark">🍓 Banish Strawberry Legs Forever</p>
-        <p className="text-dark">✨ 100% Pain-Free & Dermatologist-Approved</p>
-        <p className="text-dark">😌 Gentle Exfoliation for Radiant Skin</p>
+        <p className="text-dark">💖 The Perfect Gift for Loved Ones</p>
+        <p className="text-dark">📸 Display Both Photos &amp; Videos in HD</p>
+        <p className="text-dark">🔋 Rechargeable with Built-in Battery</p>
+        <p className="text-dark">💾 4GB Built-in Storage Space</p>
+        <p className="text-dark">🔌 Type-C USB + Multiple Plug Options</p>
+        <p className="text-dark">🛡️ Strong Acrylic Frame Protection</p>
       </div>
     </div>;
 };
-
 export default ProductInfo;
