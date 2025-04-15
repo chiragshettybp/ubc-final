@@ -94,10 +94,7 @@ const TestimonialSection: React.FC = () => {
         duration: 0.5
       }}>
           <h2 className="text-xl font-bold text-dark mb-2">Showcase Cherished Memories</h2>
-          <p className="text-sm text-gray-600">
-            Thousands of users have transformed their hair removal experience with Bleame.
-            See how our innovative crystal technology is changing lives.
-          </p>
+          <p className="text-sm text-gray-600">Enjoy vivid 1080p and 2K displays to bring your favorite photos and videos to life in stunning detail.</p>
         </motion.div>
         
         <div className="text-center mb-6 px-6">
