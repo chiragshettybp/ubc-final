@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback } from 'react';
 import {
   Carousel,
@@ -50,11 +49,6 @@ const ProductMediaSection = () => {
 
   return (
     <div className="w-full max-w-md mx-auto p-4">
-      {/* Elfsight external carousel */}
-      <div className="mb-8">
-        <div className="elfsight-app-08dd6ee0-186d-4b9d-8917-b2228033e4a6" data-elfsight-app-lazy></div>
-      </div>
-      
       <div className="relative">
         {/* Main Carousel */}
         <Carousel
