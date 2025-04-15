@@ -29,7 +29,7 @@ const ProductStatsSection: React.FC = () => {
         transition={{ duration: 0.5 }}
       >
         <h2 className="text-3xl font-bold text-dark-purple mb-8">
-          The Future Is Hair-<br />Free! 💜
+          REMEMBERFRAME® — Replay What Matters Most 💜
         </h2>
         
         {statItems.map((item, index) => (
@@ -71,3 +71,4 @@ const ProductStatsSection: React.FC = () => {
 };
 
 export default ProductStatsSection;
+
