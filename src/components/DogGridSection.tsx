@@ -27,6 +27,16 @@ const DogGridSection: React.FC = () => {
   return (
     <section className="w-full bg-white py-8">
       <div className="max-w-md mx-auto px-4">
+        <motion.div
+          className="text-center mb-6 px-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-xl font-bold text-dark mb-2">Real Results, Real Confidence</h2>
+          <p className="text-sm text-gray-600">See how our digital picture frame helps dog lovers cherish and display their most precious memories with stunning clarity and ease.</p>
+        </motion.div>
+        
         <motion.h2 
           className="text-xl font-bold text-center text-orange mb-6"
           initial={{ opacity: 0, y: -10 }}
@@ -120,3 +130,4 @@ const DogGridSection: React.FC = () => {
 };
 
 export default DogGridSection;
+
