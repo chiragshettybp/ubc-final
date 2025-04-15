@@ -12,6 +12,7 @@ import ProductStatsSection from '../components/ProductStatsSection';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProductMediaSection from '../components/ProductMediaSection';
+import AnimatedPromoSection from '../components/AnimatedPromoSection';
 import { toast } from "@/components/ui/use-toast";
 
 const Index = () => {
@@ -34,6 +35,7 @@ const Index = () => {
           <CTAButton onClick={handlePurchase} />
         </div>
         
+        <AnimatedPromoSection />
         <PaymentMethods />
         <OrderTimer />
         <BenefitBadges />
