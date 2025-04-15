@@ -21,10 +21,8 @@ const ProductInfo: React.FC = () => {
 
       <div className="border-t border-gray-200 my-4"></div>
       
-      <p className="font-semibold text-dark mb-5">
-        Say goodbye to painful waxing and razor cuts. 
-        Achieve flawless, smooth skin effortlessly with Bleame!
-      </p>
+      <p className="font-semibold text-dark mb-5">Cherish Your Favorite Memories
+Seamlessly replay cherished videos and photos on a stylish digital frame.</p>
       
       <div className="space-y-3 mb-6">
         <p className="text-dark">💖 The Perfect Gift for Loved Ones</p>
