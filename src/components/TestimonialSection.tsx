@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote as QuoteIcon } from 'lucide-react';
-
 interface Testimonial {
   id: number;
   name: string;
@@ -12,7 +10,6 @@ interface Testimonial {
   image: string;
   verified: boolean;
 }
-
 const testimonials: Testimonial[] = [{
   id: 1,
   name: "Sarah K.",
@@ -38,7 +35,6 @@ const testimonials: Testimonial[] = [{
   image: "/img/placeholder.svg",
   verified: true
 }];
-
 const TestimonialCard: React.FC<{
   testimonial: Testimonial;
   index: number;
@@ -73,12 +69,7 @@ const TestimonialCard: React.FC<{
       </div>
       
       <div className="flex mb-3">
-        {[...Array(5)].map((_, i) => (
-          <Star 
-            key={i} 
-            className={`w-4 h-4 ${i < 5 ? 'text-purple fill-purple' : 'text-gray-300'}`} 
-          />
-        ))}
+        {[...Array(5)].map((_, i) => <Star key={i} className={`w-4 h-4 ${i < 5 ? 'text-purple fill-purple' : 'text-gray-300'}`} />)}
       </div>
       
       <div className="relative flex-1">
@@ -89,18 +80,20 @@ const TestimonialCard: React.FC<{
       </div>
     </motion.div>;
 };
-
 const TestimonialSection: React.FC = () => {
   return <section className="w-full bg-purple-lighter/50 py-8">
       <div className="max-w-md mx-auto">
         {/* New section added here */}
-        <motion.div 
-          className="text-center mb-6 px-6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-xl font-bold text-dark mb-2">Real Results, Real Confidence</h2>
+        <motion.div className="text-center mb-6 px-6" initial={{
+        opacity: 0,
+        y: 20
+      }} animate={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.5
+      }}>
+          <h2 className="text-xl font-bold text-dark mb-2">Showcase Cherished Memories</h2>
           <p className="text-sm text-gray-600">
             Thousands of users have transformed their hair removal experience with Bleame.
             See how our innovative crystal technology is changing lives.
@@ -118,19 +111,14 @@ const TestimonialSection: React.FC = () => {
           duration: 0.5
         }}>Look At How Others Are
 Loving Their Bleame</motion.h2>
-          <motion.p 
-            initial={{
-              opacity: 0
-            }} 
-            animate={{
-              opacity: 1
-            }} 
-            transition={{
-              duration: 0.5,
-              delay: 0.2
-            }} 
-            className="text-gray-600 text-xs flex items-center justify-center gap-1"
-          >
+          <motion.p initial={{
+          opacity: 0
+        }} animate={{
+          opacity: 1
+        }} transition={{
+          duration: 0.5,
+          delay: 0.2
+        }} className="text-gray-600 text-xs flex items-center justify-center gap-1">
             <Star size={14} className="text-yellow-400" />
             Rated 4.8/5 by 1,319+ Happy Customers
           </motion.p>
@@ -158,6 +146,4 @@ Loving Their Bleame</motion.h2>
       </div>
     </section>;
 };
-
 export default TestimonialSection;
-
