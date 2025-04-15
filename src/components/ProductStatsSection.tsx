@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
@@ -8,7 +7,7 @@ const ProductStatsSection: React.FC = () => {
   const statItems = [
     {
       percent: "95%",
-      description: "said it was their favorite gift to give"
+      description: "said it added emotional value to their home"
     },
     {
       percent: "94%",
@@ -71,4 +70,3 @@ const ProductStatsSection: React.FC = () => {
 };
 
 export default ProductStatsSection;
-
