@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ProductInfo from '../components/ProductInfo';
 import ProductVariants from '../components/ProductVariants';
@@ -12,6 +13,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProductMediaSection from '../components/ProductMediaSection';
 import GifSection from '../components/GifSection';
+import DogGridSection from '../components/DogGridSection';
 import { toast } from "@/components/ui/use-toast";
 
 const Index = () => {
@@ -39,6 +41,7 @@ const Index = () => {
         <BenefitBadges />
         <FAQSection />
         <GifSection />
+        <DogGridSection />
         <TestimonialSection />
         <ProductStatsSection />
       </div>
