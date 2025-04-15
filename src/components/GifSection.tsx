@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 const GifSection: React.FC = () => {
-  return <section className="w-full py-8 bg-white">
+  return <section className="w-full bg-white py-0">
       <div className="max-w-md mx-auto">
         <motion.div className="text-center mb-6 px-6" initial={{
         opacity: 0,
