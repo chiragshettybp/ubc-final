@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ProductInfo from '../components/ProductInfo';
 import ProductVariants from '../components/ProductVariants';
@@ -14,17 +13,14 @@ import Footer from '../components/Footer';
 import ProductMediaSection from '../components/ProductMediaSection';
 import ImageCarousel from '../components/ImageCarousel';
 import { toast } from "@/components/ui/use-toast";
-
 const Index = () => {
   const handlePurchase = () => {
     toast({
       title: "Your order is being processed",
-      description: "Thank you for your purchase!",
+      description: "Thank you for your purchase!"
     });
   };
-  
-  return (
-    <div className="max-w-md mx-auto bg-white">
+  return <div className="max-w-md mx-auto bg-white">
       <Header />
       <div className="flex flex-col items-center pt-4 pb-8">
         <ProductMediaSection />
@@ -35,10 +31,7 @@ const Index = () => {
           <CTAButton onClick={handlePurchase} />
         </div>
         
-        <div className="w-full px-4 my-6">
-          <h2 className="text-lg font-semibold text-center mb-4">Product Gallery</h2>
-          <ImageCarousel className="shadow-xl rounded-2xl" />
-        </div>
+        
         
         <PaymentMethods />
         <OrderTimer />
@@ -48,8 +41,6 @@ const Index = () => {
         <ProductStatsSection />
       </div>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
