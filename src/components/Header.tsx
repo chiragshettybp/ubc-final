@@ -1,17 +1,14 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, ShoppingBag } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { SideNavigation } from '../components/SideNavigation';
-
 const Header: React.FC = () => {
   const isMobile = useIsMobile();
   const [minutes, setMinutes] = useState(12);
   const [seconds, setSeconds] = useState(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
-
   useEffect(() => {
     timerRef.current = setInterval(() => {
       setSeconds(prevSeconds => {
@@ -34,15 +31,11 @@ const Header: React.FC = () => {
 
   // Format seconds to always show two digits
   const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
-  
-  return (
-    <div className="w-full sticky top-0 z-50 shadow-sm">
+  return <div className="w-full sticky top-0 z-50 shadow-sm">
       {/* Top purple banner */}
       <div className="w-full bg-purple-dark py-2 px-3 md:px-6 relative overflow-hidden">
         <div className="container mx-auto flex flex-wrap justify-between items-center">
-          <p className="text-white text-xs md:text-sm font-bold text-center flex-1 md:flex-none">
-            🏆 2024 BEST RATED HAIR REMOVAL
-          </p>
+          <p className="text-white text-xs md:text-sm font-bold text-center flex-1 md:flex-none">🏆 2025 BEST RATED PRODUCT</p>
           
           {/* Countdown timer */}
           <div className="flex items-center justify-center md:justify-end space-x-2 flex-1">
@@ -85,11 +78,7 @@ const Header: React.FC = () => {
           
           {/* Logo */}
           <Link to="/" className="absolute left-1/2 transform -translate-x-1/2">
-            <img 
-              src="/img/bleame-logo.svg" 
-              alt="Bleame Logo" 
-              className="h-6 md:h-7 object-contain"
-            />
+            <img src="/img/bleame-logo.svg" alt="Bleame Logo" className="h-6 md:h-7 object-contain" />
           </Link>
           
           {/* Cart button */}
@@ -104,8 +93,6 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Header;
