@@ -14,7 +14,7 @@ const ProductMediaSection = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [api, setApi] = useState<CarouselApi>();
   
-  // Images for the carousel
+  // Images for the carousel with direct URLs
   const slides = [
     '/lovable-uploads/b1aa5ecf-3cfe-4294-8387-94c22c29221c.png',
     '/lovable-uploads/599e321e-8ba8-42a2-b858-36251b22b2d4.png',
@@ -50,6 +50,11 @@ const ProductMediaSection = () => {
 
   return (
     <div className="w-full max-w-md mx-auto p-4">
+      {/* Elfsight external carousel */}
+      <div className="mb-8">
+        <div className="elfsight-app-08dd6ee0-186d-4b9d-8917-b2228033e4a6" data-elfsight-app-lazy></div>
+      </div>
+      
       <div className="relative">
         {/* Main Carousel */}
         <Carousel
@@ -71,6 +76,11 @@ const ProductMediaSection = () => {
                     alt={`Product view ${index + 1}`}
                     className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
                     loading={index === 0 ? "eager" : "lazy"}
+                    onError={(e) => {
+                      console.error(`Error loading image ${slide}`);
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = '/placeholder.svg';
+                    }}
                   />
                 </div>
               </CarouselItem>
@@ -101,6 +111,10 @@ const ProductMediaSection = () => {
                   alt={`Thumbnail ${index + 1}`}
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = '/placeholder.svg';
+                  }}
                 />
               </button>
             ))}

@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import ProductInfo from '../components/ProductInfo';
 import ProductVariants from '../components/ProductVariants';
 import CTAButton from '../components/CTAButton';
@@ -15,6 +15,21 @@ import ProductMediaSection from '../components/ProductMediaSection';
 import { toast } from "@/components/ui/use-toast";
 
 const Index = () => {
+  // Load Elfsight script
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "https://static.elfsight.com/platform/platform.js";
+    script.async = true;
+    document.head.appendChild(script);
+    
+    return () => {
+      // Clean up
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
+    };
+  }, []);
+  
   const handlePurchase = () => {
     toast({
       title: "Your order is being processed",
