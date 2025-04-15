@@ -8,7 +8,7 @@ const ProductStatsSection: React.FC = () => {
   const statItems = [
     {
       percent: "95%",
-      description: "Said the appearance of their strawberry legs improved"
+      description: "said it was their favorite gift to give"
     },
     {
       percent: "94%",
