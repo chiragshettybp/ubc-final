@@ -28,36 +28,6 @@ const ProductMediaSection = () => {
       api.off('select', onSelect);
     };
   }, [api]);
-  return <div className="w-full max-w-md mx-auto p-4">
-      <div className="relative">
-        {/* Main Carousel */}
-        <Carousel className="w-full" opts={{
-        align: "start",
-        loop: true,
-        dragFree: true,
-        skipSnaps: true
-      }} setApi={setApi}>
-          <CarouselContent>
-            {slides.map((slide, index) => <CarouselItem key={index} className="basis-full">
-                <div className="relative aspect-square overflow-hidden rounded-lg bg-[#f5f5f5]">
-                  <img src={slide} alt={`Product view ${index + 1}`} className="w-full h-full object-contain transition-transform duration-300 hover:scale-105" loading={index === 0 ? "eager" : "lazy"} onError={e => {
-                console.error(`Error loading image ${slide}`);
-                e.currentTarget.onerror = null;
-                e.currentTarget.src = '/placeholder.svg';
-              }} />
-                </div>
-              </CarouselItem>)}
-          </CarouselContent>
-          
-          <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2" />
-          <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2" />
-        </Carousel>
-
-        {/* Thumbnails */}
-        <div className="mt-4">
-          
-        </div>
-      </div>
-    </div>;
+  return;
 };
 export default ProductMediaSection;
