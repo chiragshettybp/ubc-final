@@ -10,24 +10,28 @@ type FAQ = {
 
 const faqs: FAQ[] = [
   {
-    question: "Where can I use Bleame?",
-    answer: "Bleame can be used on all body parts including armpits, legs, face and bikini area. It's designed to be gentle on all skin types."
+    question: "What screen size and resolution does the RememberFrame have?",
+    answer: "The RememberFrame features a 5-inch HD LCD screen with a crisp 2K resolution, housed in an elegant 6.5-inch acrylic display. This provides vibrant and clear photo and video playback."
   },
   {
-    question: "How does it work?",
-    answer: "Bleame uses micro-crystal technology to gently remove hair by creating friction against the skin. Just rub in circular motions on dry skin for effective hair removal."
+    question: "How much storage does the RememberFrame offer?",
+    answer: "The device comes with 4GB of built-in storage, giving you plenty of space to store your favorite videos and pictures. This allows you to keep cherished memories right at your fingertips."
   },
   {
-    question: "Does the friction cause darkness?",
-    answer: "No, Bleame is designed to be gentle on skin and doesn't cause darkening. In fact, it helps exfoliate dead skin cells which can improve skin appearance."
+    question: "What type of battery does it have?",
+    answer: "The RememberFrame is equipped with a 1000mAh rechargeable lithium battery, providing excellent wireless use. This means you can enjoy your memories without being constantly tethered to a power outlet."
   },
   {
-    question: "Shipping & Delivery",
-    answer: "We offer free shipping from the US. Standard delivery takes 2-5 business days. All orders are processed within 24 hours."
+    question: "How do I charge the RememberFrame?",
+    answer: "Charging is simple and fast with the included Type-C USB cable and charger. Just plug it in, and you'll be ready to relive your memories in no time."
   },
   {
-    question: "Return & Refund Policy",
-    answer: "We offer a 30-day satisfaction guarantee. If you're not completely satisfied, you can return your Bleame for a full refund or replacement."
+    question: "What file types can I display?",
+    answer: "The RememberFrame supports JPEG images and most common video formats. This versatility ensures you can easily upload and display a wide variety of your favorite memories."
+  },
+  {
+    question: "What makes the RememberFrame special?",
+    answer: "With its 5-inch HD 2K screen, 6.5-inch modern acrylic frame, 4GB storage, long-lasting battery, and easy Type-C charging, the RememberFrame is designed to beautifully and conveniently showcase your most treasured moments."
   }
 ];
 
@@ -44,3 +48,4 @@ const FAQSection: React.FC = () => {
 };
 
 export default FAQSection;
+
