@@ -8,10 +8,10 @@ const ProductInfo: React.FC = () => {
   return <div className="w-full px-4">
       <div className="mb-3">
         <RatingStars />
-        <h1 className="text-2xl font-bold text-dark mt-2">Bleame Crystal Hair Eraser</h1>
+        <h1 className="text-2xl font-bold text-dark mt-2">Remember Frame™</h1>
       </div>
       
-      <p className="text-sm font-bold text-dark mb-3">🏆 2024's Revolutionary Hair Removal Solution</p>
+      <p className="text-sm font-bold text-dark mb-3">🏆 2025's Cutest Digital Frame for Cherished Moments</p>
       
       <div className="flex items-center mb-6">
         <span className="text-gray-500 line-through text-lg mr-2">$94</span>
