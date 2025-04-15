@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const AnimatedPromoSection = () => {
@@ -55,16 +54,7 @@ const AnimatedPromoSection = () => {
         }
 
         .popsicle:after {
-          content: '$ 59.99';
-          display: block;
-          position: absolute;
-          transform: rotateZ(-5deg);
-          font-size: 80px;
-          bottom: 10%;
-          right: 50%;
-          animation: fadeIn-popsicle-after .5s var(--acc-bounce) 1 forwards;
-          animation-delay: calc(var(--base-delay) + var(--variable-delay) * 5);
-          opacity: 0;
+          content: '';  // Remove price text
         }
 
         .promo-button {
@@ -88,7 +78,7 @@ const AnimatedPromoSection = () => {
         }
 
         .promo-button:after {
-          content: '40% OFF + FREE DELIVERY!';
+          content: '';  // Remove free delivery text
           display: block;
           position: relative;
           padding: 13px 34px;
