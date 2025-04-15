@@ -84,18 +84,7 @@ const TestimonialSection: React.FC = () => {
   return <section className="w-full bg-purple-lighter/50 py-8">
       <div className="max-w-md mx-auto">
         {/* New section added here */}
-        <motion.div className="text-center mb-6 px-6" initial={{
-        opacity: 0,
-        y: 20
-      }} animate={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 0.5
-      }}>
-          <h2 className="text-xl font-bold text-dark mb-2">Showcase Cherished Memories</h2>
-          <p className="text-sm text-gray-600">Enjoy vivid 1080p and 2K displays to bring your favorite photos and videos to life in stunning detail.</p>
-        </motion.div>
+        
         
         <div className="text-center mb-6 px-6">
           <motion.h2 className="text-xl font-bold text-dark mb-2" initial={{
