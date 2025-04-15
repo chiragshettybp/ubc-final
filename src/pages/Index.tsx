@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ProductInfo from '../components/ProductInfo';
 import ProductVariants from '../components/ProductVariants';
@@ -23,7 +22,8 @@ const Index = () => {
     });
   };
 
-  return <div className="max-w-md mx-auto bg-white">
+  return (
+    <div className="max-w-md mx-auto bg-white">
       <Header />
       <div className="flex flex-col items-center pt-4 pb-8">
         <ProductMediaSection />
@@ -38,12 +38,13 @@ const Index = () => {
         <OrderTimer />
         <BenefitBadges />
         <FAQSection />
-        <TestimonialSection />
         <GifSection />
+        <TestimonialSection />
         <ProductStatsSection />
       </div>
       <Footer />
-    </div>;
+    </div>
+  );
 };
 
 export default Index;
