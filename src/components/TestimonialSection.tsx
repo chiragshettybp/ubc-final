@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote as QuoteIcon } from 'lucide-react';
+
 interface Testimonial {
   id: number;
   name: string;
@@ -10,12 +11,13 @@ interface Testimonial {
   image: string;
   verified: boolean;
 }
+
 const testimonials: Testimonial[] = [{
   id: 1,
   name: "Sarah K.",
   location: "New York, USA",
   rating: 5,
-  text: "I've struggled with ingrown hairs for years until I found Bleame. It's gentle on my sensitive skin but still effective. Now I can wear shorts without feeling self-conscious!",
+  text: "I gifted this to my mom and she cried happy tears watching our old videos play. So special!",
   image: "/lovable-uploads/8e3bd07b-b2b2-4f33-a3f9-3c00b2ead9ba.png",
   verified: true
 }, {
@@ -35,6 +37,7 @@ const testimonials: Testimonial[] = [{
   image: "/img/placeholder.svg",
   verified: true
 }];
+
 const TestimonialCard: React.FC<{
   testimonial: Testimonial;
   index: number;
@@ -80,12 +83,10 @@ const TestimonialCard: React.FC<{
       </div>
     </motion.div>;
 };
+
 const TestimonialSection: React.FC = () => {
   return <section className="w-full bg-purple-lighter/50 py-8">
       <div className="max-w-md mx-auto">
-        {/* New section added here */}
-        
-        
         <div className="text-center mb-6 px-6">
           <motion.h2 className="text-xl font-bold text-dark mb-2" initial={{
           opacity: 0,
@@ -132,4 +133,5 @@ Loving Their Bleame</motion.h2>
       </div>
     </section>;
 };
+
 export default TestimonialSection;
