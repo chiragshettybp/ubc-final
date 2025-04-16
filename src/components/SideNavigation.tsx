@@ -68,10 +68,7 @@ export const SideNavigation: React.FC = () => {
           <Mail size={16} />
           <span>rememberframe@gmail.com</span>
         </a>
-        <a href="tel:815-857-8366" className="flex items-center gap-2 p-2 text-sm hover:text-purple-600">
-          <Phone size={16} />
-          <span>815-857-8366</span>
-        </a>
+        
       </div>
     </div>;
 };
