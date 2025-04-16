@@ -26,7 +26,7 @@ const ProductStatsSection: React.FC = () => {
     }} transition={{
       duration: 0.5
     }}>
-        <h2 className="text-3xl font-bold text-dark-purple mb-8">REMEMBERFRAME® Replay What Matters Most 💜</h2>
+        <h2 className="text-3xl font-bold text-dark-purple mb-8">REMEMBERFRAME® Replay What Matters Most 🩷</h2>
         
         {statItems.map((item, index) => <div key={index} className="flex items-center mb-5 pb-5 border-b border-gray-200 last:border-b-0">
             <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-full bg-[FF0B55] bg-[#ff0b55]/[0.11]">
