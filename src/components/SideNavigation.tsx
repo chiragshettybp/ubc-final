@@ -4,8 +4,8 @@ import { Home, HelpCircle, Package, Truck, ShieldCheck, FileText, UserX, Mail, P
 export const SideNavigation: React.FC = () => {
   return <div className="h-full flex flex-col bg-white">
       {/* Header */}
-      <div className="p-4 border-b flex items-center bg-[#FF0B55]/10">
-        <img src="/img/bleame-logo.svg" alt="Bleame Logo" className="h-8 object-contain" />
+      <div className="p-4 border-b flex items-center bg-slate-50">
+        
       </div>
       
       {/* Navigation Links */}
