@@ -1,25 +1,30 @@
-
 import React from 'react';
 import { Star, Monitor, Battery, Usb, Image, FileText } from 'lucide-react';
-
 const RatingStars = () => <div className="flex items-center">
     {[1, 2, 3, 4, 5].map(star => <Star key={star} className={`w-4 h-4 ${star <= 4 ? 'text-yellow-400 fill-yellow-400' : 'text-yellow-400'}`} />)}
     <span className="ml-2 text-sm text-dark">Excellent 4.8 | 1319 reviews</span>
   </div>;
-
 const ProductInfo: React.FC = () => {
-  const specifications = [
-    { icon: <Monitor size={20} className="text-purple" />, text: "5-inch HD 2K Quality Screen" },
-    { icon: <FileText size={20} className="text-purple" />, text: "6.5-inch Modern Acrylic Frame" },
-    { icon: <Image size={20} className="text-purple" />, text: "Supports JPEG & Video Files" },
-    { icon: <Battery size={20} className="text-purple" />, text: "1000mAh Rechargeable Battery" },
-    { icon: <Usb size={20} className="text-purple" />, text: "Type-C USB Cable + Charger" }
-  ];
-
+  const specifications = [{
+    icon: <Monitor size={20} className="text-purple" />,
+    text: "5-inch HD 2K Quality Screen"
+  }, {
+    icon: <FileText size={20} className="text-purple" />,
+    text: "6.5-inch Modern Acrylic Frame"
+  }, {
+    icon: <Image size={20} className="text-purple" />,
+    text: "Supports JPEG & Video Files"
+  }, {
+    icon: <Battery size={20} className="text-purple" />,
+    text: "1000mAh Rechargeable Battery"
+  }, {
+    icon: <Usb size={20} className="text-purple" />,
+    text: "Type-C USB Cable + Charger"
+  }];
   return <div className="w-full px-4">
       <div className="mb-3">
         <RatingStars />
-        <h1 className="text-2xl font-bold text-dark mt-2">Remember Frame™</h1>
+        <h1 className="text-2xl font-bold text-dark mt-2">REMEMBERFRAME®</h1>
       </div>
       
       <p className="text-sm font-bold text-dark mb-3">🏆 2025's Cutest Digital Frame for Cherished Moments</p>
@@ -36,15 +41,11 @@ const ProductInfo: React.FC = () => {
 Seamlessly replay cherished videos and photos on a stylish digital frame.</p>
       
       <div className="space-y-3 mb-6">
-        {specifications.map((spec, index) => (
-          <div key={index} className="flex items-center space-x-3">
+        {specifications.map((spec, index) => <div key={index} className="flex items-center space-x-3">
             {spec.icon}
             <p className="text-dark">{spec.text}</p>
-          </div>
-        ))}
+          </div>)}
       </div>
     </div>;
 };
-
 export default ProductInfo;
-
