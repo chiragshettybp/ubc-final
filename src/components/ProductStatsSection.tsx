@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
@@ -18,6 +19,10 @@ const ProductStatsSection: React.FC = () => {
       description: "Saw an improvement in the look of skin firmness"
     }
   ];
+
+  const handleButtonClick = () => {
+    window.open('https://www.paypal.com/ncp/payment/AWQDP2YASKJAY', '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <section className="w-full bg-white py-12 px-4">
@@ -50,9 +55,16 @@ const ProductStatsSection: React.FC = () => {
           more information refer to each product page.
         </p>
         
-        <Button className="w-44 h-12 bg-purple hover:bg-purple-dark text-white font-bold rounded-lg mb-8">
-          Claim Offer
-        </Button>
+        <button 
+          onClick={handleButtonClick}
+          className="w-44 h-12 bg-purple hover:bg-purple-dark text-white font-bold rounded-lg mb-8 relative overflow-hidden"
+        >
+          {/* Shining effect overlay */}
+          <span className="absolute inset-0 overflow-hidden">
+            <span className="absolute inset-0 w-1/4 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-[shine_3s_infinite]" />
+          </span>
+          <span className="relative z-10">Claim Offer</span>
+        </button>
         
         <div className="flex items-center mt-4">
           <div className="flex mr-1">
