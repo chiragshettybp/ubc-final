@@ -43,12 +43,15 @@ const CTAButton: React.FC<{
           times: [0, 0.2, 0.4, 0.6, 1]
         }
       } : {}} 
-      className="w-full h-16 font-bold tracking-wider text-slate-50 text-xl transition-all duration-300 ease-in-out transform active:scale-95 shadow-lg hover:shadow-xl rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500/50 bg-[#4e279a] whitespace-nowrap overflow-hidden text-ellipsis"
+      className="w-full h-16 font-bold tracking-wider text-slate-50 text-xl transition-all duration-300 ease-in-out transform active:scale-95 shadow-lg hover:shadow-xl rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500/50 bg-[#4e279a] whitespace-nowrap overflow-hidden text-ellipsis relative"
     >
+      {/* Shining effect overlay */}
+      <span className="absolute inset-0 overflow-hidden">
+        <span className="absolute inset-0 w-1/4 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-[shine_3s_infinite]" />
+      </span>
       CLAIM OFFER
     </motion.button>
   );
 };
 
 export default CTAButton;
-
