@@ -1,132 +1,37 @@
+
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Star, Quote as QuoteIcon } from 'lucide-react';
-interface Testimonial {
-  id: number;
-  name: string;
-  location: string;
-  rating: number;
-  text: string;
-  image: string;
-  verified: boolean;
-}
-const testimonials: Testimonial[] = [{
-  id: 1,
-  name: "Maria S.",
-  location: "New York, USA",
-  rating: 5,
-  text: "Best gift ever. My boyfriend couldn't stop smiling totally worth it",
-  image: "/lovable-uploads/9d9f43cd-945c-4cf8-a3a1-f711494390d2.png",
-  verified: true
-}, {
-  id: 2,
-  name: "Sofia R.",
-  location: "California, USA",
-  rating: 5,
-  text: "I gifted this to my mom and she cried happy tears watching our old videos play. So special!",
-  image: "/lovable-uploads/0b2d2384-45de-457f-b15e-c9788faf1422.png",
-  verified: true
-}, {
-  id: 3,
-  name: "Emma L.",
-  location: "Texas, USA",
-  rating: 4,
-  text: "Honestly, everyone asks where I got this! Unique, emotional, and just perfect.",
-  image: "/lovable-uploads/8bdd08f8-f1a6-4ddf-a8be-9eb0b5a5689b.png",
-  verified: true
-}];
-const TestimonialCard: React.FC<{
-  testimonial: Testimonial;
-  index: number;
-}> = ({
-  testimonial,
-  index
-}) => {
-  return <motion.div className="bg-white rounded-lg p-5 shadow-md border border-gray-100 flex flex-col h-full" initial={{
-    opacity: 0,
-    y: 20
-  }} animate={{
-    opacity: 1,
-    y: 0
-  }} transition={{
-    duration: 0.5,
-    delay: index * 0.2
-  }} whileHover={{
-    y: -5,
-    boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)"
-  }}>
-      <div className="flex items-center mb-4">
-        <div className="w-12 h-12 rounded-full overflow-hidden mr-3">
-          <img src={testimonial.image} alt={testimonial.name} className="w-full h-full object-cover" />
+import { Star } from 'lucide-react';
+
+const TestimonialSection = () => {
+  return (
+    <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[1, 2, 3].map((_, index) => (
+            <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-md">
+              <div className="flex mb-3">
+                {[1, 2, 3, 4, 5].map((starIndex) => (
+                  <Star 
+                    key={starIndex} 
+                    color="#FF0B55" 
+                    fill="#FF0B55" 
+                    size={24} 
+                    className="mr-1"
+                  />
+                ))}
+              </div>
+              <p className="text-gray-600 italic">"Amazing product that exceeded my expectations!"</p>
+              <div className="mt-4">
+                <h3 className="font-semibold">Jane Doe</h3>
+                <p className="text-sm text-gray-500">Verified Customer</p>
+              </div>
+            </div>
+          ))}
         </div>
-        <div>
-          <h4 className="font-bold text-dark text-sm">{testimonial.name}</h4>
-          <p className="text-xs text-gray-500">{testimonial.location}</p>
-        </div>
-        {testimonial.verified && <div className="ml-auto bg-purple-lighter px-2 py-1 rounded-full flex items-center">
-            <span className="font-bold text-[FF0B55] text-[#ff0c56]">✓ Verified Buyer</span>
-          </div>}
       </div>
-      
-      <div className="flex mb-3">
-        {[...Array(5)].map((_, i) => <Star key={i} className={`w-4 h-4 ${i < 5 ? 'text-purple fill-purple' : 'text-gray-300'}`} />)}
-      </div>
-      
-      <div className="relative flex-1">
-        <QuoteIcon className="absolute top-0 left-0 w-6 h-6 text-purple-light opacity-50 -translate-x-2 -translate-y-1" />
-        <p className="text-sm text-gray-700 pl-2 italic">
-          {testimonial.text}
-        </p>
-      </div>
-    </motion.div>;
+    </section>
+  );
 };
-const TestimonialSection: React.FC = () => {
-  return <section className="w-full bg-purple-lighter/50 py-8">
-      <div className="max-w-md mx-auto">
-        <div className="text-center mb-6 px-6">
-          <motion.h2 className="text-xl font-bold text-dark mb-2" initial={{
-          opacity: 0,
-          y: -10
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.5
-        }}>Look At How Others Are
-Loving Their Bleame</motion.h2>
-          <motion.p initial={{
-          opacity: 0
-        }} animate={{
-          opacity: 1
-        }} transition={{
-          duration: 0.5,
-          delay: 0.2
-        }} className="text-gray-600 text-xs flex items-center justify-center gap-1">
-            <Star size={14} className="text-yellow-400" />
-            Rated 4.8/5 by 1,319+ Happy Customers
-          </motion.p>
-        </div>
-        
-        <div className="px-4 space-y-4">
-          {testimonials.map((testimonial, index) => <TestimonialCard key={testimonial.id} testimonial={testimonial} index={index} />)}
-        </div>
-        
-        <motion.div className="flex justify-center mt-6" initial={{
-        opacity: 0
-      }} animate={{
-        opacity: 1
-      }} transition={{
-        duration: 0.5,
-        delay: 0.8
-      }}>
-          <button className="text-purple font-semibold text-sm flex items-center px-4 py-2 border border-purple rounded-full hover:bg-purple hover:text-white transition-colors">
-            See all reviews
-            <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-            </svg>
-          </button>
-        </motion.div>
-      </div>
-    </section>;
-};
+
 export default TestimonialSection;
