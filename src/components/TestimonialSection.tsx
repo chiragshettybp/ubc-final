@@ -64,7 +64,7 @@ const TestimonialCard: React.FC<{
           <p className="text-xs text-gray-500">{testimonial.location}</p>
         </div>
         {testimonial.verified && <div className="ml-auto bg-purple-lighter px-2 py-1 rounded-full flex items-center">
-            <span className="font-bold text-[FF0B55] text-[#ff0c56]">✓ Verified Buyer</span>
+            <span className="font-bold text-[#ff0c56] text-sm">✓ Verified Buyer</span>
           </div>}
       </div>
       
