@@ -1,7 +1,6 @@
 import React from 'react';
 import { Mail, Phone, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Footer = () => {
   return <footer className="w-full bg-dark text-white pb-16">
       <div className="max-w-md mx-auto px-4 pt-16">
@@ -61,11 +60,7 @@ const Footer = () => {
           {/* Payment methods */}
           <p className="text-xs opacity-75 mb-3">We accept</p>
           <div className="grid grid-cols-4 gap-2 mb-6 items-center">
-            <img 
-              src="/lovable-uploads/10cdf540-7087-4a4e-bbcd-13528bb6a15d.png"
-              alt="Payment methods: Visa, Mastercard, American Express, and PayPal"
-              className="col-span-4 w-3/4 mx-auto h-auto"
-            />
+            <img src="/lovable-uploads/10cdf540-7087-4a4e-bbcd-13528bb6a15d.png" alt="Payment methods: Visa, Mastercard, American Express, and PayPal" className="col-span-4 w-2/4 mx-auto h-auto" />
           </div>
           
           {/* Social links */}
@@ -87,5 +82,4 @@ const Footer = () => {
       </div>
     </footer>;
 };
-
 export default Footer;
