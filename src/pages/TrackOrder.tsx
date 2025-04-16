@@ -35,12 +35,12 @@ const TrackOrder = () => {
       <div className="flex flex-col items-center pt-4 pb-8 px-4">
         <div className="w-full max-w-md mx-auto py-8">
           <div className="flex items-center justify-center mb-6">
-            <Truck size={32} className="text-purple-600 mr-2" />
+            <Truck size={32} className="text-[#FF0B55] mr-2" />
             <h1 className="text-2xl font-bold">Track Your Order</h1>
           </div>
           
-          <div className="bg-purple-50 p-4 rounded-lg mb-6">
-            <p className="text-sm text-center">
+          <div className="bg-[#FF0B55]/10 p-4 rounded-lg mb-6">
+            <p className="text-sm text-center text-gray-700">
               Enter your order details below to check the current status of your purchase.
             </p>
           </div>
@@ -56,7 +56,7 @@ const TrackOrder = () => {
                 value={orderId}
                 onChange={(e) => setOrderId(e.target.value)}
                 placeholder="e.g., BLM12345"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF0B55]/50"
               />
             </div>
             
@@ -70,13 +70,13 @@ const TrackOrder = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="The email you used to order"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF0B55]/50"
               />
             </div>
             
             <button
               type="submit"
-              className="w-full bg-purple-600 text-white py-3 rounded-md font-medium hover:bg-purple-700 transition-colors"
+              className="w-full bg-[#FF0B55] text-white py-3 rounded-md font-medium hover:bg-[#FF0B55]/90 transition-colors"
             >
               Track Order
             </button>
@@ -84,7 +84,7 @@ const TrackOrder = () => {
           
           <div className="mt-8 border-t pt-6">
             <h2 className="text-lg font-medium mb-4 flex items-center">
-              <Package size={20} className="mr-2" />
+              <Package size={20} className="mr-2 text-[#FF0B55]" />
               Have Questions?
             </h2>
             <p className="text-sm text-gray-600 mb-4">
@@ -93,12 +93,12 @@ const TrackOrder = () => {
             </p>
             <ul className="text-sm space-y-2">
               <li>
-                <a href="mailto:hello@bleame.com" className="text-purple-600 hover:underline">
+                <a href="mailto:hello@bleame.com" className="text-[#FF0B55] hover:underline">
                   hello@bleame.com
                 </a>
               </li>
               <li>
-                <a href="tel:815-857-8366" className="text-purple-600 hover:underline">
+                <a href="tel:815-857-8366" className="text-[#FF0B55] hover:underline">
                   815-857-8366
                 </a>
               </li>
