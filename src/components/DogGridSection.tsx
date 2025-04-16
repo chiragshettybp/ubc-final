@@ -36,7 +36,7 @@ const DogGridSection: React.FC = () => {
       }} transition={{
         duration: 0.5
       }}>
-          <h2 className="text-xl font-bold text-dark mb-2">Showcase Cherished Memories</h2>
+          <h2 className="font-bold text-dark mb-2 text-2xl">Showcase Cherished Memories</h2>
           <p className="text-sm text-gray-600">Enjoy vivid 1080p and 2K displays to bring your favorite photos and videos to life in stunning detail.</p>
         </motion.div>
         
