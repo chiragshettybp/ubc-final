@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
 const VariantOption: React.FC<{
   active: boolean;
   variant: 'one' | 'two';
@@ -20,11 +19,7 @@ const VariantOption: React.FC<{
         <div className="flex-1">
           <div className="flex items-center">
             <div className="w-10 h-10 bg-gray-100 rounded-md mr-3 overflow-hidden">
-              {variant === 'one' ? (
-                <img src="/lovable-uploads/ed47c60b-881f-4ffa-a74d-c3a69249261b.png" alt="1 pack" className="w-full h-full object-contain" />
-              ) : (
-                <img src="/lovable-uploads/92a6c0e9-d4a3-420f-b37d-84dddc26ccfa.png" alt="2 pack" className="w-full h-full object-contain" />
-              )}
+              {variant === 'one' ? <img src="/lovable-uploads/ed47c60b-881f-4ffa-a74d-c3a69249261b.png" alt="1 pack" className="w-full h-full object-contain" /> : <img src="/lovable-uploads/92a6c0e9-d4a3-420f-b37d-84dddc26ccfa.png" alt="2 pack" className="w-full h-full object-contain" />}
             </div>
             <div>
               <p className="font-bold text-dark text-sm">
@@ -56,7 +51,6 @@ const VariantOption: React.FC<{
       </div>
     </motion.div>;
 };
-
 const ProductVariants: React.FC = () => {
   const [selectedVariant, setSelectedVariant] = useState<'one' | 'two'>('two');
   return <motion.div className="w-full px-4 space-y-4" initial={{
@@ -77,7 +71,7 @@ const ProductVariants: React.FC = () => {
       opacity: 1
     }} transition={{
       delay: 0.3
-    }} className="w-full rounded-b-lg p-3 text-white flex items-center py-0 bg-[#4e2f97]">
+    }} className="w-full rounded-b-lg p-3 text-white flex items-center py-0 bg-[FF0B55] bg-[#ff0d57]">
           <div className="w-12 h-10 rounded-md mr-3 overflow-hidden flex items-center justify-center bg-[#7069bc]/0">
             <img alt="Free Shipping" className="w-6 h-6 object-contain filter invert brightness-0 saturate-100 sepia-100 hue-rotate-220" src="/lovable-uploads/310eeacf-d479-48c5-8f4b-8036a46c378f.png" />
           </div>
@@ -104,5 +98,4 @@ const ProductVariants: React.FC = () => {
         </motion.div>}
     </motion.div>;
 };
-
 export default ProductVariants;
