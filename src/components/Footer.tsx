@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="max-w-md mx-auto px-4 pt-16">
         {/* Logo and email signup */}
         <div className="mb-10">
-          <h2 className="text-3xl font-bold mb-4">BLEAME</h2>
+          <h2 className="font-bold mb-4 text-2xl">REMEMBERFRAME®</h2>
           <p className="text-sm opacity-90 mb-4">
             Join our email list for exclusive offers and the<br />
             latest news.
