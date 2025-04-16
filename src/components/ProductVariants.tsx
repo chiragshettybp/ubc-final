@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -40,7 +39,7 @@ const VariantOption: React.FC<{
         <div className="text-right flex flex-col items-end">
           <div className="flex items-center space-x-2">
             <p className="font-bold text-purple text-base">
-              {variant === 'one' ? '$59' : '$99'}
+              {variant === 'one' ? '$69' : '$99'}
             </p>
             <motion.div className={`py-1 px-2 rounded-full text-xs font-bold transition-all duration-300
                 ${active ? 'bg-purple text-white scale-100' : 'bg-purple-light text-dark scale-90 opacity-70'}`} initial={{
@@ -50,7 +49,7 @@ const VariantOption: React.FC<{
             scale: active ? 1 : 0.9,
             opacity: active ? 1 : 0.7
           }}>
-              SAVE {variant === 'one' ? '$40' : '$99'}
+              SAVE {variant === 'one' ? '$30' : '$99'}
             </motion.div>
           </div>
         </div>
