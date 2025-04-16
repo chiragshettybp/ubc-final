@@ -33,7 +33,7 @@ const VariantOption: React.FC<{
         </div>
         <div className="text-right flex flex-col items-end">
           <div className="flex items-center space-x-2">
-            <p className="font-bold text-purple text-base">
+            <p className="font-bold text-base text-[#ff0e57]">
               {variant === 'one' ? '$69' : '$99'}
             </p>
             <motion.div className={`py-1 px-2 rounded-full text-xs font-bold transition-all duration-300

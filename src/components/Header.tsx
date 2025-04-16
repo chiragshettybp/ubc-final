@@ -53,7 +53,7 @@ const Header: React.FC = () => {
       </div>
       
       {/* Light purple banner */}
-      <div className="w-full bg-purple-light py-2 relative">
+      <div className="w-full py-2 relative bg-[FF0B55] bg-[#ffc5d7]">
         <div className="container mx-auto">
           <p className="text-dark text-xs md:text-sm font-bold text-center">
             FREE US SHIPPING + 30 DAY GUARANTEE
