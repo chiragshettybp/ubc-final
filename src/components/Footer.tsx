@@ -38,15 +38,7 @@ const Footer = () => {
         
         {/* Legal Disclaimer */}
         <div className="border-t border-gray-800 pt-6 mb-8">
-          <p className="text-xs opacity-75 leading-5 text-center">
-            Safety precautions found at Bleame.com/MustKnows must
-            be read before use. In case of discomfort, discontinue use
-            immediately. Note that all content and resources provided
-            on our website are not medical advice nor should they be
-            used as a substitute for professional medical treatment. For
-            medical concerns and/or emergencies, consult your health
-            care provider and emergency services immediately.
-          </p>
+          <p className="text-xs opacity-75 leading-5 text-center">Safety precautions found at rememberframe.com/MustKnows must be read before use. In case of discomfort, discontinue use immediately. Note that all content and resources provided on our website are not medical advice nor should they be used as a substitute for professional medical treatment. For medical concerns and/or emergencies, consult your health care provider and emergency services immediately.</p>
         </div>
         
         {/* Footer Bottom */}
@@ -54,7 +46,7 @@ const Footer = () => {
           <div className="flex gap-2 text-xs opacity-75 mb-6">
             <span>© Copyright 2025</span>
             <span className="w-1 h-1 rounded-full bg-gray-500 self-center"></span>
-            <span>Bleame</span>
+            <span>REMEMBERFRAME®</span>
           </div>
           
           {/* Payment methods */}
