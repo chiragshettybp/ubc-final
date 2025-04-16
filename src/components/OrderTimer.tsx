@@ -37,11 +37,11 @@ const OrderTimer: React.FC = () => {
     };
   }, []); // Empty dependency array ensures this only runs once
 
-  // Get tomorrow's date
-  const tomorrow = new Date();
-  tomorrow.setDate(tomorrow.getDate() + 1);
+  // Get date 4 days from now
+  const futureDate = new Date();
+  futureDate.setDate(futureDate.getDate() + 4);
   const options: Intl.DateTimeFormatOptions = { weekday: 'long', day: 'numeric', month: 'short' };
-  const formattedDate = tomorrow.toLocaleDateString('en-US', options);
+  const formattedDate = futureDate.toLocaleDateString('en-US', options);
 
   return (
     <div className="w-full px-4 text-center my-6">
