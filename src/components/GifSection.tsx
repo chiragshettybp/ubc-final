@@ -12,7 +12,7 @@ const GifSection: React.FC = () => {
       }} transition={{
         duration: 0.5
       }}>
-          <h2 className="text-xl font-bold text-dark mb-2">See How Bleame Works</h2>
+          <h2 className="text-xl font-bold text-dark mb-2">See How REMEMBERFRAME Works</h2>
         </motion.div>
         
         <div className="px-[37px]">
