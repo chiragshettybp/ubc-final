@@ -31,7 +31,7 @@ const ProductInfo: React.FC = () => {
       
       <div className="flex items-center mb-6">
         <span className="text-gray-500 line-through text-lg mr-2">$99</span>
-        <span className="font-bold mr-4 text-[FF0B55] text-[#ff0a54]">$69</span>
+        <span className="font-bold mr-4 text-[#ff0a54] text-xl">$69</span>
         <span className="bg-purple-light font-bold px-4 py-1 rounded-full text-slate-950 text-[FF0B55]">SAVE 48%</span>
       </div>
 
