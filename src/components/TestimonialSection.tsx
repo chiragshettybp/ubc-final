@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote as QuoteIcon } from 'lucide-react';
@@ -14,27 +15,27 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [{
   id: 1,
-  name: "Sarah K.",
+  name: "Maria S.",
   location: "New York, USA", 
   rating: 5,
   text: "Best gift ever. My boyfriend couldn't stop smiling totally worth it",
-  image: "/lovable-uploads/8e3bd07b-b2b2-4f33-a3f9-3c00b2ead9ba.png",
+  image: "/lovable-uploads/9d9f43cd-945c-4cf8-a3a1-f711494390d2.png",
   verified: true
 }, {
   id: 2,
-  name: "Jessica M.",
+  name: "Sofia R.",
   location: "California, USA",
   rating: 5,
   text: "I gifted this to my mom and she cried happy tears watching our old videos play. So special!",
-  image: "/lovable-uploads/1c71e581-758e-440f-91ca-bc7b31e616b1.png",
+  image: "/lovable-uploads/0b2d2384-45de-457f-b15e-c9788faf1422.png",
   verified: true
 }, {
   id: 3,
-  name: "Michelle T.",
+  name: "Emma L.",
   location: "Texas, USA",
   rating: 4,
   text: "Honestly, everyone asks where I got this! Unique, emotional, and just perfect.",
-  image: "/img/placeholder.svg",
+  image: "/lovable-uploads/8bdd08f8-f1a6-4ddf-a8be-9eb0b5a5689b.png",
   verified: true
 }];
 
