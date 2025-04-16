@@ -64,20 +64,7 @@ const Footer = () => {
           </div>
           
           {/* Social links */}
-          <div className="flex gap-4 opacity-75">
-            <a href="#" className="hover:opacity-100">
-              <Facebook className="h-5 w-5" />
-            </a>
-            <a href="#" className="hover:opacity-100">
-              <Twitter className="h-5 w-5" />
-            </a>
-            <a href="#" className="hover:opacity-100">
-              <Instagram className="h-5 w-5" />
-            </a>
-            <a href="#" className="hover:opacity-100">
-              <Youtube className="h-5 w-5" />
-            </a>
-          </div>
+          
         </div>
       </div>
     </footer>;
