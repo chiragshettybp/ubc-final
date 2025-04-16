@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote as QuoteIcon } from 'lucide-react';
-
 interface Testimonial {
   id: number;
   name: string;
@@ -12,11 +10,10 @@ interface Testimonial {
   image: string;
   verified: boolean;
 }
-
 const testimonials: Testimonial[] = [{
   id: 1,
   name: "Maria S.",
-  location: "New York, USA", 
+  location: "New York, USA",
   rating: 5,
   text: "Best gift ever. My boyfriend couldn't stop smiling totally worth it",
   image: "/lovable-uploads/9d9f43cd-945c-4cf8-a3a1-f711494390d2.png",
@@ -38,7 +35,6 @@ const testimonials: Testimonial[] = [{
   image: "/lovable-uploads/8bdd08f8-f1a6-4ddf-a8be-9eb0b5a5689b.png",
   verified: true
 }];
-
 const TestimonialCard: React.FC<{
   testimonial: Testimonial;
   index: number;
@@ -68,7 +64,7 @@ const TestimonialCard: React.FC<{
           <p className="text-xs text-gray-500">{testimonial.location}</p>
         </div>
         {testimonial.verified && <div className="ml-auto bg-purple-lighter px-2 py-1 rounded-full flex items-center">
-            <span className="text-[10px] font-bold text-purple">✓ Verified Buyer</span>
+            <span className="font-bold text-[FF0B55] text-[#ff0c56]">✓ Verified Buyer</span>
           </div>}
       </div>
       
@@ -84,7 +80,6 @@ const TestimonialCard: React.FC<{
       </div>
     </motion.div>;
 };
-
 const TestimonialSection: React.FC = () => {
   return <section className="w-full bg-purple-lighter/50 py-8">
       <div className="max-w-md mx-auto">
@@ -134,5 +129,4 @@ Loving Their Bleame</motion.h2>
       </div>
     </section>;
 };
-
 export default TestimonialSection;

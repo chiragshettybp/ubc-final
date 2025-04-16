@@ -1,12 +1,12 @@
-
 import React, { useState, useEffect, useRef } from 'react';
-
 const OrderTimer: React.FC = () => {
-  const [timeDisplay, setTimeDisplay] = useState({ hours: 2, minutes: 12 });
+  const [timeDisplay, setTimeDisplay] = useState({
+    hours: 2,
+    minutes: 12
+  });
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const hoursRef = useRef(2);
   const minutesRef = useRef(12);
-
   useEffect(() => {
     // Set up the timer only once on component mount
     if (!timerRef.current) {
@@ -19,7 +19,7 @@ const OrderTimer: React.FC = () => {
         } else {
           if (timerRef.current) clearInterval(timerRef.current);
         }
-        
+
         // Update the display state only once per minute
         setTimeDisplay({
           hours: hoursRef.current,
@@ -40,18 +40,18 @@ const OrderTimer: React.FC = () => {
   // Get date 4 days from now
   const futureDate = new Date();
   futureDate.setDate(futureDate.getDate() + 4);
-  const options: Intl.DateTimeFormatOptions = { weekday: 'long', day: 'numeric', month: 'short' };
+  const options: Intl.DateTimeFormatOptions = {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'short'
+  };
   const formattedDate = futureDate.toLocaleDateString('en-US', options);
-
-  return (
-    <div className="w-full px-4 text-center my-6">
+  return <div className="w-full px-4 text-center my-6">
       <p className="font-semibold text-dark">Want It By {formattedDate}?</p>
       <div className="flex items-center justify-center">
         <span className="font-semibold text-dark mr-2">Order Within</span>
-        <span className="font-bold text-purple">{timeDisplay.hours} Hours {timeDisplay.minutes} Minutes</span>
+        <span className="font-bold text-[FF0B55] text-[#ff0c56]">{timeDisplay.hours} Hours {timeDisplay.minutes} Minutes</span>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default OrderTimer;
