@@ -1,17 +1,13 @@
-
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Truck, Package } from 'lucide-react';
 import { toast } from "@/components/ui/use-toast";
-
 const TrackOrder = () => {
   const [orderId, setOrderId] = useState('');
   const [email, setEmail] = useState('');
-  
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (!orderId || !email) {
       toast({
         title: "Missing information",
@@ -20,17 +16,15 @@ const TrackOrder = () => {
       });
       return;
     }
-    
+
     // In a real implementation, this would make an API call
     // For now, we'll just show a success message
     toast({
       title: "Order tracking initiated",
-      description: "We're looking up your order details. You'll receive an update shortly.",
+      description: "We're looking up your order details. You'll receive an update shortly."
     });
   };
-  
-  return (
-    <div className="max-w-md mx-auto bg-white">
+  return <div className="max-w-md mx-auto bg-white">
       <Header />
       <div className="flex flex-col items-center pt-4 pb-8 px-4">
         <div className="w-full max-w-md mx-auto py-8">
@@ -50,34 +44,17 @@ const TrackOrder = () => {
               <label htmlFor="orderId" className="block text-sm font-medium mb-1">
                 Order ID
               </label>
-              <input
-                id="orderId"
-                type="text"
-                value={orderId}
-                onChange={(e) => setOrderId(e.target.value)}
-                placeholder="e.g., BLM12345"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF0B55]/50"
-              />
+              <input id="orderId" type="text" value={orderId} onChange={e => setOrderId(e.target.value)} placeholder="e.g., BLM12345" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF0B55]/50" />
             </div>
             
             <div>
               <label htmlFor="email" className="block text-sm font-medium mb-1">
                 Email Address
               </label>
-              <input
-                id="email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="The email you used to order"
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF0B55]/50"
-              />
+              <input id="email" type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="The email you used to order" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FF0B55]/50" />
             </div>
             
-            <button
-              type="submit"
-              className="w-full bg-[#FF0B55] text-white py-3 rounded-md font-medium hover:bg-[#FF0B55]/90 transition-colors"
-            >
+            <button type="submit" className="w-full bg-[#FF0B55] text-white py-3 rounded-md font-medium hover:bg-[#FF0B55]/90 transition-colors">
               Track Order
             </button>
           </form>
@@ -97,18 +74,12 @@ const TrackOrder = () => {
                   hello@bleame.com
                 </a>
               </li>
-              <li>
-                <a href="tel:815-857-8366" className="text-[#FF0B55] hover:underline">
-                  815-857-8366
-                </a>
-              </li>
+              
             </ul>
           </div>
         </div>
       </div>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default TrackOrder;
