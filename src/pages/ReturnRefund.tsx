@@ -11,11 +11,11 @@ const ReturnRefund = () => {
       <div className="flex flex-col items-center pt-4 pb-8 px-4">
         <div className="w-full max-w-md mx-auto py-8">
           <div className="flex items-center justify-center mb-6">
-            <Package size={32} className="text-purple-600 mr-2" />
+            <Package size={32} className="text-[#FF0B55] mr-2" />
             <h1 className="text-2xl font-bold">Return & Refund Policy</h1>
           </div>
           
-          <div className="bg-purple-50 p-4 rounded-lg mb-6">
+          <div className="bg-[#FF0B55]/10 p-4 rounded-lg mb-6">
             <p className="text-sm text-center">
               Our policy lasts 30 days. If 30 days have passed since your purchase, we can't offer you a refund or exchange.
             </p>
@@ -24,7 +24,7 @@ const ReturnRefund = () => {
           <div className="space-y-6">
             <div className="border-b pb-4">
               <div className="flex items-center mb-2">
-                <ArrowLeft size={20} className="text-purple-600 mr-2" />
+                <ArrowLeft size={20} className="text-[#FF0B55] mr-2" />
                 <h2 className="text-lg font-semibold">Return Eligibility</h2>
               </div>
               <p className="text-sm text-gray-600 mb-2">
@@ -39,7 +39,7 @@ const ReturnRefund = () => {
             
             <div className="border-b pb-4">
               <div className="flex items-center mb-2">
-                <AlertCircle size={20} className="text-purple-600 mr-2" />
+                <AlertCircle size={20} className="text-[#FF0B55] mr-2" />
                 <h2 className="text-lg font-semibold">Non-Returnable Items</h2>
               </div>
               <p className="text-sm text-gray-600">
@@ -83,11 +83,11 @@ const ReturnRefund = () => {
             
             <div className="pt-2">
               <div className="flex items-center mb-2">
-                <Mail size={20} className="text-purple-600 mr-2" />
+                <Mail size={20} className="text-[#FF0B55] mr-2" />
                 <h2 className="text-lg font-semibold">Contact Us</h2>
               </div>
               <p className="text-sm text-gray-600">
-                If you have any questions about our return policy, please contact us at <a href="mailto:hello@bleame.com" className="text-purple-600 hover:underline">hello@bleame.com</a>.
+                If you have any questions about our return policy, please contact us at <a href="mailto:hello@bleame.com" className="text-[#FF0B55] hover:underline">hello@bleame.com</a>.
               </p>
             </div>
           </div>
@@ -99,3 +99,4 @@ const ReturnRefund = () => {
 };
 
 export default ReturnRefund;
+
