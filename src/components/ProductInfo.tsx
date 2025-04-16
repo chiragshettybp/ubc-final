@@ -30,8 +30,8 @@ const ProductInfo: React.FC = () => {
       <p className="text-sm font-bold text-dark mb-3">🏆 2025's Cutest Digital Frame for Cherished Moments</p>
       
       <div className="flex items-center mb-6">
-        <span className="text-gray-500 line-through text-lg mr-2">$94</span>
-        <span className="font-bold text-lg mr-4 text-[#4e2f97]">$49</span>
+        <span className="text-gray-500 line-through text-lg mr-2">$99</span>
+        <span className="font-bold text-lg mr-4 text-[#4e2f97]">$59</span>
         <span className="bg-purple-light text-dark text-xs font-bold px-4 py-1 rounded-full">SAVE 48%</span>
       </div>
 
