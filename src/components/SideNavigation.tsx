@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, HelpCircle, Package, Truck, ShieldCheck, FileText, UserX, Mail, Phone } from 'lucide-react';
-
 export const SideNavigation: React.FC = () => {
   return <div className="h-full flex flex-col bg-white">
       {/* Header */}
@@ -68,7 +66,7 @@ export const SideNavigation: React.FC = () => {
         <h3 className="text-xs uppercase font-bold text-gray-500 mb-2">Contact Us</h3>
         <a href="mailto:hello@bleame.com" className="flex items-center gap-2 p-2 text-sm hover:text-purple-600">
           <Mail size={16} />
-          <span>hello@bleame.com</span>
+          <span>rememberframe@gmail.com</span>
         </a>
         <a href="tel:815-857-8366" className="flex items-center gap-2 p-2 text-sm hover:text-purple-600">
           <Phone size={16} />
