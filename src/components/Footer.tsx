@@ -3,7 +3,7 @@ import { Mail, Phone, Facebook, Twitter, Instagram, Youtube } from 'lucide-react
 import { Link } from 'react-router-dom';
 const Footer = () => {
   return <footer className="w-full text-white pb-16 bg-zinc-950">
-      <div className="max-w-md mx-auto px-4 pt-16 bg-[FF0B55] bg-black">
+      <div className="max-w-md mx-auto px-4 pt-16 bg-[#FF0B55] bg-black">
         {/* Logo and email signup */}
         <div className="mb-10">
           <h2 className="font-bold mb-4 text-2xl">REMEMBERFRAME®</h2>

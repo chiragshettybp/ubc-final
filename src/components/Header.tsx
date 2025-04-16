@@ -33,7 +33,7 @@ const Header: React.FC = () => {
   const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
   return <div className="w-full sticky top-0 z-50 shadow-sm">
       {/* Top purple banner */}
-      <div className="w-full py-2 px-3 md:px-6 relative overflow-hidden bg-[FF0B55] bg-[#ff1059]">
+      <div className="w-full py-2 px-3 md:px-6 relative overflow-hidden bg-[#FF0B55] bg-[#ff1059]">
         <div className="container mx-auto flex flex-wrap justify-between items-center">
           <p className="text-white text-xs md:text-sm font-bold text-center flex-1 md:flex-none">🏆 2025 BEST RATED PRODUCT</p>
           
