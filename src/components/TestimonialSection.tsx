@@ -15,9 +15,9 @@ interface Testimonial {
 const testimonials: Testimonial[] = [{
   id: 1,
   name: "Sarah K.",
-  location: "New York, USA",
+  location: "New York, USA", 
   rating: 5,
-  text: "I gifted this to my mom and she cried happy tears watching our old videos play. So special!",
+  text: "Best gift ever. My boyfriend couldn't stop smiling totally worth it",
   image: "/lovable-uploads/8e3bd07b-b2b2-4f33-a3f9-3c00b2ead9ba.png",
   verified: true
 }, {
@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [{
   name: "Jessica M.",
   location: "California, USA",
   rating: 5,
-  text: "Game changer for my bikini area! No more razor bumps or irritation. I was skeptical at first but now I won't use anything else. Worth every penny!",
+  text: "I gifted this to my mom and she cried happy tears watching our old videos play. So special!",
   image: "/lovable-uploads/1c71e581-758e-440f-91ca-bc7b31e616b1.png",
   verified: true
 }, {
@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [{
   name: "Michelle T.",
   location: "Texas, USA",
   rating: 4,
-  text: "I love how easy it is to use and that I don't need to replace it often. Makes my skin smoother than any razor I've tried. My strawberry legs are almost gone!",
+  text: "Honestly, everyone asks where I got this! Unique, emotional, and just perfect.",
   image: "/img/placeholder.svg",
   verified: true
 }];
