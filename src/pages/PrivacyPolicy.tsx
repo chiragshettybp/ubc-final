@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -11,11 +10,11 @@ const PrivacyPolicy = () => {
       <div className="flex flex-col items-center pt-4 pb-8 px-4">
         <div className="w-full max-w-md mx-auto py-8">
           <div className="flex items-center justify-center mb-6">
-            <ShieldCheck size={32} className="text-purple-600 mr-2" />
+            <ShieldCheck size={32} className="text-[#FF0B55] mr-2" />
             <h1 className="text-2xl font-bold">Privacy Policy</h1>
           </div>
           
-          <div className="bg-purple-50 p-4 rounded-lg mb-6">
+          <div className="bg-[#FF0B55]/10 p-4 rounded-lg mb-6">
             <p className="text-sm text-center">
               Effective Date: April 14, 2025. This Privacy Policy describes how Bleame collects and uses your personal information.
             </p>
@@ -24,7 +23,7 @@ const PrivacyPolicy = () => {
           <div className="space-y-6 text-sm text-gray-600">
             <div className="border-b pb-4">
               <div className="flex items-center mb-2">
-                <Database size={20} className="text-purple-600 mr-2" />
+                <Database size={20} className="text-[#FF0B55] mr-2" />
                 <h2 className="text-lg font-semibold text-gray-800">Information We Collect</h2>
               </div>
               <p className="mb-2">
@@ -43,7 +42,7 @@ const PrivacyPolicy = () => {
             
             <div className="border-b pb-4">
               <div className="flex items-center mb-2">
-                <Eye size={20} className="text-purple-600 mr-2" />
+                <Eye size={20} className="text-[#FF0B55] mr-2" />
                 <h2 className="text-lg font-semibold text-gray-800">How We Use Your Information</h2>
               </div>
               <p className="mb-2">We use the information we collect to:</p>
@@ -58,7 +57,7 @@ const PrivacyPolicy = () => {
             
             <div className="border-b pb-4">
               <div className="flex items-center mb-2">
-                <Lock size={20} className="text-purple-600 mr-2" />
+                <Lock size={20} className="text-[#FF0B55] mr-2" />
                 <h2 className="text-lg font-semibold text-gray-800">Data Security</h2>
               </div>
               <p>
@@ -89,7 +88,7 @@ const PrivacyPolicy = () => {
             <div className="pt-2">
               <h2 className="text-lg font-semibold mb-2 text-gray-800">Contact Us</h2>
               <p>
-                If you have any questions about this Privacy Policy, please contact us at <a href="mailto:hello@bleame.com" className="text-purple-600 hover:underline">hello@bleame.com</a>.
+                If you have any questions about this Privacy Policy, please contact us at <a href="mailto:hello@bleame.com" className="text-[#FF0B55] hover:underline">hello@bleame.com</a>.
               </p>
             </div>
           </div>
