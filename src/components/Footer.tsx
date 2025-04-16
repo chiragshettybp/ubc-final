@@ -64,7 +64,7 @@ const Footer = () => {
             <img 
               src="/lovable-uploads/10cdf540-7087-4a4e-bbcd-13528bb6a15d.png"
               alt="Payment methods: Visa, Mastercard, American Express, and PayPal"
-              className="col-span-4 w-full h-auto"
+              className="col-span-4 w-3/4 mx-auto h-auto"
             />
           </div>
           
