@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Phone, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Footer = () => {
   return <footer className="w-full bg-dark text-white pb-16">
       <div className="max-w-md mx-auto px-4 pt-16">
@@ -59,21 +60,32 @@ const Footer = () => {
           
           {/* Payment methods */}
           <p className="text-xs opacity-75 mb-3">We accept</p>
-          <div className="grid grid-cols-4 gap-2 mb-6">
-            <div className="h-6 w-10 bg-gray-700 rounded-md"></div>
-            <div className="h-6 w-10 bg-gray-700 rounded-md"></div>
-            <div className="h-6 w-10 bg-gray-700 rounded-md"></div>
-            <div className="h-6 w-10 bg-gray-700 rounded-md"></div>
-            <div className="h-6 w-10 bg-gray-700 rounded-md"></div>
-            <div className="h-6 w-10 bg-gray-700 rounded-md"></div>
-            <div className="h-6 w-10 bg-gray-700 rounded-md"></div>
-            <div className="h-6 w-10 bg-gray-700 rounded-md"></div>
+          <div className="grid grid-cols-4 gap-2 mb-6 items-center">
+            <img 
+              src="/lovable-uploads/10cdf540-7087-4a4e-bbcd-13528bb6a15d.png"
+              alt="Payment methods: Visa, Mastercard, American Express, and PayPal"
+              className="col-span-4 w-full h-auto"
+            />
           </div>
           
           {/* Social links */}
-          
+          <div className="flex gap-4 opacity-75">
+            <a href="#" className="hover:opacity-100">
+              <Facebook className="h-5 w-5" />
+            </a>
+            <a href="#" className="hover:opacity-100">
+              <Twitter className="h-5 w-5" />
+            </a>
+            <a href="#" className="hover:opacity-100">
+              <Instagram className="h-5 w-5" />
+            </a>
+            <a href="#" className="hover:opacity-100">
+              <Youtube className="h-5 w-5" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>;
 };
+
 export default Footer;
