@@ -11,11 +11,11 @@ const HowToUse = () => {
       <div className="flex flex-col items-center pt-4 pb-8 px-4">
         <div className="w-full max-w-md mx-auto py-8">
           <div className="flex items-center justify-center mb-6">
-            <Info size={32} className="text-purple-600 mr-2" />
+            <Info size={32} className="text-[#FF0B55] mr-2" />
             <h1 className="text-2xl font-bold">How to Use Bleame</h1>
           </div>
           
-          <div className="bg-purple-50 p-4 rounded-lg mb-6">
+          <div className="bg-[#FF0B55]/10 p-4 rounded-lg mb-6">
             <p className="text-sm text-center">
               Follow these simple instructions to get the most out of your Bleame product.
             </p>
