@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote as QuoteIcon } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 interface Testimonial {
   id: number;
   name: string;
@@ -119,12 +121,15 @@ Loving Their Bleame</motion.h2>
         duration: 0.5,
         delay: 0.8
       }}>
-          <button className="text-purple font-semibold text-sm flex items-center px-4 py-2 border border-purple rounded-full hover:bg-purple hover:text-white transition-colors">
+          <Link 
+            to="/reviews"
+            className="text-purple font-semibold text-sm flex items-center px-4 py-2 border border-purple rounded-full hover:bg-purple hover:text-white transition-colors"
+          >
             See all reviews
             <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
               <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
             </svg>
-          </button>
+          </Link>
         </motion.div>
       </div>
     </section>;
