@@ -430,7 +430,7 @@ const Reviews = () => {
           <Star
             key={star}
             className={`${size} ${
-              star <= rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'
+              star <= rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-600'
             }`}
           />
         ))}
@@ -439,35 +439,35 @@ const Reviews = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white">
+    <div className="max-w-md mx-auto bg-black text-white">
       <Header />
       
       <div className="px-4 py-6">
         {/* Header Section */}
         <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold mb-2">Customer Reviews</h1>
+          <h1 className="text-2xl font-bold mb-2 text-white">Customer Reviews</h1>
           <div className="flex items-center justify-center gap-2 mb-2">
             {renderStars(Math.round(averageRating), "w-5 h-5")}
-            <span className="text-lg font-semibold">{averageRating.toFixed(1)}</span>
-            <span className="text-gray-600">({reviews.length} reviews)</span>
+            <span className="text-lg font-semibold text-white">{averageRating.toFixed(1)}</span>
+            <span className="text-gray-400">({reviews.length} reviews)</span>
           </div>
-          <p className="text-sm text-gray-600">Based on verified customer purchases</p>
+          <p className="text-sm text-gray-400">Based on verified customer purchases</p>
         </div>
 
         {/* Rating Distribution */}
-        <div className="bg-gray-50 rounded-lg p-4 mb-6">
-          <h3 className="font-semibold mb-3">Rating Breakdown</h3>
+        <div className="bg-gray-900 rounded-lg p-4 mb-6 border border-gray-700">
+          <h3 className="font-semibold mb-3 text-white">Rating Breakdown</h3>
           {[5, 4, 3, 2, 1].map((rating, index) => (
             <div key={rating} className="flex items-center gap-2 mb-1">
-              <span className="text-sm w-6">{rating}</span>
+              <span className="text-sm w-6 text-gray-300">{rating}</span>
               <Star className="w-3 h-3 text-yellow-400 fill-yellow-400" />
-              <div className="flex-1 bg-gray-200 rounded-full h-2">
+              <div className="flex-1 bg-gray-700 rounded-full h-2">
                 <div 
                   className="bg-yellow-400 h-2 rounded-full transition-all duration-300"
                   style={{ width: `${(ratingCounts[index] / reviews.length) * 100}%` }}
                 />
               </div>
-              <span className="text-sm text-gray-600 w-8">{ratingCounts[index]}</span>
+              <span className="text-sm text-gray-400 w-8">{ratingCounts[index]}</span>
             </div>
           ))}
         </div>
@@ -475,19 +475,19 @@ const Reviews = () => {
         {/* Filters and Search */}
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-3">
-            <Search className="w-4 h-4 text-gray-400" />
+            <Search className="w-4 h-4 text-gray-500" />
             <input
               type="text"
               placeholder="Search reviews..."
               value={searchTerm}
               onChange={(e) => handleSearch(e.target.value)}
-              className="flex-1 px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[#FF0B55]/50"
+              className="flex-1 px-3 py-2 border border-gray-600 bg-gray-800 text-white rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
             />
           </div>
           
           <div className="flex items-center gap-2 mb-3">
-            <Filter className="w-4 h-4 text-gray-400" />
-            <span className="text-sm font-medium">Filter by rating:</span>
+            <Filter className="w-4 h-4 text-gray-500" />
+            <span className="text-sm font-medium text-gray-300">Filter by rating:</span>
           </div>
           
           <div className="flex gap-2 flex-wrap">
@@ -495,8 +495,8 @@ const Reviews = () => {
               onClick={() => handleFilter(0)}
               className={`px-3 py-1 text-xs rounded-full border ${
                 filterRating === 0 
-                  ? 'bg-[#FF0B55] text-white border-[#FF0B55]' 
-                  : 'bg-white text-gray-600 border-gray-300 hover:border-[#FF0B55]'
+                  ? 'bg-gray-600 text-white border-gray-600' 
+                  : 'bg-gray-900 text-gray-400 border-gray-600 hover:border-gray-500'
               }`}
             >
               All
@@ -507,8 +507,8 @@ const Reviews = () => {
                 onClick={() => handleFilter(rating)}
                 className={`px-3 py-1 text-xs rounded-full border flex items-center gap-1 ${
                   filterRating === rating 
-                    ? 'bg-[#FF0B55] text-white border-[#FF0B55]' 
-                    : 'bg-white text-gray-600 border-gray-300 hover:border-[#FF0B55]'
+                    ? 'bg-gray-600 text-white border-gray-600' 
+                    : 'bg-gray-900 text-gray-400 border-gray-600 hover:border-gray-500'
                 }`}
               >
                 {rating} <Star className="w-3 h-3 fill-current" />
@@ -527,7 +527,7 @@ const Reviews = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm"
+                className="bg-gray-900 border border-gray-700 rounded-lg p-4 shadow-sm"
               >
                 <div className="flex items-start gap-3 mb-3">
                   {review.image ? (
@@ -537,8 +537,8 @@ const Reviews = () => {
                       className="w-10 h-10 rounded-full object-cover"
                     />
                   ) : (
-                    <div className="w-10 h-10 bg-[#FF0B55]/10 rounded-full flex items-center justify-center">
-                      <span className="text-[#FF0B55] font-semibold text-sm">
+                    <div className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center">
+                      <span className="text-gray-300 font-semibold text-sm">
                         {review.name.charAt(0)}
                       </span>
                     </div>
@@ -546,11 +546,11 @@ const Reviews = () => {
                   
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="font-semibold text-sm">{review.name}</span>
+                      <span className="font-semibold text-sm text-white">{review.name}</span>
                       {review.verified && (
-                        <div className="flex items-center gap-1 bg-green-100 px-2 py-0.5 rounded-full">
-                          <Verified className="w-3 h-3 text-green-600" />
-                          <span className="text-xs text-green-700 font-medium">Verified</span>
+                        <div className="flex items-center gap-1 bg-green-900 px-2 py-0.5 rounded-full">
+                          <Verified className="w-3 h-3 text-green-400" />
+                          <span className="text-xs text-green-300 font-medium">Verified</span>
                         </div>
                       )}
                     </div>
@@ -558,15 +558,15 @@ const Reviews = () => {
                       {renderStars(review.rating)}
                       <span className="text-xs text-gray-500">{review.location}</span>
                     </div>
-                    <span className="text-xs text-gray-400">{new Date(review.date).toLocaleDateString()}</span>
+                    <span className="text-xs text-gray-500">{new Date(review.date).toLocaleDateString()}</span>
                   </div>
                 </div>
                 
-                <h4 className="font-semibold text-sm mb-2">{review.title}</h4>
-                <p className="text-sm text-gray-700 leading-relaxed mb-3">{review.content}</p>
+                <h4 className="font-semibold text-sm mb-2 text-white">{review.title}</h4>
+                <p className="text-sm text-gray-300 leading-relaxed mb-3">{review.content}</p>
                 
                 <div className="flex items-center gap-4 text-xs text-gray-500">
-                  <button className="flex items-center gap-1 hover:text-[#FF0B55] transition-colors">
+                  <button className="flex items-center gap-1 hover:text-gray-400 transition-colors">
                     <ThumbsUp className="w-3 h-3" />
                     Helpful ({review.helpful})
                   </button>
@@ -582,7 +582,7 @@ const Reviews = () => {
             <button
               onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}
-              className="px-3 py-2 text-sm border border-gray-300 rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:border-[#FF0B55]"
+              className="px-3 py-2 text-sm border border-gray-600 bg-gray-800 text-gray-300 rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:border-gray-500"
             >
               Previous
             </button>
@@ -606,8 +606,8 @@ const Reviews = () => {
                     onClick={() => setCurrentPage(pageNum)}
                     className={`px-3 py-2 text-sm border rounded-md ${
                       currentPage === pageNum
-                        ? 'bg-[#FF0B55] text-white border-[#FF0B55]'
-                        : 'border-gray-300 hover:border-[#FF0B55]'
+                        ? 'bg-gray-600 text-white border-gray-600'
+                        : 'border-gray-600 bg-gray-800 text-gray-300 hover:border-gray-500'
                     }`}
                   >
                     {pageNum}
@@ -619,7 +619,7 @@ const Reviews = () => {
             <button
               onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
               disabled={currentPage === totalPages}
-              className="px-3 py-2 text-sm border border-gray-300 rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:border-[#FF0B55]"
+              className="px-3 py-2 text-sm border border-gray-600 bg-gray-800 text-gray-300 rounded-md disabled:opacity-50 disabled:cursor-not-allowed hover:border-gray-500"
             >
               Next
             </button>
@@ -636,7 +636,7 @@ const Reviews = () => {
                 setSearchTerm('');
                 setFilteredReviews(reviews);
               }}
-              className="mt-2 text-[#FF0B55] text-sm hover:underline"
+              className="mt-2 text-gray-400 text-sm hover:underline"
             >
               Clear filters
             </button>
