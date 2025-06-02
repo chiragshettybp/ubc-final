@@ -1,8 +1,11 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Home, HelpCircle, Package, Truck, ShieldCheck, FileText, UserX, Mail, Phone } from 'lucide-react';
+import { Home, HelpCircle, Package, Truck, ShieldCheck, FileText, UserX, Mail, Phone, Star } from 'lucide-react';
+
 export const SideNavigation: React.FC = () => {
-  return <div className="h-full flex flex-col bg-white">
+  return (
+    <div className="h-full flex flex-col bg-white">
       {/* Header */}
       <div className="p-4 border-b flex items-center bg-slate-50">
         
@@ -39,6 +42,11 @@ export const SideNavigation: React.FC = () => {
             <Truck size={18} />
             <span className="text-sm">Shipping & Delivery</span>
           </Link>
+
+          <Link to="/reviews" className="flex items-center gap-3 p-2 hover:bg-gray-100 rounded-md">
+            <Star size={18} />
+            <span className="text-sm">Customer Reviews</span>
+          </Link>
         </div>
         
         <div className="mb-6">
@@ -70,5 +78,6 @@ export const SideNavigation: React.FC = () => {
         </a>
         
       </div>
-    </div>;
+    </div>
+  );
 };

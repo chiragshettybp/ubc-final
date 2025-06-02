@@ -1,8 +1,11 @@
+
 import React from 'react';
 import { Mail, Phone, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Footer = () => {
-  return <footer className="w-full text-white pb-16 bg-zinc-950">
+  return (
+    <footer className="w-full text-white pb-16 bg-zinc-950">
       <div className="max-w-md mx-auto px-4 pt-16 bg-gray-950">
         {/* Logo and email signup */}
         <div className="mb-10">
@@ -27,6 +30,7 @@ const Footer = () => {
             <li><Link to="/track-order" className="hover:text-purple-lighter">Track Your Order</Link></li>
             <li><Link to="/shipping-delivery" className="hover:text-purple-lighter">Shipping & Delivery</Link></li>
             <li><Link to="/return-refund" className="hover:text-purple-lighter">Return & Refund Policy</Link></li>
+            <li><Link to="/reviews" className="hover:text-purple-lighter">Customer Reviews</Link></li>
             <li><Link to="/privacy-policy" className="hover:text-purple-lighter">Privacy Policy</Link></li>
             <li><Link to="/terms-of-service" className="hover:text-purple-lighter">Terms of Service</Link></li>
             <li><Link to="/how-to-use" className="hover:text-purple-lighter">How to Use</Link></li>
@@ -59,6 +63,8 @@ const Footer = () => {
           
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
