@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Star, Monitor, Battery, Usb, Image, FileText } from 'lucide-react';
 const RatingStars = () => <div className="flex items-center">
@@ -6,39 +7,39 @@ const RatingStars = () => <div className="flex items-center">
   </div>;
 const ProductInfo: React.FC = () => {
   const specifications = [{
-    icon: <Monitor size={20} className="text-purple" />,
-    text: "5-inch HD 2K Quality Screen"
-  }, {
     icon: <FileText size={20} className="text-purple" />,
-    text: "6.5-inch Modern Acrylic Frame"
+    text: "60+ Pages of Pure Training Content"
+  }, {
+    icon: <Monitor size={20} className="text-purple" />,
+    text: "Mobile & Desktop Friendly PDF"
   }, {
     icon: <Image size={20} className="text-purple" />,
-    text: "Supports JPEG & Video Files"
+    text: "Visual Exercise Demonstrations"
   }, {
     icon: <Battery size={20} className="text-purple" />,
-    text: "1000mAh Rechargeable Battery"
+    text: "Lifetime Access & Updates"
   }, {
     icon: <Usb size={20} className="text-purple" />,
-    text: "Type-C USB Cable + Charger"
+    text: "Instant Digital Download"
   }];
   return <div className="w-full px-4">
       <div className="mb-3">
         <RatingStars />
-        <h1 className="text-2xl font-bold text-dark mt-2">REMEMBERFRAME®</h1>
+        <h1 className="text-2xl font-bold text-dark mt-2">TRAIN LIKE A SPARTAN®</h1>
       </div>
       
-      <p className="text-sm font-bold text-dark mb-3">🏆 2025's Cutest Digital Frame for Cherished Moments</p>
+      <p className="text-sm font-bold text-dark mb-3">💪 2025's Ultimate Warrior Body Blueprint for Real Men</p>
       
       <div className="flex items-center mb-6">
-        <span className="text-gray-500 line-through text-lg mr-2">$99</span>
-        <span className="font-bold mr-4 text-[#ff0a54] text-xl">$69</span>
-        <span className="bg-purple-light font-bold px-4 py-1 rounded-full text-slate-950 text-[FF0B55]">SAVE 48%</span>
+        <span className="text-gray-500 line-through text-lg mr-2">$47</span>
+        <span className="font-bold mr-4 text-[#ff0a54] text-xl">$27</span>
+        <span className="bg-purple-light font-bold px-4 py-1 rounded-full text-slate-950 text-[FF0B55]">SAVE 43%</span>
       </div>
 
       <div className="border-t border-gray-200 my-4"></div>
       
-      <p className="font-semibold text-dark mb-5">Cherish Your Favorite Memories
-Seamlessly replay cherished videos and photos on a stylish digital frame.</p>
+      <p className="font-semibold text-dark mb-5">Build a Warrior Body With Zero Excuses
+No-BS bodyweight & minimalist training system for strength, speed, and unbreakable grit.</p>
       
       <div className="space-y-3 mb-6">
         {specifications.map((spec, index) => <div key={index} className="flex items-center space-x-3">

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote as QuoteIcon } from 'lucide-react';
@@ -14,26 +15,26 @@ interface Testimonial {
 }
 const testimonials: Testimonial[] = [{
   id: 1,
-  name: "Maria S.",
-  location: "New York, USA",
+  name: "Marcus T.",
+  location: "Texas, USA",
   rating: 5,
-  text: "Best gift ever. My boyfriend couldn't stop smiling totally worth it",
+  text: "This program is no joke. Built more muscle in 8 weeks than I did in months at the gym. Pure warrior training.",
   image: "/lovable-uploads/9d9f43cd-945c-4cf8-a3a1-f711494390d2.png",
   verified: true
 }, {
   id: 2,
-  name: "Sofia R.",
+  name: "Jake R.",
   location: "California, USA",
   rating: 5,
-  text: "I gifted this to my mom and she cried happy tears watching our old videos play. So special!",
+  text: "Finally found a training system that builds real functional strength. My performance in everything improved dramatically.",
   image: "/lovable-uploads/0b2d2384-45de-457f-b15e-c9788faf1422.png",
   verified: true
 }, {
   id: 3,
-  name: "Emma L.",
-  location: "Texas, USA",
+  name: "Alex M.",
+  location: "New York, USA",
   rating: 4,
-  text: "Honestly, everyone asks where I got this! Unique, emotional, and just perfect.",
+  text: "The mental toughness part is game-changing. I'm stronger physically and mentally. This is what real training looks like.",
   image: "/lovable-uploads/8bdd08f8-f1a6-4ddf-a8be-9eb0b5a5689b.png",
   verified: true
 }];
@@ -94,8 +95,8 @@ const TestimonialSection: React.FC = () => {
           y: 0
         }} transition={{
           duration: 0.5
-        }}>Look At How Others Are
-Loving Their Bleame</motion.h2>
+        }}>See How Warriors Are Building
+Their Ultimate Battle-Ready Bodies</motion.h2>
           <motion.p initial={{
           opacity: 0
         }} animate={{
@@ -105,7 +106,7 @@ Loving Their Bleame</motion.h2>
           delay: 0.2
         }} className="text-gray-600 text-xs flex items-center justify-center gap-1">
             <Star size={14} className="text-yellow-400" />
-            Rated 4.8/5 by 1,319+ Happy Customers
+            Rated 4.8/5 by 1,319+ Warriors
           </motion.p>
         </div>
         
