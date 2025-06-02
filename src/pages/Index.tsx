@@ -25,7 +25,7 @@ const Index = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white">
+    <div className="max-w-md mx-auto bg-black">
       <Header />
       <div className="flex flex-col items-center pt-4 pb-8">
         <ProductMediaSection />

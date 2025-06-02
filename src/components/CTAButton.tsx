@@ -9,25 +9,19 @@ const CTAButton: React.FC<{
 }) => {
   const [isAnimating, setIsAnimating] = useState(false);
 
-  // Start the animation cycle when component mounts
   useEffect(() => {
     const animationInterval = setInterval(() => {
       setIsAnimating(true);
-
-      // Reset animation after it completes
       setTimeout(() => {
         setIsAnimating(false);
       }, 1000);
-    }, 5000); // Animate every 5 seconds
+    }, 5000);
 
     return () => clearInterval(animationInterval);
   }, []);
 
   const handleClick = () => {
-    // Open PayPal link in a new page
     window.open('https://www.paypal.com/ncp/payment/AWQDP2YASKJAY', '_blank', 'noopener,noreferrer');
-    
-    // Also call the original onClick prop if needed
     onClick();
   };
 
@@ -43,7 +37,7 @@ const CTAButton: React.FC<{
           times: [0, 0.2, 0.4, 0.6, 1]
         }
       } : {}} 
-      className="w-full h-16 font-bold tracking-wider text-slate-50 text-xl transition-all duration-300 ease-in-out transform active:scale-95 shadow-lg hover:shadow-xl rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500/50 bg-[#FF0B55] whitespace-nowrap overflow-hidden text-ellipsis relative"
+      className="w-full h-16 font-bold tracking-wider text-white text-xl transition-all duration-300 ease-in-out transform active:scale-95 shadow-lg hover:shadow-xl rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500/50 bg-gray-600 whitespace-nowrap overflow-hidden text-ellipsis relative"
     >
       {/* Shining effect overlay */}
       <span className="absolute inset-0 overflow-hidden">
