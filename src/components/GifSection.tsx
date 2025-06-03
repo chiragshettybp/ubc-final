@@ -24,7 +24,7 @@ const GifSection: React.FC = () => {
             whileHover={{ scale: 1.02 }}
           >
             <iframe
-              src="https://www.youtube.com/embed/L4aNgNpBcls?autoplay=1&mute=1&loop=1&playlist=L4aNgNpBcls"
+              src="https://www.youtube.com/embed/L4aNgNpBcls?autoplay=1&mute=1&loop=1&playlist=L4aNgNpBcls&controls=0"
               className="w-full aspect-[9/16] rounded-2xl"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
