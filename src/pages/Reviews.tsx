@@ -576,6 +576,17 @@ const Reviews = () => {
                 <h4 className="font-semibold text-sm mb-2 text-white">{review.title}</h4>
                 <p className="text-sm text-gray-300 leading-relaxed mb-3">{review.content}</p>
                 
+                {/* Customer Review Image */}
+                {review.image && (
+                  <div className="mb-3">
+                    <img 
+                      src={review.image} 
+                      alt="Customer review photo"
+                      className="w-full max-w-xs h-auto rounded-lg object-cover border border-gray-600"
+                    />
+                  </div>
+                )}
+                
                 <div className="flex items-center gap-4 text-xs text-gray-500">
                   <button className="flex items-center gap-1 hover:text-gray-400 transition-colors">
                     <ThumbsUp className="w-3 h-3" />
