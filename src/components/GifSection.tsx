@@ -5,7 +5,7 @@ import { Play, Pause, Volume2, VolumeOff } from 'lucide-react';
 
 const GifSection: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
 
   const togglePlay = () => {
@@ -58,6 +58,7 @@ const GifSection: React.FC = () => {
               onEnded={handleVideoEnd}
               playsInline
               muted={isMuted}
+              autoPlay
               loop
             />
             
