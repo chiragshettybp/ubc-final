@@ -1,11 +1,12 @@
 
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Play, Pause } from 'lucide-react';
+import { Play, Pause, Volume2, VolumeOff } from 'lucide-react';
 
 const GifSection: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
 
   const togglePlay = () => {
     if (videoRef.current) {
@@ -16,6 +17,13 @@ const GifSection: React.FC = () => {
         videoRef.current.pause();
         setIsPlaying(false);
       }
+    }
+  };
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted;
+      setIsMuted(videoRef.current.muted);
     }
   };
 
@@ -45,11 +53,11 @@ const GifSection: React.FC = () => {
           >
             <video 
               ref={videoRef}
-              src="https://gv-vod-cdn.aliexpress-media.com/ae_sg_gmc/video_target/gv8f-ecac1dc1-a181d08c-8f95ba64-48af/trans/165dcfbe-752e-402f-85d3-83b8f8e2993b-hd.mp4?auth_key=1748927604-0-0-b7b8e3cfda095e8d0f4ddbc0258f9005"
+              src="https://jmp.sh/bWhpddOl"
               className="w-full h-auto block rounded-2xl"
               onEnded={handleVideoEnd}
               playsInline
-              muted
+              muted={isMuted}
               loop
             />
             
@@ -66,6 +74,19 @@ const GifSection: React.FC = () => {
                   <Play className="w-8 h-8 text-black ml-1" />
                 )}
               </div>
+            </button>
+
+            {/* Mute/Unmute Button */}
+            <button
+              onClick={toggleMute}
+              className="absolute top-4 right-4 bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-70 transition-all duration-200"
+              aria-label={isMuted ? "Unmute video" : "Mute video"}
+            >
+              {isMuted ? (
+                <VolumeOff className="w-5 h-5 text-white" />
+              ) : (
+                <Volume2 className="w-5 h-5 text-white" />
+              )}
             </button>
           </motion.div>
         </div>
