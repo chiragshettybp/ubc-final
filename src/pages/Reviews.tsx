@@ -28,7 +28,7 @@ const reviews: Review[] = [
     content: "Bought this kit after wrist surgery. The adjustable resistance from 22-132 lbs was perfect for my recovery. Started with the lightest setting and gradually increased. My physical therapist was impressed with my progress!",
     verified: true,
     helpful: 24,
-    image: "/lovable-uploads/9d9f43cd-945c-4cf8-a3a1-f711494390d2.png"
+    image: "https://i.postimg.cc/L69VqV4N/61-VVt6-Mw-L.jpg"
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ const reviews: Review[] = [
     content: "This hand grip kit completely transformed my climbing performance. The finger exerciser and grip ring are game-changers. My grip strength increased dramatically in just 4 weeks. Worth every penny!",
     verified: true,
     helpful: 18,
-    image: "/lovable-uploads/0b2d2384-45de-457f-b15e-c9788faf1422.png"
+    image: "https://i.postimg.cc/vH0t56cM/6153-Sz-Ubqu-L.jpg"
   },
   {
     id: 3,
@@ -51,7 +51,8 @@ const reviews: Review[] = [
     title: "Great for stress relief at work",
     content: "Love using the stress relief grip ball during work breaks. Helps me focus and reduces anxiety. The finger stretcher is also great for counteracting typing strain. Minor issue with the carry bag zipper.",
     verified: true,
-    helpful: 12
+    helpful: 12,
+    image: "https://i.postimg.cc/G2nFbFSP/616-WQSk-SCk-L.jpg"
   },
   {
     id: 4,
@@ -63,7 +64,7 @@ const reviews: Review[] = [
     content: "Bought this for my 78-year-old father who has arthritis. The adjustable resistance and variety of tools help him maintain hand strength and mobility. Easy to use and very effective!",
     verified: true,
     helpful: 31,
-    image: "/lovable-uploads/8bdd08f8-f1a6-4ddf-a8be-9eb0b5a5689b.png"
+    image: "https://i.postimg.cc/T3Sj4MV4/617z-MEVBj3-L.jpg"
   },
   {
     id: 5,
@@ -74,7 +75,8 @@ const reviews: Review[] = [
     title: "Essential for piano practice",
     content: "As a piano teacher, finger strength and dexterity are crucial. This kit, especially the finger exerciser, has improved my playing significantly. My students notice the difference in my technique!",
     verified: true,
-    helpful: 45
+    helpful: 45,
+    image: "https://i.postimg.cc/mkRyyYYZ/61-JQA-GWFNL.jpg"
   },
   {
     id: 6,
@@ -85,7 +87,8 @@ const reviews: Review[] = [
     title: "Solid build quality, great variety",
     content: "The stainless steel springs feel premium and durable. Love having 5 different tools for various hand exercises. The carry bag is convenient for travel. Only wish the grip ring had slightly more resistance options.",
     verified: true,
-    helpful: 8
+    helpful: 8,
+    image: "https://i.postimg.cc/2jFw8tY1/61rwg-J24ue-L.jpg"
   },
   {
     id: 7,
@@ -96,7 +99,8 @@ const reviews: Review[] = [
     title: "Best investment for hand health!",
     content: "After years of computer work, my hands were weak and stiff. This kit completely changed that. Use it daily - the finger stretcher for relief and the grip strengthener for building power. Amazing results!",
     verified: true,
-    helpful: 22
+    helpful: 22,
+    image: "https://i.postimg.cc/NMRxXJrP/713ukr-X41-UL.jpg"
   },
   {
     id: 8,
@@ -107,7 +111,8 @@ const reviews: Review[] = [
     title: "Perfect for tennis players",
     content: "My tennis game improved dramatically after using this kit for 6 weeks. Stronger grip means more control and power in my shots. The adjustable resistance is perfect for progressive training.",
     verified: true,
-    helpful: 15
+    helpful: 15,
+    image: "https://i.postimg.cc/KjNrq1fP/71a-ZOTnb-WLL.jpg"
   },
   {
     id: 9,
@@ -118,7 +123,8 @@ const reviews: Review[] = [
     title: "Great for carpal tunnel prevention",
     content: "Working in data entry, I was developing carpal tunnel symptoms. This kit, especially the finger stretcher and grip ball, has been a lifesaver. Pain is gone and my hands feel stronger than ever.",
     verified: true,
-    helpful: 19
+    helpful: 19,
+    image: "https://i.postimg.cc/W4kmRWSb/71j-N-HQi-ZYL.jpg"
   },
   {
     id: 10,
@@ -129,7 +135,8 @@ const reviews: Review[] = [
     title: "Outstanding customer service",
     content: "Had a question about proper usage for my specific needs. FitBeast's 24/7 support was incredible - got detailed guidance and exercise recommendations. The product works exactly as advertised.",
     verified: true,
-    helpful: 11
+    helpful: 11,
+    image: "https://i.postimg.cc/6qYnVD6z/71-Pkl-Mj-Sx9-L.jpg"
   },
   {
     id: 11,
@@ -140,7 +147,8 @@ const reviews: Review[] = [
     title: "Guitar playing improvement",
     content: "As a guitarist, finger strength and independence are crucial. This kit's finger exerciser and grip strengthener have dramatically improved my playing technique and endurance. Highly recommend for musicians!",
     verified: true,
-    helpful: 27
+    helpful: 27,
+    image: "https://i.postimg.cc/vZDLhHVn/71s-Sjb8-Y0e-L.jpg"
   },
   {
     id: 12,
@@ -151,7 +159,8 @@ const reviews: Review[] = [
     title: "Perfect for seniors",
     content: "At 82, maintaining hand strength is important for daily activities. This kit is gentle yet effective. The adjustable resistance lets me progress safely. Feel more confident with everyday tasks now.",
     verified: true,
-    helpful: 33
+    helpful: 33,
+    image: "https://i.postimg.cc/yxV0ZVKk/71w-Gx-ALC-f-L.jpg"
   },
   {
     id: 13,
@@ -162,7 +171,8 @@ const reviews: Review[] = [
     title: "Great for office workers",
     content: "The stress relief ball is perfect for desk use. Helps with focus and reduces hand tension from typing. The whole kit is well-designed and portable. Minor complaint - wish instructions were more detailed.",
     verified: true,
-    helpful: 9
+    helpful: 9,
+    image: "https://i.postimg.cc/593BMF5v/71zk1m-Aqd-L.jpg"
   },
   {
     id: 14,
@@ -173,7 +183,8 @@ const reviews: Review[] = [
     title: "Worth every penny for athletes",
     content: "Initially thought it was pricey, but after seeing my weightlifting performance improve, it's worth every cent. Grip strength was my limiting factor - not anymore! Build quality is exceptional.",
     verified: true,
-    helpful: 16
+    helpful: 16,
+    image: "https://i.postimg.cc/L68z46vW/815mfdrat-PL.jpg"
   },
   {
     id: 15,
@@ -184,7 +195,8 @@ const reviews: Review[] = [
     title: "Helps with arthritis management",
     content: "My rheumatologist recommended grip exercises for my arthritis. This kit provides the perfect variety and resistance levels. Regular use has significantly reduced stiffness and improved mobility.",
     verified: true,
-    helpful: 21
+    helpful: 21,
+    image: "https://i.postimg.cc/tTdhJsLK/81s2ztdbmq-L.jpg"
   },
   {
     id: 16,
