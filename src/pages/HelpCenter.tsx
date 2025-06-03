@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -17,7 +18,7 @@ const HelpCenter = () => {
           
           <div className="bg-gray-800 p-4 rounded-lg mb-6">
             <p className="text-sm text-center text-white">
-              Find answers to frequently asked questions or get in touch with our support team.
+              Find answers about your Hand Grips Strengthener Kit or get in touch with our support team.
             </p>
           </div>
           
@@ -28,20 +29,20 @@ const HelpCenter = () => {
                 <h2 className="text-lg font-semibold text-white">Frequently Asked Questions</h2>
               </div>
               <p className="text-sm text-gray-300 mb-2">
-                Browse our most common questions and answers.
+                Browse our most common questions about the Hand Grips Strengthener Kit.
               </p>
               <div className="space-y-3 mt-4">
                 <Link to="/how-to-use" className="block text-sm text-gray-400 hover:underline">
-                  How do I use the Spartan training program?
+                  How do I use the Hand Grips Strengthener Kit properly?
                 </Link>
                 <Link to="/shipping-delivery" className="block text-sm text-gray-400 hover:underline">
-                  What are the delivery times for digital products?
+                  What are the shipping times for my hand grip kit?
                 </Link>
                 <Link to="/return-refund" className="block text-sm text-gray-400 hover:underline">
-                  What is your refund policy?
+                  What is your refund policy for the grip strengthener?
                 </Link>
                 <Link to="/track-order" className="block text-sm text-gray-400 hover:underline">
-                  How can I track my order?
+                  How can I track my Hand Grip Kit order?
                 </Link>
               </div>
             </div>
@@ -52,7 +53,7 @@ const HelpCenter = () => {
                 <h2 className="text-lg font-semibold text-white">Contact Support</h2>
               </div>
               <p className="text-sm text-gray-300 mb-4">
-                Our customer support team is here to help with any questions or concerns.
+                FitBeast's 24/7 customer support team is here to help with any questions about your Hand Grips Strengthener Kit.
               </p>
               <div className="space-y-3">
                 <a href="mailto:rememberframe@gmail.com" className="flex items-center text-sm text-gray-400 hover:underline">

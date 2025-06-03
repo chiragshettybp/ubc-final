@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -16,7 +17,7 @@ const TermsOfService = () => {
           
           <div className="bg-gray-800 p-4 rounded-lg mb-6">
             <p className="text-sm text-center text-white">
-              Effective Date: April 14, 2025. These Terms of Service govern your use of the Train Like a Spartan program and website.
+              Effective Date: April 14, 2025. These Terms of Service govern your use of the Hand Grips Strengthener Kit and FitBeast website.
             </p>
           </div>
           
@@ -24,14 +25,14 @@ const TermsOfService = () => {
             <div className="border-b border-gray-700 pb-4">
               <h2 className="text-lg font-semibold mb-2 text-white">1. Acceptance of Terms</h2>
               <p>
-                By accessing or using our website, placing an order, or using any of our training programs, you agree to be bound by these Terms of Service. If you do not agree to all the terms, you may not use our services.
+                By accessing or using our website, placing an order for the Hand Grips Strengthener Kit, or using any of our fitness products, you agree to be bound by these Terms of Service. If you do not agree to all the terms, you may not use our services.
               </p>
             </div>
             
             <div className="border-b border-gray-700 pb-4">
               <h2 className="text-lg font-semibold mb-2 text-white">2. Products and Orders</h2>
               <p className="mb-2">
-                All training programs are subject to availability. We reserve the right to discontinue any program at any time. Prices for programs are subject to change without notice.
+                All Hand Grips Strengthener Kits are subject to availability. We reserve the right to discontinue any product at any time. Prices for our grip strengthener kits are subject to change without notice.
               </p>
               <p>
                 We reserve the right to refuse any order you place with us. We may, in our sole discretion, limit or cancel quantities purchased per person, per household, or per order.
@@ -41,13 +42,13 @@ const TermsOfService = () => {
             <div className="border-b border-gray-700 pb-4">
               <div className="flex items-center mb-2">
                 <AlertTriangle size={20} className="text-gray-400 mr-2" />
-                <h2 className="text-lg font-semibold text-white">3. Program Disclaimers</h2>
+                <h2 className="text-lg font-semibold text-white">3. Health and Safety Disclaimers</h2>
               </div>
               <p className="mb-2">
-                Our training programs are not intended to diagnose, treat, cure, or prevent any disease or health condition. Results from programs may vary from person to person.
+                The Hand Grips Strengthener Kit is designed for fitness and rehabilitation purposes. Results may vary from person to person. This product is not intended to diagnose, treat, cure, or prevent any medical condition.
               </p>
               <p>
-                We recommend consulting with a healthcare professional before starting any new training program, especially if you have pre-existing health conditions.
+                We recommend consulting with a healthcare professional before starting any new exercise program, especially if you have pre-existing hand, wrist, or arm conditions.
               </p>
             </div>
             
@@ -57,7 +58,7 @@ const TermsOfService = () => {
                 <h2 className="text-lg font-semibold text-white">4. Intellectual Property</h2>
               </div>
               <p>
-                All content included in our training programs and on this website, such as text, graphics, logos, images, and software, is the property of Train Like a Spartan or its content suppliers and is protected by international copyright laws.
+                All content related to the Hand Grips Strengthener Kit, including product designs, instructional materials, videos, and website content, is the property of FitBeast and is protected by international copyright laws.
               </p>
             </div>
             
@@ -71,7 +72,7 @@ const TermsOfService = () => {
             <div className="border-b border-gray-700 pb-4">
               <h2 className="text-lg font-semibold mb-2 text-white">6. Limitation of Liability</h2>
               <p>
-                In no event shall Train Like a Spartan, its officers, directors, employees, or agents, be liable to you for any direct, indirect, incidental, special, punitive, or consequential damages whatsoever resulting from any use of our training programs, website, or services.
+                In no event shall FitBeast, its officers, directors, employees, or agents, be liable to you for any direct, indirect, incidental, special, punitive, or consequential damages whatsoever resulting from any use of our Hand Grips Strengthener Kit, website, or services.
               </p>
             </div>
             
@@ -81,7 +82,7 @@ const TermsOfService = () => {
                 <h2 className="text-lg font-semibold text-white">7. Contact Information</h2>
               </div>
               <p>
-                If you have any questions about these Terms of Service, please contact us at <a href="mailto:rememberframe@gmail.com" className="text-gray-400 hover:underline">rememberframe@gmail.com</a>.
+                If you have any questions about these Terms of Service regarding the Hand Grips Strengthener Kit, please contact us at <a href="mailto:rememberframe@gmail.com" className="text-gray-400 hover:underline">rememberframe@gmail.com</a>.
               </p>
             </div>
           </div>

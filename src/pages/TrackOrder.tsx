@@ -24,7 +24,7 @@ const TrackOrder = () => {
     // For now, we'll just show a success message
     toast({
       title: "Order tracking initiated",
-      description: "We're looking up your order details. You'll receive an update shortly."
+      description: "We're looking up your Hand Grips Strengthener Kit order details. You'll receive an update shortly."
     });
   };
 
@@ -35,12 +35,12 @@ const TrackOrder = () => {
         <div className="w-full max-w-md mx-auto py-8">
           <div className="flex items-center justify-center mb-6">
             <Truck size={32} className="text-gray-400 mr-2" />
-            <h1 className="text-2xl font-bold text-white">Track Your Order</h1>
+            <h1 className="text-2xl font-bold text-white">Track Your Hand Grip Kit Order</h1>
           </div>
           
           <div className="bg-gray-800 p-4 rounded-lg mb-6">
             <p className="text-sm text-center text-gray-300">
-              Enter your order details below to check the current status of your purchase.
+              Enter your order details below to check the current status of your Hand Grips Strengthener Kit - 5 Pack® purchase.
             </p>
           </div>
           
@@ -54,7 +54,7 @@ const TrackOrder = () => {
                 type="text" 
                 value={orderId}
                 onChange={(e) => setOrderId(e.target.value)}
-                placeholder="e.g., SPA12345"
+                placeholder="e.g., HGK12345"
                 className="w-full px-4 py-2 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 bg-gray-800 text-white"
               />
             </div>
@@ -68,7 +68,7 @@ const TrackOrder = () => {
                 type="email" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="The email you used to order"
+                placeholder="The email you used to order your grip kit"
                 className="w-full px-4 py-2 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500 bg-gray-800 text-white"
               />
             </div>
@@ -77,18 +77,18 @@ const TrackOrder = () => {
               type="submit"
               className="w-full bg-gray-600 text-white py-3 rounded-md font-medium hover:bg-gray-700 transition-colors"
             >
-              Track Order
+              Track Hand Grip Kit Order
             </button>
           </form>
           
           <div className="mt-8 border-t border-gray-700 pt-6">
             <h2 className="text-lg font-medium mb-4 flex items-center text-white">
               <Package size={20} className="mr-2 text-gray-400" />
-              Have Questions?
+              Questions About Your Order?
             </h2>
             <p className="text-sm text-gray-300 mb-4">
-              If you're having trouble tracking your order or have any other questions, 
-              please contact our customer support team:
+              If you're having trouble tracking your Hand Grips Strengthener Kit order or have any questions about shipping, 
+              please contact FitBeast's 24/7 customer support team:
             </p>
             <ul className="text-sm space-y-2">
               <li>

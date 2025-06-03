@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -25,8 +24,8 @@ const reviews: Review[] = [
     location: "California, USA",
     rating: 5,
     date: "2024-05-15",
-    title: "Absolutely perfect gift!",
-    content: "I bought this for my grandmother's 85th birthday. She was so moved watching our family videos on this beautiful frame. The quality is outstanding and it was so easy to set up. Worth every penny!",
+    title: "Perfect for hand rehabilitation!",
+    content: "Bought this kit after wrist surgery. The adjustable resistance from 22-132 lbs was perfect for my recovery. Started with the lightest setting and gradually increased. My physical therapist was impressed with my progress!",
     verified: true,
     helpful: 24,
     image: "/lovable-uploads/9d9f43cd-945c-4cf8-a3a1-f711494390d2.png"
@@ -37,8 +36,8 @@ const reviews: Review[] = [
     location: "Texas, USA",
     rating: 5,
     date: "2024-05-12",
-    title: "Amazing quality and fast delivery",
-    content: "The RememberFrame exceeded my expectations. The picture quality is crystal clear and the touch interface is very intuitive. My wife loved seeing our wedding videos play automatically.",
+    title: "Amazing for rock climbing training",
+    content: "This hand grip kit completely transformed my climbing performance. The finger exerciser and grip ring are game-changers. My grip strength increased dramatically in just 4 weeks. Worth every penny!",
     verified: true,
     helpful: 18,
     image: "/lovable-uploads/0b2d2384-45de-457f-b15e-c9788faf1422.png"
@@ -49,8 +48,8 @@ const reviews: Review[] = [
     location: "New York, USA",
     rating: 4,
     date: "2024-05-10",
-    title: "Great product, minor setup issues",
-    content: "Love the concept and execution. Had some trouble with the initial WiFi setup but customer service was very helpful. Now it works perfectly and everyone asks where I got it!",
+    title: "Great for stress relief at work",
+    content: "Love using the stress relief grip ball during work breaks. Helps me focus and reduces anxiety. The finger stretcher is also great for counteracting typing strain. Minor issue with the carry bag zipper.",
     verified: true,
     helpful: 12
   },
@@ -60,8 +59,8 @@ const reviews: Review[] = [
     location: "Florida, USA",
     rating: 5,
     date: "2024-05-08",
-    title: "Perfect for elderly parents",
-    content: "Bought this for my parents who aren't tech-savvy. They absolutely love it! So simple to use and they can see photos and videos of their grandkids anytime. Highly recommend!",
+    title: "Perfect for elderly hand mobility",
+    content: "Bought this for my 78-year-old father who has arthritis. The adjustable resistance and variety of tools help him maintain hand strength and mobility. Easy to use and very effective!",
     verified: true,
     helpful: 31,
     image: "/lovable-uploads/8bdd08f8-f1a6-4ddf-a8be-9eb0b5a5689b.png"
@@ -72,8 +71,8 @@ const reviews: Review[] = [
     location: "Washington, USA",
     rating: 5,
     date: "2024-05-05",
-    title: "Brought tears of joy",
-    content: "This frame made my mom cry happy tears. She lost my dad last year and being able to watch their old videos together brings her so much comfort. Thank you for creating something so meaningful.",
+    title: "Essential for piano practice",
+    content: "As a piano teacher, finger strength and dexterity are crucial. This kit, especially the finger exerciser, has improved my playing significantly. My students notice the difference in my technique!",
     verified: true,
     helpful: 45
   },
@@ -83,8 +82,8 @@ const reviews: Review[] = [
     location: "Arizona, USA",
     rating: 4,
     date: "2024-05-03",
-    title: "Solid build quality",
-    content: "The frame feels premium and well-made. Picture quality is excellent. Only wish the screen was slightly larger, but overall very satisfied with the purchase.",
+    title: "Solid build quality, great variety",
+    content: "The stainless steel springs feel premium and durable. Love having 5 different tools for various hand exercises. The carry bag is convenient for travel. Only wish the grip ring had slightly more resistance options.",
     verified: true,
     helpful: 8
   },
@@ -94,8 +93,8 @@ const reviews: Review[] = [
     location: "Colorado, USA",
     rating: 5,
     date: "2024-05-01",
-    title: "Best investment ever!",
-    content: "I can't believe how much joy this little frame brings to our family. The kids love recording messages for grandma and she treasures every single one. 10/10 would buy again!",
+    title: "Best investment for hand health!",
+    content: "After years of computer work, my hands were weak and stiff. This kit completely changed that. Use it daily - the finger stretcher for relief and the grip strengthener for building power. Amazing results!",
     verified: true,
     helpful: 22
   },
@@ -105,8 +104,8 @@ const reviews: Review[] = [
     location: "Illinois, USA",
     rating: 5,
     date: "2024-04-28",
-    title: "Exceeded expectations",
-    content: "Was skeptical at first but this product is genuinely amazing. The video quality is crisp, setup was straightforward, and my wife hasn't stopped using it since we got it.",
+    title: "Perfect for tennis players",
+    content: "My tennis game improved dramatically after using this kit for 6 weeks. Stronger grip means more control and power in my shots. The adjustable resistance is perfect for progressive training.",
     verified: true,
     helpful: 15
   },
@@ -116,8 +115,8 @@ const reviews: Review[] = [
     location: "Oregon, USA",
     rating: 5,
     date: "2024-04-25",
-    title: "Perfect wedding gift",
-    content: "Gave this to my newlywed sister with all our family photos and videos loaded. She was in tears! Such a thoughtful and unique gift that will be treasured forever.",
+    title: "Great for carpal tunnel prevention",
+    content: "Working in data entry, I was developing carpal tunnel symptoms. This kit, especially the finger stretcher and grip ball, has been a lifesaver. Pain is gone and my hands feel stronger than ever.",
     verified: true,
     helpful: 19
   },
@@ -127,8 +126,8 @@ const reviews: Review[] = [
     location: "Nevada, USA",
     rating: 4,
     date: "2024-04-22",
-    title: "Great customer service",
-    content: "Had an issue with my first unit, but the customer service team was incredible. They sent a replacement immediately and it works perfectly. Really impressed with the company.",
+    title: "Outstanding customer service",
+    content: "Had a question about proper usage for my specific needs. FitBeast's 24/7 support was incredible - got detailed guidance and exercise recommendations. The product works exactly as advertised.",
     verified: true,
     helpful: 11
   },
@@ -138,8 +137,8 @@ const reviews: Review[] = [
     location: "Georgia, USA",
     rating: 5,
     date: "2024-04-20",
-    title: "Memories come alive",
-    content: "This frame has brought our family closer together. We share videos and photos instantly and my grandmother feels so connected to all of us. Absolutely love it!",
+    title: "Guitar playing improvement",
+    content: "As a guitarist, finger strength and independence are crucial. This kit's finger exerciser and grip strengthener have dramatically improved my playing technique and endurance. Highly recommend for musicians!",
     verified: true,
     helpful: 27
   },
@@ -149,8 +148,8 @@ const reviews: Review[] = [
     location: "Michigan, USA",
     rating: 5,
     date: "2024-04-18",
-    title: "Technology made simple",
-    content: "Finally, a tech product that my elderly father can actually use! He's 82 and figured it out in minutes. Now he watches videos of his great-grandkids all day long.",
+    title: "Perfect for seniors",
+    content: "At 82, maintaining hand strength is important for daily activities. This kit is gentle yet effective. The adjustable resistance lets me progress safely. Feel more confident with everyday tasks now.",
     verified: true,
     helpful: 33
   },
@@ -160,8 +159,8 @@ const reviews: Review[] = [
     location: "North Carolina, USA",
     rating: 4,
     date: "2024-04-15",
-    title: "Beautiful design",
-    content: "The frame looks elegant in our living room and the display quality is fantastic. Only minor complaint is the sound could be a bit louder, but overall very happy.",
+    title: "Great for office workers",
+    content: "The stress relief ball is perfect for desk use. Helps with focus and reduces hand tension from typing. The whole kit is well-designed and portable. Minor complaint - wish instructions were more detailed.",
     verified: true,
     helpful: 9
   },
@@ -171,8 +170,8 @@ const reviews: Review[] = [
     location: "Ohio, USA",
     rating: 5,
     date: "2024-04-12",
-    title: "Worth every penny",
-    content: "Initially thought it was pricey, but after seeing how much joy it brings my family, it's worth every cent. The build quality and functionality are top-notch.",
+    title: "Worth every penny for athletes",
+    content: "Initially thought it was pricey, but after seeing my weightlifting performance improve, it's worth every cent. Grip strength was my limiting factor - not anymore! Build quality is exceptional.",
     verified: true,
     helpful: 16
   },
@@ -182,8 +181,8 @@ const reviews: Review[] = [
     location: "Virginia, USA",
     rating: 5,
     date: "2024-04-10",
-    title: "Connects families",
-    content: "Living across the country from my parents, this frame helps us stay connected. They see photos and videos of their grandkids daily. It's like we're there with them.",
+    title: "Helps with arthritis management",
+    content: "My rheumatologist recommended grip exercises for my arthritis. This kit provides the perfect variety and resistance levels. Regular use has significantly reduced stiffness and improved mobility.",
     verified: true,
     helpful: 21
   },
@@ -193,8 +192,8 @@ const reviews: Review[] = [
     location: "Pennsylvania, USA",
     rating: 5,
     date: "2024-04-08",
-    title: "Incredibly user-friendly",
-    content: "Set this up for my 78-year-old mother and she mastered it immediately. The interface is so intuitive and she loves showing it off to her friends.",
+    title: "Incredibly versatile kit",
+    content: "Love having 5 different tools for various exercises. From rehabilitation to strength building to stress relief - this kit covers everything. The video tutorials are also very helpful.",
     verified: true,
     helpful: 14
   },
@@ -204,8 +203,8 @@ const reviews: Review[] = [
     location: "Indiana, USA",
     rating: 4,
     date: "2024-04-05",
-    title: "Great for busy families",
-    content: "With our hectic schedules, this frame helps us share precious moments instantly. Kids love seeing themselves on the big screen. Minor wifi connectivity issues initially.",
+    title: "Great for busy professionals",
+    content: "As a surgeon, hand strength and dexterity are critical. This portable kit lets me maintain and improve my hand fitness anywhere. The finger exerciser is particularly beneficial for fine motor skills.",
     verified: true,
     helpful: 7
   },
@@ -215,8 +214,8 @@ const reviews: Review[] = [
     location: "Tennessee, USA",
     rating: 5,
     date: "2024-04-03",
-    title: "Premium quality",
-    content: "The attention to detail in this product is impressive. From the packaging to the frame itself, everything screams quality. My wife is obsessed with it!",
+    title: "Premium quality materials",
+    content: "The stainless steel springs and ergonomic design show attention to quality. Each tool feels durable and well-engineered. After 3 months of daily use, everything still works perfectly.",
     verified: true,
     helpful: 13
   },
@@ -226,8 +225,8 @@ const reviews: Review[] = [
     location: "Missouri, USA",
     rating: 5,
     date: "2024-04-01",
-    title: "Emotional connection",
-    content: "This frame has become the centerpiece of our home. Every visitor comments on it and wants to know where to get one. It's brought so much happiness to our family.",
+    title: "Perfect for drummers",
+    content: "My drumming endurance and control improved dramatically using this kit. The finger exerciser and grip strengthener target exactly the muscles drummers need. Essential gear for any serious musician.",
     verified: true,
     helpful: 25
   },
@@ -237,8 +236,8 @@ const reviews: Review[] = [
     location: "Wisconsin, USA",
     rating: 4,
     date: "2024-03-29",
-    title: "Good value for money",
-    content: "Compared to other digital frames, this offers great value. The video feature sets it apart and the quality is excellent. Would recommend to anyone.",
+    title: "Good value for complete kit",
+    content: "Compared to buying individual hand exercise tools, this 5-pack offers great value. The variety ensures I never get bored with my hand workout routine. Quality is excellent across all items.",
     verified: true,
     helpful: 10
   },
@@ -248,8 +247,8 @@ const reviews: Review[] = [
     location: "Minnesota, USA",
     rating: 5,
     date: "2024-03-27",
-    title: "Life-changing product",
-    content: "Sounds dramatic, but this frame has genuinely changed how our family stays connected. My elderly aunt feels less isolated and loves receiving daily updates.",
+    title: "Life-changing for hand pain",
+    content: "Suffered from chronic hand pain due to repetitive strain. This kit's combination of strengthening and stretching tools has virtually eliminated my pain. Feel like I have new hands!",
     verified: true,
     helpful: 29
   },
@@ -259,8 +258,8 @@ const reviews: Review[] = [
     location: "Iowa, USA",
     rating: 5,
     date: "2024-03-25",
-    title: "Sleek and modern",
-    content: "The design is beautiful and fits perfectly with our home decor. The touch screen is responsive and the picture quality is stunning. Highly recommend!",
+    title: "Compact yet comprehensive",
+    content: "Amazing how much functionality they packed into such a portable kit. The carry bag fits easily in my gym bag or briefcase. No excuses not to maintain hand strength anywhere.",
     verified: true,
     helpful: 12
   },
@@ -270,8 +269,8 @@ const reviews: Review[] = [
     location: "Kansas, USA",
     rating: 4,
     date: "2024-03-22",
-    title: "Easy setup process",
-    content: "Even though I'm not tech-savvy, I had this up and running in 20 minutes. The instructions were clear and customer support was helpful when I had questions.",
+    title: "Easy to use for all ages",
+    content: "Bought this for family use - from my teenage athlete son to my elderly mother. The adjustable resistance and variety of tools work for everyone's needs and abilities.",
     verified: true,
     helpful: 8
   },
@@ -281,8 +280,8 @@ const reviews: Review[] = [
     location: "Arkansas, USA",
     rating: 5,
     date: "2024-03-20",
-    title: "Perfect for seniors",
-    content: "Bought this for my 85-year-old grandfather. He was amazed by the technology and now spends hours watching family videos. It's brought him so much joy.",
+    title: "Perfect for physical therapy",
+    content: "My physical therapist recommended this kit for my hand rehabilitation program. The progressive resistance options and different exercise types are exactly what I needed for recovery.",
     verified: true,
     helpful: 20
   },
@@ -292,8 +291,8 @@ const reviews: Review[] = [
     location: "Louisiana, USA",
     rating: 5,
     date: "2024-03-18",
-    title: "Outstanding customer service",
-    content: "Had a question about compatibility and the support team went above and beyond to help. The product itself is fantastic and works exactly as advertised.",
+    title: "Outstanding support and product",
+    content: "Had questions about which exercises to focus on for my goals. FitBeast's support team provided personalized recommendations. The product quality and customer service are both top-notch.",
     verified: true,
     helpful: 15
   },
@@ -303,8 +302,8 @@ const reviews: Review[] = [
     location: "Mississippi, USA",
     rating: 4,
     date: "2024-03-15",
-    title: "Great addition to any home",
-    content: "This frame has become a conversation starter in our home. Guests are always impressed by the quality and functionality. Minor issues with app connectivity.",
+    title: "Great addition to home gym",
+    content: "This kit complements my home workout routine perfectly. Hand and forearm strength often gets neglected, but this comprehensive kit ensures I don't skip this important aspect of fitness.",
     verified: true,
     helpful: 6
   },
@@ -314,8 +313,8 @@ const reviews: Review[] = [
     location: "Alabama, USA",
     rating: 5,
     date: "2024-03-12",
-    title: "Brings family together",
-    content: "Since getting this frame, our whole family is more engaged in sharing memories. It's created new traditions and brought us closer together. Love it!",
+    title: "Helps with daily activities",
+    content: "After a stroke, rebuilding hand strength was crucial for independence. This kit's variety and adjustable resistance helped me progress from basic grip to complex fine motor tasks.",
     verified: true,
     helpful: 23
   },
@@ -325,8 +324,8 @@ const reviews: Review[] = [
     location: "South Carolina, USA",
     rating: 5,
     date: "2024-03-10",
-    title: "Impressive technology",
-    content: "The seamless way photos and videos display is impressive. The quality is professional-grade and the user interface is intuitive. Exceeded all expectations.",
+    title: "Impressive engineering",
+    content: "The ergonomic design and quality materials show thoughtful engineering. Each tool targets different aspects of hand fitness. As an engineer myself, I appreciate the attention to detail.",
     verified: true,
     helpful: 17
   },
@@ -336,8 +335,8 @@ const reviews: Review[] = [
     location: "Kentucky, USA",
     rating: 4,
     date: "2024-03-08",
-    title: "Worth the investment",
-    content: "Initially hesitant about the price, but after using it for a month, I can say it's worth every dollar. The happiness it brings to my family is priceless.",
+    title: "Worth the investment for health",
+    content: "Initially hesitant about the price, but hand health is invaluable. After using this kit for 2 months, my grip strength and dexterity have improved significantly. Worth every dollar.",
     verified: true,
     helpful: 11
   },
@@ -347,8 +346,8 @@ const reviews: Review[] = [
     location: "Oklahoma, USA",
     rating: 5,
     date: "2024-03-05",
-    title: "Revolutionary product",
-    content: "This isn't just a digital frame - it's a way to stay connected with loved ones. The ease of use and quality construction make this a must-have for any family.",
+    title: "Revolutionary hand training kit",
+    content: "This isn't just a grip strengthener - it's a complete hand fitness system. The combination of tools covers every aspect of hand and forearm development. A must-have for serious training.",
     verified: true,
     helpful: 26
   },
@@ -358,8 +357,8 @@ const reviews: Review[] = [
     location: "West Virginia, USA",
     rating: 5,
     date: "2024-03-03",
-    title: "Perfect memorial gift",
-    content: "Gave this to my aunt after she lost her husband. Loading it with memories of their 50-year marriage brought her so much comfort. Thank you for creating something so meaningful.",
+    title: "Perfect for martial arts training",
+    content: "As a martial artist, grip strength is crucial for grappling and weapon training. This kit has significantly improved my performance. The finger exerciser is particularly beneficial for technique.",
     verified: true,
     helpful: 34
   },
@@ -369,8 +368,8 @@ const reviews: Review[] = [
     location: "Utah, USA",
     rating: 4,
     date: "2024-03-01",
-    title: "Solid product overall",
-    content: "Great build quality and features. The display is crisp and the frame looks premium. Only wished it had more storage space, but cloud features make up for it.",
+    title: "Solid product for active lifestyle",
+    content: "Great build quality and comprehensive tools for hand fitness. The portable design means I can maintain my hand strength routine even when traveling. Wish it included more exercise variations guide.",
     verified: true,
     helpful: 9
   }
@@ -445,13 +444,13 @@ const Reviews = () => {
       <div className="px-4 py-6">
         {/* Header Section */}
         <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold mb-2 text-white">Customer Reviews</h1>
+          <h1 className="text-2xl font-bold mb-2 text-white">Hand Grip Kit Reviews</h1>
           <div className="flex items-center justify-center gap-2 mb-2">
             {renderStars(Math.round(averageRating), "w-5 h-5")}
             <span className="text-lg font-semibold text-white">{averageRating.toFixed(1)}</span>
             <span className="text-gray-400">({reviews.length} reviews)</span>
           </div>
-          <p className="text-sm text-gray-400">Based on verified customer purchases</p>
+          <p className="text-sm text-gray-400">Based on verified Hand Grips Strengthener Kit purchases</p>
         </div>
 
         {/* Rating Distribution */}

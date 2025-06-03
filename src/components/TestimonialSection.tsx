@@ -20,25 +20,25 @@ const testimonials: Testimonial[] = [
     name: "Marcus T.",
     location: "Texas, USA",
     rating: 5,
-    text: "This program is no joke. Built more muscle in 8 weeks than I did in months at the gym. Pure warrior training.",
+    text: "This hand grip kit is incredible! My forearm strength increased dramatically in just 3 weeks. Perfect for my rock climbing training.",
     image: "/lovable-uploads/9d9f43cd-945c-4cf8-a3a1-f711494390d2.png",
     verified: true
   },
   {
     id: 2,
-    name: "Jake R.",
+    name: "Sarah M.",
     location: "California, USA", 
     rating: 5,
-    text: "Finally found a training system that builds real functional strength. My performance in everything improved dramatically.",
+    text: "As a pianist, finger dexterity is crucial. This kit helped me build strength and control I never had before. The finger exerciser is amazing!",
     image: "/lovable-uploads/0b2d2384-45de-457f-b15e-c9788faf1422.png",
     verified: true
   },
   {
     id: 3,
-    name: "Alex M.",
+    name: "Alex R.",
     location: "New York, USA",
-    rating: 4,
-    text: "The mental toughness part is game-changing. I'm stronger physically and mentally. This is what real training looks like.",
+    rating: 5,
+    text: "Recovering from wrist surgery, this kit was perfect for rehabilitation. Adjustable resistance helped me progress safely. Highly recommend!",
     image: "/lovable-uploads/8bdd08f8-f1a6-4ddf-a8be-9eb0b5a5689b.png",
     verified: true
   }
@@ -95,7 +95,7 @@ const TestimonialSection: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            See How Warriors Are Building Their Ultimate Battle-Ready Bodies
+            See How People Are Building Stronger Hands with Our 5-Pack Kit
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -104,7 +104,7 @@ const TestimonialSection: React.FC = () => {
             className="text-gray-400 text-xs flex items-center justify-center gap-1"
           >
             <Star size={14} className="text-yellow-400" />
-            Rated 4.8/5 by 1,319+ Warriors
+            Rated 4.8/5 by 1,319+ Hand Strength Users
           </motion.p>
         </div>
         

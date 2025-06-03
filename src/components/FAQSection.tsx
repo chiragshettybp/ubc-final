@@ -10,28 +10,28 @@ type FAQ = {
 
 const faqs: FAQ[] = [
   {
-    question: "What's included in the Train Like a Spartan program?",
-    answer: "You get 60+ pages of pure training content including bodyweight workouts, minimalist equipment programs, speed & agility circuits, warrior meal framework, and exclusive bonuses like warm-up routines and motivation clips."
+    question: "What's included in the Hand Grips Strengthener Kit - 5 Pack®?",
+    answer: "You get a complete hand training system: 1x Adjustable Hand Grip Strengthener (22-132 lbs), 1x Finger Exerciser (4 lbs per finger), 1x Finger Stretcher Resistance Band, 1x Hand Strengthener Grip Ring (50 lbs), 1x Stress Relief Grip Ball, 1x Stylish Carry Bag, plus User's Manual and FREE Online Video Tutorial."
   },
   {
-    question: "Do I need a gym or equipment for this program?",
-    answer: "No gym required! The program is designed for bodyweight training and minimal equipment. For the minimalist equipment program, you only need dumbbells and a pull-up bar."
+    question: "Is this suitable for beginners and all fitness levels?",
+    answer: "Absolutely! The adjustable resistance from 22-132 lbs makes it perfect for everyone - from beginners to advanced athletes. Whether you're recovering from injury, just starting out, or training at high performance levels, this kit grows with you."
   },
   {
-    question: "What format is the program delivered in?",
-    answer: "The program comes as a mobile and desktop-friendly PDF with visual exercise demonstrations. You'll get instant download access after purchase with lifetime updates included."
+    question: "Can I use this for stress relief and rehabilitation?",
+    answer: "Yes! The kit includes a Stress Relief Grip Ball and multiple resistance levels specifically designed for stress relief, rehabilitation, and therapeutic use. Perfect for office breaks, anxiety relief, and recovery from hand injuries."
   },
   {
-    question: "How long does it take to see results?",
-    answer: "Most warriors see improvements in strength and conditioning within 2-3 weeks of consistent training. The program is designed to build functional strength, speed, and mental toughness progressively."
+    question: "How portable is the Hand Grips Strengthener Kit?",
+    answer: "Extremely portable! The lightweight design and included stylish carry bag make it perfect for travel. Take it to the gym, office, or anywhere you go. No excuses, just progress."
   },
   {
-    question: "Is this suitable for beginners?",
-    answer: "Yes! The program includes 3-day, 4-day, and 6-day training splits, so you can choose your battle rhythm based on your fitness level and schedule."
+    question: "Who can benefit from this hand strengthener kit?",
+    answer: "Everyone! Perfect for athletes (rock climbers, weightlifters, tennis/golf players, martial artists), musicians (guitarists, pianists, drummers), office workers, seniors improving hand mobility, and anyone recovering from hand injuries."
   },
   {
     question: "What's your guarantee policy?",
-    answer: "We offer a 7-day risk-free guarantee. If you try the program and don't feel stronger, tougher, and more focused, we'll refund you with no questions asked."
+    answer: "We offer a 7-day risk-free guarantee. If you try the Hand Grips Strengthener Kit and don't feel stronger hands and improved dexterity, we'll refund you with no questions asked. Plus, you get 24/7 customer support from FitBeast."
   }
 ];
 
