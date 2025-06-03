@@ -53,7 +53,7 @@ const GifSection: React.FC = () => {
           >
             <video 
               ref={videoRef}
-              src="https://jmp.sh/bWhpddOl"
+              src="https://drive.google.com/uc?export=download&id=1Q4sqEoCVoOviSffAjL4EqhIxVtqwdmW5"
               className="w-full h-auto block rounded-2xl"
               onEnded={handleVideoEnd}
               playsInline
