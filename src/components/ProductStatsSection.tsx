@@ -7,15 +7,15 @@ const ProductStatsSection: React.FC = () => {
   const statItems = [
     {
       percent: "94%",
-      description: "Built noticeable muscle using just bodyweight training"
+      description: "Improved grip strength and hand dexterity significantly"
     },
     {
       percent: "89%", 
-      description: "Increased their strength and explosive power significantly"
+      description: "Reduced stress and anxiety using the grip ball daily"
     },
     {
       percent: "92%",
-      description: "Developed unbreakable mental toughness and discipline"
+      description: "Enhanced performance in sports and musical instruments"
     }
   ];
 
@@ -31,7 +31,7 @@ const ProductStatsSection: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-3xl font-bold text-white mb-8">TRAIN LIKE A SPARTAN® Build Your Warrior Body 💪</h2>
+        <h2 className="text-3xl font-bold text-white mb-8">BUILD YOUR HAND STRENGTH® Stronger Hands, Better Life 💪</h2>
         
         {statItems.map((item, index) => (
           <div key={index} className="flex items-center mb-5 pb-5 border-b border-gray-700 last:border-b-0">
@@ -68,7 +68,7 @@ const ProductStatsSection: React.FC = () => {
           </div>
           <span className="text-sm font-normal mr-1 text-gray-300">Excellent</span>
           <span className="text-sm font-bold mr-1 text-gray-300">4.8</span>
-          <span className="text-sm text-gray-400">| 1,319 warrior reviews</span>
+          <span className="text-sm text-gray-400">| 1,319 hand strength reviews</span>
         </div>
       </motion.div>
     </section>

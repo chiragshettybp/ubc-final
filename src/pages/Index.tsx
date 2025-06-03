@@ -14,13 +14,13 @@ import Footer from '../components/Footer';
 import ProductMediaSection from '../components/ProductMediaSection';
 import GifSection from '../components/GifSection';
 import DogGridSection from '../components/DogGridSection';
-import { toast } from "@/components/ui/use-toast";
+import { toast } from "@/hooks/use-toast";
 
 const Index = () => {
   const handlePurchase = () => {
     toast({
-      title: "Your order is being processed",
-      description: "Thank you for your purchase!"
+      title: "Your Hand Grip Kit order is being processed",
+      description: "Thank you for choosing the Hand Grips Strengthener Kit - 5 Pack®!"
     });
   };
 

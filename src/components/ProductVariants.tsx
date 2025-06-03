@@ -1,5 +1,7 @@
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+
 const VariantOption: React.FC<{
   active: boolean;
   variant: 'basic' | 'complete';
@@ -19,14 +21,14 @@ const VariantOption: React.FC<{
         <div className="flex-1">
           <div className="flex items-center">
             <div className="w-10 h-10 bg-gray-700 rounded-md mr-3 overflow-hidden">
-              {variant === 'basic' ? <img src="/lovable-uploads/ed47c60b-881f-4ffa-a74d-c3a69249261b.png" alt="Basic Package" className="w-full h-full object-contain" /> : <img src="/lovable-uploads/92a6c0e9-d4a3-420f-b37d-84dddc26ccfa.png" alt="Complete Package" className="w-full h-full object-contain" />}
+              {variant === 'basic' ? <img src="/lovable-uploads/ed47c60b-881f-4ffa-a74d-c3a69249261b.png" alt="Basic Hand Grip Kit" className="w-full h-full object-contain" /> : <img src="/lovable-uploads/92a6c0e9-d4a3-420f-b37d-84dddc26ccfa.png" alt="Complete Hand Grip Kit" className="w-full h-full object-contain" />}
             </div>
             <div>
               <p className="font-bold text-white text-sm">
-                {variant === 'basic' ? 'Basic Training Package' : 'Complete Warrior Package'}
+                {variant === 'basic' ? 'Basic Hand Grip Kit (3 Pieces)' : 'Complete Hand Grip Kit (5 Pack®)'}
               </p>
               {variant === 'complete' && <p className="text-xs text-gray-400 font-semibold">
-                  + All Bonuses Included
+                  + Carry Bag & Video Tutorial
                 </p>}
             </div>
           </div>
@@ -51,8 +53,10 @@ const VariantOption: React.FC<{
       </div>
     </motion.div>;
 };
+
 const ProductVariants: React.FC = () => {
   const [selectedVariant, setSelectedVariant] = useState<'basic' | 'complete'>('complete');
+
   return <motion.div className="w-full px-4 space-y-4" initial={{
     opacity: 0,
     y: 20
@@ -72,10 +76,9 @@ const ProductVariants: React.FC = () => {
     }} transition={{
       delay: 0.3
     }} className="w-full rounded-b-lg p-3 text-white flex items-center py-0 bg-gray-700">
-        
         <div>
           <p className="text-xs">
-            <span className="font-bold">+ INSTANT</span> DOWNLOAD included with this package
+            <span className="font-bold">+ INSTANT</span> SHIPPING included with this package
           </p>
         </div>
       </motion.div>
@@ -91,9 +94,10 @@ const ProductVariants: React.FC = () => {
     }}>
           <div className="w-3 h-3 rounded-full bg-gray-500 mr-2"></div>
           <p className="text-xs">
-            <span className="font-bold text-center">WARRIOR BONUSES INCLUDED</span> 
+            <span className="font-bold text-center">COMPLETE 5-PACK KIT INCLUDED</span> 
           </p>
         </motion.div>}
     </motion.div>;
 };
+
 export default ProductVariants;
