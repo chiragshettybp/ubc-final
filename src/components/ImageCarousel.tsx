@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 interface ImageCarouselProps {
@@ -9,11 +8,10 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ className }) => {
   const [current, setCurrent] = useState(0);
   
   const slides = [
-    "https://i.postimg.cc/wTJk0B2n/51748977.jpg",
-    "https://i.postimg.cc/RC2R7t7c/51748961-ezgif-com-webp-to-jpg-converter.jpg",
-    "https://i.postimg.cc/7P59J92H/51748960-ezgif-com-webp-to-jpg-converter.jpg",
-    "https://i.postimg.cc/NLh5KBrH/51748959-ezgif-com-webp-to-jpg-converter.jpg",
-    "https://i.postimg.cc/8cf7kjsG/51748958-ezgif-com-webp-to-jpg-converter.jpg"
+    "https://i.postimg.cc/fbnvHfCn/Sab0ce3e310be497d84779cdf1646bbc10.webp",
+    "https://i.postimg.cc/qRGQ668f/S06b370ea617f429e90501c28b5562747z.webp",
+    "https://i.postimg.cc/fyTCcWKV/S443e98fcaae34b05b8f7375e1e3775e7r.webp",
+    "https://i.postimg.cc/NFJ4phJp/See4559fa673642eea317f53f32bf55d4m.webp"
   ];
 
   const nextSlide = () => {
