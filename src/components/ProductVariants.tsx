@@ -22,12 +22,10 @@ const VariantOption: React.FC<{
               {variant === 'basic' ? <img src="/lovable-uploads/ed47c60b-881f-4ffa-a74d-c3a69249261b.png" alt="Basic Hand Grip Kit" className="w-full h-full object-contain" /> : <img src="/lovable-uploads/92a6c0e9-d4a3-420f-b37d-84dddc26ccfa.png" alt="Complete Hand Grip Kit" className="w-full h-full object-contain" />}
             </div>
             <div>
-              <p className="font-bold text-white text-sm">
+              <p className="font-bold text-white text-base">
                 {variant === 'basic' ? 'PACK OF 1' : 'PACK OF 1'}
               </p>
-              <p className="text-xs text-gray-400 font-semibold">
-                + Carry Bag & Video Tutorial
-              </p>
+              
             </div>
           </div>
         </div>
