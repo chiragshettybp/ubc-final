@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -64,7 +63,7 @@ const HowToUse = () => {
             <div className="pt-2">
               <h2 className="text-lg font-semibold mb-2 text-white">Need Help?</h2>
               <p className="text-sm text-gray-300">
-                If you have any questions about using your Hand Grips Strengthener Kit, contact FitBeast's 24/7 support team at <a href="mailto:rememberframe@gmail.com" className="text-gray-400 hover:underline">rememberframe@gmail.com</a>.
+                If you have any questions about using your Hand Grips Strengthener Kit, contact FitBeast's 24/7 support team at <a href="mailto:handgrip@gmail.com" className="text-gray-400 hover:underline">handgrip@gmail.com</a>.
               </p>
             </div>
           </div>

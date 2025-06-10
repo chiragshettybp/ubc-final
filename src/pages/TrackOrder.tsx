@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -92,8 +91,8 @@ const TrackOrder = () => {
             </p>
             <ul className="text-sm space-y-2">
               <li>
-                <a href="mailto:rememberframe@gmail.com" className="text-gray-400 hover:underline">
-                  rememberframe@gmail.com
+                <a href="mailto:handgrip@gmail.com" className="text-gray-400 hover:underline">
+                  handgrip@gmail.com
                 </a>
               </li>
             </ul>

@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="max-w-md mx-auto px-4 pt-16 bg-black">
         {/* Logo and email signup */}
         <div className="mb-10">
-          <h2 className="font-bold mb-4 text-2xl">REMEMBERFRAME®</h2>
+          <h2 className="font-bold mb-4 text-2xl">HANDGRIP®</h2>
           <p className="text-sm opacity-90 mb-4">
             Join our email list for exclusive offers and the<br />
             latest news.
@@ -33,7 +33,7 @@ const Footer = () => {
         
         {/* Legal Disclaimer */}
         <div className="border-t border-gray-700 pt-6 mb-8">
-          <p className="text-xs opacity-75 leading-5 text-center">Safety precautions found at rememberframe.com/MustKnows must be read before use. In case of discomfort, discontinue use immediately. Note that all content and resources provided on our website are not medical advice nor should they be used as a substitute for professional medical treatment. For medical concerns and/or emergencies, consult your health care provider and emergency services immediately.</p>
+          <p className="text-xs opacity-75 leading-5 text-center">Safety precautions found at handgrip.com/MustKnows must be read before use. In case of discomfort, discontinue use immediately. Note that all content and resources provided on our website are not medical advice nor should they be used as a substitute for professional medical treatment. For medical concerns and/or emergencies, consult your health care provider and emergency services immediately.</p>
         </div>
         
         {/* Footer Bottom */}
@@ -41,7 +41,7 @@ const Footer = () => {
           <div className="flex gap-2 text-xs opacity-75 mb-6">
             <span>© Copyright 2025</span>
             <span className="w-1 h-1 rounded-full bg-gray-500 self-center"></span>
-            <span>REMEMBERFRAME®</span>
+            <span>HANDGRIP®</span>
           </div>
           
           {/* Payment methods */}

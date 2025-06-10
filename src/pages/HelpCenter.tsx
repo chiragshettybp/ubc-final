@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -56,9 +55,9 @@ const HelpCenter = () => {
                 FitBeast's 24/7 customer support team is here to help with any questions about your Hand Grips Strengthener Kit.
               </p>
               <div className="space-y-3">
-                <a href="mailto:rememberframe@gmail.com" className="flex items-center text-sm text-gray-400 hover:underline">
+                <a href="mailto:handgrip@gmail.com" className="flex items-center text-sm text-gray-400 hover:underline">
                   <Mail size={16} className="mr-2" />
-                  rememberframe@gmail.com
+                  handgrip@gmail.com
                 </a>
                 <a href="tel:815-857-8366" className="flex items-center text-sm text-gray-400 hover:underline">
                   <MessageSquare size={16} className="mr-2" />
