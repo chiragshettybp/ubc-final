@@ -1,7 +1,5 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-
 const VariantOption: React.FC<{
   active: boolean;
   variant: 'basic' | 'complete';
@@ -53,10 +51,8 @@ const VariantOption: React.FC<{
       </div>
     </motion.div>;
 };
-
 const ProductVariants: React.FC = () => {
   const [selectedVariant, setSelectedVariant] = useState<'basic' | 'complete'>('complete');
-
   return <motion.div className="w-full px-4 space-y-4" initial={{
     opacity: 0,
     y: 20
@@ -94,10 +90,9 @@ const ProductVariants: React.FC = () => {
     }}>
           <div className="w-3 h-3 rounded-full bg-gray-500 mr-2"></div>
           <p className="text-xs">
-            <span className="font-bold text-center">COMPLETE 5-PACK KIT INCLUDED</span> 
+            <span className="font-bold text-center">SECURE &amp; FAST PAYMENT OPTION</span> 
           </p>
         </motion.div>}
     </motion.div>;
 };
-
 export default ProductVariants;
