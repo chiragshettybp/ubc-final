@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -43,7 +44,7 @@ const DogGridSection: React.FC = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.03 }}
           >
-            <img className="w-full rounded-md" src="https://i.postimg.cc/bNxYhshQ/2-FDt-W2-QFCP.jpg" alt="Training" />
+            <img className="w-full rounded-md" src="https://i.postimg.cc/L69VqV4N/61-VVt6-Mw-L.jpg" alt="Hand Grip Training" />
             <p className="text-xs italic text-center mt-1 text-gray-300">Raw strength captured in motion.</p>
           </motion.div>
           
@@ -52,7 +53,7 @@ const DogGridSection: React.FC = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.03 }}
           >
-            <img className="w-full rounded-md" src="https://i.postimg.cc/RZGMWyqh/Acrylic-Digital-Picture-Frame-Digital-Frame-02130-1744170669-1280-1280.jpg" alt="Training" />
+            <img className="w-full rounded-md" src="https://i.postimg.cc/vH0t56cM/6153-Sz-Ubqu-L.jpg" alt="Hand Grip Training" />
             <p className="text-xs italic text-center mt-1 text-gray-300">The perfect warrior mindset.</p>
           </motion.div>
           
@@ -61,7 +62,7 @@ const DogGridSection: React.FC = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.03 }}
           >
-            <img className="w-full rounded-md" src="https://i.postimg.cc/jd0qmyGx/Sz-CMA-w-VS5n.jpg" alt="Training" />
+            <img className="w-full rounded-md" src="https://i.postimg.cc/G2nFbFSP/616-WQSk-SCk-L.jpg" alt="Hand Grip Training" />
             <p className="text-xs italic text-center mt-1 text-gray-300">Unleash your inner spartan.</p>
           </motion.div>
           
@@ -70,7 +71,7 @@ const DogGridSection: React.FC = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.03 }}
           >
-            <img className="w-full rounded-md" src="https://i.postimg.cc/x8HfqdbV/Tq7y1-Xfsw-K.jpg" alt="Training" />
+            <img className="w-full rounded-md" src="https://i.postimg.cc/T3Sj4MV4/617z-MEVBj3-L.jpg" alt="Hand Grip Training" />
             <p className="text-xs italic text-center mt-1 text-gray-300">Train like a true warrior.</p>
           </motion.div>
           
@@ -79,7 +80,7 @@ const DogGridSection: React.FC = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.03 }}
           >
-            <img className="w-full rounded-md" src="https://i.postimg.cc/bJS8FvgS/V3g-Wb-E57ys.jpg" alt="Training" />
+            <img className="w-full rounded-md" src="https://i.postimg.cc/mkRyyYYZ/61-JQA-GWFNL.jpg" alt="Hand Grip Training" />
             <p className="text-xs italic text-center mt-1 text-gray-300">Embrace the challenge.</p>
           </motion.div>
           
@@ -88,7 +89,7 @@ const DogGridSection: React.FC = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.03 }}
           >
-            <img className="w-full rounded-md" src="https://i.postimg.cc/dQTt55NN/pb-NB6knf-MT5.jpg" alt="Training" />
+            <img className="w-full rounded-md" src="https://i.postimg.cc/2jFw8tY1/61rwg-J24ue-L.jpg" alt="Hand Grip Training" />
             <p className="text-xs italic text-center mt-1 text-gray-300">Push your limits.</p>
           </motion.div>
           
@@ -97,7 +98,7 @@ const DogGridSection: React.FC = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.03 }}
           >
-            <img className="w-full rounded-md" src="https://i.postimg.cc/cLdx40xP/IMG-2490-scaled-600x600.jpg" alt="Training" />
+            <img className="w-full rounded-md" src="https://i.postimg.cc/NMRxXJrP/713ukr-X41-UL.jpg" alt="Hand Grip Training" />
             <p className="text-xs italic text-center mt-1 text-gray-300">Unleash your potential.</p>
           </motion.div>
           
@@ -106,7 +107,7 @@ const DogGridSection: React.FC = () => {
             variants={itemVariants}
             whileHover={{ scale: 1.03 }}
           >
-            <img className="w-full rounded-md" src="https://i.postimg.cc/5t0fLgF3/Acrylic-Digital-Picture-Frame-Office-16062-1744170669-1280-1280.jpg" alt="Training" />
+            <img className="w-full rounded-md" src="https://i.postimg.cc/KjNrq1fP/71a-ZOTnb-WLL.jpg" alt="Hand Grip Training" />
             <p className="text-xs italic text-center mt-1 text-gray-300">Become unbreakable.</p>
           </motion.div>
         </motion.div>
