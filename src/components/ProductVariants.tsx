@@ -23,7 +23,7 @@ const VariantOption: React.FC<{
             </div>
             <div>
               <p className="font-bold text-white text-base">
-                {variant === 'basic' ? 'PACK OF 1' : 'PACK OF 1'}
+                {variant === 'basic' ? 'PACK OF 1' : 'PACK OF 2'}
               </p>
               
             </div>
