@@ -1,12 +1,9 @@
-
 import React from 'react';
 import { Star, Monitor, Battery, Usb, Image, FileText } from 'lucide-react';
-
 const RatingStars = () => <div className="flex items-center">
     {[1, 2, 3, 4, 5].map(star => <Star key={star} className={`w-4 h-4 ${star <= 4 ? 'text-yellow-400 fill-yellow-400' : 'text-yellow-400'}`} />)}
     <span className="ml-2 text-sm text-white">Excellent 4.8 | 1319 reviews</span>
   </div>;
-
 const ProductInfo: React.FC = () => {
   const specifications = [{
     icon: <FileText size={20} className="text-gray-400" />,
@@ -24,11 +21,10 @@ const ProductInfo: React.FC = () => {
     icon: <Usb size={20} className="text-gray-400" />,
     text: "Portable with Stylish Carry Bag"
   }];
-
   return <div className="w-full px-4 bg-black">
       <div className="mb-3">
         <RatingStars />
-        <h1 className="text-2xl font-bold text-white mt-2">Hand Grips Strengthener Kit - 5 Pack®</h1>
+        <h1 className="text-2xl font-bold text-white mt-2">HANDGRIP® - 5 Pack Strengthener Kit</h1>
       </div>
       
       <p className="text-sm font-bold text-white mb-3">💪 Build Strength. Improve Dexterity. Relieve Stress. Anytime, Anywhere.</p>
@@ -52,5 +48,4 @@ Perfect for athletes, musicians, office workers, and anyone looking to boost han
       </div>
     </div>;
 };
-
 export default ProductInfo;
