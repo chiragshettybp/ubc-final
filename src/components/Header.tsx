@@ -82,7 +82,7 @@ const Header: React.FC = () => {
           
           {/* Logo */}
           <Link to="/" className="absolute left-1/2 transform -translate-x-1/2">
-            <img alt="Bleame Logo" className="h-6 md:h-7 object-contain" src="/img/bleame-logo.svg" />
+            <span className="text-white text-xl md:text-2xl font-bold tracking-wide">Bleame</span>
           </Link>
           
           {/* Cart button */}
