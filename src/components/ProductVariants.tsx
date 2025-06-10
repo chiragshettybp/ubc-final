@@ -25,18 +25,18 @@ const VariantOption: React.FC<{
             </div>
             <div>
               <p className="font-bold text-white text-sm">
-                {variant === 'basic' ? 'Basic Hand Grip Kit (3 Pieces)' : 'Complete Hand Grip Kit (5 Pack®)'}
+                {variant === 'basic' ? 'PACK OF 1' : 'PACK OF 1'}
               </p>
-              {variant === 'complete' && <p className="text-xs text-gray-400 font-semibold">
-                  + Carry Bag & Video Tutorial
-                </p>}
+              <p className="text-xs text-gray-400 font-semibold">
+                + Carry Bag & Video Tutorial
+              </p>
             </div>
           </div>
         </div>
         <div className="text-right flex flex-col items-end">
           <div className="flex items-center space-x-2">
             <p className="font-bold text-base text-gray-400">
-              {variant === 'basic' ? '$17' : '$27'}
+              {variant === 'basic' ? '$19' : '$29'}
             </p>
             <motion.div className={`py-1 px-2 rounded-full text-xs font-bold transition-all duration-300
                 ${active ? 'bg-gray-600 text-white scale-100' : 'bg-gray-700 text-gray-300 scale-90 opacity-70'}`} initial={{
@@ -46,7 +46,7 @@ const VariantOption: React.FC<{
             scale: active ? 1 : 0.9,
             opacity: active ? 1 : 0.7
           }}>
-              SAVE {variant === 'basic' ? '$30' : '$20'}
+              SAVE {variant === 'basic' ? '$30' : '$40'}
             </motion.div>
           </div>
         </div>
