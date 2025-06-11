@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState, useEffect, memo } from 'react';
+import LazyImage from './LazyImage';
 
 interface ImageCarouselProps {
   className?: string;
 }
 
-const ImageCarousel: React.FC<ImageCarouselProps> = ({ className }) => {
+const ImageCarousel: React.FC<ImageCarouselProps> = memo(({ className }) => {
   const [current, setCurrent] = useState(0);
   
   const slides = [
@@ -37,10 +39,11 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ className }) => {
           key={index} 
           className={`carousel-slide ${index === current ? 'active' : ''}`}
         >
-          <img 
-            src={slide} 
-            alt={`Product image ${index + 1}`} 
-            loading="lazy"
+          <LazyImage
+            src={slide}
+            alt={`Product image ${index + 1}`}
+            loading={index === 0 ? 'eager' : 'lazy'}
+            className="w-full h-full"
           />
         </div>
       ))}
@@ -76,6 +79,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ className }) => {
       </div>
     </div>
   );
-};
+});
+
+ImageCarousel.displayName = 'ImageCarousel';
 
 export default ImageCarousel;
