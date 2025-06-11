@@ -1,35 +1,13 @@
 
-import React, { useState, useRef, useEffect, memo } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Volume2, VolumeX } from 'lucide-react';
 
-const GifSection: React.FC = memo(() => {
+const GifSection: React.FC = () => {
   const [isMuted, setIsMuted] = useState(true);
-  const [isInView, setIsInView] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!isInView) return;
-
     const video = videoRef.current;
     if (video) {
       const handleCanPlay = () => {
@@ -51,7 +29,7 @@ const GifSection: React.FC = memo(() => {
         video.removeEventListener('loadstart', handleLoadStart);
       };
     }
-  }, [isInView]);
+  }, []);
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -71,7 +49,7 @@ const GifSection: React.FC = memo(() => {
   };
 
   return (
-    <section ref={sectionRef} className="w-full bg-black py-8">
+    <section className="w-full bg-black py-8">
       <div className="max-w-md mx-auto">
         <motion.div 
           className="text-center mb-6 px-6"
@@ -90,46 +68,36 @@ const GifSection: React.FC = memo(() => {
             transition={{ duration: 0.6, delay: 0.2 }}
             whileHover={{ scale: 1.02 }}
           >
-            {isInView ? (
-              <video
-                ref={videoRef}
-                src="https://ik.imagekit.io/00e3q7unr/165dcfbe-752e-402f-85d3-83b8f8e2993b-hd%20(online-video-cutter.com).mp4?updatedAt=1749624311718"
-                className="w-full aspect-[9/16] rounded-2xl cursor-pointer"
-                muted={isMuted}
-                loop
-                controls={false}
-                playsInline
-                preload="none"
-                onClick={handleVideoClick}
-                title="Hand Grips Strengthener Kit Demo"
-              />
-            ) : (
-              <div className="w-full aspect-[9/16] rounded-2xl bg-gray-800 animate-pulse flex items-center justify-center">
-                <div className="text-gray-400">Loading video...</div>
-              </div>
-            )}
+            <video
+              ref={videoRef}
+              src="https://ik.imagekit.io/00e3q7unr/165dcfbe-752e-402f-85d3-83b8f8e2993b-hd%20(online-video-cutter.com).mp4?updatedAt=1749624311718"
+              className="w-full aspect-[9/16] rounded-2xl cursor-pointer"
+              muted={isMuted}
+              loop
+              controls={false}
+              playsInline
+              preload="metadata"
+              onClick={handleVideoClick}
+              title="Hand Grips Strengthener Kit Demo"
+            />
             
             {/* Mute/Unmute Button */}
-            {isInView && (
-              <button
-                onClick={toggleMute}
-                className="absolute top-4 right-4 bg-black bg-opacity-50 hover:bg-opacity-70 text-white p-2 rounded-full transition-all duration-200"
-                aria-label={isMuted ? 'Unmute video' : 'Mute video'}
-              >
-                {isMuted ? (
-                  <VolumeX className="w-5 h-5" />
-                ) : (
-                  <Volume2 className="w-5 h-5" />
-                )}
-              </button>
-            )}
+            <button
+              onClick={toggleMute}
+              className="absolute top-4 right-4 bg-black bg-opacity-50 hover:bg-opacity-70 text-white p-2 rounded-full transition-all duration-200"
+              aria-label={isMuted ? 'Unmute video' : 'Mute video'}
+            >
+              {isMuted ? (
+                <VolumeX className="w-5 h-5" />
+              ) : (
+                <Volume2 className="w-5 h-5" />
+              )}
+            </button>
           </motion.div>
         </div>
       </div>
     </section>
   );
-});
-
-GifSection.displayName = 'GifSection';
+};
 
 export default GifSection;
