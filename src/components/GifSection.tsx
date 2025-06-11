@@ -1,16 +1,59 @@
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Volume2, VolumeX } from 'lucide-react';
 
 const GifSection: React.FC = () => {
   const [isMuted, setIsMuted] = useState(true);
+  const [videoError, setVideoError] = useState<string | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      const handleCanPlay = () => {
+        console.log('Video can play');
+        video.play().catch(err => {
+          console.error('Video play failed:', err);
+          setVideoError('Autoplay blocked - click to play');
+        });
+      };
+
+      const handleError = (e: Event) => {
+        console.error('Video error:', e);
+        setVideoError('Video failed to load');
+      };
+
+      const handleLoadStart = () => {
+        console.log('Video loading started');
+      };
+
+      video.addEventListener('canplay', handleCanPlay);
+      video.addEventListener('error', handleError);
+      video.addEventListener('loadstart', handleLoadStart);
+
+      return () => {
+        video.removeEventListener('canplay', handleCanPlay);
+        video.removeEventListener('error', handleError);
+        video.removeEventListener('loadstart', handleLoadStart);
+      };
+    }
+  }, []);
 
   const toggleMute = () => {
     if (videoRef.current) {
       videoRef.current.muted = !isMuted;
       setIsMuted(!isMuted);
+    }
+  };
+
+  const handleVideoClick = () => {
+    if (videoRef.current) {
+      if (videoRef.current.paused) {
+        videoRef.current.play().catch(err => {
+          console.error('Manual play failed:', err);
+        });
+      }
     }
   };
 
@@ -37,13 +80,21 @@ const GifSection: React.FC = () => {
             <video
               ref={videoRef}
               src="https://imagekit.io/player/embed/00e3q7unr/165dcfbe-752e-402f-85d3-83b8f8e2993b-hd%20(online-video-cutter.com).mp4"
-              className="w-full aspect-[9/16] rounded-2xl"
-              autoPlay
+              className="w-full aspect-[9/16] rounded-2xl cursor-pointer"
               muted={isMuted}
               loop
               controls={false}
+              playsInline
+              preload="metadata"
+              onClick={handleVideoClick}
               title="Hand Grips Strengthener Kit Demo"
             />
+            
+            {videoError && (
+              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-sm p-4 text-center rounded-2xl">
+                {videoError}
+              </div>
+            )}
             
             {/* Mute/Unmute Button */}
             <button
