@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState, useEffect, useCallback } from 'react';
 
 interface ImageCarouselProps {
   className?: string;
@@ -14,21 +15,21 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ className }) => {
     "https://i.postimg.cc/NFJ4phJp/See4559fa673642eea317f53f32bf55d4m.webp"
   ];
 
-  const nextSlide = () => {
-    setCurrent((current + 1) % slides.length);
-  };
+  const nextSlide = useCallback(() => {
+    setCurrent((prevCurrent) => (prevCurrent + 1) % slides.length);
+  }, [slides.length]);
 
-  const prevSlide = () => {
-    setCurrent((current - 1 + slides.length) % slides.length);
-  };
+  const prevSlide = useCallback(() => {
+    setCurrent((prevCurrent) => (prevCurrent - 1 + slides.length) % slides.length);
+  }, [slides.length]);
 
-  // Auto-advance slides
+  // Auto-advance slides - fixed dependency array
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
     }, 5000);
     return () => clearInterval(interval);
-  }, [current]);
+  }, [nextSlide]);
 
   return (
     <div className={`carousel-container mx-auto ${className}`}>
