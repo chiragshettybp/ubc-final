@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote as QuoteIcon } from 'lucide-react';
@@ -23,7 +24,7 @@ const testimonials: Testimonial[] = [{
   verified: true
 }, {
   id: 2,
-  name: "Sarah M.",
+  name: "David M.",
   location: "California, USA",
   rating: 5,
   text: "As a pianist, finger dexterity is crucial. This kit helped me build strength and control I never had before. The finger exerciser is amazing!",
@@ -31,7 +32,7 @@ const testimonials: Testimonial[] = [{
   verified: true
 }, {
   id: 3,
-  name: "Alex R.",
+  name: "Mike R.",
   location: "New York, USA",
   rating: 5,
   text: "Recovering from wrist surgery, this kit was perfect for rehabilitation. Adjustable resistance helped me progress safely. Highly recommend!",
