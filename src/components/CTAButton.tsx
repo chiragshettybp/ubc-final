@@ -21,7 +21,7 @@ const CTAButton: React.FC<{
   }, []);
 
   const handleClick = () => {
-    window.open('https://www.paypal.com/ncp/payment/AWQDP2YASKJAY', '_blank', 'noopener,noreferrer');
+    window.open('https://www.paypal.com/ncp/payment/L8JHEPL6RSSPJ', '_blank', 'noopener,noreferrer');
     onClick();
   };
 
