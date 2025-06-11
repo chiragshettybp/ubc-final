@@ -5,7 +5,6 @@ import { Volume2, VolumeX } from 'lucide-react';
 
 const GifSection: React.FC = () => {
   const [isMuted, setIsMuted] = useState(true);
-  const [videoError, setVideoError] = useState<string | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -15,13 +14,7 @@ const GifSection: React.FC = () => {
         console.log('Video can play');
         video.play().catch(err => {
           console.error('Video play failed:', err);
-          setVideoError('Autoplay blocked - click to play');
         });
-      };
-
-      const handleError = (e: Event) => {
-        console.error('Video error:', e);
-        setVideoError('Video failed to load');
       };
 
       const handleLoadStart = () => {
@@ -29,12 +22,10 @@ const GifSection: React.FC = () => {
       };
 
       video.addEventListener('canplay', handleCanPlay);
-      video.addEventListener('error', handleError);
       video.addEventListener('loadstart', handleLoadStart);
 
       return () => {
         video.removeEventListener('canplay', handleCanPlay);
-        video.removeEventListener('error', handleError);
         video.removeEventListener('loadstart', handleLoadStart);
       };
     }
@@ -89,12 +80,6 @@ const GifSection: React.FC = () => {
               onClick={handleVideoClick}
               title="Hand Grips Strengthener Kit Demo"
             />
-            
-            {videoError && (
-              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-sm p-4 text-center rounded-2xl">
-                {videoError}
-              </div>
-            )}
             
             {/* Mute/Unmute Button */}
             <button
