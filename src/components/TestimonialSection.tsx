@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote as QuoteIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 interface Testimonial {
   id: number;
   name: string;
@@ -11,13 +12,14 @@ interface Testimonial {
   image: string;
   verified: boolean;
 }
+
 const testimonials: Testimonial[] = [{
   id: 1,
   name: "Marcus T.",
   location: "Texas, USA",
   rating: 5,
   text: "This hand grip kit is incredible! My forearm strength increased dramatically in just 3 weeks. Perfect for my rock climbing training.",
-  image: "/lovable-uploads/9d9f43cd-945c-4cf8-a3a1-f711494390d2.png",
+  image: "https://i.postimg.cc/T1cV6TWF/86061fc3-b51c-44cf-8cf3-08ea2c5f5fe6.jpg",
   verified: true
 }, {
   id: 2,
@@ -25,7 +27,7 @@ const testimonials: Testimonial[] = [{
   location: "California, USA",
   rating: 5,
   text: "As a pianist, finger dexterity is crucial. This kit helped me build strength and control I never had before. The finger exerciser is amazing!",
-  image: "/lovable-uploads/0b2d2384-45de-457f-b15e-c9788faf1422.png",
+  image: "https://i.postimg.cc/Qt1gfQNX/9febbacf-257a-4d1f-9aef-ef6f77f92674.jpg",
   verified: true
 }, {
   id: 3,
@@ -33,9 +35,10 @@ const testimonials: Testimonial[] = [{
   location: "New York, USA",
   rating: 5,
   text: "Recovering from wrist surgery, this kit was perfect for rehabilitation. Adjustable resistance helped me progress safely. Highly recommend!",
-  image: "/lovable-uploads/8bdd08f8-f1a6-4ddf-a8be-9eb0b5a5689b.png",
+  image: "https://i.postimg.cc/8cGR97sL/b7f8d311-bb5a-463a-82aa-8aa48128c735.jpg",
   verified: true
 }];
+
 const TestimonialCard: React.FC<{
   testimonial: Testimonial;
   index: number;
@@ -81,6 +84,7 @@ const TestimonialCard: React.FC<{
       </div>
     </motion.div>;
 };
+
 const TestimonialSection: React.FC = () => {
   return <section className="w-full py-8 bg-zinc-950">
       <div className="max-w-md mx-auto">
@@ -131,4 +135,5 @@ const TestimonialSection: React.FC = () => {
       </div>
     </section>;
 };
+
 export default TestimonialSection;
