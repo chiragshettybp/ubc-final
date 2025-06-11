@@ -1,9 +1,7 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote as QuoteIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 interface Testimonial {
   id: number;
   name: string;
@@ -13,7 +11,6 @@ interface Testimonial {
   image: string;
   verified: boolean;
 }
-
 const testimonials: Testimonial[] = [{
   id: 1,
   name: "Marcus T.",
@@ -39,7 +36,6 @@ const testimonials: Testimonial[] = [{
   image: "https://i.postimg.cc/8cGR97sL/b7f8d311-bb5a-463a-82aa-8aa48128c735.jpg",
   verified: true
 }];
-
 const TestimonialCard: React.FC<{
   testimonial: Testimonial;
   index: number;
@@ -85,7 +81,6 @@ const TestimonialCard: React.FC<{
       </div>
     </motion.div>;
 };
-
 const TestimonialSection: React.FC = () => {
   return <section className="w-full py-8 bg-zinc-950">
       <div className="max-w-md mx-auto">
@@ -98,9 +93,7 @@ const TestimonialSection: React.FC = () => {
           y: 0
         }} transition={{
           duration: 0.5
-        }}>
-            See How People Are Building Stronger Hands with Our 5-Pack Kit
-          </motion.h2>
+        }}>See How People Are Building Stronger Hands with Our 5 Pack Strengther Kit</motion.h2>
           <motion.p initial={{
           opacity: 0
         }} animate={{
@@ -136,5 +129,4 @@ const TestimonialSection: React.FC = () => {
       </div>
     </section>;
 };
-
 export default TestimonialSection;
