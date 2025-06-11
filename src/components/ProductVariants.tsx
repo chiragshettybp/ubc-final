@@ -19,7 +19,7 @@ const VariantOption: React.FC<{
         <div className="flex-1">
           <div className="flex items-center">
             <div className="w-10 h-10 bg-gray-700 rounded-md mr-3 overflow-hidden">
-              {variant === 'basic' ? <img src="/lovable-uploads/ed47c60b-881f-4ffa-a74d-c3a69249261b.png" alt="Basic Hand Grip Kit" className="w-full h-full object-contain" /> : <img src="/lovable-uploads/92a6c0e9-d4a3-420f-b37d-84dddc26ccfa.png" alt="Complete Hand Grip Kit" className="w-full h-full object-contain" />}
+              {variant === 'basic' ? <img src="/lovable-uploads/99288b6b-4070-45cb-8343-0e1d32a1d497.png" alt="Basic Hand Grip Kit" className="w-full h-full object-contain" /> : <img src="/lovable-uploads/74b9412e-db04-4cec-b460-b1a34278b482.png" alt="Complete Hand Grip Kit" className="w-full h-full object-contain" />}
             </div>
             <div>
               <p className="font-bold text-white text-base">
