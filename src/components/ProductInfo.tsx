@@ -30,8 +30,8 @@ const ProductInfo: React.FC = () => {
       <p className="text-sm font-bold text-white mb-3">💪 Build Strength. Improve Dexterity. Relieve Stress. Anytime, Anywhere.</p>
       
       <div className="flex items-center mb-6">
-        <span className="text-gray-500 line-through text-lg mr-2">$47</span>
-        <span className="font-bold mr-4 text-gray-400 text-xl">$27</span>
+        <span className="text-gray-500 line-through text-lg mr-2">$49</span>
+        <span className="font-bold mr-4 text-gray-400 text-xl">$19</span>
         <span className="bg-gray-700 font-bold px-4 py-1 rounded-full text-white">SAVE 43%</span>
       </div>
 
