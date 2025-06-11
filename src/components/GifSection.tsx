@@ -23,11 +23,13 @@ const GifSection: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             whileHover={{ scale: 1.02 }}
           >
-            <iframe
-              src="https://www.youtube.com/embed/L4aNgNpBcls?autoplay=1&mute=1&loop=1&playlist=L4aNgNpBcls&controls=0"
+            <video
+              src="https://imagekit.io/player/embed/00e3q7unr/165dcfbe-752e-402f-85d3-83b8f8e2993b-hd%20(online-video-cutter.com).mp4"
               className="w-full aspect-[9/16] rounded-2xl"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
+              autoPlay
+              muted
+              loop
+              controls={false}
               title="Hand Grips Strengthener Kit Demo"
             />
           </motion.div>
