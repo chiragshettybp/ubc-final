@@ -79,7 +79,7 @@ const GifSection: React.FC = () => {
           >
             <video
               ref={videoRef}
-              src="https://imagekit.io/player/embed/00e3q7unr/165dcfbe-752e-402f-85d3-83b8f8e2993b-hd%20(online-video-cutter.com).mp4"
+              src="https://ik.imagekit.io/00e3q7unr/165dcfbe-752e-402f-85d3-83b8f8e2993b-hd%20(online-video-cutter.com).mp4?updatedAt=1749624311718"
               className="w-full aspect-[9/16] rounded-2xl cursor-pointer"
               muted={isMuted}
               loop
