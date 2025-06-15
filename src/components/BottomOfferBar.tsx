@@ -29,30 +29,30 @@ const BottomOfferBar: React.FC = () => {
 
   return (
     <div
-      className="fixed left-1/2 bottom-0 z-50 w-[98vw] max-w-2xl -translate-x-1/2 pb-3 px-1"
+      className="fixed left-1/2 bottom-0 z-50 w-[98vw] max-w-2xl -translate-x-1/2 pb-2 px-1"
       style={{ pointerEvents: "none" }}
     >
       <div
-        className="w-full min-h-[72px] sm:min-h-0 bg-[#111] border border-yellow-400 rounded-t-2xl flex flex-col md:flex-row items-center justify-between gap-4 px-5 py-4 shadow-lg"
+        className="w-full min-h-[50px] sm:min-h-0 bg-[#111] border border-yellow-400 rounded-t-xl flex flex-col md:flex-row items-center justify-between gap-2 px-3 py-2 shadow-lg"
         style={{ pointerEvents: "auto" }}
       >
         <div className="flex-1 flex flex-col items-center md:items-start">
-          <div className="text-white text-base font-semibold mb-1 text-center md:text-left">
+          <div className="text-white text-sm font-semibold mb-0 text-center md:text-left">
             Offer Will Expire In...
           </div>
-          <div className="flex items-center gap-2">
-            <span className="text-yellow-400 font-bold text-2xl tabular-nums">
+          <div className="flex items-center gap-1">
+            <span className="text-yellow-400 font-bold text-xl tabular-nums">
               {minutes.toString().padStart(2, "0")}
             </span>
-            <span className="text-white ml-1 text-sm font-medium">Minutes</span>
-            <span className="text-yellow-400 font-bold text-2xl tabular-nums ml-4">
+            <span className="text-white ml-1 text-xs font-medium">Min</span>
+            <span className="text-yellow-400 font-bold text-xl tabular-nums ml-2">
               {seconds.toString().padStart(2, "0")}
             </span>
-            <span className="text-white ml-1 text-sm font-medium">Seconds</span>
+            <span className="text-white ml-1 text-xs font-medium">Sec</span>
           </div>
         </div>
         <button
-          className={`${GOLD_GRADIENT} transition-all duration-200 rounded-full text-black font-semibold text-lg px-4 py-2 shadow-lg hover:brightness-105 focus:outline-none`}
+          className={`${GOLD_GRADIENT} transition-all duration-200 rounded-full text-black font-semibold text-base px-3 py-1.5 shadow-lg hover:brightness-105 focus:outline-none`}
           style={{
             boxShadow:
               "0 4px 18px 0 rgba(249,213,35,0.16), 0 1.5px 0 0 #fde047 inset",
@@ -73,4 +73,3 @@ const BottomOfferBar: React.FC = () => {
 };
 
 export default BottomOfferBar;
-
