@@ -103,6 +103,11 @@ export default {
 				ctaPulse: {
 					'0%, 100%': { transform: 'scale(1)' },
 					'50%': { transform: 'scale(1.045)' }
+				},
+				'pop-up': {
+					'0%': { transform: 'scale(0.87)', opacity: '0' },
+					'80%': { transform: 'scale(1.06)', opacity: '1' },
+					'100%': { transform: 'scale(1)', opacity: '1' },
 				}
 			},
 			animation: {
@@ -110,6 +115,7 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				wiggle: 'wiggle 2.7s cubic-bezier(0.36,1.11,0.89,0.44) infinite',
 				'cta-pulse': 'ctaPulse 6.5s cubic-bezier(0.77, 0, 0.18, 1) infinite',
+				'pop-up': 'pop-up 0.44s cubic-bezier(0.3,1.01,0.32,1) 1',
 			}
 		}
 	},

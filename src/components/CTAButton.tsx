@@ -5,16 +5,10 @@ import { motion } from 'framer-motion';
 const CTAButton: React.FC<{
   onClick: () => void;
 }> = ({ onClick }) => {
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    const animationInterval = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setIsAnimating(false);
-      }, 1000);
-    }, 5000);
-    return () => clearInterval(animationInterval);
+    setIsMounted(true);
   }, []);
 
   const handleClick = () => {
@@ -27,7 +21,10 @@ const CTAButton: React.FC<{
       onClick={handleClick}
       whileHover={{ scale: 1.09, rotate: -6 }}
       whileTap={{ scale: 0.97, rotate: 0 }}
-      className="w-full h-16 font-bold tracking-wider text-black text-xl transition-all duration-300 ease-in-out transform active:scale-95 shadow-lg hover:shadow-xl rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 bg-[#fde047] whitespace-nowrap overflow-hidden text-ellipsis relative animate-wiggle animate-cta-pulse"
+      className={
+        `w-full h-16 font-bold tracking-wider text-black text-xl transition-all duration-300 ease-in-out transform active:scale-95 shadow-lg hover:shadow-xl rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 bg-[#fde047] whitespace-nowrap overflow-hidden text-ellipsis relative` +
+        (isMounted ? ' animate-pop-up' : '')
+      }
       style={{ backgroundColor: "#fde047" }}
     >
       {/* Shining effect overlay */}
@@ -43,3 +40,4 @@ const CTAButton: React.FC<{
 };
 
 export default CTAButton;
+
