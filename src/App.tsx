@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -13,6 +14,7 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 import RefundPolicy from "./pages/RefundPolicy";
 import Disclaimer from "./pages/Disclaimer";
 import AffiliateDisclosure from "./pages/AffiliateDisclosure";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
@@ -44,3 +46,4 @@ const App = () => (
 );
 
 export default App;
+
