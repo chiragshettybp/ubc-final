@@ -1,19 +1,13 @@
 import React from 'react';
 const ProductInfo: React.FC = () => {
   return <div className="w-full px-4 bg-black">
-      <h1 className="text-2xl font-bold text-white mt-2 mb-2">YOUTUBE INCOME ACADEMY by Alyssa Ray®</h1>
+      <h1 className="font-bold text-white mt-2 mb-2 text-2xl text-left py-[19px]">YOUTUBE INCOME ACADEMY by Alyssa Ray®</h1>
       
       <p className="text-sm font-bold text-white mb-2">
         🎥 Launch. Automate. Monetize. Turn Content into Passive Income.
       </p>
 
-      <div className="flex items-center mb-4">
-        <span className="text-gray-500 line-through text-lg mr-2">$499</span>
-        <span className="font-bold mr-4 text-gray-400 text-xl">$197</span>
-        <span className="bg-gray-700 font-bold px-4 py-1 rounded-full text-white">
-          SAVE 60%
-        </span>
-      </div>
+      
 
       <p className="font-semibold text-white mb-2">
         The all-in-one system to build a fully automated YouTube channel.
