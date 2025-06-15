@@ -32,10 +32,7 @@ const Index = () => {
       <div className="flex flex-col items-center pt-4 pb-8">
         <ProductMediaSection />
         <ProductInfo />
-        {/* --- Promo Bar Animation 1 --- */}
-        <PromoBanner />
-        <PromoBadge />
-        {/* --- Promo Bar Animation 2 (above bundle options) --- */}
+        {/* --- Single Promo Bar Animation + Badge (just before bundle options) --- */}
         <PromoBanner />
         <PromoBadge />
         <ProductVariants />
