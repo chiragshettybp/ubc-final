@@ -36,8 +36,8 @@ const DogGridSection: React.FC = () => {
       }} transition={{
         duration: 0.5
       }}>
-          <h2 className="font-bold text-white mb-2 text-2xl">Build Your Warrior Physique</h2>
-          <p className="text-sm text-gray-300">Transform your body with proven Spartan training methods that build real functional strength.</p>
+          <h2 className="font-bold text-white mb-2 text-2xl">Launch Your Automated YouTube Earning Journey</h2>
+          <p className="text-sm text-gray-300">I’ll show you step-by-step how I built a fully automated YouTube channel using AI,no camera, no editing skills.</p>
         </motion.div>
         
         <motion.div className="grid grid-cols-2 gap-3 sm:gap-4" variants={containerVariants} initial="hidden" animate="visible">
