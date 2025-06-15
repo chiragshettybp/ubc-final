@@ -81,7 +81,7 @@ const PromoBanner: React.FC = () => <div className="relative w-full px-4 mb-4">
           Today's Price:
         </span>
         <span className="text-2xl font-extrabold text-yellow-300 whitespace-nowrap relative drop-shadow-glow">
-          $697
+          $197
           {/* Yellow underline effect */}
           <svg className="absolute left-0 -bottom-2" width="74" height="12" viewBox="0 0 74 12" fill="none" xmlns="http://www.w3.org/2000/svg" style={{
           zIndex: 1
