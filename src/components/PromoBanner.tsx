@@ -1,3 +1,4 @@
+
 import React from "react";
 
 // Sparkle SVG -- reusable
@@ -46,7 +47,7 @@ const PromoBanner: React.FC = () => (
           absolute
           w-full h-full
           rounded-2xl
-          bg-gradient-to-r from-yellow-400/40 via-fuchsia-500/10 to-green-300/40
+          bg-gradient-to-r from-yellow-400/40 via-fuchsia-500/10 to-yellow-300/40
           blur-2xl opacity-60
           animate-[pulse_2.5s_ease-in-out_infinite]
           scale-100
@@ -80,14 +81,14 @@ const PromoBanner: React.FC = () => (
       }}
     >
       {/* Everyday Price (crossed out) */}
-      <div className="flex items-center px-5 pt-4 pb-2 md:py-4 min-w-[175px] bg-gradient-to-r from-red-900/90 via-transparent to-transparent relative justify-center">
+      <div className="flex items-center px-5 pt-4 pb-2 md:py-4 min-w-[175px] bg-gradient-to-r from-black/70 via-transparent to-transparent relative justify-center">
         <span className="text-white text-lg font-semibold whitespace-nowrap">
           Everyday Price:
         </span>
-        <span className="relative ml-2 text-2xl font-bold text-red-400 select-none">
+        <span className="relative ml-2 text-2xl font-bold text-white select-none">
           <span className="relative z-10">$1387</span>
           <span
-            className="absolute left-0 right-0 top-1/2 h-1 border-b-4 border-red-500 z-20 w-full"
+            className="absolute left-0 right-0 top-1/2 h-1 border-b-4 border-yellow-300 z-20 w-full"
             style={{ transform: "rotate(-14deg) translateY(-50%)" }}
           />
         </span>
@@ -101,13 +102,13 @@ const PromoBanner: React.FC = () => (
       </div>
 
       {/* Today's Price with underline */}
-      <div className="flex items-center px-5 pb-4 pt-2 md:py-4 bg-gradient-to-l from-green-900/80 via-transparent to-transparent relative min-w-[190px] justify-center">
+      <div className="flex items-center px-5 pb-4 pt-2 md:py-4 bg-gradient-to-l from-black/70 via-transparent to-transparent relative min-w-[190px] justify-center">
         <span className="text-white text-lg font-semibold mr-1 whitespace-nowrap">
           Today's Price:
         </span>
-        <span className="text-2xl font-extrabold text-green-400 whitespace-nowrap relative drop-shadow-glow">
+        <span className="text-2xl font-extrabold text-yellow-300 whitespace-nowrap relative drop-shadow-glow">
           $697
-          {/* Green underline effect */}
+          {/* Yellow underline effect */}
           <svg
             className="absolute left-0 -bottom-2"
             width="74"
@@ -119,7 +120,7 @@ const PromoBanner: React.FC = () => (
           >
             <path
               d="M2 10C11.3142 6.66667 41.6 0.8 72 4"
-              stroke="#6EE7B7"
+              stroke="#FFD700"
               strokeWidth="4"
               strokeLinecap="round"
             />
