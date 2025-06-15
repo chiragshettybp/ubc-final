@@ -42,7 +42,7 @@ const ProductInfo: React.FC = () => {
         <div className="flex items-center space-x-2">
           <span className="text-green-400">📁</span>
           <span className="text-white">
-            Bonus: 50 Viral Video Ideas & Channel Audit Templates <span className="text-gray-400">($397 Value)</span>
+            Bonus: 50 Viral Video Ideas & Channel Audit Templates <span className="text-[#f4d535]">($397 Value Bonus FREE)</span>
           </span>
         </div>
       </div>
