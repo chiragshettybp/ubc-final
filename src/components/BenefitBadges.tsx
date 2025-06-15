@@ -1,3 +1,4 @@
+
 import React from 'react';
 const BenefitBadge: React.FC<{
   icon: string;
@@ -13,7 +14,8 @@ const BenefitBadge: React.FC<{
       <p className="text-xs font-bold text-white">{text}</p>
     </div>;
 };
+
 const BenefitBadges: React.FC = () => {
-  return;
+  return null;
 };
 export default BenefitBadges;
