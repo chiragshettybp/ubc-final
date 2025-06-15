@@ -1,10 +1,11 @@
+
 import React from 'react';
-import SlinkySection from './SlinkySection';
+// Removed: import SlinkySection from './SlinkySection';
 
 const ProductInfo: React.FC = () => {
   return (
     <div className="w-full px-4 bg-black">
-      <SlinkySection />
+      {/* Removed: <SlinkySection /> */}
       <h1 className="font-bold text-white mt-2 mb-2 text-2xl text-left py-[19px]">
         YOUTUBE INCOME ACADEMY by Alyssa Ray®
       </h1>
@@ -54,3 +55,4 @@ const ProductInfo: React.FC = () => {
   );
 };
 export default ProductInfo;
+
