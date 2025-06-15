@@ -1,19 +1,13 @@
-
 import React from 'react';
 import { Mail, Phone, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Footer = () => {
-  return (
-    <footer className="w-full text-white pb-16 bg-black">
+  return <footer className="w-full text-white pb-16 bg-black">
       <div className="max-w-md mx-auto px-4 pt-16 bg-black">
         {/* Logo and email signup */}
         <div className="mb-10">
-          <h2 className="font-bold mb-4 text-2xl">HANDGRIP®</h2>
-          <p className="text-sm opacity-90 mb-4">
-            Join our email list for exclusive offers and the<br />
-            latest news.
-          </p>
+          <h2 className="font-bold mb-4 text-2xl text-left">Alyssa Ray®</h2>
+          
         </div>
         
         {/* Help Links */}
@@ -33,7 +27,11 @@ const Footer = () => {
         
         {/* Legal Disclaimer */}
         <div className="border-t border-gray-700 pt-6 mb-8">
-          <p className="text-xs opacity-75 leading-5 text-center">Safety precautions found at handgrip.com/MustKnows must be read before use. In case of discomfort, discontinue use immediately. Note that all content and resources provided on our website are not medical advice nor should they be used as a substitute for professional medical treatment. For medical concerns and/or emergencies, consult your health care provider and emergency services immediately.</p>
+          <p className="opacity-75 leading-5 text-center text-xs">By purchasing and enrolling in this course, you agree to our Terms and Conditions and acknowledge that all course content is provided for educational purposes only. Class start dates may vary or be delayed due to the scheduling and completion of existing student batches. We operate on a structured intake system to ensure quality delivery, and as such, we do not offer refunds for delayed starts. Please enroll only if you understand and accept this scheduling policy.
+
+
+
+Results are entirely dependent on your commitment, consistency, and individual effort. While many of our students have achieved outstanding results, we make no guarantees of specific outcomes. By enrolling, you accept full responsibility for your progress and understand that lack of results does not qualify for a refund. This course is a self-responsibility-based learning program, and your success ultimately depends on your actions.</p>
         </div>
         
         {/* Footer Bottom */}
@@ -41,7 +39,7 @@ const Footer = () => {
           <div className="flex gap-2 text-xs opacity-75 mb-6">
             <span>© Copyright 2025</span>
             <span className="w-1 h-1 rounded-full bg-gray-500 self-center"></span>
-            <span>HANDGRIP®</span>
+            <span>Alyssa Ray®</span>
           </div>
           
           {/* Payment methods */}
@@ -51,8 +49,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
