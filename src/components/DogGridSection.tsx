@@ -36,7 +36,7 @@ const DogGridSection: React.FC = () => {
       }} transition={{
         duration: 0.5
       }}>
-          <h2 className="font-bold text-white mb-2 text-2xl">Launch Your Automated YouTube Earning Journey</h2>
+          <h2 className="font-bold text-white mb-2 text-2xl">Real creators. Real results.</h2>
           <p className="text-sm text-gray-300">I’ll show you step-by-step how I built a fully automated YouTube channel using AI,no camera, no editing skills.</p>
         </motion.div>
         
