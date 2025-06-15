@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 const DogGridSection: React.FC = () => {
@@ -95,7 +94,7 @@ const DogGridSection: React.FC = () => {
           scale: 1.03
         }}>
             <img className="w-full rounded-md" src="https://i.postimg.cc/KjNrq1fP/71a-ZOTnb-WLL.jpg" alt="Hand Grip Training" />
-            <p className="text-xs italic text-center mt-1 text-gray-300">“YouTube used to feel too hard — now I know I can actually do it.”</p>
+            <p className="text-xs italic text-center mt-1 text-gray-300">&quot;The coolest thing? It feels like a real family of creators. Also made $143 last week from affiliate links alone 🫣&quot;</p>
           </motion.div>
         </motion.div>
       </div>
