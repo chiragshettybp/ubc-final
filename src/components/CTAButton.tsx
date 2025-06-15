@@ -4,9 +4,7 @@ import { motion } from 'framer-motion';
 
 const CTAButton: React.FC<{
   onClick: () => void;
-}> = ({
-  onClick
-}) => {
+}> = ({ onClick }) => {
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
@@ -16,7 +14,6 @@ const CTAButton: React.FC<{
         setIsAnimating(false);
       }, 1000);
     }, 5000);
-
     return () => clearInterval(animationInterval);
   }, []);
 
@@ -28,10 +25,9 @@ const CTAButton: React.FC<{
   return (
     <motion.button
       onClick={handleClick}
-      whileHover={{ scale: 1.08, rotate: -4 }}
+      whileHover={{ scale: 1.09, rotate: -6 }}
       whileTap={{ scale: 0.97, rotate: 0 }}
-      // Add continuous wiggle animation with Tailwind and fall back to animated scale
-      className="w-full h-16 font-bold tracking-wider text-black text-xl transition-all duration-300 ease-in-out transform active:scale-95 shadow-lg hover:shadow-xl rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 bg-[#fde047] whitespace-nowrap overflow-hidden text-ellipsis relative animate-[wiggle_1.5s_ease-in-out_infinite]"
+      className="w-full h-16 font-bold tracking-wider text-black text-xl transition-all duration-300 ease-in-out transform active:scale-95 shadow-lg hover:shadow-xl rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 bg-[#fde047] whitespace-nowrap overflow-hidden text-ellipsis relative animate-wiggle animate-cta-pulse"
       style={{ backgroundColor: "#fde047" }}
     >
       {/* Shining effect overlay */}
@@ -47,4 +43,3 @@ const CTAButton: React.FC<{
 };
 
 export default CTAButton;
-

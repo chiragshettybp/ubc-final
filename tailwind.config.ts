@@ -92,19 +92,24 @@ export default {
 					}
 				},
 				wiggle: {
-					'0%, 100%': { transform: 'rotate(-2deg) scale(1)' },
-					'15%': { transform: 'rotate(2deg) scale(1.04)' },
-					'30%': { transform: 'rotate(-2deg) scale(1.03)' },
-					'45%': { transform: 'rotate(2deg) scale(1.05)' },
-					'60%': { transform: 'rotate(-2deg) scale(1)' },
-					'75%': { transform: 'rotate(2deg) scale(0.98)' },
-					'90%': { transform: 'rotate(-2deg) scale(1)' },
+					'0%': { transform: 'rotate(0deg) scale(1)' },
+					'18%': { transform: 'rotate(-3deg) scale(1.04)' },
+					'36%': { transform: 'rotate(3deg) scale(1.08)' },
+					'54%': { transform: 'rotate(-1.5deg) scale(1.1)' },
+					'72%': { transform: 'rotate(2deg) scale(1.08)' },
+					'90%': { transform: 'rotate(0deg) scale(1.03)' },
+					'100%': { transform: 'rotate(0deg) scale(1)' }
+				},
+				ctaPulse: {
+					'0%, 100%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.045)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				wiggle: 'wiggle 1.5s ease-in-out infinite',
+				wiggle: 'wiggle 1.7s cubic-bezier(0.36,1.11,0.89,0.44) infinite',
+				'cta-pulse': 'ctaPulse 4.1s cubic-bezier(0.77, 0, 0.18, 1) infinite',
 			}
 		}
 	},
