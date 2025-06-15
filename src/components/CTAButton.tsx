@@ -41,7 +41,7 @@ const CTAButton: React.FC<{
     >
       {/* Shining effect overlay */}
       <span className="absolute inset-0 overflow-hidden flex items-center justify-center pointer-events-none z-20">
-        <span className="relative text-white text-base font-semibold drop-shadow-md">
+        <span className="relative text-white text-base font-semibold drop-shadow-md capitalize">
           Start Your Channel Today
         </span>
         <span className="absolute inset-0 w-1/4 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-[shine_3s_infinite]" />
@@ -52,3 +52,4 @@ const CTAButton: React.FC<{
 };
 
 export default CTAButton;
+
