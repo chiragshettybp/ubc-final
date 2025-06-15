@@ -26,22 +26,17 @@ const CTAButton: React.FC<{
   };
 
   return (
-    <motion.button 
-      onClick={handleClick} 
-      whileHover={{ scale: 1.05 }} 
-      whileTap={{ scale: 0.95 }} 
-      animate={isAnimating ? {
-        y: [0, -8, 0, -4, 0],
-        transition: {
-          duration: 1,
-          times: [0, 0.2, 0.4, 0.6, 1]
-        }
-      } : {}} 
-      className="w-full h-16 font-bold tracking-wider text-white text-xl transition-all duration-300 ease-in-out transform active:scale-95 shadow-lg hover:shadow-xl rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500/50 bg-gray-600 whitespace-nowrap overflow-hidden text-ellipsis relative"
+    <motion.button
+      onClick={handleClick}
+      whileHover={{ scale: 1.08, rotate: -4 }}
+      whileTap={{ scale: 0.97, rotate: 0 }}
+      // Add continuous wiggle animation with Tailwind and fall back to animated scale
+      className="w-full h-16 font-bold tracking-wider text-black text-xl transition-all duration-300 ease-in-out transform active:scale-95 shadow-lg hover:shadow-xl rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 bg-[#fde047] whitespace-nowrap overflow-hidden text-ellipsis relative animate-[wiggle_1.5s_ease-in-out_infinite]"
+      style={{ backgroundColor: "#fde047" }}
     >
       {/* Shining effect overlay */}
       <span className="absolute inset-0 overflow-hidden flex items-center justify-center pointer-events-none z-20">
-        <span className="relative text-white text-base font-semibold drop-shadow-md uppercase">
+        <span className="relative text-black text-base font-semibold drop-shadow-md uppercase">
           Start Your Channel Today
         </span>
         <span className="absolute inset-0 w-1/4 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-[shine_3s_infinite]" />
@@ -52,3 +47,4 @@ const CTAButton: React.FC<{
 };
 
 export default CTAButton;
+
