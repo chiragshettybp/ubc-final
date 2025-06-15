@@ -93,7 +93,7 @@ const TestimonialSection: React.FC = () => {
           y: 0
         }} transition={{
           duration: 0.5
-        }}>See How People Are Building Stronger Hands with Our 5 Pack Strengther Kit</motion.h2>
+        }}>See How People Are Building Passive Income with the YouTube Income Academy</motion.h2>
           <motion.p initial={{
           opacity: 0
         }} animate={{
