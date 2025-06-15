@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Volume2, VolumeX } from 'lucide-react';
@@ -66,7 +67,18 @@ const GifSection: React.FC = () => {
         }} whileHover={{
           scale: 1.02
         }}>
-            <video ref={videoRef} src="https://ik.imagekit.io/00e3q7unr/165dcfbe-752e-402f-85d3-83b8f8e2993b-hd%20(online-video-cutter.com).mp4?updatedAt=1749624311718" className="w-full aspect-[9/16] rounded-2xl cursor-pointer" muted={isMuted} loop controls={false} playsInline preload="metadata" onClick={handleVideoClick} title="Hand Grips Strengthener Kit Demo" />
+            <video
+              ref={videoRef}
+              src="https://dxeul8wagn2zr.cloudfront.net/g7gpuw%2Ffile%2F9dbfd1548319f3ec8d88f17b292e08cd_735a14d37fb1986eacd4a7f6883031ef.mp4?response-content-disposition=inline%3Bfilename%3D%229dbfd1548319f3ec8d88f17b292e08cd_735a14d37fb1986eacd4a7f6883031ef.mp4%22%3B&response-content-type=video%2Fmp4&Expires=1750035096&Signature=deUp0HBuB37YwAVDwbSGKOqD4rnieqEDyx7l96FzHRMuPxnPSqqUDdtKtbVg~-sEEGoUfIjd7THJMzQJZ-rxGic~jmu~rAomNO6IgKY1tk64u8wfp9TSYEL~L0IG2c~W0g~teXvWjsTCPj8y6Jg84SBWuv6wHBCfoED~7NViDXC7NctC7N2uZKZ6o79CeRkQfgRmw4sTRQYUZ-sMXQwLl0~N9SdB7UQPNKJEhJbdR-OPuToI5KTqZ0ls8qP~OMI~1UoS0QZuyMN30gDl1SrnARx3L3nK1JQHCGBdfBbmhVPNZiPZgfyIMWA27fNvxFhZnG7U4EdX0939fFV-iEX0Sg__&Key-Pair-Id=APKAJT5WQLLEOADKLHBQ"
+              className="w-full aspect-[9/16] rounded-2xl cursor-pointer"
+              muted={isMuted}
+              loop
+              controls={false}
+              playsInline
+              preload="metadata"
+              onClick={handleVideoClick}
+              title="Hand Grips Strengthener Kit Demo"
+            />
             
             {/* Mute/Unmute Button */}
             <button onClick={toggleMute} className="absolute top-4 right-4 bg-black bg-opacity-50 hover:bg-opacity-70 text-white p-2 rounded-full transition-all duration-200" aria-label={isMuted ? 'Unmute video' : 'Mute video'}>
