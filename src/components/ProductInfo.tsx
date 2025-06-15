@@ -1,9 +1,6 @@
-
 import React from 'react';
-
 const ProductInfo: React.FC = () => {
-  return (
-    <div className="w-full px-4 bg-black">
+  return <div className="w-full px-4 bg-black">
       <h1 className="text-2xl font-bold text-white mt-2 mb-2">
         YOUTUBE INCOME ACADEMY® – Full AI YouTube Automation Course
       </h1>
@@ -58,14 +55,10 @@ const ProductInfo: React.FC = () => {
         </div>
       </div>
       
-      <p className="text-white font-semibold mb-1">
+      <p className="text-white font-semibold mb-1 py-[4px]">
         No Camera. No Experience Needed.
       </p>
-      <p className="text-white">
-        Plug, play, and start growing on YouTube—even while you sleep.
-      </p>
-    </div>
-  );
+      
+    </div>;
 };
-
 export default ProductInfo;
