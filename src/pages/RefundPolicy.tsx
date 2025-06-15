@@ -14,7 +14,7 @@ const RefundPolicy = () => (
         <h2 className="font-bold text-base mt-4 mb-2">Eligibility</h2>
         <ul className="list-disc pl-5 mb-2">
           <li>Refund requests must be made within 30 days of enrollment.</li>
-          <li>If you’ve accessed/downloaded >70% of materials, eligibility is at our discretion.</li>
+          <li>If you’ve accessed/downloaded &gt;70% of materials, eligibility is at our discretion.</li>
         </ul>
         <h2 className="font-bold text-base mt-4 mb-2">Process</h2>
         <p>Email <a className="underline" href="mailto:support@yourbrand.com">support@yourbrand.com</a> with your order number and reason. Our team will review and respond within 3 business days.</p>
@@ -26,3 +26,4 @@ const RefundPolicy = () => (
 );
 
 export default RefundPolicy;
+
