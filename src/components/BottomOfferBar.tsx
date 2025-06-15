@@ -33,7 +33,7 @@ const BottomOfferBar: React.FC = () => {
       style={{ pointerEvents: "none" }}
     >
       <div
-        className="w-full bg-[#111] border border-yellow-400 rounded-t-2xl flex flex-col md:flex-row items-center justify-between gap-4 px-5 py-4 shadow-lg"
+        className="w-full min-h-[72px] sm:min-h-0 bg-[#111] border border-yellow-400 rounded-t-2xl flex flex-col md:flex-row items-center justify-between gap-4 px-5 py-4 shadow-lg"
         style={{ pointerEvents: "auto" }}
       >
         <div className="flex-1 flex flex-col items-center md:items-start">
