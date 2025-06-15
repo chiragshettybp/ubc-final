@@ -1,5 +1,8 @@
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+
+// Small reusable component for variant option
 const VariantOption: React.FC<{
   active: boolean;
   variant: 'basic' | 'complete';
@@ -9,8 +12,43 @@ const VariantOption: React.FC<{
   variant,
   onClick
 }) => {
-  return;
+  // Friendly label and description, could be extended
+  const label = variant === 'basic' ? 'Basic Kit' : 'Complete Kit';
+  const desc = variant === 'basic'
+    ? '3 grip types'
+    : '5 grip types + extra resistance + carry bag';
+
+  return (
+    <button
+      type="button"
+      className={`
+        flex flex-col w-full rounded-lg border-2 px-4 py-3 mb-1 text-left 
+        transition-colors duration-150
+        ${active
+          ? 'border-green-400 bg-gradient-to-r from-green-900/60 via-black/70 to-fuchsia-800/30 shadow-lg'
+          : 'border-gray-700 bg-transparent hover:border-green-400'
+        }
+        focus:outline-none
+      `}
+      onClick={onClick}
+      aria-pressed={active}
+      tabIndex={0}
+    >
+      <div className="flex items-center">
+        <span className={`font-bold text-lg mr-2 ${active ? 'text-green-300' : 'text-gray-200'}`}>
+          {label}
+        </span>
+        {active && (
+          <span className="ml-1 px-2 py-0.5 rounded bg-green-500 text-xs text-black font-semibold shadow">
+            Selected
+          </span>
+        )}
+      </div>
+      <span className={`text-xs mt-1 ${active ? 'text-green-200' : 'text-gray-400'}`}>{desc}</span>
+    </button>
+  );
 };
+
 const ProductVariants: React.FC = () => {
   const [selectedVariant, setSelectedVariant] = useState<'basic' | 'complete'>('complete');
   return <motion.div className="w-full px-4 space-y-4" initial={{
