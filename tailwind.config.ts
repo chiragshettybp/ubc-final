@@ -108,8 +108,8 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				wiggle: 'wiggle 1.7s cubic-bezier(0.36,1.11,0.89,0.44) infinite',
-				'cta-pulse': 'ctaPulse 4.1s cubic-bezier(0.77, 0, 0.18, 1) infinite',
+				wiggle: 'wiggle 2.7s cubic-bezier(0.36,1.11,0.89,0.44) infinite',
+				'cta-pulse': 'ctaPulse 6.5s cubic-bezier(0.77, 0, 0.18, 1) infinite',
 			}
 		}
 	},
