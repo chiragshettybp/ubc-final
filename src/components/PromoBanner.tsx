@@ -70,8 +70,10 @@ const PromoBanner: React.FC = () => (
     <div
       className="
         relative z-10
-        rounded-2xl border-2 border-yellow-400 overflow-hidden shadow-lg flex items-stretch justify-between
+        rounded-2xl border-2 border-yellow-400 overflow-hidden shadow-lg
+        flex flex-col md:flex-row items-stretch justify-between
         animate-bounce-in
+        bg-gradient-to-r from-[#46060F] via-[#0F242A] to-[#034C1C]
       "
       style={{
         background:
@@ -79,7 +81,7 @@ const PromoBanner: React.FC = () => (
       }}
     >
       {/* Everyday Price (crossed out) */}
-      <div className="flex items-center px-5 py-4 min-w-[175px] bg-gradient-to-r from-red-900/90 via-transparent to-transparent relative">
+      <div className="flex items-center px-5 pt-4 pb-2 md:py-4 min-w-[175px] bg-gradient-to-r from-red-900/90 via-transparent to-transparent relative justify-center">
         <span className="text-white text-lg font-semibold whitespace-nowrap">
           Everyday Price:
         </span>
@@ -94,13 +96,13 @@ const PromoBanner: React.FC = () => (
         <Sparkle className="absolute -left-6 top-1/2 -translate-y-1/2 scale-75 animate-[twinkle_1.3s_linear_infinite]" />
       </div>
 
-      {/* Animated Arrow */}
-      <div className="flex items-center px-2 animate-[popin_0.8s_ease-in-out_alternate_infinite]">
+      {/* Animated Arrow (show only on desktop) */}
+      <div className="hidden md:flex items-center px-2 animate-[popin_0.8s_ease-in-out_alternate_infinite]">
         <span className="text-white text-3xl font-bold drop-shadow-glow animate-pulse">&rarr;</span>
       </div>
 
       {/* Today's Price with underline */}
-      <div className="flex items-center px-5 py-4 bg-gradient-to-l from-green-900/80 via-transparent to-transparent relative min-w-[190px]">
+      <div className="flex items-center px-5 pb-4 pt-2 md:py-4 bg-gradient-to-l from-green-900/80 via-transparent to-transparent relative min-w-[190px] justify-center">
         <span className="text-white text-lg font-semibold mr-1 whitespace-nowrap">
           Today's Price:
         </span>
@@ -124,8 +126,8 @@ const PromoBanner: React.FC = () => (
             />
           </svg>
         </span>
-        {/* "Explosion" badge */}
-        <span className="absolute -top-4 right-5 bg-yellow-300 text-black text-xs px-3 py-1 rounded-lg font-semibold shadow uppercase animate-popin font-inter">
+        {/* "Explosion" badge (move for mobile) */}
+        <span className="absolute -top-4 right-5 bg-yellow-300 text-black text-xs px-3 py-1 rounded-lg font-semibold shadow uppercase animate-popin font-inter whitespace-nowrap">
           This offer may end soon!
         </span>
       </div>
@@ -152,10 +154,17 @@ const PromoBanner: React.FC = () => (
       }
       .animate-twinkle { animation: twinkle 1.2s infinite; }
       .drop-shadow-glow { filter: drop-shadow(0 0 6px #fbbf24); }
+      @media (max-width: 767px) {
+        /* Stack badge under the price on mobile if needed */
+        .font-inter[style*="absolute"] {
+          right: 50%!important; 
+          left: 50%!important;
+          transform: translate(-50%,0);
+        }
+      }
     `}
     </style>
   </div>
 );
 
 export default PromoBanner;
-
