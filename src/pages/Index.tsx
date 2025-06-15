@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ProductInfo from '../components/ProductInfo';
 import ProductVariants from '../components/ProductVariants';
@@ -14,6 +13,7 @@ import Footer from '../components/Footer';
 import ProductMediaSection from '../components/ProductMediaSection';
 import GifSection from '../components/GifSection';
 import DogGridSection from '../components/DogGridSection';
+import PromoBanner from '../components/PromoBanner';
 import { toast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -30,6 +30,7 @@ const Index = () => {
       <div className="flex flex-col items-center pt-4 pb-8">
         <ProductMediaSection />
         <ProductInfo />
+        <PromoBanner />
         <ProductVariants />
         
         <div className="w-full px-4 my-4">
