@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ProductInfo from '../components/ProductInfo';
 import ProductVariants from '../components/ProductVariants';
@@ -30,6 +31,9 @@ const Index = () => {
       <div className="flex flex-col items-center pt-4 pb-8">
         <ProductMediaSection />
         <ProductInfo />
+        {/* --- Promo Bar Animation 1 --- */}
+        <PromoBanner />
+        {/* --- Promo Bar Animation 2 (above bundle options) --- */}
         <PromoBanner />
         <ProductVariants />
         
@@ -52,3 +56,4 @@ const Index = () => {
 };
 
 export default Index;
+
