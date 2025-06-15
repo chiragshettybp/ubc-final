@@ -3,41 +3,37 @@ import React from 'react';
 import { Accordion } from '@/components/ui/accordion';
 import FAQItem from './FAQItem';
 
-type FAQ = {
-  question: string;
-  answer: string;
-};
-
-const faqs: FAQ[] = [
+const faqs = [
   {
-    question: "What's included in the Hand Grips Strengthener Kit - 5 Pack®?",
-    answer: "You get a complete hand training system: 1x Adjustable Hand Grip Strengthener (22-132 lbs), 1x Finger Exerciser (4 lbs per finger), 1x Finger Stretcher Resistance Band, 1x Hand Strengthener Grip Ring (50 lbs), 1x Stress Relief Grip Ball, 1x Stylish Carry Bag, plus User's Manual and FREE Online Video Tutorial."
+    question: "Do I need experience to join?",
+    answer: "No experience needed. The course walks you through from niche selection to automation."
   },
   {
-    question: "Is this suitable for beginners and all fitness levels?",
-    answer: "Absolutely! The adjustable resistance from 22-132 lbs makes it perfect for everyone - from beginners to advanced athletes. Whether you're recovering from injury, just starting out, or training at high performance levels, this kit grows with you."
+    question: "What types of channels can I make?",
+    answer: "Create faceless, automated channels for any niche, such as top 10s, reviews, or tutorials."
   },
   {
-    question: "Can I use this for stress relief and rehabilitation?",
-    answer: "Yes! The kit includes a Stress Relief Grip Ball and multiple resistance levels specifically designed for stress relief, rehabilitation, and therapeutic use. Perfect for office breaks, anxiety relief, and recovery from hand injuries."
+    question: "Is monetization beyond ads covered?",
+    answer: "Yes. Learn AdSense, affiliate marketing, sponsorships, and selling digital products/services."
   },
   {
-    question: "How portable is the Hand Grips Strengthener Kit?",
-    answer: "Extremely portable! The lightweight design and included stylish carry bag make it perfect for travel. Take it to the gym, office, or anywhere you go. No excuses, just progress."
+    question: "What tools do I need?",
+    answer: "You'll access Alyssa's tech stack: AI script/voice tools, stock video/music, editors, and SEO tools. Most have free or low-cost options."
   },
   {
-    question: "Who can benefit from this hand strengthener kit?",
-    answer: "Everyone! Perfect for athletes (rock climbers, weightlifters, tennis/golf players, martial artists), musicians (guitarists, pianists, drummers), office workers, seniors improving hand mobility, and anyone recovering from hand injuries."
+    question: "How soon will I see results?",
+    answer: "Most students see growth in 30-90 days using the provided frameworks, depending on effort and niche."
   },
   {
-    question: "What's your guarantee policy?",
-    answer: "We offer a 7-day risk-free guarantee. If you try the Hand Grips Strengthener Kit and don't feel stronger hands and improved dexterity, we'll refund you with no questions asked. Plus, you get 24/7 customer support from FitBeast."
+    question: "Is support included after enrolling?",
+    answer: "Yes. Get group access, ongoing feedback, live sessions, updates, and community challenges."
   }
 ];
 
 const FAQSection: React.FC = () => {
   return (
     <div className="w-full px-4 mt-6 bg-black">
+      <h2 className="text-white text-lg font-bold mb-4">❓ Frequently Asked Questions (FAQ)</h2>
       <Accordion type="single" collapsible className="w-full">
         {faqs.map((faq, index) => (
           <FAQItem key={index} faq={faq} index={index} />
@@ -48,3 +44,4 @@ const FAQSection: React.FC = () => {
 };
 
 export default FAQSection;
+
