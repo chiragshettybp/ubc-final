@@ -1,19 +1,18 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import TrackOrder from "./pages/TrackOrder";
-import HowToUse from "./pages/HowToUse";
+import StudentDashboard from "./pages/StudentDashboard";
+import BonusResources from "./pages/BonusResources";
 import HelpCenter from "./pages/HelpCenter";
-import ShippingDelivery from "./pages/ShippingDelivery";
-import ReturnRefund from "./pages/ReturnRefund";
+import Blog from "./pages/Blog";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsOfService from "./pages/TermsOfService";
-import Reviews from "./pages/Reviews";
-import NotFound from "./pages/NotFound";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import RefundPolicy from "./pages/RefundPolicy";
+import Disclaimer from "./pages/Disclaimer";
+import AffiliateDisclosure from "./pages/AffiliateDisclosure";
 
 const queryClient = new QueryClient();
 
@@ -25,14 +24,17 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/track-order" element={<TrackOrder />} />
-          <Route path="/how-to-use" element={<HowToUse />} />
+          {/* Learning & Support */}
+          <Route path="/student-dashboard" element={<StudentDashboard />} />
+          <Route path="/bonus-resources" element={<BonusResources />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/help-center" element={<HelpCenter />} />
-          <Route path="/shipping-delivery" element={<ShippingDelivery />} />
-          <Route path="/return-refund" element={<ReturnRefund />} />
+          {/* Legal & Trust */}
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-of-service" element={<TermsOfService />} />
-          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/affiliate-disclosure" element={<AffiliateDisclosure />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
