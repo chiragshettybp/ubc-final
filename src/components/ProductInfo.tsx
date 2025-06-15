@@ -16,31 +16,31 @@ const ProductInfo: React.FC = () => {
       
       <div className="space-y-2 mb-4">
         <div className="flex items-center space-x-2">
-          <span className="text-green-400">✅</span>
+          <span className="text-green-400">📁</span>
           <span className="text-white">1-on-1 Coaching with Alyssa Ray</span>
         </div>
         <div className="flex items-center space-x-2">
-          <span className="text-green-400">✅</span>
+          <span className="text-green-400">📁</span>
           <span className="text-white">Full AI Workflow: Script to Upload</span>
         </div>
         <div className="flex items-center space-x-2">
-          <span className="text-green-400">✅</span>
+          <span className="text-green-400">📁</span>
           <span className="text-white">Access to Alyssa’s YouTube Analytics Dashboard</span>
         </div>
         <div className="flex items-center space-x-2">
-          <span className="text-green-400">✅</span>
+          <span className="text-green-400">📁</span>
           <span className="text-white">5 AI-Generated, SEO-Optimized Video Templates</span>
         </div>
         <div className="flex items-center space-x-2">
-          <span className="text-green-400">✅</span>
+          <span className="text-green-400">📁</span>
           <span className="text-white">Channel Setup + Monetization Blueprint</span>
         </div>
         <div className="flex items-center space-x-2">
-          <span className="text-green-400">✅</span>
+          <span className="text-green-400">📁</span>
           <span className="text-white">Private Telegram/Discord Community</span>
         </div>
         <div className="flex items-center space-x-2">
-          <span className="text-green-400">✅</span>
+          <span className="text-green-400">📁</span>
           <span className="text-white">
             Bonus: 50 Viral Video Ideas & Channel Audit Templates <span className="text-gray-400">($397 Value)</span>
           </span>
