@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ProductInfo from '../components/ProductInfo';
 // Removed: import ProductVariants from '../components/ProductVariants';
@@ -16,6 +15,7 @@ import GifSection from '../components/GifSection';
 import DogGridSection from '../components/DogGridSection';
 import PromoBanner from '../components/PromoBanner';
 import PromoBadge from '../components/PromoBadge';
+import BottomOfferBar from '../components/BottomOfferBar';
 import { toast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -49,6 +49,7 @@ const Index = () => {
         <ProductStatsSection />
       </div>
       <Footer />
+      <BottomOfferBar />
     </div>
   );
 };
