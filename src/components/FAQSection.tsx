@@ -1,9 +1,7 @@
-
 import React from 'react';
 import { Accordion } from '@/components/ui/accordion';
 import { Separator } from '@/components/ui/separator';
 import FAQItem from './FAQItem';
-
 const faqs = [{
   question: "Do I need experience to join?",
   answer: "No experience needed. The course walks you through from niche selection to automation."
@@ -23,16 +21,13 @@ const faqs = [{
   question: "Is support included after enrolling?",
   answer: "Yes. Get group access, ongoing feedback, live sessions, updates, and community challenges."
 }];
-
 const FAQSection: React.FC = () => {
-  return (
-    <div className="w-full px-4 mt-6 bg-black">
+  return <div className="w-full px-4 mt-6 bg-black">
       <Separator className="mb-6 bg-gray-700" />
-      <h2 className="text-white font-bold mb-4 text-2xl">❓FAQ</h2>
+      <h2 className="text-white font-bold mb-4 text-2xl">FAQ</h2>
       <Accordion type="single" collapsible className="w-full">
         {faqs.map((faq, index) => <FAQItem key={index} faq={faq} index={index} />)}
       </Accordion>
-    </div>
-  );
+    </div>;
 };
 export default FAQSection;
