@@ -4,13 +4,11 @@ import { Link } from 'react-router-dom';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { SideNavigation } from '../components/SideNavigation';
-
 const Header: React.FC = () => {
   const isMobile = useIsMobile();
   const [minutes, setMinutes] = useState(12);
   const [seconds, setSeconds] = useState(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
-
   useEffect(() => {
     timerRef.current = setInterval(() => {
       setSeconds(prevSeconds => {
@@ -29,14 +27,12 @@ const Header: React.FC = () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, []);
-
   const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
-
   return <div className="w-full sticky top-0 z-50 shadow-sm">
       {/* Top grey banner */}
       <div className="w-full py-2 px-3 md:px-6 relative overflow-hidden bg-gray-600">
         <div className="container mx-auto flex flex-wrap justify-between items-center">
-          <p className="text-white text-xs md:text-sm font-bold text-center flex-1 md:flex-none">🏆 2025 BEST RATED PRODUCT</p>
+          <p className="text-white text-xs md:text-sm font-bold text-center flex-1 md:flex-none">🏆 2025 BEST RATED YT ACADEMY</p>
           
           {/* Countdown timer */}
           <div className="flex items-center justify-center md:justify-end space-x-2 flex-1">
@@ -56,9 +52,7 @@ const Header: React.FC = () => {
       {/* Light grey banner */}
       <div className="w-full py-2 relative bg-gray-300">
         <div className="container mx-auto">
-          <p className="text-black text-xs md:text-sm font-bold text-center">
-            FREE US SHIPPING + 30 DAY GUARANTEE
-          </p>
+          <p className="text-black text-xs md:text-sm font-bold text-center">30 DAY MONEY BACK GUARANTEE</p>
         </div>
       </div>
       
@@ -97,5 +91,4 @@ const Header: React.FC = () => {
       </div>
     </div>;
 };
-
 export default Header;
