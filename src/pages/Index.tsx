@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ProductInfo from '../components/ProductInfo';
-import ProductVariants from '../components/ProductVariants';
+// Removed: import ProductVariants from '../components/ProductVariants';
 import CTAButton from '../components/CTAButton';
 import OrderTimer from '../components/OrderTimer';
 import BenefitBadges from '../components/BenefitBadges';
@@ -35,7 +35,7 @@ const Index = () => {
         {/* --- Single Promo Bar Animation + Badge (just before bundle options) --- */}
         <PromoBanner />
         <PromoBadge />
-        <ProductVariants />
+        {/* Removed: <ProductVariants /> */}
         <div className="w-full px-4 my-4">
           <CTAButton onClick={handlePurchase} />
         </div>
