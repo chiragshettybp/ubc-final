@@ -56,14 +56,7 @@ const ProductStatsSection: React.FC = () => {
           <span className="relative z-10">GET YOUR'S NOW</span>
         </button>
         
-        <div className="flex items-center mt-4">
-          <div className="flex mr-1">
-            {[1, 2, 3, 4, 5].map(star => <Star key={star} className="w-4 h-4 text-gray-400 fill-gray-400" />)}
-          </div>
-          <span className="text-sm font-normal mr-1 text-gray-300">Excellent</span>
-          <span className="text-sm font-bold mr-1 text-gray-300">4.8</span>
-          <span className="text-sm text-gray-400">| 1,319 hand strength reviews</span>
-        </div>
+        
       </motion.div>
     </section>;
 };
