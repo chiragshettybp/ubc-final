@@ -57,38 +57,7 @@ const Header: React.FC = () => {
       </div>
       
       {/* Navigation bar */}
-      <div className="w-full bg-black py-3 relative border-b border-gray-700">
-        <div className="container mx-auto flex items-center justify-between px-4">
-          {/* Menu button with Sheet */}
-          <Sheet>
-            <SheetTrigger asChild>
-              <button className="hover:bg-gray-800 p-2 rounded-full transition-colors">
-                <Menu className="w-5 h-5 text-white" />
-              </button>
-            </SheetTrigger>
-            <SheetContent side="left" className="p-0 w-[280px] bg-black border-gray-700">
-              <SideNavigation />
-            </SheetContent>
-          </Sheet>
-          
-          {/* Logo */}
-          <Link to="/" className="absolute left-1/2 transform -translate-x-1/2">
-            <span className="text-white text-xl md:text-2xl font-bold tracking-wide">HANDGRIP®
-          </span>
-          </Link>
-          
-          {/* Cart button */}
-          <div className="relative">
-            <button className="hover:bg-gray-800 p-2 rounded-full transition-colors">
-              <ShoppingBag className="w-5 h-5 text-white" />
-              <div className="absolute -top-1 -right-1 w-5 h-5 bg-gray-600 text-white 
-                            text-[10px] rounded-full flex items-center justify-center font-bold">
-                2
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
+      
     </div>;
 };
 export default Header;
