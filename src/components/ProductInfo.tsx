@@ -1,19 +1,20 @@
 import React from 'react';
+import SlinkySection from './SlinkySection';
+
 const ProductInfo: React.FC = () => {
-  return <div className="w-full px-4 bg-black">
-      <h1 className="font-bold text-white mt-2 mb-2 text-2xl text-left py-[19px]">YOUTUBE INCOME ACADEMY by Alyssa Ray®</h1>
-      
+  return (
+    <div className="w-full px-4 bg-black">
+      <SlinkySection />
+      <h1 className="font-bold text-white mt-2 mb-2 text-2xl text-left py-[19px]">
+        YOUTUBE INCOME ACADEMY by Alyssa Ray®
+      </h1>
       <p className="text-sm font-bold text-white mb-2">
         🎥 Launch. Automate. Monetize. Turn Content into Passive Income.
       </p>
-
-      
-
       <p className="font-semibold text-white mb-2">
         The all-in-one system to build a fully automated YouTube channel.
         Ideal for beginners, creators, and entrepreneurs ready to scale income with AI.
       </p>
-      
       <div className="space-y-2 mb-4">
         <div className="flex items-center space-x-2">
           <span className="text-green-400">📁</span>
@@ -46,11 +47,10 @@ const ProductInfo: React.FC = () => {
           </span>
         </div>
       </div>
-      
       <p className="text-white font-semibold mb-1 py-[4px]">
         No Camera. No Experience Needed.
       </p>
-      
-    </div>;
+    </div>
+  );
 };
 export default ProductInfo;
