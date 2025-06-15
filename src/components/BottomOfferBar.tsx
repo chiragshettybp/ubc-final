@@ -33,11 +33,11 @@ const BottomOfferBar: React.FC = () => {
       style={{ pointerEvents: "none" }}
     >
       <div
-        className="w-full min-h-[50px] sm:min-h-0 bg-[#111] border border-yellow-400 rounded-t-xl flex flex-col md:flex-row items-center justify-between gap-2 px-3 py-2 shadow-lg"
+        className="w-full min-h-[40px] bg-[#111] border border-yellow-400 rounded-t-xl flex flex-row items-center justify-between gap-2 px-3 py-2 shadow-lg"
         style={{ pointerEvents: "auto" }}
       >
-        <div className="flex-1 flex flex-col items-center md:items-start">
-          <div className="text-white text-sm font-semibold mb-0 text-center md:text-left">
+        <div className="flex flex-col items-start justify-center">
+          <div className="text-white text-sm font-semibold mb-0">
             Offer Will Expire In...
           </div>
           <div className="flex items-center gap-1">
