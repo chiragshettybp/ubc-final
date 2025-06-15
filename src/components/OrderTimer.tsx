@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 
 const OrderTimer: React.FC = () => {
@@ -40,22 +39,19 @@ const OrderTimer: React.FC = () => {
     };
   }, []); // Empty dependency array ensures this only runs once
 
-  // Get date 4 days from now
-  const futureDate = new Date();
-  futureDate.setDate(futureDate.getDate() + 4);
-  const options: Intl.DateTimeFormatOptions = { 
-    weekday: 'long', 
-    day: 'numeric', 
-    month: 'short' 
-  };
-  const formattedDate = futureDate.toLocaleDateString('en-US', options);
+  // Hardcode the date for clarity and brevity
+  const dateString = "Thursday, Jun 19";
 
   return (
     <div className="w-full px-4 text-center my-6 bg-black">
-      <p className="font-semibold text-white">Want It By {formattedDate}?</p>
+      <p className="font-semibold text-white mb-1">
+        Want to Start Earning By {dateString}?
+      </p>
       <div className="flex items-center justify-center">
-        <span className="font-semibold text-white mr-2">Order Within</span>
-        <span className="font-bold text-gray-400">{timeDisplay.hours} Hours {timeDisplay.minutes} Minutes</span>
+        <span className="font-semibold text-white mr-2">Enroll Within</span>
+        <span className="font-bold text-gray-400">
+          {timeDisplay.hours} Hours {timeDisplay.minutes} Minutes
+        </span>
       </div>
     </div>
   );
