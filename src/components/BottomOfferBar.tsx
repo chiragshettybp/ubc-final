@@ -52,7 +52,7 @@ const BottomOfferBar: React.FC = () => {
           </div>
         </div>
         <button
-          className={`${GOLD_GRADIENT} transition-all duration-200 rounded-full text-black font-semibold text-lg px-8 py-3 shadow-lg hover:brightness-105 focus:outline-none`}
+          className={`${GOLD_GRADIENT} transition-all duration-200 rounded-full text-black font-semibold text-lg px-4 py-2 shadow-lg hover:brightness-105 focus:outline-none`}
           style={{
             boxShadow:
               "0 4px 18px 0 rgba(249,213,35,0.16), 0 1.5px 0 0 #fde047 inset",
@@ -73,3 +73,4 @@ const BottomOfferBar: React.FC = () => {
 };
 
 export default BottomOfferBar;
+
