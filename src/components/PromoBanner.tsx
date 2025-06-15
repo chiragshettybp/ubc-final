@@ -1,3 +1,4 @@
+
 import React from "react";
 
 // Sparkle SVG -- reusable
@@ -69,25 +70,25 @@ const PromoBanner: React.FC = () => (
     <div
       className="
         relative z-10
-        rounded-2xl border-2 border-yellow-400 overflow-hidden shadow-lg
+        rounded-2xl border-2 border-gray-400 overflow-hidden shadow-lg
         flex flex-col md:flex-row items-stretch justify-between
         animate-bounce-in
-        bg-gradient-to-r from-[#46060F] via-[#0F242A] to-[#034C1C]
+        bg-gradient-to-r from-[#222] via-[#1a2324] to-[#222]
       "
       style={{
         background:
-          "linear-gradient(90deg, #46060F 0%, #0F242A 50%, #034C1C 100%)",
+          "linear-gradient(90deg, #252329 0%, #192224 50%, #222 100%)",
       }}
     >
-      {/* Everyday Price (crossed out) */}
-      <div className="flex items-center px-5 pt-4 pb-2 md:py-4 min-w-[175px] bg-gradient-to-r from-red-900/90 via-transparent to-transparent relative justify-center">
+      {/* Everyday Price (crossed out, but neutral colors) */}
+      <div className="flex items-center px-5 pt-4 pb-2 md:py-4 min-w-[175px] bg-transparent relative justify-center">
         <span className="text-white text-lg font-semibold whitespace-nowrap">
           Everyday Price:
         </span>
-        <span className="relative ml-2 text-2xl font-bold text-red-400 select-none">
+        <span className="relative ml-2 text-2xl font-bold text-gray-300 select-none">
           <span className="relative z-10">$1387</span>
           <span
-            className="absolute left-0 right-0 top-1/2 h-1 border-b-4 border-red-500 z-20 w-full"
+            className="absolute left-0 right-0 top-1/2 h-1 border-b-4 border-gray-400 z-20 w-full"
             style={{ transform: "rotate(-14deg) translateY(-50%)" }}
           />
         </span>
@@ -100,30 +101,13 @@ const PromoBanner: React.FC = () => (
         <span className="text-white text-3xl font-bold drop-shadow-glow animate-pulse">&rarr;</span>
       </div>
 
-      {/* Today's Price with underline */}
-      <div className="flex items-center px-5 pb-4 pt-2 md:py-4 bg-gradient-to-l from-green-900/80 via-transparent to-transparent relative min-w-[190px] justify-center">
+      {/* Today's Price (neutral - no green, no underline) */}
+      <div className="flex items-center px-5 pb-4 pt-2 md:py-4 bg-transparent relative min-w-[190px] justify-center">
         <span className="text-white text-lg font-semibold mr-1 whitespace-nowrap">
           Today's Price:
         </span>
-        <span className="text-2xl font-extrabold text-green-400 whitespace-nowrap relative drop-shadow-glow">
+        <span className="text-2xl font-extrabold text-gray-100 whitespace-nowrap relative drop-shadow-glow">
           $697
-          {/* Green underline effect */}
-          <svg
-            className="absolute left-0 -bottom-2"
-            width="74"
-            height="12"
-            viewBox="0 0 74 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            style={{ zIndex: 1 }}
-          >
-            <path
-              d="M2 10C11.3142 6.66667 41.6 0.8 72 4"
-              stroke="#6EE7B7"
-              strokeWidth="4"
-              strokeLinecap="round"
-            />
-          </svg>
         </span>
       </div>
     </div>
