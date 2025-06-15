@@ -15,6 +15,7 @@ import ProductMediaSection from '../components/ProductMediaSection';
 import GifSection from '../components/GifSection';
 import DogGridSection from '../components/DogGridSection';
 import PromoBanner from '../components/PromoBanner';
+import PromoBadge from '../components/PromoBadge';
 import { toast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -33,14 +34,14 @@ const Index = () => {
         <ProductInfo />
         {/* --- Promo Bar Animation 1 --- */}
         <PromoBanner />
+        <PromoBadge />
         {/* --- Promo Bar Animation 2 (above bundle options) --- */}
         <PromoBanner />
+        <PromoBadge />
         <ProductVariants />
-        
         <div className="w-full px-4 my-4">
           <CTAButton onClick={handlePurchase} />
         </div>
-        
         <PaymentMethods />
         <OrderTimer />
         <BenefitBadges />
@@ -56,4 +57,3 @@ const Index = () => {
 };
 
 export default Index;
-

@@ -1,4 +1,3 @@
-
 import React from "react";
 
 // Sparkle SVG -- reusable
@@ -56,7 +55,7 @@ const PromoBanner: React.FC = () => (
       />
     </div>
 
-    {/* Sparkle Animation overlays (random positions) */}
+    {/* Sparkle Animation overlays */}
     {/* Top left corner */}
     <Sparkle className="absolute left-2 -top-2 animate-[popin_0.7s_ease-in-out_infinite_alternate] z-10" />
     {/* Top right */}
@@ -125,10 +124,6 @@ const PromoBanner: React.FC = () => (
               strokeLinecap="round"
             />
           </svg>
-        </span>
-        {/* "Explosion" badge (move for mobile) */}
-        <span className="absolute -top-4 right-5 bg-yellow-300 text-black text-xs px-3 py-1 rounded-lg font-semibold shadow uppercase animate-popin font-inter whitespace-nowrap">
-          This offer may end soon!
         </span>
       </div>
     </div>
