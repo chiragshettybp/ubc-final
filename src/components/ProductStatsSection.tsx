@@ -50,10 +50,10 @@ const ProductStatsSection: React.FC = () => {
         {/* Order Button and Reviews Block (unchanged) */}
         <button onClick={handleButtonClick} className="w-44 h-12 bg-gray-600 hover:bg-gray-700 text-white font-bold rounded-lg mb-8 relative overflow-hidden">
           {/* Shining effect overlay */}
-          <span className="absolute inset-0 overflow-hidden">
+          <span className="absolute inset-0 overflow-hidden px-0">
             <span className="absolute inset-0 w-1/4 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-[shine_3s_infinite]" />
           </span>
-          <span className="relative z-10">GET YOUR'S NOW</span>
+          <span className="relative z-10 text-xl">CLAIM SPOT </span>
         </button>
         
         
