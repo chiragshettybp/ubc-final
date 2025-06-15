@@ -73,11 +73,11 @@ const PromoBanner: React.FC = () => (
         rounded-2xl border-2 border-yellow-400 overflow-hidden shadow-lg
         flex flex-col md:flex-row items-stretch justify-between
         animate-bounce-in
-        bg-gradient-to-r from-[#46060F] via-[#0F242A] to-[#034C1C]
+        bg-gradient-to-r from-neutral-900 via-neutral-800 to-yellow-900
       "
       style={{
         background:
-          "linear-gradient(90deg, #46060F 0%, #0F242A 50%, #034C1C 100%)",
+          "linear-gradient(90deg, #18181b 0%, #27272a 50%, #fde68a 100%)",
       }}
     >
       {/* Everyday Price (crossed out) */}
