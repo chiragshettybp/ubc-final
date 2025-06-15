@@ -6,7 +6,7 @@ const ProductInfo: React.FC = () => {
   return (
     <div className="w-full px-4 bg-black">
       {/* Removed: <SlinkySection /> */}
-      <h1 className="font-bold text-white mt-2 mb-2 text-2xl text-left py-[19px]">
+      <h1 className="font-bold text-white mt-2 mb-2 text-2xl text-left py-[19px] animate-fade-in">
         YOUTUBE INCOME ACADEMY by Alyssa Ray®
       </h1>
       <p className="text-sm font-bold text-white mb-2">
