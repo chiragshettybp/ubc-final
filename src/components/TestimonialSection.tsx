@@ -16,7 +16,7 @@ const testimonials: Testimonial[] = [{
   name: "Marcus T.",
   location: "Texas, USA",
   rating: 5,
-  text: "This hand grip kit is incredible! My forearm strength increased dramatically in just 3 weeks. Perfect for my rock climbing training.",
+  text: "Honestly didn’t think this would work for me, but wow… I followed the steps, used the tools Alyssa recommended, and boom — first video up, 3K views in 10 days. Just hit 1,000 subs and I’m getting monetized. Wild.",
   image: "https://i.postimg.cc/T1cV6TWF/86061fc3-b51c-44cf-8cf3-08ea2c5f5fe6.jpg",
   verified: true
 }, {
@@ -24,7 +24,7 @@ const testimonials: Testimonial[] = [{
   name: "David M.",
   location: "California, USA",
   rating: 5,
-  text: "As a pianist, finger dexterity is crucial. This kit helped me build strength and control I never had before. The finger exerciser is amazing!",
+  text: "I’ve always wanted to start a YouTube channel but never knew where to start. This course made it stupid simple. AI does 90% of the work. I still can’t believe I’m publishing weekly and it barely takes me 2 hours a week.",
   image: "https://i.postimg.cc/Qt1gfQNX/9febbacf-257a-4d1f-9aef-ef6f77f92674.jpg",
   verified: true
 }, {
@@ -32,7 +32,7 @@ const testimonials: Testimonial[] = [{
   name: "Mike R.",
   location: "New York, USA",
   rating: 5,
-  text: "Recovering from wrist surgery, this kit was perfect for rehabilitation. Adjustable resistance helped me progress safely. Highly recommend!",
+  text: "After surgery, I had so much downtime and wanted to try something new. This was perfect. I didn’t even need a camera. Now I’ve got videos ranking in search and even made $174 last week in affiliate sales. Grateful, seriously.",
   image: "https://i.postimg.cc/8cGR97sL/b7f8d311-bb5a-463a-82aa-8aa48128c735.jpg",
   verified: true
 }];
@@ -93,7 +93,9 @@ const TestimonialSection: React.FC = () => {
           y: 0
         }} transition={{
           duration: 0.5
-        }}>See How People Are Building Passive Income with the YouTube Income Academy</motion.h2>
+        }}>
+          See How Real People Are Building Passive Income with the YouTube Income Academy
+        </motion.h2>
           <motion.p initial={{
           opacity: 0
         }} animate={{
@@ -103,7 +105,7 @@ const TestimonialSection: React.FC = () => {
           delay: 0.2
         }} className="text-gray-400 text-xs flex items-center justify-center gap-1">
             <Star size={14} className="text-yellow-400" />
-            Rated 4.8/5 by 1,319+ Hand Strength Users
+            Rated 4.8/5 by 1,300+ happy creators
           </motion.p>
         </div>
         
