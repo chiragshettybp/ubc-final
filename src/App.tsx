@@ -9,6 +9,7 @@ import StudentDashboard from "./pages/StudentDashboard";
 import BonusResources from "./pages/BonusResources";
 import HelpCenter from "./pages/HelpCenter";
 import Blog from "./pages/Blog";
+import CommunityAccess from "./pages/CommunityAccess";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import RefundPolicy from "./pages/RefundPolicy";
@@ -29,15 +30,16 @@ const App = () => (
           {/* Learning & Support */}
           <Route path="/student-dashboard" element={<StudentDashboard />} />
           <Route path="/bonus-resources" element={<BonusResources />} />
-          <Route path="/blog" element={<Blog />} />
           <Route path="/help-center" element={<HelpCenter />} />
+          <Route path="/community-access" element={<CommunityAccess />} />
+          <Route path="/blog" element={<Blog />} />
           {/* Legal & Trust */}
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/affiliate-disclosure" element={<AffiliateDisclosure />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* CUSTOM ROUTES ABOVE CATCH-ALL */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
@@ -46,4 +48,3 @@ const App = () => (
 );
 
 export default App;
-
