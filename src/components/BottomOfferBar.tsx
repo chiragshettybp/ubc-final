@@ -29,30 +29,30 @@ const BottomOfferBar: React.FC = () => {
 
   return (
     <div
-      className="fixed left-1/2 bottom-0 z-50 w-[98vw] max-w-2xl -translate-x-1/2 pb-2 px-1"
+      className="fixed left-0 bottom-0 z-50 w-full"
       style={{ pointerEvents: "none" }}
     >
       <div
-        className="w-full min-h-[40px] bg-[#111] border border-yellow-400 rounded-t-xl flex flex-row items-center justify-between gap-2 px-3 py-2 shadow-lg"
+        className="w-full min-h-[32px] bg-[#111] border-t border-yellow-400 flex flex-row items-center justify-between gap-2 px-3 py-1 shadow-lg"
         style={{ pointerEvents: "auto" }}
       >
         <div className="flex flex-col items-start justify-center">
-          <div className="text-white text-sm font-semibold mb-0">
+          <div className="text-white text-xs font-semibold mb-0">
             Offer Will Expire In...
           </div>
           <div className="flex items-center gap-1">
-            <span className="text-yellow-400 font-bold text-xl tabular-nums">
+            <span className="text-yellow-400 font-bold text-sm tabular-nums">
               {minutes.toString().padStart(2, "0")}
             </span>
             <span className="text-white ml-1 text-xs font-medium">Min</span>
-            <span className="text-yellow-400 font-bold text-xl tabular-nums ml-2">
+            <span className="text-yellow-400 font-bold text-sm tabular-nums ml-2">
               {seconds.toString().padStart(2, "0")}
             </span>
             <span className="text-white ml-1 text-xs font-medium">Sec</span>
           </div>
         </div>
         <button
-          className={`${GOLD_GRADIENT} transition-all duration-200 rounded-full text-black font-semibold text-base px-3 py-1.5 shadow-lg hover:brightness-105 focus:outline-none`}
+          className={`${GOLD_GRADIENT} transition-all duration-200 rounded-full text-black font-semibold text-sm px-3 py-1 shadow-lg hover:brightness-105 focus:outline-none`}
           style={{
             boxShadow:
               "0 4px 18px 0 rgba(249,213,35,0.16), 0 1.5px 0 0 #fde047 inset",
