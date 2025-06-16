@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -12,7 +11,7 @@ const CTAButton: React.FC<{
   }, []);
 
   const handleClick = () => {
-    window.open('https://www.paypal.com/ncp/payment/L8JHEPL6RSSPJ', '_blank', 'noopener,noreferrer');
+    window.open('https://www.paypal.com/ncp/payment/RGV3ZRLJ8V448', '_blank', 'noopener,noreferrer');
     onClick();
   };
 
@@ -40,4 +39,3 @@ const CTAButton: React.FC<{
 };
 
 export default CTAButton;
-
