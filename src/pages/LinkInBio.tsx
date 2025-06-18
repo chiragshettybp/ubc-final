@@ -3,48 +3,51 @@ import React from 'react';
 import { Globe, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useNavigate } from 'react-router-dom';
 
 const LinkInBio = () => {
+  const navigate = useNavigate();
+
   const countryLinks = [
     {
       country: "United States",
       flag: "🇺🇸",
-      paypalLink: "https://www.paypal.com/ncp/payment/RGV3ZRLJ8V448"
+      route: "/united-states"
     },
     {
       country: "Canada", 
       flag: "🇨🇦",
-      paypalLink: "https://www.paypal.com/ncp/payment/CANADA123"
+      route: "/canada"
     },
     {
       country: "United Kingdom",
       flag: "🇬🇧", 
-      paypalLink: "https://www.paypal.com/ncp/payment/UK456"
+      route: "/united-kingdom"
     },
     {
       country: "Australia",
       flag: "🇦🇺",
-      paypalLink: "https://www.paypal.com/ncp/payment/AU789"
+      route: "/australia"
     },
     {
       country: "Germany",
       flag: "🇩🇪",
-      paypalLink: "https://www.paypal.com/ncp/payment/DE012"
+      route: "/germany"
     },
     {
       country: "France",
       flag: "🇫🇷",
-      paypalLink: "https://www.paypal.com/ncp/payment/FR345"
+      route: "/france"
     },
     {
       country: "Rest of World",
       flag: "🌍",
-      paypalLink: "https://www.paypal.com/ncp/payment/WORLD999"
+      route: "/usa"
     }
   ];
 
-  const handleCountryClick = (paypalLink: string, country: string) => {
-    window.open(paypalLink, '_blank', 'noopener,noreferrer');
+  const handleCountryClick = (route: string) => {
+    navigate(route);
   };
 
   return (
@@ -54,7 +57,7 @@ const LinkInBio = () => {
           {countryLinks.map((item, index) => (
             <Button
               key={index}
-              onClick={() => handleCountryClick(item.paypalLink, item.country)}
+              onClick={() => handleCountryClick(item.route)}
               className="w-full h-16 bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400 text-black font-semibold hover:brightness-105 transition-all duration-200 text-lg"
             >
               <div className="flex items-center justify-center space-x-3">
@@ -71,7 +74,7 @@ const LinkInBio = () => {
             Don't see your country? Contact support for assistance.
           </p>
           <Button 
-            onClick={() => window.location.href = '/'} 
+            onClick={() => navigate('/')} 
             variant="outline" 
             className="mt-4 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black"
           >
