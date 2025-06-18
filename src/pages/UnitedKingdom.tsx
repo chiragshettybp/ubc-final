@@ -33,7 +33,7 @@ const UnitedKingdom = () => {
       <div className="flex flex-col items-center pt-4 pb-8">
         <ProductMediaSection />
         <ProductInfo />
-        <PromoBanner />
+        <PromoBanner currency="£" />
         <PromoBadge />
         <div className="w-full px-4 my-4">
           <CTAButton onClick={handlePurchase} paypalLink="https://www.paypal.com/ncp/payment/A65LNZJ2CSQH4" />
