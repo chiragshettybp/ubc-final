@@ -20,6 +20,7 @@ import { toast } from "@/hooks/use-toast";
 
 const France = () => {
   const handlePurchase = () => {
+    window.open('https://www.paypal.com/ncp/payment/DFR7FV287SS9W', '_blank', 'noopener,noreferrer');
     toast({
       title: "Your Hand Grip Kit order is being processed",
       description: "Thank you for choosing the Hand Grips Strengthener Kit - 5 Pack®!"
@@ -35,7 +36,7 @@ const France = () => {
         <PromoBanner />
         <PromoBadge />
         <div className="w-full px-4 my-4">
-          <CTAButton onClick={handlePurchase} />
+          <CTAButton onClick={handlePurchase} paypalLink="https://www.paypal.com/ncp/payment/DFR7FV287SS9W" />
         </div>
         <PaymentMethods />
         <OrderTimer />
@@ -47,7 +48,7 @@ const France = () => {
         <ProductStatsSection />
       </div>
       <Footer />
-      <BottomOfferBar />
+      <BottomOfferBar paypalLink="https://www.paypal.com/ncp/payment/DFR7FV287SS9W" />
     </div>
   );
 };

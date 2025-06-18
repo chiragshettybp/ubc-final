@@ -1,9 +1,11 @@
+
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 const CTAButton: React.FC<{
   onClick: () => void;
-}> = ({ onClick }) => {
+  paypalLink?: string;
+}> = ({ onClick, paypalLink }) => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -11,7 +13,11 @@ const CTAButton: React.FC<{
   }, []);
 
   const handleClick = () => {
-    window.open('https://www.paypal.com/ncp/payment/RGV3ZRLJ8V448', '_blank', 'noopener,noreferrer');
+    if (paypalLink) {
+      window.open(paypalLink, '_blank', 'noopener,noreferrer');
+    } else {
+      window.open('https://www.paypal.com/ncp/payment/RGV3ZRLJ8V448', '_blank', 'noopener,noreferrer');
+    }
     onClick();
   };
 
