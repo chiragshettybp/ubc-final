@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -18,6 +17,12 @@ import Disclaimer from "./pages/Disclaimer";
 import AffiliateDisclosure from "./pages/AffiliateDisclosure";
 import NotFound from "./pages/NotFound";
 import LinkInBio from "./pages/LinkInBio";
+import UnitedStates from "./pages/UnitedStates";
+import Canada from "./pages/Canada";
+import UnitedKingdom from "./pages/UnitedKingdom";
+import Australia from "./pages/Australia";
+import Germany from "./pages/Germany";
+import France from "./pages/France";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +34,12 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/usa" element={<Index />} />
+          <Route path="/united-states" element={<UnitedStates />} />
+          <Route path="/canada" element={<Canada />} />
+          <Route path="/united-kingdom" element={<UnitedKingdom />} />
+          <Route path="/australia" element={<Australia />} />
+          <Route path="/germany" element={<Germany />} />
+          <Route path="/france" element={<France />} />
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/link-in-bio" element={<LinkInBio />} />
           {/* Learning & Support */}
