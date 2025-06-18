@@ -61,7 +61,7 @@ const PromoBanner: React.FC = () => <div className="relative w-full px-4 mb-4">
           Everyday Price:
         </span>
         <span className="relative ml-2 text-2xl font-bold text-white select-none">
-          <span className="relative z-10">$499</span>
+          <span className="relative z-10">CA$499</span>
           <span className="absolute left-0 right-0 top-1/2 h-1 border-b-4 border-yellow-300 z-20 w-full" style={{
           transform: "rotate(-14deg) translateY(-50%)"
         }} />
