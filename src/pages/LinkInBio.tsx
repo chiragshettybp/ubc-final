@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Globe, MapPin } from 'lucide-react';
+import { Globe, MapPin, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useNavigate } from 'react-router-dom';
@@ -12,37 +12,44 @@ const LinkInBio = () => {
     {
       country: "United States",
       flag: "🇺🇸",
-      route: "/united-states"
+      route: "/united-states",
+      gradient: "from-red-500 via-white to-blue-500"
     },
     {
       country: "Canada", 
       flag: "🇨🇦",
-      route: "/canada"
+      route: "/canada",
+      gradient: "from-red-500 via-white to-red-600"
     },
     {
       country: "United Kingdom",
       flag: "🇬🇧", 
-      route: "/united-kingdom"
+      route: "/united-kingdom",
+      gradient: "from-blue-600 via-white to-red-600"
     },
     {
       country: "Australia",
       flag: "🇦🇺",
-      route: "/australia"
+      route: "/australia",
+      gradient: "from-blue-800 via-red-600 to-blue-800"
     },
     {
       country: "Germany",
       flag: "🇩🇪",
-      route: "/germany"
+      route: "/germany",
+      gradient: "from-black via-red-600 to-yellow-400"
     },
     {
       country: "France",
       flag: "🇫🇷",
-      route: "/france"
+      route: "/france",
+      gradient: "from-blue-600 via-white to-red-600"
     },
     {
       country: "Rest of World",
       flag: "🌍",
-      route: "/usa"
+      route: "/usa",
+      gradient: "from-green-500 via-blue-500 to-purple-600"
     }
   ];
 
@@ -51,36 +58,80 @@ const LinkInBio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black p-4">
-      <div className="max-w-md mx-auto">
-        <div className="space-y-3">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 p-4 flex items-center justify-center">
+      <div className="max-w-md w-full">
+        {/* Header Section */}
+        <div className="text-center mb-8 animate-fade-in">
+          <div className="mb-4">
+            <Globe className="w-16 h-16 text-yellow-400 mx-auto mb-3 animate-pulse" />
+          </div>
+          <h1 className="text-3xl font-bold text-white mb-2 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+            Choose Your Region
+          </h1>
+          <p className="text-gray-300 text-sm">
+            Select your country to get started with localized content
+          </p>
+        </div>
+
+        {/* Country Links */}
+        <div className="space-y-4 mb-8">
           {countryLinks.map((item, index) => (
-            <Button
+            <div
               key={index}
-              onClick={() => handleCountryClick(item.route)}
-              className="w-full h-16 bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400 text-black font-semibold hover:brightness-105 transition-all duration-200 text-lg"
+              className="animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-center justify-center space-x-3">
-                <span className="text-2xl">{item.flag}</span>
-                <span>{item.country}</span>
-                <MapPin className="w-5 h-5" />
-              </div>
-            </Button>
+              <Button
+                onClick={() => handleCountryClick(item.route)}
+                className={`
+                  w-full h-16 relative overflow-hidden group
+                  bg-gradient-to-r ${item.gradient}
+                  text-white font-semibold text-lg
+                  hover:scale-105 hover:shadow-2xl
+                  transition-all duration-300 ease-out
+                  border-2 border-white/20 hover:border-white/40
+                  rounded-xl
+                `}
+              >
+                {/* Shimmer effect */}
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+                
+                <div className="flex items-center justify-between w-full px-4 relative z-10">
+                  <div className="flex items-center space-x-4">
+                    <span className="text-3xl drop-shadow-lg">{item.flag}</span>
+                    <span className="font-bold drop-shadow-md">{item.country}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <MapPin className="w-5 h-5 drop-shadow-md" />
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  </div>
+                </div>
+              </Button>
+            </div>
           ))}
         </div>
 
-        <div className="mt-8 text-center">
-          <p className="text-gray-400 text-sm">
-            Don't see your country? Contact support for assistance.
-          </p>
-          <Button 
-            onClick={() => navigate('/')} 
-            variant="outline" 
-            className="mt-4 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black"
-          >
-            Back to Home
-          </Button>
-        </div>
+        {/* Footer Section */}
+        <Card className="bg-gray-800/50 border-gray-700 backdrop-blur-sm animate-fade-in">
+          <CardContent className="p-6 text-center">
+            <p className="text-gray-300 text-sm mb-4">
+              Don't see your country? We're here to help!
+            </p>
+            <div className="space-y-3">
+              <Button 
+                onClick={() => navigate('/')} 
+                variant="outline" 
+                className="border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300 font-semibold"
+              >
+                <Globe className="w-4 h-4 mr-2" />
+                Back to Home
+              </Button>
+              <p className="text-xs text-gray-400">
+                Contact support for assistance with unlisted regions
+              </p>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
