@@ -13,25 +13,25 @@ const LinkInBio = () => {
       country: "United States",
       flag: "🇺🇸",
       route: "/united-states",
-      gradient: "from-blue-600 via-white to-red-600"
+      gradient: "from-gray-900 via-red-600 to-yellow-500"
     },
     {
       country: "Canada",
       flag: "🇨🇦", 
       route: "/canada",
-      gradient: "from-red-600 via-white to-red-600"
+      gradient: "from-black via-red-700 to-yellow-400"
     },
     {
       country: "United Kingdom",
       flag: "🇬🇧",
       route: "/united-kingdom", 
-      gradient: "from-blue-700 via-white to-red-700"
+      gradient: "from-gray-800 via-red-500 to-yellow-600"
     },
     {
       country: "Australia",
       flag: "🇦🇺",
       route: "/australia",
-      gradient: "from-blue-800 via-blue-600 to-blue-800"
+      gradient: "from-gray-900 via-red-800 to-amber-500"
     },
     {
       country: "Germany", 
@@ -43,13 +43,13 @@ const LinkInBio = () => {
       country: "France",
       flag: "🇫🇷",
       route: "/france", 
-      gradient: "from-blue-700 via-white to-red-700"
+      gradient: "from-black via-red-700 to-yellow-400"
     },
     {
       country: "Rest of World",
       flag: "🌍",
       route: "/usa",
-      gradient: "from-purple-600 via-blue-600 to-green-600"
+      gradient: "from-gray-800 via-red-500 to-yellow-600"
     }
   ];
 
@@ -62,7 +62,7 @@ const LinkInBio = () => {
       <div className="max-w-md w-full">
         {/* Header Section */}
         <div className="text-center mb-8 animate-fade-in">
-          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-gray-50">
+          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent">
             Choose Your Region
           </h1>
           <p className="text-gray-300 text-sm">
@@ -90,9 +90,6 @@ const LinkInBio = () => {
                   rounded-xl
                   p-0
                 `}
-                style={{
-                  background: `linear-gradient(to right, ${item.gradient.replace('from-', '').replace('via-', ', ').replace('to-', ', ')})`,
-                }}
               >
                 {/* Shimmer effect */}
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
