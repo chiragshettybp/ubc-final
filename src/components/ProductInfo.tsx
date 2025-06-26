@@ -1,3 +1,4 @@
+
 import React from 'react';
 // Removed: import SlinkySection from './SlinkySection';
 
@@ -5,44 +6,48 @@ const ProductInfo: React.FC = () => {
   return <div className="w-full px-4 bg-black">
       {/* Removed: <SlinkySection /> */}
       <h1 className="font-bold text-white mt-2 mb-2 text-2xl text-left py-[19px]">
-        YOUTUBE INCOME ACADEMY by Alyssa Ray®
+        LAUNCHPAD PRO PACK - YOUR DIGITAL MONEY MACHINE
       </h1>
       <p className="text-sm font-bold text-white mb-2">
-        🎥 Launch. Automate. Monetize. Turn Content into Passive Income.
+        💸 Launch. Sell. Profit. Turn Digital Products into Passive Income.
       </p>
       <p className="font-semibold text-white mb-2">
-        The all-in-one system to build a fully automated YouTube channel.
-        Ideal for beginners, creators, and entrepreneurs ready to scale income with AI.
+        The all-in-one system to build your automated online business.
+        Ideal for beginners, aspiring entrepreneurs, and anyone ready to earn money online with minimal effort.
       </p>
       <div className="space-y-2 mb-4">
         <div className="flex items-center space-x-2">
           <span className="text-green-400">📁</span>
-          <span className="text-white">1-on-1 Coaching with Alyssa Ray</span>
+          <span className="text-white">Step-by-Step Guide: Selling Digital Products</span>
         </div>
         <div className="flex items-center space-x-2">
           <span className="text-green-400">📁</span>
-          <span className="text-white">Full AI Workflow: Script to Upload</span>
+          <span className="text-white">Free Website Setup & Launch Blueprint</span>
         </div>
         <div className="flex items-center space-x-2">
           <span className="text-green-400">📁</span>
-          <span className="text-white">Access to Alyssa’s YouTube Analytics Dashboard</span>
+          <span className="text-white">AI Strategies for Free Customer Acquisition</span>
         </div>
         <div className="flex items-center space-x-2">
           <span className="text-green-400">📁</span>
-          <span className="text-white">5 AI-Generated, SEO-Optimized Video Templates</span>
+          <span className="text-white">Access to 40 Million+ Premium Digital Products</span>
         </div>
         <div className="flex items-center space-x-2">
           <span className="text-green-400">📁</span>
-          <span className="text-white">Channel Setup + Monetization Blueprint</span>
+          <span className="text-white">1000+ High-Ticket Courses with Resell Rights</span>
         </div>
         <div className="flex items-center space-x-2">
           <span className="text-green-400">📁</span>
-          <span className="text-white">Private Telegram/Discord Community</span>
+          <span className="text-white">200K+ Viral Reels for Instant Content</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <span className="text-green-400">📁</span>
+          <span className="text-white">300K+ ChatGPT Prompts Bundle</span>
         </div>
         <div className="flex items-center space-x-2">
           <span className="text-green-400">📁</span>
           <span className="text-white">
-            Bonus: 50 Viral Video Ideas & Channel Audit Templates <span className="text-[#f4d535]">($397 Value Bonus FREE)</span>
+            Bonus: Ready-Made, Tested & Proven Ad Templates <span className="text-[#f4d535]">(₹3999 Value Bonus FREE)</span>
           </span>
         </div>
       </div>
@@ -51,4 +56,5 @@ const ProductInfo: React.FC = () => {
       </p>
     </div>;
 };
+
 export default ProductInfo;
