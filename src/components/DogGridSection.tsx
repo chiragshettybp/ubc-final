@@ -20,27 +20,29 @@ const DogGridSection: React.FC = () => {
     }
   };
 
-  // The list of image links (in order of provided)
+  // Updated image links
   const images = [
-    "https://i.postimg.cc/9Q7ngbf6/4-Common-Mistakes-to-Avoid-1-Poor-training.jpg",
-    "https://i.postimg.cc/R0xbkt6N/67c650f3-85ac-47cb-a51d-050e867edc6e.jpg",
-    "https://i.postimg.cc/1z0YszwM/861c681d-25c1-4ca6-ac07-218aae489e89.jpg",
-    "https://i.postimg.cc/CLdtkSpL/95d80d33-52ba-47de-9068-b47622ca87f2.jpg",
-    "https://i.postimg.cc/WbKy7Csm/cccf37aa-f805-462e-aeb9-44805a389c0e.jpg",
-    "https://i.postimg.cc/7PKd5bcW/How-To-Get-More-Video-Views-on-You-Tube.jpg",
-    "https://i.postimg.cc/50xK0MmJ/Looking-to-make-money-from-your-You-Tube-channel.jpg",
-    "https://i.postimg.cc/SsDTYtZM/Build-Your-Digital-Empire-with-Tjdigitalagency.jpg"
+    "https://i.postimg.cc/T3BQ82RN/68403b322e9b1-9.png",
+    "https://i.postimg.cc/L5vvGzXj/68403b3f6b1e5-10.png",
+    "https://i.postimg.cc/zGypPH1R/68403b4ac8ddb-11.png",
+    "https://i.postimg.cc/X7HQ8ctb/68403b574f69b-12.png",
+    "https://i.postimg.cc/Kvv0Bsqf/68403b60a3d31-13.png",
+    "https://i.postimg.cc/ZnDprjns/684173d646f2d-1.png",
+    "https://i.postimg.cc/wv2hB9pp/684173e4b408f-2.png",
+    "https://i.postimg.cc/bY6xcYg0/684173edaa125-3.png",
+    "https://i.postimg.cc/brv1D4y2/6841740589e08-4.png"
   ];
 
   const captions = [
-    "\"I've taken other digital product courses, but this is the first one I could actually follow.\"",
-    "\"I didn't think I'd ever start selling online, but now I have 6 products live.\"",
-    "\"The AI tools seemed hard at first, but they make everything so much easier.\"",
-    "\"I got my first ₹1,000 in sales last night — I still can't believe it.\"",
-    "\"This course felt like someone finally said, 'Here, let me help you.'\"",
-    "\"I was nervous, but the system explains everything in such a calm, clear way.\"",
-    "\"I'm making sales while I sleep… never thought that was possible.\"",
-    "\"The coolest thing? It feels like a real family of marketers. Also made ₹5,143 last week from digital products alone 🫣\""
+    "\"Maine pehle kabhi online business nahi kiya tha, lekin ye course ne step-by-step sikhaya. Ab meri monthly income ₹15,000 hai!\"",
+    "\"AI tools ka naam sunkar dar lagta tha, but iske baad lagta hai jaise technology meri dost hai. Bahut easy hai!\"",
+    "\"Sirf 2 mahine mein maine apna pehla digital product launch kiya. ₹8,500 ka sale hua pehle hi din!\"",
+    "\"Ghar baithe kaam kar sakti hun, bachon ka bhi khyal rakh sakti hun. Perfect solution hai working mothers ke liye.\"",
+    "\"Mumbai mein job chhodkar ye business start kiya. Ab meri income job se zyada hai aur time bhi free hai.\"",
+    "\"LaunchPad Pro Pack ki wajah se meri zindagi badal gayi. Passive income ka matlab samjh gaya hun.\"",
+    "\"Pehle sochta tha digital marketing sirf ameer logon ke liye hai. Ye course ne prove kar diya ki koi bhi kar sakta hai.\"",
+    "\"Hindi mein explanation mila, isliye samajhna aasan tha. Support team bhi bahut helpful hai, 24 ghante available.\"",
+    "\"Teen mahine pehle zero tha online business mein. Aaj mere paas 12 digital products hai aur ₹45,000 monthly earning!\""
   ];
 
   return (
