@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ProductInfo from '../components/ProductInfo';
 // Removed: import ProductVariants from '../components/ProductVariants';
@@ -16,6 +17,7 @@ import DogGridSection from '../components/DogGridSection';
 import PromoBanner from '../components/PromoBanner';
 import PromoBadge from '../components/PromoBadge';
 import BottomOfferBar from '../components/BottomOfferBar';
+import ProductShowcaseSection from '../components/ProductShowcaseSection';
 import { toast } from "@/hooks/use-toast";
 
 const Index = () => {
@@ -35,6 +37,10 @@ const Index = () => {
         {/* --- Single Promo Bar Animation + Badge (just before bundle options) --- */}
         <PromoBanner />
         <PromoBadge />
+        
+        {/* Product Showcase Section */}
+        <ProductShowcaseSection />
+        
         {/* Removed: <ProductVariants /> */}
         <div className="w-full px-4 my-4">
           <CTAButton onClick={handlePurchase} />
