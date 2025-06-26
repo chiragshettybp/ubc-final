@@ -5,6 +5,13 @@ import React from 'react';
 const ProductInfo: React.FC = () => {
   return <div className="w-full px-4 bg-black">
       {/* Removed: <SlinkySection /> */}
+      <div className="w-full flex justify-center mb-4">
+        <img 
+          src="https://i.postimg.cc/BZHnGmJq/mainbanner-png-1.png" 
+          alt="LaunchPad Pro Pack Banner" 
+          className="w-full max-w-md rounded-lg"
+        />
+      </div>
       <h1 className="font-bold text-white mt-2 mb-2 text-2xl text-left py-[19px]">
         LAUNCHPAD PRO PACK - YOUR DIGITAL MONEY MACHINE
       </h1>
