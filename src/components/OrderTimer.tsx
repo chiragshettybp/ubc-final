@@ -1,12 +1,15 @@
+
 import React, { useState, useEffect, useRef } from 'react';
+
 const OrderTimer: React.FC = () => {
   const [timeDisplay, setTimeDisplay] = useState({
     hours: 2,
-    minutes: 12
+    minutes: 8
   });
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const hoursRef = useRef(2);
-  const minutesRef = useRef(12);
+  const minutesRef = useRef(8);
+
   useEffect(() => {
     // Set up the timer only once on component mount
     if (!timerRef.current) {
@@ -38,8 +41,10 @@ const OrderTimer: React.FC = () => {
   }, []); // Empty dependency array ensures this only runs once
 
   // Hardcode the date for clarity and brevity
-  const dateString = "Thursday, Jun 19";
-  return <div className="w-full px-4 text-center my-6 bg-black">
+  const dateString = "Today";
+
+  return (
+    <div className="w-full px-4 text-center my-6 bg-black">
       <p className="font-semibold text-white mb-1">
         Want to Start Earning By {dateString}?
       </p>
@@ -49,6 +54,8 @@ const OrderTimer: React.FC = () => {
           {timeDisplay.hours} Hours {timeDisplay.minutes} Minutes
         </span>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default OrderTimer;

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
@@ -15,7 +16,7 @@ const ProductStatsSection: React.FC = () => {
   }];
 
   const handleButtonClick = () => {
-    window.open('https://www.paypal.com/ncp/payment/L8JHEPL6RSSPJ', '_blank', 'noopener,noreferrer');
+    window.open('https://rzp.io/rzp/g3w6qRIO', '_blank', 'noopener,noreferrer');
   };
 
   return (
