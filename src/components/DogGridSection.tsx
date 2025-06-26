@@ -33,13 +33,13 @@ const DogGridSection: React.FC = () => {
   ];
 
   const captions = [
-    ""I've taken other digital product courses, but this is the first one I could actually follow."",
-    ""I didn't think I'd ever start selling online, but now I have 6 products live."",
-    ""The AI tools seemed hard at first, but they make everything so much easier."",
-    ""I got my first ₹1,000 in sales last night — I still can't believe it."",
-    ""This course felt like someone finally said, 'Here, let me help you.'"",
-    ""I was nervous, but the system explains everything in such a calm, clear way."",
-    ""I'm making sales while I sleep… never thought that was possible."",
+    "\"I've taken other digital product courses, but this is the first one I could actually follow.\"",
+    "\"I didn't think I'd ever start selling online, but now I have 6 products live.\"",
+    "\"The AI tools seemed hard at first, but they make everything so much easier.\"",
+    "\"I got my first ₹1,000 in sales last night — I still can't believe it.\"",
+    "\"This course felt like someone finally said, 'Here, let me help you.'\"",
+    "\"I was nervous, but the system explains everything in such a calm, clear way.\"",
+    "\"I'm making sales while I sleep… never thought that was possible.\"",
     "\"The coolest thing? It feels like a real family of marketers. Also made ₹5,143 last week from digital products alone 🫣\""
   ];
 
