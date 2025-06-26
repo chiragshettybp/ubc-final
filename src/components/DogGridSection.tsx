@@ -30,28 +30,14 @@ const DogGridSection: React.FC = () => {
     "\"Teen mahine pehle zero tha online business mein. Aaj mere paas 12 digital products hai aur ₹45,000 monthly earning!\""
   ];
 
-  // Auto-slide effect
+  // Auto-slide effect - one image at a time
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
+    }, 2500); // Change image every 2.5 seconds
 
     return () => clearInterval(interval);
   }, [images.length]);
-
-  // Get current set of 4 images to display
-  const getVisibleImages = () => {
-    const visibleImages = [];
-    for (let i = 0; i < 4; i++) {
-      const index = (currentIndex + i) % images.length;
-      visibleImages.push({
-        src: images[index],
-        caption: captions[index],
-        key: `${index}-${Math.floor(currentIndex / images.length)}`
-      });
-    }
-    return visibleImages;
-  };
 
   return (
     <section className="w-full bg-black py-8">
@@ -66,26 +52,28 @@ const DogGridSection: React.FC = () => {
           <p className="text-sm text-gray-300">I'll show you step-by-step how to build a fully automated digital product business using AI, no upfront investment, no tech skills.</p>
         </motion.div>
         
-        <div className="grid grid-cols-2 gap-3 sm:gap-4 h-96">
+        <div className="relative w-full h-80 overflow-hidden rounded-lg">
           <AnimatePresence mode="wait">
-            {getVisibleImages().map((item, idx) => (
-              <motion.div 
-                key={item.key}
-                className="border-2 border-gray-600 rounded-lg p-1 shadow-md hover:shadow-lg transition-all duration-300 bg-gray-800"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ 
-                  duration: 0.8,
-                  delay: idx * 0.1,
-                  ease: "easeInOut"
-                }}
-                whileHover={{ scale: 1.03 }}
-              >
-                <img className="w-full rounded-md h-32 object-cover" src={item.src} alt="Digital Product Marketing" />
-                <p className="text-xs italic text-center mt-1 text-gray-300 line-clamp-3">{item.caption}</p>
-              </motion.div>
-            ))}
+            <motion.div 
+              key={currentIndex}
+              className="absolute inset-0 border-2 border-gray-600 rounded-lg p-3 shadow-md bg-gray-800 flex flex-col"
+              initial={{ x: '100%', opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: '-100%', opacity: 0 }}
+              transition={{ 
+                duration: 0.8,
+                ease: "easeInOut"
+              }}
+            >
+              <img 
+                className="w-full rounded-md h-48 object-cover mb-3" 
+                src={images[currentIndex]} 
+                alt="Digital Product Marketing" 
+              />
+              <p className="text-sm italic text-center text-gray-300 flex-1 flex items-center justify-center px-2">
+                {captions[currentIndex]}
+              </p>
+            </motion.div>
           </AnimatePresence>
         </div>
 
