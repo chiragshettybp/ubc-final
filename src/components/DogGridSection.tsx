@@ -1,24 +1,9 @@
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const DogGridSection: React.FC = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 }
-    }
-  };
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   // Updated image links
   const images = [
@@ -45,6 +30,29 @@ const DogGridSection: React.FC = () => {
     "\"Teen mahine pehle zero tha online business mein. Aaj mere paas 12 digital products hai aur ₹45,000 monthly earning!\""
   ];
 
+  // Auto-slide effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  // Get current set of 4 images to display
+  const getVisibleImages = () => {
+    const visibleImages = [];
+    for (let i = 0; i < 4; i++) {
+      const index = (currentIndex + i) % images.length;
+      visibleImages.push({
+        src: images[index],
+        caption: captions[index],
+        key: `${index}-${Math.floor(currentIndex / images.length)}`
+      });
+    }
+    return visibleImages;
+  };
+
   return (
     <section className="w-full bg-black py-8">
       <div className="max-w-md mx-auto px-4">
@@ -58,24 +66,40 @@ const DogGridSection: React.FC = () => {
           <p className="text-sm text-gray-300">I'll show you step-by-step how to build a fully automated digital product business using AI, no upfront investment, no tech skills.</p>
         </motion.div>
         
-        <motion.div 
-          className="grid grid-cols-2 gap-3 sm:gap-4" 
-          variants={containerVariants} 
-          initial="hidden" 
-          animate="visible"
-        >
-          {images.map((src, idx) => (
-            <motion.div 
-              key={idx} 
-              className="border-2 border-gray-600 rounded-lg p-1 shadow-md hover:shadow-lg transition-all duration-300 bg-gray-800" 
-              variants={itemVariants} 
-              whileHover={{ scale: 1.03 }}
-            >
-              <img className="w-full rounded-md" src={src} alt="Digital Product Marketing" />
-              <p className="text-xs italic text-center mt-1 text-gray-300">{captions[idx]}</p>
-            </motion.div>
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 h-96">
+          <AnimatePresence mode="wait">
+            {getVisibleImages().map((item, idx) => (
+              <motion.div 
+                key={item.key}
+                className="border-2 border-gray-600 rounded-lg p-1 shadow-md hover:shadow-lg transition-all duration-300 bg-gray-800"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ 
+                  duration: 0.8,
+                  delay: idx * 0.1,
+                  ease: "easeInOut"
+                }}
+                whileHover={{ scale: 1.03 }}
+              >
+                <img className="w-full rounded-md h-32 object-cover" src={item.src} alt="Digital Product Marketing" />
+                <p className="text-xs italic text-center mt-1 text-gray-300 line-clamp-3">{item.caption}</p>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
+
+        {/* Progress indicator */}
+        <div className="flex justify-center mt-4 space-x-2">
+          {images.map((_, idx) => (
+            <div
+              key={idx}
+              className={`h-2 w-2 rounded-full transition-all duration-300 ${
+                idx === currentIndex ? 'bg-white' : 'bg-gray-600'
+              }`}
+            />
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
