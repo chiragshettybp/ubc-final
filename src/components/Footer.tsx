@@ -1,13 +1,15 @@
+
 import React from 'react';
 import { Mail, Phone, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Footer = () => {
-  return <footer className="w-full text-white pb-16 bg-black">
+  return (
+    <footer className="w-full text-white pb-16 bg-black">
       <div className="max-w-md mx-auto px-4 pt-16 bg-black">
         {/* Logo and email signup */}
         <div className="mb-10">
-          <h2 className="font-bold mb-4 text-2xl text-left">Alyssa Ray®</h2>
-          
+          <h2 className="font-bold mb-4 text-2xl text-left">LaunchPad Pro®</h2>
         </div>
         
         {/* Help Links */}
@@ -27,19 +29,17 @@ const Footer = () => {
         
         {/* Legal Disclaimer */}
         <div className="border-t border-gray-700 pt-6 mb-8">
-          <p className="opacity-75 leading-5 text-center text-xs">By purchasing and enrolling in this course, you agree to our Terms and Conditions and acknowledge that all course content is provided for educational purposes only. Class start dates may vary or be delayed due to the scheduling and completion of existing student batches. We operate on a structured intake system to ensure quality delivery, and as such, we do not offer refunds for delayed starts. Please enroll only if you understand and accept this scheduling policy.
-
-
-
-Results are entirely dependent on your commitment, consistency, and individual effort. While many of our students have achieved outstanding results, we make no guarantees of specific outcomes. By enrolling, you accept full responsibility for your progress and understand that lack of results does not qualify for a refund. This course is a self-responsibility-based learning program, and your success ultimately depends on your actions.</p>
+          <p className="opacity-75 leading-5 text-center text-xs">
+            DISCLAIMER: The profit figures stated above are my personal figures from the last 5 years. Please understand these results can vary, I'm not implying you'll duplicate them (or do anything for that matter). The average person who buys any "how to" information gets little to no results. I'm using these references for example purposes only. Your results will vary and depend on many factors… including but not limited to your background, experience, and work ethic. All business entails risk as well as massive and consistent effort and action. If you're not willing to accept that, please DO NOT ATTEND THIS TRAINING.
+            <br /><br />
+            This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
+          </p>
         </div>
         
         {/* Footer Bottom */}
         <div className="flex flex-col items-center">
           <div className="flex gap-2 text-xs opacity-75 mb-6">
-            <span>© Copyright 2025</span>
-            <span className="w-1 h-1 rounded-full bg-gray-500 self-center"></span>
-            <span>Alyssa Ray®</span>
+            <span>LaunchPad Pro - Copyright © 2025. All Rights Reserved.</span>
           </div>
           
           {/* Payment methods */}
@@ -49,6 +49,8 @@ Results are entirely dependent on your commitment, consistency, and individual e
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

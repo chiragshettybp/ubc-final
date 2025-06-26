@@ -25,7 +25,7 @@ interface PromoBannerProps {
   currency?: string;
 }
 
-const PromoBanner: React.FC<PromoBannerProps> = ({ currency = "$" }) => <div className="relative w-full px-4 mb-4">
+const PromoBanner: React.FC<PromoBannerProps> = ({ currency = "₹" }) => <div className="relative w-full px-4 mb-4">
     {/* Animated glow burst behind banner */}
     <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
       <span className="
@@ -67,7 +67,7 @@ const PromoBanner: React.FC<PromoBannerProps> = ({ currency = "$" }) => <div cla
           Everyday Price:
         </span>
         <span className="relative ml-2 text-2xl font-bold text-white select-none">
-          <span className="relative z-10">{currency}499</span>
+          <span className="relative z-10">{currency}997</span>
           <span className="absolute left-0 right-0 top-1/2 h-1 border-b-4 border-yellow-300 z-20 w-full" style={{
           transform: "rotate(-14deg) translateY(-50%)"
         }} />
@@ -87,12 +87,12 @@ const PromoBanner: React.FC<PromoBannerProps> = ({ currency = "$" }) => <div cla
           Today's Price:
         </span>
         <span className="text-2xl font-extrabold text-yellow-300 whitespace-nowrap relative drop-shadow-glow">
-          {currency}197
+          {currency}99
           {/* Yellow underline effect */}
-          <svg className="absolute left-0 -bottom-2" width="74" height="12" viewBox="0 0 74 12" fill="none" xmlns="http://www.w3.org/2000/svg" style={{
+          <svg className="absolute left-0 -bottom-2" width="64" height="12" viewBox="0 0 64 12" fill="none" xmlns="http://www.w3.org/2000/svg" style={{
           zIndex: 1
         }}>
-            <path d="M2 10C11.3142 6.66667 41.6 0.8 72 4" stroke="#FFD700" strokeWidth="4" strokeLinecap="round" />
+            <path d="M2 10C11.3142 6.66667 35.6 0.8 62 4" stroke="#FFD700" strokeWidth="4" strokeLinecap="round" />
           </svg>
         </span>
       </div>
