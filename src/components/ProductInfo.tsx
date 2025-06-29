@@ -38,26 +38,86 @@ const ProductInfo: React.FC = () => {
 
       {/* Discovery Story Section - Clone 1 */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
-        
-        
+        <img alt="Discovery Story Image 1" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/18ac57cb-8c68-48de-b143-aeaddf92c215.png" />
+        <div className="rounded-lg p-6 max-w-md w-full bg-slate-50 px-[4px]">
+          <h2 className="text-lg font-bold text-black mb-3">I discovered something that changed everything.</h2>
+          <p className="text-sm text-gray-700 mb-3">
+            While scrolling through social media one day, I stumbled upon people making thousands of dollars selling digital products online.
+          </p>
+          <p className="text-sm text-gray-700 mb-3 font-semibold">I was intrigued.</p>
+          <p className="text-sm text-gray-700 mb-3">
+            These weren't tech experts or marketing geniuses. They were regular people like me, sharing their knowledge and expertise.
+          </p>
+          <p className="text-sm text-gray-700">
+            The best part? They were doing it without showing their faces, without fancy equipment, and without years of experience.
+          </p>
+          <p className="text-sm mt-3 font-semibold text-green-500">
+            This was my breakthrough moment.
+          </p>
+        </div>
       </div>
 
       {/* Discovery Story Section - Clone 2 */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
-        
-        
+        <img alt="Discovery Story Image 2" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/462e46e6-4622-479c-84d0-f2b846a4d9c9.png" />
+        <div className="rounded-lg p-6 max-w-md w-full bg-slate-50 px-[4px]">
+          <h2 className="text-lg font-bold text-black mb-3">I decided to take action immediately.</h2>
+          <p className="text-sm text-gray-700 mb-3">
+            I spent weeks researching, learning everything I could about digital products and online marketing.
+          </p>
+          <p className="text-sm text-gray-700 mb-3 font-semibold">The learning curve was steep.</p>
+          <p className="text-sm text-gray-700 mb-3">
+            I made mistakes, faced rejections, and sometimes questioned if this was really for me.
+          </p>
+          <p className="text-sm text-gray-700">
+            But I kept pushing forward because I knew this was my chance to break free from the traditional career path.
+          </p>
+          <p className="text-sm mt-3 font-semibold text-blue-500">
+            Persistence was key.
+          </p>
+        </div>
       </div>
 
       {/* Discovery Story Section - Clone 3 */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
-        
-        
+        <img alt="Discovery Story Image 3" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/eb9a95f0-2ee3-4b35-b521-322495676a63.png" />
+        <div className="rounded-lg p-6 max-w-md w-full bg-slate-50 px-[4px]">
+          <h2 className="text-lg font-bold text-black mb-3">Then something amazing happened.</h2>
+          <p className="text-sm text-gray-700 mb-3">
+            My first digital product sale came in at 2 AM while I was sleeping. I couldn't believe it!
+          </p>
+          <p className="text-sm text-gray-700 mb-3 font-semibold">€47 in my account.</p>
+          <p className="text-sm text-gray-700 mb-3">
+            It wasn't much, but it proved that this system actually worked. People were willing to pay for value.
+          </p>
+          <p className="text-sm text-gray-700">
+            That first sale gave me the confidence to scale up and optimize my approach.
+          </p>
+          <p className="text-sm mt-3 font-semibold text-purple-500">
+            The floodgates opened.
+          </p>
+        </div>
       </div>
 
       {/* Discovery Story Section - Clone 4 */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
-        
-        
+        <img alt="Discovery Story Image 4" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/b4eed02e-f9c6-44d3-abd3-b78fa368a55e.png" />
+        <div className="rounded-lg p-6 max-w-md w-full bg-slate-50 px-[4px]">
+          <h2 className="text-lg font-bold text-black mb-3">Within months, everything changed.</h2>
+          <p className="text-sm text-gray-700 mb-3">
+            From that first €47 sale, I built a system that now generates consistent income every single day.
+          </p>
+          <p className="text-sm text-gray-700 mb-3 font-semibold">No more 8-hour days for €500/month.</p>
+          <p className="text-sm text-gray-700 mb-3">
+            I was finally free to live life on my own terms, work from anywhere, and help others do the same.
+          </p>
+          <p className="text-sm text-gray-700">
+            Now I want to share this exact system with you, so you don't have to figure it all out on your own.
+          </p>
+          <p className="text-sm mt-3 font-semibold text-orange-500">
+            Your turn is coming.
+          </p>
+        </div>
       </div>
 
       {/* First Steps Section */}
