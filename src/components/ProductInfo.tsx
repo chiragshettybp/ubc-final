@@ -11,25 +11,13 @@ const ProductInfo: React.FC = () => {
       
       {/* New images added below the heading */}
       <div className="w-full flex flex-col items-center space-y-4 mb-6">
-        <img 
-          alt="Success testimonial about moving to new home" 
-          className="w-full max-w-md rounded-lg shadow-md" 
-          src="/lovable-uploads/eb9a95f0-2ee3-4b35-b521-322495676a63.png" 
-        />
-        <img 
-          alt="Beautiful modern home interior" 
-          className="w-full max-w-md rounded-lg shadow-md" 
-          src="/lovable-uploads/462e46e6-4622-479c-84d0-f2b846a4d9c9.png" 
-        />
+        <img alt="Success testimonial about moving to new home" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/eb9a95f0-2ee3-4b35-b521-322495676a63.png" />
+        <img alt="Beautiful modern home interior" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/462e46e6-4622-479c-84d0-f2b846a4d9c9.png" />
       </div>
 
       {/* Gloria's Introduction Section */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
-        <img 
-          alt="Meet Gloria - Your Success Guide" 
-          className="w-full max-w-md rounded-lg shadow-md" 
-          src="/lovable-uploads/cea682d6-6583-431c-92ea-be7522a15e80.png" 
-        />
+        <img alt="Meet Gloria - Your Success Guide" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/cea682d6-6583-431c-92ea-be7522a15e80.png" />
         <div className="bg-blue-50 rounded-lg p-6 max-w-md w-full">
           <h2 className="text-lg font-bold text-black mb-3">Hey, nice to meet you! My name is Gloria.</h2>
           <p className="text-sm text-gray-700 mb-3">
@@ -50,96 +38,20 @@ const ProductInfo: React.FC = () => {
 
       {/* Discovery Story Section */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
-        <img 
-          alt="The moment everything changed" 
-          className="w-full max-w-md rounded-lg shadow-md" 
-          src="/lovable-uploads/d89fee55-77a1-4abf-b054-ff70619758a7.png" 
-        />
-        <div className="bg-green-50 rounded-lg p-6 max-w-md w-full">
-          <p className="text-sm text-gray-700 mb-3">
-            One day, scrolling on Instagram I stumbled upon Digital Marketing and saw how ordinary people and graduates like me were changing their lives making money online with no experience.
-          </p>
-          <p className="text-sm text-gray-700 mb-3 font-semibold text-green-600">
-            They were making $500/day! WHAT?
-          </p>
-          <p className="text-sm text-gray-700 mb-3">
-            They had no boss, no working hours, no rush in the traffic. I wanted that life.
-          </p>
-          <p className="text-sm text-gray-700 mb-3">
-            So I decided to give it a try since I had nothing to lose.
-          </p>
-          <p className="text-sm text-gray-700">
-            Oh and if you're asking, yes, I was scared. I was skeptical as well.
-          </p>
-          <p className="text-sm text-gray-700 mt-3 font-semibold">
-            But I'm the kind of person who has to try it herself before giving up.
-          </p>
-        </div>
+        
+        
       </div>
 
       {/* First Steps Section */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
-        <img 
-          alt="Taking the first step" 
-          className="w-full max-w-md rounded-lg shadow-md" 
-          src="/lovable-uploads/d1984f48-28aa-4a00-b9f4-34816a9a1ffa.png" 
-        />
-        <div className="bg-yellow-50 rounded-lg p-6 max-w-md w-full">
-          <p className="text-sm text-gray-700 mb-3">
-            I didn't want to ask my parents so I worked 2 jobs for 8 months: I was a nanny in the morning and a secretary in a law firm in the afternoon. I saved up the money I needed to learn the skills so I could finally build my own future. And I took the first step, I bought the course.
-          </p>
-          <p className="text-sm text-gray-700 font-semibold">
-            It's been a journey. It takes consistency and faith.
-          </p>
-          <p className="text-sm text-gray-700 mt-3 font-bold text-orange-600">
-            But since that first step...
-          </p>
-        </div>
+        
+        
       </div>
 
       {/* Success Results Section */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
-        <img 
-          alt="Living life on my own terms" 
-          className="w-full max-w-md rounded-lg shadow-md" 
-          src="/lovable-uploads/cf23bf65-631a-476a-8e7f-1f9f64dfb48f.png" 
-        />
-        <div className="bg-purple-50 rounded-lg p-6 max-w-md w-full">
-          <div className="space-y-3">
-            <div className="flex items-center">
-              <span className="text-yellow-500 mr-2">⭐</span>
-              <span className="text-sm text-gray-700">I can travel the world without asking for permission</span>
-            </div>
-            <div className="flex items-center">
-              <span className="text-yellow-500 mr-2">⭐</span>
-              <span className="text-sm text-gray-700">I got to choose my working hours depending on how I feel every day</span>
-            </div>
-            <div className="flex items-center">
-              <span className="text-yellow-500 mr-2">⭐</span>
-              <span className="text-sm text-gray-700">I spend more time with my family</span>
-            </div>
-            <div className="flex items-center">
-              <span className="text-yellow-500 mr-2">⭐</span>
-              <span className="text-sm text-gray-700">I can wake up with no alarm clock</span>
-            </div>
-            <div className="flex items-center">
-              <span className="text-yellow-500 mr-2">⭐</span>
-              <span className="text-sm text-gray-700">I finally feel valuable, capable and proud of myself</span>
-            </div>
-            <div className="flex items-center">
-              <span className="text-yellow-500 mr-2">⭐</span>
-              <span className="text-sm text-gray-700">I live life on my own terms</span>
-            </div>
-            <div className="flex items-center">
-              <span className="text-yellow-500 mr-2">⭐</span>
-              <span className="text-sm text-gray-700">I'm creating a bright future for my boyfriend and I</span>
-            </div>
-            <div className="flex items-center">
-              <span className="text-yellow-500 mr-2">⭐</span>
-              <span className="text-sm text-gray-700">I help others escape their stressful jobs to gain back their own time and financial freedom thanks to digital marketing</span>
-            </div>
-          </div>
-        </div>
+        
+        
       </div>
 
       <p className="text-sm font-bold text-black mb-2">
