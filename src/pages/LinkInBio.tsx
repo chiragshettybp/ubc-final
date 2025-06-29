@@ -13,43 +13,43 @@ const LinkInBio = () => {
       country: "United States",
       flag: "🇺🇸",
       route: "/united-states",
-      gradient: "from-blue-600 via-white to-red-600"
+      gradient: "from-yellow-400 via-yellow-300 to-yellow-500"
     },
     {
       country: "Canada",
       flag: "🇨🇦", 
       route: "/canada",
-      gradient: "from-red-600 via-white to-red-600"
+      gradient: "from-yellow-400 via-yellow-300 to-yellow-500"
     },
     {
       country: "United Kingdom",
       flag: "🇬🇧",
       route: "/united-kingdom", 
-      gradient: "from-blue-700 via-white to-red-700"
+      gradient: "from-yellow-400 via-yellow-300 to-yellow-500"
     },
     {
       country: "Australia",
       flag: "🇦🇺",
       route: "/australia",
-      gradient: "from-blue-800 via-blue-600 to-blue-800"
+      gradient: "from-yellow-400 via-yellow-300 to-yellow-500"
     },
     {
       country: "Germany", 
       flag: "🇩🇪",
       route: "/germany",
-      gradient: "from-gray-900 via-red-600 to-yellow-500"
+      gradient: "from-yellow-400 via-yellow-300 to-yellow-500"
     },
     {
       country: "France",
       flag: "🇫🇷",
       route: "/france", 
-      gradient: "from-blue-700 via-white to-red-700"
+      gradient: "from-yellow-400 via-yellow-300 to-yellow-500"
     },
     {
       country: "Rest of World",
       flag: "🌍",
       route: "/usa",
-      gradient: "from-purple-600 via-blue-600 to-green-600"
+      gradient: "from-yellow-400 via-yellow-300 to-yellow-500"
     }
   ];
 
@@ -58,14 +58,14 @@ const LinkInBio = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800 p-4 flex items-center justify-center">
+    <div className="min-h-screen bg-white p-4 flex items-center justify-center">
       <div className="max-w-md w-full">
         {/* Header Section */}
         <div className="text-center mb-8 animate-fade-in">
-          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-gray-50">
+          <h1 className="text-3xl font-bold mb-2 bg-gradient-to-r from-yellow-600 to-yellow-800 bg-clip-text text-transparent">
             Choose Your Region
           </h1>
-          <p className="text-gray-300 text-sm">
+          <p className="text-gray-600 text-sm">
             Select your country to get started with localized content
           </p>
         </div>
@@ -83,27 +83,25 @@ const LinkInBio = () => {
                 className={`
                   w-full h-16 relative overflow-hidden group
                   bg-gradient-to-r ${item.gradient}
-                  text-white font-semibold text-lg
+                  text-black font-semibold text-lg
                   hover:scale-105 hover:shadow-2xl
                   transition-all duration-300 ease-out
-                  border-2 border-gray-700 hover:border-gray-500
+                  border-2 border-yellow-200 hover:border-yellow-400
                   rounded-xl
                   p-0
+                  shadow-lg
                 `}
-                style={{
-                  background: `linear-gradient(to right, ${item.gradient.replace('from-', '').replace('via-', ', ').replace('to-', ', ')})`,
-                }}
               >
                 {/* Shimmer effect */}
-                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
                 
                 <div className="flex items-center justify-between w-full px-6 relative z-10">
                   <div className="flex items-center space-x-4">
                     <span className="text-3xl drop-shadow-lg filter brightness-110">{item.flag}</span>
-                    <span className="font-bold drop-shadow-md text-shadow">{item.country}</span>
+                    <span className="font-bold drop-shadow-sm text-shadow-sm">{item.country}</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <MapPin className="w-5 h-5 drop-shadow-md" />
+                    <MapPin className="w-5 h-5 drop-shadow-sm" />
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </div>
@@ -113,7 +111,7 @@ const LinkInBio = () => {
         </div>
 
         {/* Footer Section */}
-        <Card className="bg-gray-800/50 border-gray-700 backdrop-blur-sm animate-fade-in">
+        <Card className="bg-gray-50 border-gray-200 backdrop-blur-sm animate-fade-in shadow-sm">
         </Card>
       </div>
       
@@ -126,8 +124,8 @@ const LinkInBio = () => {
           animation: fade-in 0.6s ease-out forwards;
           opacity: 0;
         }
-        .text-shadow {
-          text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        .text-shadow-sm {
+          text-shadow: 0 1px 2px rgba(0,0,0,0.1);
         }
       `}</style>
     </div>
