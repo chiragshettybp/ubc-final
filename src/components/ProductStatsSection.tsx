@@ -53,7 +53,7 @@ const ProductStatsSection: React.FC = () => {
           <span className="absolute inset-0 overflow-hidden flex items-center justify-center">
             <span className="absolute inset-0 w-1/4 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-[shine_3s_infinite]" />
           </span>
-          <span className="relative z-10 text-xl font-extrabold">GET ACCESS NOW</span>
+          <span className="relative z-10 text-xl font-extrabold">GET ACCESS </span>
         </button>
       </motion.div>
     </section>;
