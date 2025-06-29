@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="w-full text-white pb-16 bg-black">
-      <div className="max-w-md mx-auto px-4 pt-16 bg-black">
+    <footer className="w-full text-black pb-16 bg-white border-t border-gray-200">
+      <div className="max-w-md mx-auto px-4 pt-16 bg-white">
         {/* Logo and email signup */}
         <div className="mb-10">
           <h2 className="font-bold mb-4 text-2xl text-left">LaunchPad Pro®</h2>
@@ -16,19 +16,19 @@ const Footer = () => {
         <div className="mb-10">
           <h3 className="font-bold mb-4">Need Help?</h3>
           <ul className="opacity-75 text-sm space-y-3">
-            <li><Link to="/help-center" className="hover:text-gray-400">Help Center</Link></li>
-            <li><Link to="/track-order" className="hover:text-gray-400">Track Your Order</Link></li>
-            <li><Link to="/shipping-delivery" className="hover:text-gray-400">Shipping & Delivery</Link></li>
-            <li><Link to="/return-refund" className="hover:text-gray-400">Return & Refund Policy</Link></li>
-            <li><Link to="/reviews" className="hover:text-gray-400">Customer Reviews</Link></li>
-            <li><Link to="/privacy-policy" className="hover:text-gray-400">Privacy Policy</Link></li>
-            <li><Link to="/terms-of-service" className="hover:text-gray-400">Terms of Service</Link></li>
-            <li><Link to="/how-to-use" className="hover:text-gray-400">How to Use</Link></li>
+            <li><Link to="/help-center" className="hover:text-gray-600">Help Center</Link></li>
+            <li><Link to="/track-order" className="hover:text-gray-600">Track Your Order</Link></li>
+            <li><Link to="/shipping-delivery" className="hover:text-gray-600">Shipping & Delivery</Link></li>
+            <li><Link to="/return-refund" className="hover:text-gray-600">Return & Refund Policy</Link></li>
+            <li><Link to="/reviews" className="hover:text-gray-600">Customer Reviews</Link></li>
+            <li><Link to="/privacy-policy" className="hover:text-gray-600">Privacy Policy</Link></li>
+            <li><Link to="/terms-of-service" className="hover:text-gray-600">Terms of Service</Link></li>
+            <li><Link to="/how-to-use" className="hover:text-gray-600">How to Use</Link></li>
           </ul>
         </div>
         
         {/* Legal Disclaimer */}
-        <div className="border-t border-gray-700 pt-6 mb-8">
+        <div className="border-t border-gray-300 pt-6 mb-8">
           <p className="opacity-75 leading-5 text-center text-xs">
             DISCLAIMER: The profit figures stated above are my personal figures from the last 5 years. Please understand these results can vary, I'm not implying you'll duplicate them (or do anything for that matter). The average person who buys any "how to" information gets little to no results. I'm using these references for example purposes only. Your results will vary and depend on many factors… including but not limited to your background, experience, and work ethic. All business entails risk as well as massive and consistent effort and action. If you're not willing to accept that, please DO NOT ATTEND THIS TRAINING.
             <br /><br />

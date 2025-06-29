@@ -40,7 +40,7 @@ const DogGridSection: React.FC = () => {
   }, [images.length]);
 
   return (
-    <section className="w-full bg-black py-8">
+    <section className="w-full bg-white py-8">
       <div className="max-w-md mx-auto px-4">
         <motion.div 
           className="text-center mb-6 px-6" 
@@ -48,15 +48,15 @@ const DogGridSection: React.FC = () => {
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.5 }}
         >
-          <h2 className="font-bold text-white mb-2 text-2xl">Real Marketers. Real Results.</h2>
-          <p className="text-sm text-gray-300">I'll show you step-by-step how to build a fully automated digital product business using AI, no upfront investment, no tech skills.</p>
+          <h2 className="font-bold text-black mb-2 text-2xl">Real Marketers. Real Results.</h2>
+          <p className="text-sm text-gray-600">I'll show you step-by-step how to build a fully automated digital product business using AI, no upfront investment, no tech skills.</p>
         </motion.div>
         
         <div className="relative w-full h-80 overflow-hidden rounded-lg">
           <AnimatePresence mode="wait">
             <motion.div 
               key={currentIndex}
-              className="absolute inset-0 border-2 border-gray-600 rounded-lg p-3 shadow-md bg-gray-800 flex flex-col"
+              className="absolute inset-0 border-2 border-gray-300 rounded-lg p-3 shadow-md bg-gray-50 flex flex-col"
               initial={{ x: '100%', opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: '-100%', opacity: 0 }}
@@ -70,7 +70,7 @@ const DogGridSection: React.FC = () => {
                 src={images[currentIndex]} 
                 alt="Digital Product Marketing" 
               />
-              <p className="text-sm italic text-center text-gray-300 flex-1 flex items-center justify-center px-2">
+              <p className="text-sm italic text-center text-gray-700 flex-1 flex items-center justify-center px-2">
                 {captions[currentIndex]}
               </p>
             </motion.div>
@@ -83,7 +83,7 @@ const DogGridSection: React.FC = () => {
             <div
               key={idx}
               className={`h-2 w-2 rounded-full transition-all duration-300 ${
-                idx === currentIndex ? 'bg-white' : 'bg-gray-600'
+                idx === currentIndex ? 'bg-black' : 'bg-gray-300'
               }`}
             />
           ))}
