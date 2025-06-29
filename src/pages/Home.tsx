@@ -42,6 +42,13 @@ const Home = () => {
         <PromoBanner />
         <PromoBadge />
         
+        {/* CTA Button, Payment Methods, and Timer positioned below PromoBanner */}
+        <div className="w-full px-4 my-4">
+          <CTAButton onClick={handlePurchase} />
+        </div>
+        <PaymentMethods />
+        <OrderTimer />
+        
         {/* Product Showcase Section */}
         <ProductShowcaseSection />
         
@@ -50,11 +57,6 @@ const Home = () => {
         <UrgencySection />
         
         {/* Removed: <ProductVariants /> */}
-        <div className="w-full px-4 my-4">
-          <CTAButton onClick={handlePurchase} />
-        </div>
-        <PaymentMethods />
-        <OrderTimer />
         <BenefitBadges />
         
         {/* Removed: <GuaranteeSection /> */}
