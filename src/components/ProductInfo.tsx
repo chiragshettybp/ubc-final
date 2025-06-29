@@ -7,9 +7,7 @@ const ProductInfo: React.FC = () => {
       <div className="w-full flex justify-center mb-4">
         <img alt="LaunchPad Pro Pack Banner" className="w-full max-w-md rounded-lg" src="/lovable-uploads/b4eed02e-f9c6-44d3-abd3-b78fa368a55e.png" />
       </div>
-      <h1 className="font-bold text-black mt-2 mb-2 text-2xl text-left py-[19px]">
-        LAUNCHPAD PRO PACK - YOUR DIGITAL MONEY MACHINE
-      </h1>
+      <h1 className="text-black mt-2 mb-2 text-2xl text-center py-[10px] my-[13px] font-extrabold">Steal My All-Inclusive, Done-For-You System to Start Making Money Online with Social Media—Even If You Don't Have Experience!</h1>
       <p className="text-sm font-bold text-black mb-2">
         💸 Launch. Sell. Profit. Turn Digital Products into Passive Income.
       </p>
