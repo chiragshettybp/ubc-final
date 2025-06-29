@@ -34,7 +34,7 @@ const ProductStatsSection: React.FC = () => {
         {/* Stats Grid */}
         <div className="divide-y divide-gray-700 mb-8">
           {statItems.map((item, index) => <div key={index} className="flex items-center py-5 space-x-6">
-              <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-full bg-zinc-300">
+              <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-full bg-yellow-400">
                 <span className="font-bold text-lg text-zinc-950">{item.percent}</span>
               </div>
               <div>
