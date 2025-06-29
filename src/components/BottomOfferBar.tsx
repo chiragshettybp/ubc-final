@@ -29,11 +29,7 @@ const BottomOfferBar: React.FC<{
   }, [minutes]);
 
   const handleButtonClick = () => {
-    if (paypalLink) {
-      window.open(paypalLink, "_blank", "noopener,noreferrer");
-    } else {
-      window.open("https://www.paypal.com/ncp/payment/L8JHEPL6RSSPJ", "_blank", "noopener,noreferrer");
-    }
+    window.open("https://www.paypal.com/ncp/payment/RGV3ZRLJ8V448", "_blank", "noopener,noreferrer");
   };
 
   return <div className="fixed left-0 bottom-0 z-50 w-full" style={{
@@ -64,7 +60,7 @@ const BottomOfferBar: React.FC<{
           }} 
           onClick={handleButtonClick}
         >
-          START EARNING
+          GET ACCESS NOW
         </button>
       </div>
     </div>;

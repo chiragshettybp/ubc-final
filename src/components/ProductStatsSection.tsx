@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
@@ -13,7 +14,7 @@ const ProductStatsSection: React.FC = () => {
     description: "Started earning from sales, affiliate links, or digital products within 60 days"
   }];
   const handleButtonClick = () => {
-    window.open('https://rzp.io/rzp/g3w6qRIO', '_blank', 'noopener,noreferrer');
+    window.open('https://www.paypal.com/ncp/payment/RGV3ZRLJ8V448', '_blank', 'noopener,noreferrer');
   };
   return <section className="w-full py-12 px-4 bg-zinc-50">
       <motion.div className="max-w-md mx-auto" initial={{
@@ -53,7 +54,7 @@ const ProductStatsSection: React.FC = () => {
           <span className="absolute inset-0 overflow-hidden px-0">
             <span className="absolute inset-0 w-1/4 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-[shine_3s_infinite]" />
           </span>
-          <span className="relative z-10 text-xl">GET IT NOW</span>
+          <span className="relative z-10 text-xl">GET ACCESS NOW</span>
         </button>
       </motion.div>
     </section>;

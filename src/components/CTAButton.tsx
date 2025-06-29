@@ -13,7 +13,7 @@ const CTAButton: React.FC<{
   }, []);
 
   const handleClick = () => {
-    window.open('https://rzp.io/rzp/g3w6qRIO', '_blank', 'noopener,noreferrer');
+    window.open('https://www.paypal.com/ncp/payment/RGV3ZRLJ8V448', '_blank', 'noopener,noreferrer');
     onClick();
   };
 
@@ -31,11 +31,11 @@ const CTAButton: React.FC<{
       {/* Shining effect overlay */}
       <span className="absolute inset-0 overflow-hidden flex items-center justify-center pointer-events-none z-20">
         <span className="relative text-black text-base font-semibold drop-shadow-md uppercase">
-          GET IT NOW
+          GET ACCESS NOW
         </span>
         <span className="absolute inset-0 w-1/4 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-[shine_3s_infinite]" />
       </span>
-      <span className="invisible">GET IT NOW</span>
+      <span className="invisible">GET ACCESS NOW</span>
     </motion.button>
   );
 };
