@@ -20,7 +20,7 @@ import BottomOfferBar from '../components/BottomOfferBar';
 import ProductShowcaseSection from '../components/ProductShowcaseSection';
 import BonusSection from '../components/BonusSection';
 import UrgencySection from '../components/UrgencySection';
-import GuaranteeSection from '../components/GuaranteeSection';
+// Removed: import GuaranteeSection from '../components/GuaranteeSection';
 import { toast } from "@/hooks/use-toast";
 
 const Home = () => {
@@ -57,7 +57,7 @@ const Home = () => {
         <OrderTimer />
         <BenefitBadges />
         
-        <GuaranteeSection />
+        {/* Removed: <GuaranteeSection /> */}
         <FAQSection />
         <GifSection />
         <DogGridSection />
