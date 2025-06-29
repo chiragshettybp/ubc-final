@@ -124,8 +124,43 @@ But I'm the kind of person who has to try it herself before giving up.</p>
 
       {/* Success Results Section */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
-        
-        
+        <div className="rounded-lg p-6 max-w-md w-full bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200">
+          <h2 className="text-xl font-bold text-purple-900 mb-4 text-center">Now I Get To...</h2>
+          <div className="space-y-3">
+            <div className="flex items-start space-x-3">
+              <span className="text-yellow-500 text-lg">✨</span>
+              <p className="text-sm text-gray-700">I can travel the world without asking for permission</p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <span className="text-yellow-500 text-lg">✨</span>
+              <p className="text-sm text-gray-700">I get to choose my working hours depending on how I feel every day</p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <span className="text-yellow-500 text-lg">✨</span>
+              <p className="text-sm text-gray-700">I spend more time with my family</p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <span className="text-yellow-500 text-lg">✨</span>
+              <p className="text-sm text-gray-700">I can wake up with no alarm clock</p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <span className="text-yellow-500 text-lg">✨</span>
+              <p className="text-sm text-gray-700">I finally feel valuable, capable and proud of myself</p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <span className="text-yellow-500 text-lg">✨</span>
+              <p className="text-sm text-gray-700">I live life on my own terms</p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <span className="text-yellow-500 text-lg">✨</span>
+              <p className="text-sm text-gray-700">I'm creating a bright future for my boyfriend and I</p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <span className="text-yellow-500 text-lg">✨</span>
+              <p className="text-sm text-gray-700">I help others escape their stressful jobs to gain back their own time and financial freedom thanks to digital marketing</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <p className="text-sm font-bold text-black mb-2">
