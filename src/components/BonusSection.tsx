@@ -35,7 +35,7 @@ const BonusSection: React.FC = () => {
   }, 0);
 
   return (
-    <section className="w-full py-12 px-4 bg-gradient-to-br from-blue-50 to-purple-50">
+    <section className="w-full py-12 px-4 bg-white">
       <div className="max-w-md mx-auto">
         <motion.div 
           className="text-center mb-8"
