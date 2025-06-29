@@ -7,22 +7,26 @@ const BonusSection: React.FC = () => {
     {
       title: "BONUS #1: Social Media Automation Tools",
       value: "$2,499",
-      description: "Complete suite of tools to automate your social media posting and engagement"
+      description: "Complete suite of tools to automate your social media posting and engagement",
+      image: "/lovable-uploads/fcf20f05-c959-4db4-a6c6-811e60d12714.png"
     },
     {
       title: "BONUS #2: Email Marketing Templates",
       value: "$1,999", 
-      description: "50+ proven email templates that convert browsers into buyers"
+      description: "50+ proven email templates that convert browsers into buyers",
+      image: "/lovable-uploads/881bd75f-e3ba-417c-b258-b503d55928d8.png"
     },
     {
       title: "BONUS #3: Live Masterclass Access",
       value: "$4,999",
-      description: "Exclusive access to monthly live training sessions with industry experts"
+      description: "Exclusive access to monthly live training sessions with industry experts",
+      image: "/lovable-uploads/11f8dd12-73fc-4ed0-9ff6-2beda7d3e855.png"
     },
     {
       title: "BONUS #4: Private Community Access",
       value: "$2,999",
-      description: "Join our exclusive community of successful digital entrepreneurs"
+      description: "Join our exclusive community of successful digital entrepreneurs",
+      image: "/lovable-uploads/3e1e2be9-bcd9-4939-9f05-0f78ed7f174f.png"
     }
   ];
 
@@ -56,13 +60,24 @@ const BonusSection: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="font-bold text-black text-sm flex-1">{bonus.title}</h3>
-                <span className="bg-yellow-300 text-black px-2 py-1 rounded text-xs font-bold ml-2">
-                  {bonus.value}
-                </span>
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <img 
+                    src={bonus.image} 
+                    alt={bonus.title}
+                    className="w-16 h-16 object-cover rounded-lg"
+                  />
+                </div>
+                <div className="flex-1">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="font-bold text-black text-sm flex-1">{bonus.title}</h3>
+                    <span className="bg-yellow-300 text-black px-2 py-1 rounded text-xs font-bold ml-2">
+                      {bonus.value}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 text-sm">{bonus.description}</p>
+                </div>
               </div>
-              <p className="text-gray-600 text-sm">{bonus.description}</p>
             </motion.div>
           ))}
         </div>
