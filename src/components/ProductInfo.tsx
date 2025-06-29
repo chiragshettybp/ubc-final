@@ -38,19 +38,21 @@ const ProductInfo: React.FC = () => {
 
       {/* Discovery Story Section - Clone 1 */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
-        <img alt="Discovery Story Image 1" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/18ac57cb-8c68-48de-b143-aeaddf92c215.png" />
+        <img alt="Discovery Story Image 1" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/632dd5e3-a018-4d66-bbee-a79188ae7929.jpg" />
         <div className="rounded-lg p-6 max-w-md w-full bg-slate-50 px-[4px]">
           <h2 className="text-lg font-bold text-black mb-3">I discovered something that changed everything.</h2>
-          <p className="text-sm text-gray-700 mb-3">
-            While scrolling through social media one day, I stumbled upon people making thousands of dollars selling digital products online.
-          </p>
-          <p className="text-sm text-gray-700 mb-3 font-semibold">I was intrigued.</p>
-          <p className="text-sm text-gray-700 mb-3">
-            These weren't tech experts or marketing geniuses. They were regular people like me, sharing their knowledge and expertise.
-          </p>
-          <p className="text-sm text-gray-700">
-            The best part? They were doing it without showing their faces, without fancy equipment, and without years of experience.
-          </p>
+          <p className="text-sm text-gray-700 mb-3">One day, scrolling on Instagram I stumbled upon Digital Marketing and saw how ordinary people and graduates like me were changing their lives making money online with no experience.</p>
+          <p className="text-sm text-gray-700 mb-3 font-semibold">They were making $500/day! WHAT?</p>
+          <p className="text-sm text-gray-700 mb-3">They had no boss, no working hours, no rush in the traffic. I wanted that life.
+
+
+
+So I decided to give it a try since I had nothing to lose.</p>
+          <p className="text-sm text-gray-700">Oh and if you're asking, yes, I was scared. I was skeptical as well.
+
+
+
+But I'm the kind of person who has to try it herself before giving up.</p>
           <p className="text-sm mt-3 font-semibold text-green-500">
             This was my breakthrough moment.
           </p>
@@ -59,22 +61,16 @@ const ProductInfo: React.FC = () => {
 
       {/* Discovery Story Section - Clone 2 */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
-        <img alt="Discovery Story Image 2" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/462e46e6-4622-479c-84d0-f2b846a4d9c9.png" />
+        <img alt="Discovery Story Image 2" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/7e44e579-d766-41f7-bb72-7becfb87c920.jpg" />
         <div className="rounded-lg p-6 max-w-md w-full bg-slate-50 px-[4px]">
           <h2 className="text-lg font-bold text-black mb-3">I decided to take action immediately.</h2>
-          <p className="text-sm text-gray-700 mb-3">
-            I spent weeks researching, learning everything I could about digital products and online marketing.
-          </p>
-          <p className="text-sm text-gray-700 mb-3 font-semibold">The learning curve was steep.</p>
-          <p className="text-sm text-gray-700 mb-3">
-            I made mistakes, faced rejections, and sometimes questioned if this was really for me.
-          </p>
-          <p className="text-sm text-gray-700">
-            But I kept pushing forward because I knew this was my chance to break free from the traditional career path.
-          </p>
-          <p className="text-sm mt-3 font-semibold text-blue-500">
-            Persistence was key.
-          </p>
+          <p className="text-sm text-gray-700 mb-3">I didn't want to ask my parents so I worked 2 jobs for 8 months: I was a nanny in the morning and a secretary in a law firm in the afternoon. I saved up the money I needed to learn the skills so I could finally build my dream future. And I took the first step, I bought the course.</p>
+          <p className="text-sm text-gray-700 mb-3 font-semibold">It's been a journey, it takes consistency and faith.
+
+        </p>
+          
+          
+          <p className="text-sm mt-3 font-semibold text-blue-500">But since that first step...</p>
         </div>
       </div>
 
