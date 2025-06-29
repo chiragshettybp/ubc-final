@@ -8,6 +8,21 @@ const ProductInfo: React.FC = () => {
         <img alt="LaunchPad Pro Pack Banner" className="w-full max-w-md rounded-lg" src="/lovable-uploads/b4eed02e-f9c6-44d3-abd3-b78fa368a55e.png" />
       </div>
       <h1 className="text-black mt-2 mb-2 text-2xl text-center py-[10px] my-[13px] font-extrabold">Steal My All-Inclusive, Done-For-You System to Start Making Money Online with Social Media—Even If You Don't Have Experience!</h1>
+      
+      {/* New images added below the heading */}
+      <div className="w-full flex flex-col items-center space-y-4 mb-6">
+        <img 
+          alt="Success testimonial about moving to new home" 
+          className="w-full max-w-md rounded-lg shadow-md" 
+          src="/lovable-uploads/eb9a95f0-2ee3-4b35-b521-322495676a63.png" 
+        />
+        <img 
+          alt="Beautiful modern home interior" 
+          className="w-full max-w-md rounded-lg shadow-md" 
+          src="/lovable-uploads/462e46e6-4622-479c-84d0-f2b846a4d9c9.png" 
+        />
+      </div>
+
       <p className="text-sm font-bold text-black mb-2">
         💸 Launch. Sell. Profit. Turn Digital Products into Passive Income.
       </p>
