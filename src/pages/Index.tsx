@@ -18,13 +18,18 @@ import PromoBanner from '../components/PromoBanner';
 import PromoBadge from '../components/PromoBadge';
 import BottomOfferBar from '../components/BottomOfferBar';
 import ProductShowcaseSection from '../components/ProductShowcaseSection';
+import ProductFeatureGrid from '../components/ProductFeatureGrid';
+import PricingSection from '../components/PricingSection';
+import BonusSection from '../components/BonusSection';
+import UrgencySection from '../components/UrgencySection';
+import GuaranteeSection from '../components/GuaranteeSection';
 import { toast } from "@/hooks/use-toast";
 
 const Index = () => {
   const handlePurchase = () => {
     toast({
-      title: "Your Hand Grip Kit order is being processed",
-      description: "Thank you for choosing the Hand Grips Strengthener Kit - 5 Pack®!"
+      title: "Your LaunchPad Pro Pack order is being processed",
+      description: "Thank you for choosing the LaunchPad Pro Pack - Start your online income journey today!"
     });
   };
 
@@ -34,12 +39,19 @@ const Index = () => {
       <div className="flex flex-col items-center pt-4 pb-8">
         <ProductMediaSection />
         <ProductInfo />
+        
         {/* --- Single Promo Bar Animation + Badge (just before bundle options) --- */}
         <PromoBanner />
         <PromoBadge />
         
         {/* Product Showcase Section */}
         <ProductShowcaseSection />
+        
+        {/* New comprehensive sections */}
+        <ProductFeatureGrid />
+        <PricingSection />
+        <BonusSection />
+        <UrgencySection />
         
         {/* Removed: <ProductVariants /> */}
         <div className="w-full px-4 my-4">
@@ -48,6 +60,8 @@ const Index = () => {
         <PaymentMethods />
         <OrderTimer />
         <BenefitBadges />
+        
+        <GuaranteeSection />
         <FAQSection />
         <GifSection />
         <DogGridSection />
