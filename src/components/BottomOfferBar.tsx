@@ -1,5 +1,7 @@
+
 import React, { useEffect, useRef, useState } from "react";
 const GOLD_GRADIENT = "bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-400";
+
 const BottomOfferBar: React.FC<{
   paypalLink?: string;
 }> = ({
@@ -9,6 +11,7 @@ const BottomOfferBar: React.FC<{
   const [seconds, setSeconds] = useState(59);
   const [minutes, setMinutes] = useState(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  
   useEffect(() => {
     timerRef.current = setInterval(() => {
       setSeconds(prev => {
@@ -26,9 +29,15 @@ const BottomOfferBar: React.FC<{
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [minutes]);
+  
   const handleButtonClick = () => {
-    window.open("https://www.paypal.com/ncp/payment/RGV3ZRLJ8V448", "_blank", "noopener,noreferrer");
+    if (paypalLink) {
+      window.open(paypalLink, "_blank", "noopener,noreferrer");
+    } else {
+      window.open("https://www.paypal.com/ncp/payment/RGV3ZRLJ8V448", "_blank", "noopener,noreferrer");
+    }
   };
+  
   return <div className="fixed left-0 bottom-0 z-50 w-full" style={{
     pointerEvents: "none"
   }}>
@@ -58,4 +67,5 @@ const BottomOfferBar: React.FC<{
       </div>
     </div>;
 };
+
 export default BottomOfferBar;

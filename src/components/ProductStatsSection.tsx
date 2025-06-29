@@ -1,7 +1,11 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
-const ProductStatsSection: React.FC = () => {
+
+const ProductStatsSection: React.FC<{
+  paypalLink?: string;
+}> = ({ paypalLink }) => {
   const statItems = [{
     percent: "96%",
     description: "Launched their online income stream within the first 2 weeks of purchase"
@@ -12,9 +16,15 @@ const ProductStatsSection: React.FC = () => {
     percent: "88%",
     description: "Started earning from sales, affiliate links, or digital products within 60 days"
   }];
+  
   const handleButtonClick = () => {
-    window.open('https://www.paypal.com/ncp/payment/RGV3ZRLJ8V448', '_blank', 'noopener,noreferrer');
+    if (paypalLink) {
+      window.open(paypalLink, '_blank', 'noopener,noreferrer');
+    } else {
+      window.open('https://www.paypal.com/ncp/payment/RGV3ZRLJ8V448', '_blank', 'noopener,noreferrer');
+    }
   };
+  
   return <section className="w-full py-12 px-4 bg-[#fffffd]">
       <motion.div className="max-w-md mx-auto" initial={{
       opacity: 0,
@@ -58,4 +68,5 @@ const ProductStatsSection: React.FC = () => {
       </motion.div>
     </section>;
 };
+
 export default ProductStatsSection;
