@@ -1,26 +1,28 @@
+
 import React from 'react';
 import { Mail, Phone, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Footer = () => {
-  return <footer className="w-full text-black pb-16 bg-white border-t border-gray-200">
+  return (
+    <footer className="w-full text-black pb-16 bg-white border-t border-gray-200">
       <div className="max-w-md mx-auto px-4 pt-16 bg-white">
         {/* Logo and email signup */}
         <div className="mb-10">
           <h2 className="font-bold mb-4 text-2xl text-left">Alyssa Ray®</h2>
         </div>
         
-        {/* Help Links */}
+        {/* New Links */}
         <div className="mb-10">
-          <h3 className="font-bold mb-4">Need Help?</h3>
+          <h3 className="font-bold mb-4">Quick Links</h3>
           <ul className="opacity-75 text-sm space-y-3">
-            <li><Link to="/help-center" className="hover:text-gray-600">Help Center</Link></li>
-            <li><Link to="/track-order" className="hover:text-gray-600">Track Your Order</Link></li>
-            <li><Link to="/shipping-delivery" className="hover:text-gray-600">Shipping & Delivery</Link></li>
-            <li><Link to="/return-refund" className="hover:text-gray-600">Return & Refund Policy</Link></li>
-            <li><Link to="/reviews" className="hover:text-gray-600">Customer Reviews</Link></li>
+            <li><Link to="/about" className="hover:text-gray-600">About</Link></li>
+            <li><Link to="/contact" className="hover:text-gray-600">Contact</Link></li>
             <li><Link to="/privacy-policy" className="hover:text-gray-600">Privacy Policy</Link></li>
-            <li><Link to="/terms-of-service" className="hover:text-gray-600">Terms of Service</Link></li>
-            <li><Link to="/how-to-use" className="hover:text-gray-600">How to Use</Link></li>
+            <li><Link to="/terms-conditions" className="hover:text-gray-600">Terms & Conditions</Link></li>
+            <li><Link to="/refund-policy" className="hover:text-gray-600">Refund Policy</Link></li>
+            <li><Link to="/faq" className="hover:text-gray-600">FAQ</Link></li>
+            <li><Link to="/disclaimer" className="hover:text-gray-600">Disclaimer</Link></li>
           </ul>
         </div>
         
@@ -46,6 +48,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
