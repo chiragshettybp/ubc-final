@@ -91,8 +91,8 @@ But I'm the kind of person who has to try it herself before giving up.</p>
 
       {/* Success Results Section */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
-        <div className="rounded-lg p-6 max-w-md w-full bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 bg-slate-50 px-[20px]">
-          <h2 className="text-xl font-bold mb-4 text-center text-yellow-500">Now I Get To...</h2>
+        <div className="rounded-lg p-6 max-w-md w-full bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-300 bg-yellow-50 px-[20px]">
+          <h2 className="text-xl font-bold mb-4 text-center text-yellow-600">Now I Get To...</h2>
           <div className="space-y-3">
             <div className="flex items-start space-x-3">
               <span className="text-yellow-500 text-lg">✨</span>
