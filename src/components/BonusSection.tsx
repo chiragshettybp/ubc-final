@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -35,7 +34,7 @@ const BonusSection: React.FC = () => {
   }, 0);
 
   return (
-    <section className="w-full py-12 px-4 bg-gradient-to-br from-blue-50 to-purple-50">
+    <section className="w-full py-12 px-4" style={{ backgroundColor: '#fef8c4' }}>
       <div className="max-w-md mx-auto">
         <motion.div 
           className="text-center mb-8"
