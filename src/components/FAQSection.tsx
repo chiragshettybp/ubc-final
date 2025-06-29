@@ -33,9 +33,9 @@ const faqs = [
 
 const FAQSection: React.FC = () => {
   return (
-    <div className="w-full px-4 mt-6 bg-black">
-      <Separator className="mb-6 bg-gray-700" />
-      <h2 className="text-white font-bold mb-4 text-2xl">FAQ</h2>
+    <div className="w-full px-4 mt-6 bg-white">
+      <Separator className="mb-6 bg-gray-200" />
+      <h2 className="text-black font-bold mb-4 text-2xl">FAQ</h2>
       <Accordion type="single" collapsible className="w-full">
         {faqs.map((faq, index) => (
           <FAQItem key={index} faq={faq} index={index} />

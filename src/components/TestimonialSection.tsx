@@ -47,19 +47,19 @@ const testimonials: Testimonial[] = [
 const TestimonialCard: React.FC<{ testimonial: Testimonial; index: number }> = ({ testimonial, index }) => {
   return (
     <motion.div 
-      className="bg-gray-900 rounded-lg p-5 shadow-md border border-gray-700 flex flex-col h-full" 
+      className="bg-white rounded-lg p-5 shadow-md border border-gray-200 flex flex-col h-full" 
       initial={{ opacity: 0, y: 20 }} 
       animate={{ opacity: 1, y: 0 }} 
       transition={{ duration: 0.5, delay: index * 0.2 }} 
-      whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(255, 255, 255, 0.1)" }}
+      whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" }}
     >
       <div className="flex items-center mb-4">
         <div className="w-12 h-12 rounded-full overflow-hidden mr-3">
           <img src={testimonial.image} alt={testimonial.name} className="w-full h-full object-cover" />
         </div>
         <div>
-          <h4 className="font-bold text-white text-sm">{testimonial.name}</h4>
-          <p className="text-xs text-gray-400">{testimonial.location}</p>
+          <h4 className="font-bold text-black text-sm">{testimonial.name}</h4>
+          <p className="text-xs text-gray-600">{testimonial.location}</p>
         </div>
         {testimonial.verified && (
           <div className="ml-auto px-2 py-1 rounded-full flex items-center bg-yellow-300">
@@ -70,13 +70,13 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial; index: number }> = (
       
       <div className="flex mb-3">
         {[...Array(5)].map((_, i) => (
-          <Star key={i} className={`w-4 h-4 ${i < 5 ? 'text-gray-400 fill-gray-400' : 'text-gray-600'}`} />
+          <Star key={i} className={`w-4 h-4 ${i < 5 ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} />
         ))}
       </div>
       
       <div className="relative flex-1">
-        <QuoteIcon className="absolute top-0 left-0 w-6 h-6 text-gray-600 opacity-50 -translate-x-2 -translate-y-1" />
-        <p className="text-sm text-gray-300 pl-2 italic">
+        <QuoteIcon className="absolute top-0 left-0 w-6 h-6 text-gray-400 opacity-50 -translate-x-2 -translate-y-1" />
+        <p className="text-sm text-gray-700 pl-2 italic">
           {testimonial.text}
         </p>
       </div>
@@ -86,11 +86,11 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial; index: number }> = (
 
 const TestimonialSection: React.FC = () => {
   return (
-    <section className="w-full py-8 bg-zinc-950">
+    <section className="w-full py-8 bg-white">
       <div className="max-w-md mx-auto">
         <div className="text-center mb-6 px-6">
           <motion.h2 
-            className="text-xl font-bold text-white mb-2" 
+            className="text-xl font-bold text-black mb-2" 
             initial={{ opacity: 0, y: -10 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.5 }}
@@ -101,7 +101,7 @@ const TestimonialSection: React.FC = () => {
             initial={{ opacity: 0 }} 
             animate={{ opacity: 1 }} 
             transition={{ duration: 0.5, delay: 0.2 }} 
-            className="text-gray-400 text-xs flex items-center justify-center gap-1"
+            className="text-gray-600 text-xs flex items-center justify-center gap-1"
           >
             <Star size={14} className="text-yellow-400" />
             Rated 4.8/5 by 1,300+ happy creators
@@ -122,7 +122,7 @@ const TestimonialSection: React.FC = () => {
         >
           <Link 
             to="/reviews" 
-            className="text-gray-400 font-semibold text-sm flex items-center px-4 py-2 border border-gray-600 rounded-full hover:bg-gray-700 hover:text-white transition-colors"
+            className="text-gray-600 font-semibold text-sm flex items-center px-4 py-2 border border-gray-300 rounded-full hover:bg-gray-100 hover:text-black transition-colors"
           >
             See all reviews
             <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 w-4 h-4" viewBox="0 0 20 20" fill="currentColor">
