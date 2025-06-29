@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 // Removed: import SlinkySection from './SlinkySection';
@@ -28,7 +29,7 @@ const ProductInfo: React.FC = () => {
           <p className="text-sm text-gray-700 mb-3">
             I went to school and then to college and I got a degree. But then?
           </p>
-          <p className="text-sm text-gray-700">
+          <p className="text-sm text-gray-700 mb-3">
             I had nothing. With my degree I could barely make $500/month working 8 hours/day as I had no experience and this is what they can offer you.
           </p>
           <p className="text-sm mt-3 font-semibold text-yellow-500">
@@ -189,14 +190,6 @@ But I'm the kind of person who has to try it herself before giving up.</p>
         </div>
       </div>
 
-      <p className="text-sm font-bold text-black mb-2">
-        💸 Launch. Sell. Profit. Turn Digital Products into Passive Income.
-      </p>
-      <p className="font-semibold text-black mb-2">
-        The all-in-one system to build your automated online business.
-        Ideal for beginners, aspiring entrepreneurs, and anyone ready to earn money online with minimal effort.
-      </p>
-      
       {/* FAQ Dropdown Section */}
       <div className="w-full max-w-md mx-auto mb-4">
         <h3 className="text-lg font-bold text-black mb-3">What's Included:</h3>
