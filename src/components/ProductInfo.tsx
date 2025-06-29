@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 // Removed: import SlinkySection from './SlinkySection';
@@ -20,7 +19,7 @@ const ProductInfo: React.FC = () => {
       {/* Gloria's Introduction Section */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
         <img alt="Meet Gloria - Your Success Guide" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/18ac57cb-8c68-48de-b143-aeaddf92c215.png" />
-        <div className="rounded-lg p-6 max-w-md w-full bg-slate-50 px-[4px]">
+        <div className="rounded-lg p-6 max-w-md w-full px-[4px] bg-white/[0.31]">
           <h2 className="text-lg font-bold text-black mb-3">Hey, nice to meet you! My name is Gloria.</h2>
           <p className="text-sm text-gray-700 mb-3">
             I'm an Italian girl who was always taught to do the right things: go to school and get a college degree so you can find a good job.
@@ -41,7 +40,7 @@ const ProductInfo: React.FC = () => {
       {/* Discovery Story Section - Clone 1 */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
         <img alt="Discovery Story Image 1" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/632dd5e3-a018-4d66-bbee-a79188ae7929.jpg" />
-        <div className="rounded-lg p-6 max-w-md w-full bg-slate-50 px-[4px]">
+        <div className="rounded-lg p-6 max-w-md w-full px-[4px] bg-white/[0.31]">
           <h2 className="text-lg font-bold text-black mb-3">I discovered something that changed everything.</h2>
           <p className="text-sm text-gray-700 mb-3">One day, scrolling on Instagram I stumbled upon Digital Marketing and saw how ordinary people and graduates like me were changing their lives making money online with no experience.</p>
           <p className="text-sm text-gray-700 mb-3 font-semibold">They were making $500/day! WHAT?</p>
@@ -64,7 +63,7 @@ But I'm the kind of person who has to try it herself before giving up.</p>
       {/* Discovery Story Section - Clone 2 */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
         <img alt="Discovery Story Image 2" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/7e44e579-d766-41f7-bb72-7becfb87c920.jpg" />
-        <div className="rounded-lg p-6 max-w-md w-full bg-slate-50 px-[4px]">
+        <div className="rounded-lg p-6 max-w-md w-full px-[4px] bg-white/[0.31]">
           <h2 className="text-lg font-bold text-black mb-3">I decided to take action immediately.</h2>
           <p className="text-sm text-gray-700 mb-3">I didn't want to ask my parents so I worked 2 jobs for 8 months: I was a nanny in the morning and a secretary in a law firm in the afternoon. I saved up the money I needed to learn the skills so I could finally build my dream future. And I took the first step, I bought the course.</p>
           <p className="text-sm text-gray-700 mb-3 font-semibold">It's been a journey, it takes consistency and faith.
@@ -134,7 +133,7 @@ But I'm the kind of person who has to try it herself before giving up.</p>
 
       {/* New Section - "I know what you're probably thinking..." */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
-        <div className="rounded-lg p-6 max-w-md w-full bg-slate-50 px-0">
+        <div className="rounded-lg p-6 max-w-md w-full px-0 bg-white/[0.31]">
           <h2 className="text-lg font-bold text-black mb-4">I know what you're probably thinking...</h2>
           <div className="space-y-3">
             <div className="flex items-start space-x-3">
