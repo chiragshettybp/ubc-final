@@ -1,5 +1,4 @@
 import React from 'react';
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 // Removed: import SlinkySection from './SlinkySection';
 
 const ProductInfo: React.FC = () => {
@@ -172,7 +171,7 @@ But I'm the kind of person who has to try it herself before giving up.</p>
             <p className="text-sm font-semibold text-black mb-2">If that's you, you're exactly where you should be!</p>
           </div>
           
-          <div className="mt-6 bg-gradient-to-r from-yellow-50 to-yellow-100 p-4 rounded-lg border border-yellow-300">
+          <div className="mt-6 bg-gradient-to-r from-teal-50 to-cyan-50 p-4 rounded-lg border border-teal-200">
             <h3 className="text-lg font-bold text-black mb-2">This Is The Reason Why The Ultimate Branding Course Is What You Need</h3>
             <p className="text-sm text-gray-700 mb-2">
               In this comprehensive course you'll learn from <span className="font-semibold">A to Z</span> how to create your successful brand selling digital products...
@@ -181,11 +180,6 @@ But I'm the kind of person who has to try it herself before giving up.</p>
               <span className="font-semibold">Even if you never heard about it or you don't have any products to sell.</span>
             </p>
           </div>
-        </div>
-        
-        {/* Added UBC Course showcase image */}
-        <div className="w-full flex justify-center mt-4">
-          <img alt="Ultimate Branding Course showcase" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/c4d7d51a-b7da-4e8b-bd68-03661aee1365.png" />
         </div>
       </div>
 
@@ -196,95 +190,49 @@ But I'm the kind of person who has to try it herself before giving up.</p>
         The all-in-one system to build your automated online business.
         Ideal for beginners, aspiring entrepreneurs, and anyone ready to earn money online with minimal effort.
       </p>
-      
-      {/* FAQ Dropdown Section */}
-      <div className="w-full max-w-md mx-auto mb-4">
-        <h3 className="text-lg font-bold text-black mb-3">What's Included:</h3>
-        <Accordion type="single" collapsible className="w-full">
-          <AccordionItem value="item-1" className="border-b border-gray-200">
-            <AccordionTrigger className="py-3 font-semibold text-black hover:no-underline text-left">
-              <div className="flex items-center space-x-2">
-                <span className="text-green-600">📁</span>
-                <span>Earn While You Learn Program</span>
-              </div>
-            </AccordionTrigger>
-            <AccordionContent className="text-gray-700 text-sm pb-4">
-              Love the course? Turn it into your first income stream with our Affiliate Program. Resell a Done-For-You (DFY) $997 course and keep 85% of the profits. No product creation needed!
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-2" className="border-b border-gray-200">
-            <AccordionTrigger className="py-3 font-semibold text-black hover:no-underline text-left">
-              <div className="flex items-center space-x-2">
-                <span className="text-green-600">📁</span>
-                <span>No Hidden Costs Policy</span>
-              </div>
-            </AccordionTrigger>
-            <AccordionContent className="text-gray-700 text-sm pb-4">
-              One-time payment, lifetime value. No upsells, no surprises. Just everything you need in one place.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-3" className="border-b border-gray-200">
-            <AccordionTrigger className="py-3 font-semibold text-black hover:no-underline text-left">
-              <div className="flex items-center space-x-2">
-                <span className="text-green-600">📁</span>
-                <span>Done-For-You Funnel Templates</span>
-              </div>
-            </AccordionTrigger>
-            <AccordionContent className="text-gray-700 text-sm pb-4">
-              Already DFY Funnel Templates to save hours of your time so you can start monetize right away.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-4" className="border-b border-gray-200">
-            <AccordionTrigger className="py-3 font-semibold text-black hover:no-underline text-left">
-              <div className="flex items-center space-x-2">
-                <span className="text-green-600">📁</span>
-                <span>Multi-Language Support</span>
-              </div>
-            </AccordionTrigger>
-            <AccordionContent className="text-gray-700 text-sm pb-4">
-              Available in 5+ Languages – Access the entire course in English, Spanish, French, Portuguese, and German. Italian coming soon!
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-5" className="border-b border-gray-200">
-            <AccordionTrigger className="py-3 font-semibold text-black hover:no-underline text-left">
-              <div className="flex items-center space-x-2">
-                <span className="text-green-600">📁</span>
-                <span>$3,000+ in FREE Bonuses</span>
-              </div>
-            </AccordionTrigger>
-            <AccordionContent className="text-gray-700 text-sm pb-4">
-              <div className="space-y-2">
-                <p>→ Step-by-Step Guide to Selling Digital Products</p>
-                <p>→ Website Setup & Launch Blueprint</p>
-                <p>→ AI Customer Acquisition Secrets</p>
-                <p>→ 40M+ Premium Digital Products Access</p>
-                <p>→ 1000+ Resellable High-Ticket Courses</p>
-                <p>→ 200K+ Viral Reels for Content Creation</p>
-                <p>→ 300K+ ChatGPT Prompt Bundle</p>
-              </div>
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="item-6" className="border-b border-gray-200">
-            <AccordionTrigger className="py-3 font-semibold text-black hover:no-underline text-left">
-              <div className="flex items-center space-x-2">
-                <span className="text-green-600">📁</span>
-                <span>Ready-Made Ad Templates</span>
-              </div>
-            </AccordionTrigger>
-            <AccordionContent className="text-gray-700 text-sm pb-4">
-              <span className="text-black">
-                Bonus: Ready-Made, Tested & Proven Ad Templates <span className="text-[#f4d535]">(₹3999 Value Bonus FREE)</span>
-              </span>
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+      <div className="space-y-2 mb-4">
+        <div className="flex items-center space-x-2">
+          
+          <span className="text-black">Earn While You Learn – Love the course? Turn it into your first income stream with our Affiliate Program. Resell a Done-For-You (DFY) $997 course and keep 85% of the profits. No product creation needed!</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <span className="text-green-600">📁</span>
+          <span className="text-black">No Hidden Costs, Ever – One-time payment, lifetime value. No upsells, no surprises. Just everything you need in one place.</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <span className="text-green-600">📁</span>
+          <span className="text-black">Already DFY Funnel Templates to save hours of your time so you can start monetize right away.</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <span className="text-green-600">📁</span>
+          <span className="text-black">Available in 5+ Languages – Access the entire course in English, Spanish, French, Portuguese, and German. Italian coming soon!</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <span className="text-green-600">📁</span>
+          <span className="text-black">Over $3,000 in FREE Bonuses –
+→ Step-by-Step Guide to Selling Digital Products
+→ Website Setup &amp; Launch Blueprint
+→ AI Customer Acquisition Secrets
+→ 40M+ Premium Digital Products Access
+→ 1000+ Resellable High-Ticket Courses
+→ 200K+ Viral Reels for Content Creation
+→ 300K+ ChatGPT Prompt Bundle</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <span className="text-green-600">📁</span>
+          <span className="text-black">No Hidden Costs, Ever – One-time payment, lifetime value. No upsells, no surprises. Just everything you need in one place.</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <span className="text-green-600">📁</span>
+          <span className="text-black">300K+ ChatGPT Prompts Bundle</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <span className="text-green-600">📁</span>
+          <span className="text-black">
+            Bonus: Ready-Made, Tested & Proven Ad Templates <span className="text-[#f4d535]">(₹3999 Value Bonus FREE)</span>
+          </span>
+        </div>
       </div>
-
       <p className="text-black mb-1 text-base text-center py-[3px] font-bold">
         No Camera. No Experience Needed.
       </p>
