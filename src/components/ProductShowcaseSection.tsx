@@ -63,7 +63,7 @@ const ProductShowcaseSection: React.FC = () => {
   const reelsCategories = ["20,000+ Luxury Reels", "1,500+ Glowing Motion Graphics Reels", "10,000+ Motivational Reels", "500+ AI Anime Reels", "1,000+ 2D Animation Reels", "500+ Cartoon Reels", "1,400+ Funny Reels", "1,000+ Comedy Reels", "500+ Omegle Reels", "AI Tech & AI Doctor Reels", "Business Reels", "3,500+ Shark Tank Reels", "Emotional & Lofi Music Reels", "Gym & Fitness Reels", "Car & Automotive Reels", "Tips, Tricks & Utility Reels", "Tools, DIY & Woodwork Reels", "Art & Craft Reels", "Study & Educational Reels", "Nature Reels", "Superhero Reels", "Satisfying ASMR Reels", "Useful Gadgets Reels", "Cricket Reels", "📦 Many Other Powerful Niches..."];
 
   return (
-    <div className="w-full px-4 mt-6 bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-300">
+    <div className="w-full px-4 mt-6 bg-gradient-to-br from-yellow-50 to-yellow-100">
       {/* Courses Section */}
       <div className="mb-8">
         <div 
