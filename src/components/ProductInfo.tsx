@@ -18,7 +18,7 @@ const ProductInfo: React.FC = () => {
       {/* Gloria's Introduction Section */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
         <img alt="Meet Gloria - Your Success Guide" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/18ac57cb-8c68-48de-b143-aeaddf92c215.png" />
-        <div className="bg-blue-50 rounded-lg p-6 max-w-md w-full">
+        <div className="rounded-lg p-6 max-w-md w-full bg-slate-50 px-[4px]">
           <h2 className="text-lg font-bold text-black mb-3">Hey, nice to meet you! My name is Gloria.</h2>
           <p className="text-sm text-gray-700 mb-3">
             I'm an Italian girl who was always taught to do the right things: go to school and get a college degree so you can find a good job.
@@ -30,7 +30,7 @@ const ProductInfo: React.FC = () => {
           <p className="text-sm text-gray-700">
             I had nothing. With my degree I could barely make $500/month working 8 hours/day as I had no experience and this is what they can offer you.
           </p>
-          <p className="text-sm text-gray-700 mt-3 font-semibold text-red-600">
+          <p className="text-sm mt-3 font-semibold text-yellow-500">
             Well, they got it wrong.
           </p>
         </div>
