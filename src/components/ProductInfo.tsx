@@ -36,7 +36,25 @@ const ProductInfo: React.FC = () => {
         </div>
       </div>
 
-      {/* Discovery Story Section */}
+      {/* Discovery Story Section - Clone 1 */}
+      <div className="w-full flex flex-col items-center space-y-4 mb-8">
+        
+        
+      </div>
+
+      {/* Discovery Story Section - Clone 2 */}
+      <div className="w-full flex flex-col items-center space-y-4 mb-8">
+        
+        
+      </div>
+
+      {/* Discovery Story Section - Clone 3 */}
+      <div className="w-full flex flex-col items-center space-y-4 mb-8">
+        
+        
+      </div>
+
+      {/* Discovery Story Section - Clone 4 */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
         
         
