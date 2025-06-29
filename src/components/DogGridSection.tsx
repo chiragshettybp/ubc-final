@@ -1,43 +1,27 @@
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const DogGridSection: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Updated image links
+  // Updated image links from user
   const images = [
-    "https://i.postimg.cc/T3BQ82RN/68403b322e9b1-9.png",
-    "https://i.postimg.cc/L5vvGzXj/68403b3f6b1e5-10.png",
-    "https://i.postimg.cc/zGypPH1R/68403b4ac8ddb-11.png",
-    "https://i.postimg.cc/X7HQ8ctb/68403b574f69b-12.png",
-    "https://i.postimg.cc/Kvv0Bsqf/68403b60a3d31-13.png",
-    "https://i.postimg.cc/ZnDprjns/684173d646f2d-1.png",
-    "https://i.postimg.cc/wv2hB9pp/684173e4b408f-2.png",
-    "https://i.postimg.cc/bY6xcYg0/684173edaa125-3.png",
-    "https://i.postimg.cc/brv1D4y2/6841740589e08-4.png"
+    "https://i.postimg.cc/XvnpcX6y/67320d399a492-3316-FA31-863-C-474-A-9467-EDE5-A4-BFC86-C-L0-001-9-7-20245-22-07-PM-jpg.jpg",
+    "https://i.postimg.cc/9f1zxVcg/67320d45bd3c1-0-BD9-F7-ED-5369-4976-AFAA-64236021-E785-L0-001-9-7-20245-22-41-PM-jpg.jpg",
+    "https://i.postimg.cc/P5sLJ26y/67320d5c0fcec-FF28886-B-204-C-4-EE4-88-BE-E62-B77481-A5-D-L0-001-9-7-20245-26-35-PM-jpg.jpg",
+    "https://i.postimg.cc/sXNxrcQp/67320d663a702-47-F67-C0-B-2-F98-4-C89-B139-1-E61-E143-B3-EC-L0-001-9-7-20245-27-51-PM-jpg.jpg",
+    "https://i.postimg.cc/fk4b3Rvy/67320d7273d0a-D4256-DFF-C503-4-D43-9-D28-347-D99-C8-E0-F0-L0-001-9-7-20245-28-36-PM-jpg.jpg",
+    "https://i.postimg.cc/x1vXzMh2/67320d79c5927-F37-C8372-8-C72-474-D-A9-AF-F8-BB78-F7-BFAF-L0-001-9-7-20245-40-15-PM-jpg.jpg",
+    "https://i.postimg.cc/HxxnRKxY/67320d8a2f077-811-BCB54-9-C6-B-4-A12-A491-AF1-A13-DFBE50-L0-001-9-7-20245-33-26-PM-jpg.jpg",
+    "https://i.postimg.cc/bwhQWyjq/6732111fac39b-Screenshot2024-11-11150616-jpg.jpg",
+    "https://i.postimg.cc/QM61FcKM/67321163c2e87-Screenshot2024-11-11151417-jpg.jpg",
+    "https://i.postimg.cc/1zRDRvtT/6732117b7f7da-Screenshot2024-11-11150917-jpg.jpg",
+    "https://i.postimg.cc/gjLJkZ81/673211adabfb3-Screenshot2024-11-11150701-jpg.jpg",
+    "https://i.postimg.cc/qBNXCDLH/673211c989d30-Screenshot2024-11-11150441-jpg.jpg",
+    "https://i.postimg.cc/h4N888yz/673211ed2c497-Screenshot2024-11-11150521-jpg.jpg",
+    "https://i.postimg.cc/WbrG5DC9/673213bfd2f7b-Screenshot2024-11-11152330-jpg.jpg",
+    "https://i.postimg.cc/MTvRVX1m/673215264e29f-Screenshot2024-11-11153049-jpg.jpg",
+    "https://i.postimg.cc/rwNSLB8x/675026ecc59b3-Screenshot2024-12-04105405-jpg.jpg"
   ];
-
-  const captions = [
-    "\"Maine pehle kabhi online business nahi kiya tha, lekin ye course ne step-by-step sikhaya. Ab meri monthly income ₹15,000 hai!\"",
-    "\"AI tools ka naam sunkar dar lagta tha, but iske baad lagta hai jaise technology meri dost hai. Bahut easy hai!\"",
-    "\"Sirf 2 mahine mein maine apna pehla digital product launch kiya. ₹8,500 ka sale hua pehle hi din!\"",
-    "\"Ghar baithe kaam kar sakti hun, bachon ka bhi khyal rakh sakti hun. Perfect solution hai working mothers ke liye.\"",
-    "\"Mumbai mein job chhodkar ye business start kiya. Ab meri income job se zyada hai aur time bhi free hai.\"",
-    "\"LaunchPad Pro Pack ki wajah se meri zindagi badal gayi. Passive income ka matlab samjh gaya hun.\"",
-    "\"Pehle sochta tha digital marketing sirf ameer logon ke liye hai. Ye course ne prove kar diya ki koi bhi kar sakta hai.\"",
-    "\"Hindi mein explanation mila, isliye samajhna aasan tha. Support team bhi bahut helpful hai, 24 ghante available.\"",
-    "\"Teen mahine pehle zero tha online business mein. Aaj mere paas 12 digital products hai aur ₹45,000 monthly earning!\""
-  ];
-
-  // Auto-slide effect - one image at a time
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 2500); // Change image every 2.5 seconds
-
-    return () => clearInterval(interval);
-  }, [images.length]);
 
   return (
     <section className="w-full bg-white py-8">
@@ -52,40 +36,22 @@ const DogGridSection: React.FC = () => {
           <p className="text-sm text-gray-600">I'll show you step-by-step how to build a fully automated digital product business using AI, no upfront investment, no tech skills.</p>
         </motion.div>
         
-        <div className="relative w-full h-80 overflow-hidden rounded-lg">
-          <AnimatePresence mode="wait">
-            <motion.div 
-              key={currentIndex}
-              className="absolute inset-0 border-2 border-gray-300 rounded-lg p-3 shadow-md bg-gray-50 flex flex-col"
-              initial={{ x: '100%', opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: '-100%', opacity: 0 }}
-              transition={{ 
-                duration: 0.8,
-                ease: "easeInOut"
-              }}
+        <div className="space-y-4">
+          {images.map((image, index) => (
+            <motion.div
+              key={index}
+              className="w-full rounded-lg overflow-hidden shadow-md"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <img 
-                className="w-full rounded-md h-48 object-cover mb-3" 
-                src={images[currentIndex]} 
-                alt="Digital Product Marketing" 
+                className="w-full h-auto object-cover" 
+                src={image} 
+                alt={`Review ${index + 1}`}
+                loading="lazy"
               />
-              <p className="text-sm italic text-center text-gray-700 flex-1 flex items-center justify-center px-2">
-                {captions[currentIndex]}
-              </p>
             </motion.div>
-          </AnimatePresence>
-        </div>
-
-        {/* Progress indicator */}
-        <div className="flex justify-center mt-4 space-x-2">
-          {images.map((_, idx) => (
-            <div
-              key={idx}
-              className={`h-2 w-2 rounded-full transition-all duration-300 ${
-                idx === currentIndex ? 'bg-black' : 'bg-gray-300'
-              }`}
-            />
           ))}
         </div>
       </div>
