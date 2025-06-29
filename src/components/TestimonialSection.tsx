@@ -17,29 +17,29 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Marcus T.",
+    name: "Sarah M.",
     location: "Texas, USA",
     rating: 5,
-    text: "Honestly didn't think this would work for me, but wow… I followed the steps, used the tools Alyssa recommended, and boom — first product up, 3K views in 10 days. Just hit ₹10,000 in sales and I'm getting consistent orders. Wild.",
-    image: "https://i.postimg.cc/T1cV6TWF/86061fc3-b51c-44cf-8cf3-08ea2c5f5fe6.jpg",
+    text: "I was skeptical at first, but this pack completely changed my life! Within just 2 weeks of following the step-by-step guide, I had my first digital product live and selling. Made $2,500 in my first month and now I'm consistently hitting $5K+ monthly. The AI tools make everything so simple!",
+    image: "https://i.postimg.cc/NFK4spNY/1969a872-5c58-494d-a4b4-30aaaa1a6abe.jpg",
     verified: true
   },
   {
     id: 2,
-    name: "David M.",
+    name: "Jessica L.",
     location: "California, USA", 
     rating: 5,
-    text: "I've always wanted to start an online business but never knew where to start. This pack made it stupid simple. AI does 90% of the work. I still can't believe I'm launching products weekly and it barely takes me 2 hours a week.",
-    image: "https://i.postimg.cc/Qt1gfQNX/9febbacf-257a-4d1f-9aef-ef6f77f92674.jpg",
+    text: "As a busy mom of two, I needed something I could do in my spare time. This pack was perfect! The automation features mean I can earn while taking care of my kids. Last month I made $3,800 working just 10 hours a week. It's like having a money-making machine on autopilot!",
+    image: "https://i.postimg.cc/Y2PRnB9S/465317c6-bfb5-4bb7-9bcd-ac39a8fed9b0.jpg",
     verified: true
   },
   {
     id: 3,
-    name: "Mike R.",
+    name: "Amanda K.",
     location: "New York, USA",
     rating: 5,
-    text: "After surgery, I had so much downtime and wanted to try something new. This was perfect. I didn't even need any upfront investment. Now I've got products selling automatically and even made ₹17,400 last week in digital sales. Grateful, seriously.",
-    image: "https://i.postimg.cc/8cGR97sL/b7f8d311-bb5a-463a-82aa-8aa48128c735.jpg",
+    text: "I went from zero online business experience to making $4,200 in digital sales last month! The community support is incredible and the resell rights mean I keep 100% of every sale. This isn't just a course - it's a complete business system that actually works. Best $99 I've ever spent!",
+    image: "https://i.postimg.cc/Y0TxhYVF/Let-s-take-pictures-we-can-t-post-selfie.jpg",
     verified: true
   }
 ];
