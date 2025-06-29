@@ -193,27 +193,34 @@ But I'm the kind of person who has to try it herself before giving up.</p>
       <div className="space-y-2 mb-4">
         <div className="flex items-center space-x-2">
           <span className="text-green-600">📁</span>
-          <span className="text-black">Step-by-Step Guide: Selling Digital Products</span>
+          <span className="text-black">Earn While You Learn – Love the course? Turn it into your first income stream with our Affiliate Program. Resell a Done-For-You (DFY) $997 course and keep 85% of the profits. No product creation needed!</span>
         </div>
         <div className="flex items-center space-x-2">
           <span className="text-green-600">📁</span>
-          <span className="text-black">Free Website Setup & Launch Blueprint</span>
+          <span className="text-black">No Hidden Costs, Ever – One-time payment, lifetime value. No upsells, no surprises. Just everything you need in one place.</span>
         </div>
         <div className="flex items-center space-x-2">
           <span className="text-green-600">📁</span>
-          <span className="text-black">AI Strategies for Free Customer Acquisition</span>
+          <span className="text-black">Already DFY Funnel Templates to save hours of your time so you can start monetize right away.</span>
         </div>
         <div className="flex items-center space-x-2">
           <span className="text-green-600">📁</span>
-          <span className="text-black">Access to 40 Million+ Premium Digital Products</span>
+          <span className="text-black">Available in 5+ Languages – Access the entire course in English, Spanish, French, Portuguese, and German. Italian coming soon!</span>
         </div>
         <div className="flex items-center space-x-2">
           <span className="text-green-600">📁</span>
-          <span className="text-black">1000+ High-Ticket Courses with Resell Rights</span>
+          <span className="text-black">Over $3,000 in FREE Bonuses –
+→ Step-by-Step Guide to Selling Digital Products
+→ Website Setup &amp; Launch Blueprint
+→ AI Customer Acquisition Secrets
+→ 40M+ Premium Digital Products Access
+→ 1000+ Resellable High-Ticket Courses
+→ 200K+ Viral Reels for Content Creation
+→ 300K+ ChatGPT Prompt Bundle</span>
         </div>
         <div className="flex items-center space-x-2">
           <span className="text-green-600">📁</span>
-          <span className="text-black">200K+ Viral Reels for Instant Content</span>
+          <span className="text-black">No Hidden Costs, Ever – One-time payment, lifetime value. No upsells, no surprises. Just everything you need in one place.</span>
         </div>
         <div className="flex items-center space-x-2">
           <span className="text-green-600">📁</span>
