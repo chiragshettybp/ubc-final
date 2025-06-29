@@ -1,4 +1,3 @@
-
 import React from 'react';
 // Removed: import SlinkySection from './SlinkySection';
 
@@ -6,11 +5,7 @@ const ProductInfo: React.FC = () => {
   return <div className="w-full px-4 bg-white">
       {/* Removed: <SlinkySection /> */}
       <div className="w-full flex justify-center mb-4">
-        <img 
-          src="https://i.postimg.cc/BZHnGmJq/mainbanner-png-1.png" 
-          alt="LaunchPad Pro Pack Banner" 
-          className="w-full max-w-md rounded-lg"
-        />
+        <img alt="LaunchPad Pro Pack Banner" className="w-full max-w-md rounded-lg" src="/lovable-uploads/b4eed02e-f9c6-44d3-abd3-b78fa368a55e.png" />
       </div>
       <h1 className="font-bold text-black mt-2 mb-2 text-2xl text-left py-[19px]">
         LAUNCHPAD PRO PACK - YOUR DIGITAL MONEY MACHINE
@@ -63,5 +58,4 @@ const ProductInfo: React.FC = () => {
       </p>
     </div>;
 };
-
 export default ProductInfo;
