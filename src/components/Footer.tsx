@@ -1,15 +1,12 @@
-
 import React from 'react';
 import { Mail, Phone, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Footer = () => {
-  return (
-    <footer className="w-full text-black pb-16 bg-white border-t border-gray-200">
+  return <footer className="w-full text-black pb-16 bg-white border-t border-gray-200">
       <div className="max-w-md mx-auto px-4 pt-16 bg-white">
         {/* Logo and email signup */}
         <div className="mb-10">
-          <h2 className="font-bold mb-4 text-2xl text-left">LaunchPad Pro®</h2>
+          <h2 className="font-bold mb-4 text-2xl text-left">Alyssa Ray®</h2>
         </div>
         
         {/* Help Links */}
@@ -39,7 +36,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="flex flex-col items-center">
           <div className="flex gap-2 text-xs opacity-75 mb-6">
-            <span>LaunchPad Pro - Copyright © 2025. All Rights Reserved.</span>
+            <span>Alyssa Ray - Copyright © 2025. All Rights Reserved.</span>
           </div>
           
           {/* Payment methods */}
@@ -49,8 +46,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
