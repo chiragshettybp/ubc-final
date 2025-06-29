@@ -76,45 +76,12 @@ But I'm the kind of person who has to try it herself before giving up.</p>
 
       {/* Discovery Story Section - Clone 3 */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
-        <img alt="Discovery Story Image 3" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/eb9a95f0-2ee3-4b35-b521-322495676a63.png" />
-        <div className="rounded-lg p-6 max-w-md w-full bg-slate-50 px-[4px]">
-          <h2 className="text-lg font-bold text-black mb-3">Then something amazing happened.</h2>
-          <p className="text-sm text-gray-700 mb-3">
-            My first digital product sale came in at 2 AM while I was sleeping. I couldn't believe it!
-          </p>
-          <p className="text-sm text-gray-700 mb-3 font-semibold">€47 in my account.</p>
-          <p className="text-sm text-gray-700 mb-3">
-            It wasn't much, but it proved that this system actually worked. People were willing to pay for value.
-          </p>
-          <p className="text-sm text-gray-700">
-            That first sale gave me the confidence to scale up and optimize my approach.
-          </p>
-          <p className="text-sm mt-3 font-semibold text-purple-500">
-            The floodgates opened.
-          </p>
-        </div>
+        <img alt="Discovery Story Image 3" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/82e7cbc4-56f1-4bcd-b499-209051e3922d.jpg" />
+        
       </div>
 
       {/* Discovery Story Section - Clone 4 */}
-      <div className="w-full flex flex-col items-center space-y-4 mb-8">
-        <img alt="Discovery Story Image 4" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/b4eed02e-f9c6-44d3-abd3-b78fa368a55e.png" />
-        <div className="rounded-lg p-6 max-w-md w-full bg-slate-50 px-[4px]">
-          <h2 className="text-lg font-bold text-black mb-3">Within months, everything changed.</h2>
-          <p className="text-sm text-gray-700 mb-3">
-            From that first €47 sale, I built a system that now generates consistent income every single day.
-          </p>
-          <p className="text-sm text-gray-700 mb-3 font-semibold">No more 8-hour days for €500/month.</p>
-          <p className="text-sm text-gray-700 mb-3">
-            I was finally free to live life on my own terms, work from anywhere, and help others do the same.
-          </p>
-          <p className="text-sm text-gray-700">
-            Now I want to share this exact system with you, so you don't have to figure it all out on your own.
-          </p>
-          <p className="text-sm mt-3 font-semibold text-orange-500">
-            Your turn is coming.
-          </p>
-        </div>
-      </div>
+      
 
       {/* First Steps Section */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
@@ -124,8 +91,8 @@ But I'm the kind of person who has to try it herself before giving up.</p>
 
       {/* Success Results Section */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
-        <div className="rounded-lg p-6 max-w-md w-full bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200">
-          <h2 className="text-xl font-bold text-purple-900 mb-4 text-center">Now I Get To...</h2>
+        <div className="rounded-lg p-6 max-w-md w-full bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 bg-slate-50">
+          <h2 className="text-xl font-bold mb-4 text-center text-yellow-500">Now I Get To...</h2>
           <div className="space-y-3">
             <div className="flex items-start space-x-3">
               <span className="text-yellow-500 text-lg">✨</span>
