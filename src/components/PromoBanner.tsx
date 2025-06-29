@@ -25,7 +25,7 @@ interface PromoBannerProps {
   currency?: string;
 }
 
-const PromoBanner: React.FC<PromoBannerProps> = ({ currency = "₹" }) => <div className="relative w-full px-4 mb-4">
+const PromoBanner: React.FC<PromoBannerProps> = ({ currency = "$" }) => <div className="relative w-full px-4 mb-4">
     {/* Animated glow burst behind banner */}
     <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
       <span className="

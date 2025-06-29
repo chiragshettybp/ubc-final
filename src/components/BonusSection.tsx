@@ -6,28 +6,28 @@ const BonusSection: React.FC = () => {
   const bonuses = [
     {
       title: "BONUS #1: Social Media Automation Tools",
-      value: "₹2,499",
+      value: "$2,499",
       description: "Complete suite of tools to automate your social media posting and engagement"
     },
     {
       title: "BONUS #2: Email Marketing Templates",
-      value: "₹1,999", 
+      value: "$1,999", 
       description: "50+ proven email templates that convert browsers into buyers"
     },
     {
       title: "BONUS #3: Live Masterclass Access",
-      value: "₹4,999",
+      value: "$4,999",
       description: "Exclusive access to monthly live training sessions with industry experts"
     },
     {
       title: "BONUS #4: Private Community Access",
-      value: "₹2,999",
+      value: "$2,999",
       description: "Join our exclusive community of successful digital entrepreneurs"
     }
   ];
 
   const totalValue = bonuses.reduce((sum, bonus) => {
-    return sum + parseInt(bonus.value.replace('₹', '').replace(',', ''));
+    return sum + parseInt(bonus.value.replace('$', '').replace(',', ''));
   }, 0);
 
   return (
@@ -40,7 +40,7 @@ const BonusSection: React.FC = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-2xl font-bold text-black mb-4">
-            🎁 Exclusive Bonuses Worth ₹{totalValue.toLocaleString()}
+            🎁 Exclusive Bonuses Worth ${totalValue.toLocaleString()}
           </h2>
           <p className="text-gray-600 text-sm">
             Get these incredible bonuses absolutely FREE when you order today
@@ -74,7 +74,7 @@ const BonusSection: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           <div className="text-lg font-bold text-black mb-1">
-            Total Bonus Value: ₹{totalValue.toLocaleString()}
+            Total Bonus Value: ${totalValue.toLocaleString()}
           </div>
           <div className="text-sm text-gray-600">
             Yours FREE with LaunchPad Pro Pack

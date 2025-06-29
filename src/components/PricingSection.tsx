@@ -41,8 +41,8 @@ const PricingSection: React.FC = () => {
           </h3>
           
           <div className="text-center mb-4">
-            <span className="text-gray-500 line-through text-lg">₹997</span>
-            <span className="text-3xl font-bold text-black ml-2">₹99</span>
+            <span className="text-gray-500 line-through text-lg">$997</span>
+            <span className="text-3xl font-bold text-black ml-2">$99</span>
             <div className="text-xs text-gray-600 mt-1">Limited Time Offer</div>
           </div>
 
@@ -73,7 +73,7 @@ const PricingSection: React.FC = () => {
             </div>
             <div className="flex items-center text-sm text-black">
               <span className="text-green-500 mr-2">✓</span>
-              Ready-Made Ad Templates (₹3999 Value)
+              Ready-Made Ad Templates ($3999 Value)
             </div>
           </div>
 

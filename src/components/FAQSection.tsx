@@ -6,7 +6,7 @@ import FAQItem from './FAQItem';
 
 const faqs = [
   {
-    question: "What do I get for ₹99?",
+    question: "What do I get for $99?",
     answer: "✅ You get the complete Entrovibe Pack: a step-by-step guide to selling digital products, free website setup, AI customer strategies, community access, and over 40 Million+ Digital Products, 1000+ Courses, and 200k+ Viral Reels – all with Resell Rights!"
   },
   {
@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     question: "Do I need any experience or extra money to start?",
-    answer: "❌ No! The Pack is for beginners, requiring no prior skills or additional investment beyond the one-time ₹99. Everything is included."
+    answer: "❌ No! The Pack is for beginners, requiring no prior skills or additional investment beyond the one-time $99. Everything is included."
   },
   {
     question: "How do I get access after buying?",
@@ -23,10 +23,10 @@ const faqs = [
   },
   {
     question: "Is this a one-time payment, or are there hidden fees?",
-    answer: "✅ It's a one-time payment of ₹99 only. There are no recurring fees, subscriptions, or hidden charges."
+    answer: "✅ It's a one-time payment of $99 only. There are no recurring fees, subscriptions, or hidden charges."
   },
   {
-    question: "Will the price stay at ₹99?",
+    question: "Will the price stay at $99?",
     answer: "❌ No, this is a limited-time offer. The price will increase soon, so grab it now to secure this low rate."
   }
 ];

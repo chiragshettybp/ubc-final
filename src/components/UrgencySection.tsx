@@ -1,11 +1,14 @@
+
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+
 const UrgencySection: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState({
     hours: 23,
     minutes: 45,
     seconds: 30
   });
+
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(prev => {
@@ -30,12 +33,16 @@ const UrgencySection: React.FC = () => {
         return prev;
       });
     }, 1000);
+
     return () => clearInterval(timer);
   }, []);
+
   const handlePurchase = () => {
     window.open('https://rzp.io/rzp/g3w6qRIO', '_blank', 'noopener,noreferrer');
   };
-  return <>
+
+  return (
+    <>
       <style>{`
         .pulse-animation {
           animation: pulse 2s infinite;
@@ -48,6 +55,8 @@ const UrgencySection: React.FC = () => {
       `}</style>
       
       
-    </>;
+    </>
+  );
 };
+
 export default UrgencySection;
