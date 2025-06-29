@@ -17,7 +17,7 @@ const ProductInfo: React.FC = () => {
 
       {/* Gloria's Introduction Section */}
       <div className="w-full flex flex-col items-center space-y-4 mb-8">
-        <img alt="Meet Gloria - Your Success Guide" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/cea682d6-6583-431c-92ea-be7522a15e80.png" />
+        <img alt="Meet Gloria - Your Success Guide" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/18ac57cb-8c68-48de-b143-aeaddf92c215.png" />
         <div className="bg-blue-50 rounded-lg p-6 max-w-md w-full">
           <h2 className="text-lg font-bold text-black mb-3">Hey, nice to meet you! My name is Gloria.</h2>
           <p className="text-sm text-gray-700 mb-3">
