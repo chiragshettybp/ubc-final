@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 // Removed: import SlinkySection from './SlinkySection';
@@ -173,7 +172,7 @@ But I'm the kind of person who has to try it herself before giving up.</p>
             <p className="text-sm font-semibold text-black mb-2">If that's you, you're exactly where you should be!</p>
           </div>
           
-          <div className="mt-6 bg-gradient-to-r from-teal-50 to-cyan-50 p-4 rounded-lg border border-teal-200">
+          <div className="mt-6 bg-gradient-to-r from-yellow-50 to-yellow-100 p-4 rounded-lg border border-yellow-300">
             <h3 className="text-lg font-bold text-black mb-2">This Is The Reason Why The Ultimate Branding Course Is What You Need</h3>
             <p className="text-sm text-gray-700 mb-2">
               In this comprehensive course you'll learn from <span className="font-semibold">A to Z</span> how to create your successful brand selling digital products...
@@ -182,6 +181,11 @@ But I'm the kind of person who has to try it herself before giving up.</p>
               <span className="font-semibold">Even if you never heard about it or you don't have any products to sell.</span>
             </p>
           </div>
+        </div>
+        
+        {/* Added UBC Course showcase image */}
+        <div className="w-full flex justify-center mt-4">
+          <img alt="Ultimate Branding Course showcase" className="w-full max-w-md rounded-lg shadow-md" src="/lovable-uploads/c4d7d51a-b7da-4e8b-bd68-03661aee1365.png" />
         </div>
       </div>
 
