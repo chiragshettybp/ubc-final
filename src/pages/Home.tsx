@@ -18,7 +18,6 @@ import PromoBanner from '../components/PromoBanner';
 import PromoBadge from '../components/PromoBadge';
 import BottomOfferBar from '../components/BottomOfferBar';
 import ProductShowcaseSection from '../components/ProductShowcaseSection';
-import ProductFeatureGrid from '../components/ProductFeatureGrid';
 import PricingSection from '../components/PricingSection';
 import BonusSection from '../components/BonusSection';
 import UrgencySection from '../components/UrgencySection';
@@ -48,7 +47,6 @@ const Home = () => {
         <ProductShowcaseSection />
         
         {/* New comprehensive sections */}
-        <ProductFeatureGrid />
         <PricingSection />
         <BonusSection />
         <UrgencySection />
