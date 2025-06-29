@@ -1,3 +1,4 @@
+
 import React from 'react';
 // Removed: import SlinkySection from './SlinkySection';
 
@@ -126,6 +127,59 @@ But I'm the kind of person who has to try it herself before giving up.</p>
               <span className="text-yellow-500 text-lg">✨</span>
               <p className="text-sm text-gray-700">I help others escape their stressful jobs to gain back their own time and financial freedom thanks to digital marketing</p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* New Section - "I know what you're probably thinking..." */}
+      <div className="w-full flex flex-col items-center space-y-4 mb-8">
+        <div className="rounded-lg p-6 max-w-md w-full bg-slate-50">
+          <h2 className="text-lg font-bold text-black mb-4">I know what you're probably thinking...</h2>
+          <div className="space-y-3">
+            <div className="flex items-start space-x-3">
+              <div className="bg-black text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
+                ✗
+              </div>
+              <p className="text-sm text-gray-700">How can I do this? I don't even have a product to sell</p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="bg-black text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
+                ✗
+              </div>
+              <p className="text-sm text-gray-700">It's not for me, I don't know much about social media</p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="bg-black text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
+                ✗
+              </div>
+              <p className="text-sm text-gray-700">I'm not tech savvy at all, how can I set up an online store?</p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="bg-black text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
+                ✗
+              </div>
+              <p className="text-sm text-gray-700">I have no skills, why would someone buy from me?</p>
+            </div>
+            <div className="flex items-start space-x-3">
+              <div className="bg-black text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
+                ✗
+              </div>
+              <p className="text-sm text-gray-700">I have a 9-5 and kids, how can I find extra time to do this?</p>
+            </div>
+          </div>
+          
+          <div className="mt-6 p-4 bg-white rounded-lg border-l-4 border-blue-500">
+            <p className="text-sm font-semibold text-black mb-2">If that's you, you're exactly where you should be!</p>
+          </div>
+          
+          <div className="mt-6 bg-gradient-to-r from-teal-50 to-cyan-50 p-4 rounded-lg border border-teal-200">
+            <h3 className="text-lg font-bold text-black mb-2">This Is The Reason Why The Ultimate Branding Course Is What You Need</h3>
+            <p className="text-sm text-gray-700 mb-2">
+              In this comprehensive course you'll learn from <span className="font-semibold">A to Z</span> how to create your successful brand selling digital products...
+            </p>
+            <p className="text-sm text-gray-700">
+              <span className="font-semibold">Even if you never heard about it or you don't have any products to sell.</span>
+            </p>
           </div>
         </div>
       </div>
