@@ -18,7 +18,6 @@ import PromoBanner from '../components/PromoBanner';
 import PromoBadge from '../components/PromoBadge';
 import BottomOfferBar from '../components/BottomOfferBar';
 import ProductShowcaseSection from '../components/ProductShowcaseSection';
-import PricingSection from '../components/PricingSection';
 import BonusSection from '../components/BonusSection';
 import UrgencySection from '../components/UrgencySection';
 import GuaranteeSection from '../components/GuaranteeSection';
@@ -47,7 +46,6 @@ const Index = () => {
         <ProductShowcaseSection />
         
         {/* New comprehensive sections */}
-        <PricingSection />
         <BonusSection />
         <UrgencySection />
         
